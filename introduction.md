@@ -109,8 +109,5 @@ The diagram above represents the gender pattern. The middle element corresponds 
 Throughout the documentation each example is represented in a pattern where instances are illustrated (in ovals rather than rectangles) in addition to their structured diagrams. Instances are represented in the examples, unlike in the modeling patterns where they are not.
 
 For example, the triples mapped to the gender pattern mentioned above would look like the following:
-<!--
-<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;url&quot;:&quot;https://drive.google.com/uc?id=1C8p1lpiLNDykkf1HUK4SVfJ6jf0p6UQ5&amp;export=download&quot;}"></div>
-<script type="text/javascript" src="https://app.diagrams.net/embed2.js?&fetch=https%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1C8p1lpiLNDykkf1HUK4SVfJ6jf0p6UQ5%26export%3Ddownload"></script>
--->
+
 In this diagram, each instance (the instances of Jean Paul Riopelle, of the gender Male, and of the type Gender) are linked together through properties in accordance with the structure of the corresponding pattern in the model.
