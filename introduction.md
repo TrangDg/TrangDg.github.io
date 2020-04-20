@@ -92,7 +92,7 @@ To facilitate understanding and visually convey how CIDOC CRM entities are used 
 
 In addition, fields defined in the Reference Documentation are indicated in bold above their respective class name, as shown below:
 
-<iframe frameborder="0" style="width:100%;height:543px;" src="https://app.diagrams.net?lightbox=1&highlight=0000ff&layers=1&nav=1&title=Conventions_2.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1HILva7PuFDfsCg5daNYxTva-BtlwTjBg%26export%3Ddownload"></iframe>
+<iframe frameborder="0" style="width:100%" src="https://app.diagrams.net?lightbox=1&highlight=0000ff&layers=1&nav=1&title=Conventions_2.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1HILva7PuFDfsCg5daNYxTva-BtlwTjBg%26export%3Ddownload"></iframe>
 
 In the above diagram, the “Birth Place”,  “Birth Date Begin” and “Birth Date End” fields from the Reference Documentation are denoted in bold. In addition to facilitating the understanding of both the Target Model and its Reference Documentation, this also illustrates how the translation of the data to a semantic framework generates several new elements such as `E67 Birth` event and `E52 Time-Span`.
 
