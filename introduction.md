@@ -109,7 +109,7 @@ For example, the triples mapped to the gender pattern mentioned above would look
 
 In this diagram, each instance (the instances of Jean Paul Riopelle, of the gender Male, and of the type Gender) are linked together through properties in accordance with the structure of the corresponding pattern in the model.
 
-```mermaid
+<div class="mermaid">
 graph TD
       	A1(https://chin-rcip.ca/e39/0000001) -->|crm:P98i_was_born| B1(https://chin-rcip.ca/event/start/0000001)
 		B1(https://chin-rcip.ca/event/start/0000001):::Temporal_Entity -->|rdf:type| C1[crm:E67_Birth]:::Temporal_Entity
@@ -138,4 +138,4 @@ graph TD
 		classDef Conceptual_Object fill:#FFD700, stroke:#000000;
 		classDef Physical_Object fill:#D2B48C, stroke:#000000;
 		classDef Actor fill:#F9A8C2, stroke:#000000;
-```    
+</div>    
