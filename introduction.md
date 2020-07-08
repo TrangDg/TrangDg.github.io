@@ -108,3 +108,34 @@ For example, the triples mapped to the gender pattern mentioned above would look
 <iframe frameborder="0" style="width:100%;height:323px;" src="https://app.diagrams.net?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Conventions_4.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1C8p1lpiLNDykkf1HUK4SVfJ6jf0p6UQ5%26export%3Ddownload"></iframe>
 
 In this diagram, each instance (the instances of Jean Paul Riopelle, of the gender Male, and of the type Gender) are linked together through properties in accordance with the structure of the corresponding pattern in the model.
+
+```mermaid
+graph TD
+      	A1(https://chin-rcip.ca/e39/0000001) -->|crm:P98i_was_born| B1(https://chin-rcip.ca/event/start/0000001)
+		B1(https://chin-rcip.ca/event/start/0000001):::Temporal_Entity -->|rdf:type| C1[crm:E67_Birth]:::Temporal_Entity
+		B1(https://chin-rcip.ca/event/start/0000001) -->|rdfs:label| C2("Événement de naissance de Atget, Eugène@fr")
+		B1(https://chin-rcip.ca/event/start/0000001) -->|crm:P7_took_place_at| C3(geo:2998517)
+		C3(geo:2998517):::Place -->|rdf:type| D1[crm:E53_Place]:::Place
+		C3(geo:2998517) -->|rdfs:label| D2("Libourne, France@fr")
+		B1(https://chin-rcip.ca/event/start/0000001) -->|crm:P4_has_time-span| C4(urn:uuid:dad2b7e8-cb47-4b79-be8d-30d29290bfec)
+		C4(urn:uuid:dad2b7e8-cb47-4b79-be8d-30d29290bfec) -->|rdfs:label| D3("Time-Span of Birth of Atget, Eugène@en")
+		C4(urn:uuid:dad2b7e8-cb47-4b79-be8d-30d29290bfec) -->|crm:P82b_end_of_the_end| D4("1856-02-12T23:59:59Z")
+		C4(urn:uuid:dad2b7e8-cb47-4b79-be8d-30d29290bfec) -->|rdfs:label| D5("Durée de l’événement de naissance de Atget, Eugène@fr")
+		C4(urn:uuid:dad2b7e8-cb47-4b79-be8d-30d29290bfec):::Time-Span -->|rdf:type| D6[crm:E52_Time-Span]:::Time-Span
+		C4(urn:uuid:dad2b7e8-cb47-4b79-be8d-30d29290bfec) -->|crm:P82a_begin_of_the_begin| D7("1856-02-12T00:00:00Z")
+		B1(https://chin-rcip.ca/event/start/0000001) -->|rdfs:label| C5("Birth event of Atget, Eugène@en")
+		A1(https://chin-rcip.ca/e39/0000001) -->|rdfs:label| B2("Eugène Atget@fr")
+		A1(https://chin-rcip.ca/e39/0000001):::Actor -->|rdf:type| B3[crm:E21_Person]:::Actor
+
+		classDef default fill:#FFFFFF,stroke:#000000;
+		classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
+		classDef Temporal_Entity fill:#00C9E6, stroke:#000000;
+		classDef Type fill:#E18312, stroke:#000000;
+		classDef Time-Span fill:#2C9C91, stroke:#000000;
+		classDef Appellation fill:#FFEB7F, stroke:#000000;
+		classDef Place fill:#008836, stroke:#000000;
+		classDef Persistent_Item fill:#A4A0A3, stroke:#000000;
+		classDef Conceptual_Object fill:#FFD700, stroke:#000000;
+		classDef Physical_Object fill:#D2B48C, stroke:#000000;
+		classDef Actor fill:#F9A8C2, stroke:#000000;
+```    
