@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
+# Visualization of RDF data using Mermaid JS
 
-    <h1>Visualization of RDF data using Mermaid JS</h1>
-    <br>
-    Diagram of <b>Identifier</b> and <b>Applellation</b> of <b><i>Eugène Atget</i></b>:
- <div class="mermaid" id='d1'>
-   	graph TD
+#### Diagram of <b>Identifier</b> and <b>Applellation</b> of <b><i>Eugène Atget</i></b>:
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+
+<div class="mermaid">
+	graph TD
    	classDef default fill:#FFFFFF,stroke:#000000;
 		classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
 		classDef Temporal_Entity fill:#00C9E6, stroke:#000000;
@@ -57,13 +55,12 @@
 	B3([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]):::Appellation -->|rdf:type| C13[crm:E41_Appellation]:::Appellation
 	A1([https://chin-rcip.ca/e39/0000001]) -->|rdfs:label| B4(["Eugène Atget@fr"])
 
-	
-   </div>
-   <br>
-    Diagram of the <b>Birth Event</b> pattern of <b><i>Eugène Atget</i></b>:
-    <div class="mermaid" id='d2'>
-    	graph TD
+</div>
 
+####  Diagram of the <b>Birth Event</b> pattern of <b><i>Eugène Atget</i></b>:
+
+<div class="mermaid">
+	graph TD
 classDef Literal fill:#ffcccc,stroke:#ff4d4d;
 classDef URI fill:#ff9999,stroke:#000000;
 classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
@@ -91,10 +88,12 @@ C4([geo:2998517]) -->|rdf:type| D7[crm:E53_Place]:::Place
 B1([https://chin-rcip.ca/event/start/0000001]):::URI -->|rdfs:label| C5(["Événement de naissance de Atget, Eugène@fr"]):::Literal
 A1([https://chin-rcip.ca/e39/0000001]) -->|rdf:type| B2[crm:E21_Person]:::Actor
 A1([https://chin-rcip.ca/e39/0000001]):::URI -->|rdfs:label| B3(["Eugène Atget@fr"]):::Literal
-    </div>
 
+</div>
+
+####  Diagram of the <b>Relationshio</b> pattern of <b><i>François Baillairgé</i></b> and <b><i>William-Duval Baillairgé</i></b>:
 <div class="mermaid">
-graph TD
+	graph TD
 classDef Literal fill:#f2f2f2,stroke:#a6a6a6;
 classDef URI fill:#cccccc,stroke:#000000;
 classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
@@ -134,13 +133,4 @@ C3([urn:uuid:605caa81-dc27-4567-a0c2-a3f3481752b5]) -->|rdf:type| D6[crm:E7_Acti
 B1([urn:uuid:d672c449-1473-4a86-8969-0749a5e27f0c]) -->|rdf:type| C4[crm:PC14_carried_out_by]:::PC_Classes
 A1([https://chin-rcip.ca/e39/0000002]):::URI -->|rdfs:label| B2(["François Baillairgé@fr"]):::Literal
 A1([https://chin-rcip.ca/e39/0000002]) -->|rdf:type| B3[crm:E21_Person]:::Actor
-
 </div>
-
-  <!--   <style>
-    	#d1, #d2 {
-    		width:;
-    	}
-    </style> -->
-  </body>
-</html>
