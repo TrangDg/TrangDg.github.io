@@ -1,6 +1,6 @@
 # Visualization of RDF data using Mermaid JS
 
-#### Diagram of <b>Identifier</b> and <b>Applellation</b> of <b><i>Eugène Atget</i></b>:
+#### Diagram of Identifier and Applellation of <i>Eugène Atget</i>:
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
@@ -57,7 +57,7 @@
 
 </div>
 
-####  Diagram of the <b>Birth Event</b> pattern of <b><i>Eugène Atget</i></b>:
+####  Diagram of the Birth Event pattern of <i>Eugène Atget</i>:
 
 <div class="mermaid">
 	graph TD
@@ -91,7 +91,8 @@ A1([https://chin-rcip.ca/e39/0000001]):::URI -->|rdfs:label| B3(["Eugène Atget@
 
 </div>
 
-####  Diagram of the <b>Relationshio</b> pattern of <b><i>François Baillairgé</i></b> and <b><i>William-Duval Baillairgé</i></b>:
+####  Diagram of the Relationship pattern of <i>François Baillairgé</i>and <i>William-Duval Baillairgé</i>:
+
 <div class="mermaid">
 	graph TD
 classDef Literal fill:#f2f2f2,stroke:#a6a6a6;
