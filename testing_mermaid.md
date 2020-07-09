@@ -1,9 +1,78 @@
 # Visualization of RDF data using Mermaid JS
 
-#### Diagram of Identifier and Applellation of <i>Eugène Atget</i>:
-
 <script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
+
+### Philippe's RDf exmaple of Existence pattern
+
+```html
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.rdm.net/person/0001> a crm:E21_Person ;
+	crm:P98i_was_born <https://www.rdm.net/event/0001> ;
+	crm:P100i_died_in <https://www.rdm.net/event/0002> .
+
+<https://www.rdm.net/event/0001> a crm:E67_Birth ;
+	crm:P4_has_time-span <http://www.rdm.net/time-span/0001> ;
+	crm:P7_took_place_at <http://www.rdm.net/place/0001> .
+
+<https://www.rdm.net/event/0002> a crm:E67_Birth ;
+	crm:P4_has_time-span <http://www.rdm.net/time-span/0002> ;
+	crm:P7_took_place_at <http://www.rdm.net/place/0002> .
+
+<http://www.rdm.net/time-span/0001> a crm:E52_Time-Span ;
+	crm:P82a_begin_of_the_begin "1900-02-20T00:00:00-04:00"^^xsd:dateTime ;
+	crm:P82b_end_of_the_end "1900-02-20T23:59:59-04:00"^^xsd:dateTime .
+
+<http://www.rdm.net/time-span/0002> a crm:E52_Time-Span ;
+	crm:P82a_begin_of_the_begin "1985-12-25T00:00:00-04:00"^^xsd:dateTime ;
+	crm:P82b_end_of_the_end "1985-12-25T23:59:59-04:00"^^xsd:dateTime .
+
+<http://www.rdm.net/place/0001> a crm:E53_Place .
+
+<http://www.rdm.net/place/0002> a crm:E53_Place .
+
+```
+
+### Diagram
+
+<div class="mermaid">
+graph TD
+classDef Literal fill:#f2f2f2,stroke:#a6a6a6;
+classDef URI fill:#cccccc,stroke:#000000;
+classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
+classDef Temporal_Entity fill:#00C9E6, stroke:#000000;
+classDef Type fill:#E18312, stroke:#000000;
+classDef Time-Span fill:#2C9C91, stroke:#000000;
+classDef Appellation fill:#FFEB7F, stroke:#000000;
+classDef Place fill:#008836, stroke:#000000;
+classDef Persistent_Item fill:#A4A0A3, stroke:#000000;
+classDef Conceptual_Object fill:#FFD700, stroke:#000000;
+classDef Physical_Object fill:#D2B48C, stroke:#000000;
+classDef Actor fill:#F9A8C2, stroke:#000000;
+classDef PC_Classes fill:#bbff99, stroke:#000000;
+A1([https://www.rdm.net/person/0001]) -->|rdf:type| B1[crm:E21_Person]:::Actor
+A1([https://www.rdm.net/person/0001]):::URI -->|crm:P100i_died_in| B2([https://www.rdm.net/event/0002]):::Literal
+B2([https://www.rdm.net/event/0002]):::URI -->|crm:P7_took_place_at| C1([http://www.rdm.net/place/0002]):::Literal
+C1([http://www.rdm.net/place/0002]) -->|rdf:type| D1[crm:E53_Place]:::Place
+B2([https://www.rdm.net/event/0002]) -->|rdf:type| C2[crm:E67_Birth]:::Temporal_Entity
+B2([https://www.rdm.net/event/0002]):::URI -->|crm:P4_has_time-span| C3([http://www.rdm.net/time-span/0002]):::Literal
+C3([http://www.rdm.net/time-span/0002]) -->|rdf:type| D2[crm:E52_Time-Span]:::Time-Span
+C3([http://www.rdm.net/time-span/0002]):::URI -->|crm:P82a_begin_of_the_begin| D3(["1985-12-25T00:00:00-04:00"^^xsd:dateTime]):::Literal
+C3([http://www.rdm.net/time-span/0002]):::URI -->|crm:P82b_end_of_the_end| D4(["1985-12-25T23:59:59-04:00"^^xsd:dateTime]):::Literal
+A1([https://www.rdm.net/person/0001]):::URI -->|crm:P98i_was_born| B3([https://www.rdm.net/event/0001]):::Literal
+B3([https://www.rdm.net/event/0001]):::URI -->|crm:P4_has_time-span| C4([http://www.rdm.net/time-span/0001]):::Literal
+C4([http://www.rdm.net/time-span/0001]) -->|rdf:type| D5[crm:E52_Time-Span]:::Time-Span
+C4([http://www.rdm.net/time-span/0001]):::URI -->|crm:P82b_end_of_the_end| D6(["1900-02-20T23:59:59-04:00"^^xsd:dateTime]):::Literal
+C4([http://www.rdm.net/time-span/0001]):::URI -->|crm:P82a_begin_of_the_begin| D7(["1900-02-20T00:00:00-04:00"^^xsd:dateTime]):::Literal
+B3([https://www.rdm.net/event/0001]):::URI -->|crm:P7_took_place_at| C5([http://www.rdm.net/place/0001]):::Literal
+C5([http://www.rdm.net/place/0001]) -->|rdf:type| D8[crm:E53_Place]:::Place
+B3([https://www.rdm.net/event/0001]) -->|rdf:type| C6[crm:E67_Birth]:::Temporal_Entity
+</div>
+
+#### Diagram of Identifier and Applellation of <i>Eugène Atget</i>:
 
 <div class="mermaid">
 	graph TD
