@@ -3,7 +3,7 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 
-### Philippe's RDf exmaple of Existence pattern
+### Philippe's RDF example of Existence pattern
 
 ```html
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
@@ -36,7 +36,7 @@
 
 ```
 
-### Diagram
+#### Diagram
 
 <div class="mermaid">
 graph TD
@@ -71,6 +71,8 @@ B3([https://www.rdm.net/event/0001]):::URI -->|crm:P7_took_place_at| C5([http://
 C5([http://www.rdm.net/place/0001]) -->|rdf:type| D8[crm:E53_Place]:::Place
 B3([https://www.rdm.net/event/0001]) -->|rdf:type| C6[crm:E67_Birth]:::Temporal_Entity
 </div>
+
+### Other examples from MAC dataset
 
 #### Diagram of Identifier and Applellation of <i>Eugène Atget</i>:
 
