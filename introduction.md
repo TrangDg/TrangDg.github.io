@@ -110,6 +110,6 @@ For example, the triples mapped to the gender pattern mentioned above would look
 In this diagram, each instance (the instances of Jean Paul Riopelle, of the gender Male, and of the type Gender) are linked together through properties in accordance with the structure of the corresponding pattern in the model.
 <script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
-<div class="mermaid">
+
 @mermaid[](diagram/diagram1.mmd)
-</div>    
+
