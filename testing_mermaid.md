@@ -18,7 +18,7 @@
 	crm:P4_has_time-span <http://www.rdm.net/time-span/0001> ;
 	crm:P7_took_place_at <http://www.rdm.net/place/0001> .
 
-<https://www.rdm.net/event/0002> a crm:E67_Birth ;
+<https://www.rdm.net/event/0002> a crm:E69_Death ;
 	crm:P4_has_time-span <http://www.rdm.net/time-span/0002> ;
 	crm:P7_took_place_at <http://www.rdm.net/place/0002> .
 
@@ -53,23 +53,24 @@ classDef Conceptual_Object fill:#FFD700, stroke:#000000;
 classDef Physical_Object fill:#D2B48C, stroke:#000000;
 classDef Actor fill:#F9A8C2, stroke:#000000;
 classDef PC_Classes fill:#bbff99, stroke:#000000;
-A1([https://www.rdm.net/person/0001]) -->|rdf:type| B1[crm:E21_Person]:::Actor
-A1([https://www.rdm.net/person/0001]):::URI -->|crm:P100i_died_in| B2([https://www.rdm.net/event/0002]):::Literal
-B2([https://www.rdm.net/event/0002]):::URI -->|crm:P7_took_place_at| C1([http://www.rdm.net/place/0002]):::Literal
+A1([https://www.rdm.net/person/0001]):::URI -->|crm:P100i_died_in| B1([https://www.rdm.net/event/0002]):::Literal
+B1([https://www.rdm.net/event/0002]):::URI -->|crm:P7_took_place_at| C1([http://www.rdm.net/place/0002]):::Literal
 C1([http://www.rdm.net/place/0002]) -->|rdf:type| D1[crm:E53_Place]:::Place
-B2([https://www.rdm.net/event/0002]) -->|rdf:type| C2[crm:E67_Birth]:::Temporal_Entity
-B2([https://www.rdm.net/event/0002]):::URI -->|crm:P4_has_time-span| C3([http://www.rdm.net/time-span/0002]):::Literal
-C3([http://www.rdm.net/time-span/0002]) -->|rdf:type| D2[crm:E52_Time-Span]:::Time-Span
-C3([http://www.rdm.net/time-span/0002]):::URI -->|crm:P82a_begin_of_the_begin| D3(["1985-12-25T00:00:00-04:00"^^xsd:dateTime]):::Literal
+B1([https://www.rdm.net/event/0002]) -->|rdf:type| C2[crm:E69_Death]:::Temporal_Entity
+B1([https://www.rdm.net/event/0002]):::URI -->|crm:P4_has_time-span| C3([http://www.rdm.net/time-span/0002]):::Literal
+C3([http://www.rdm.net/time-span/0002]):::URI -->|crm:P82a_begin_of_the_begin| D2(["1985-12-25T00:00:00-04:00"^^xsd:dateTime]):::Literal
+C3([http://www.rdm.net/time-span/0002]) -->|rdf:type| D3[crm:E52_Time-Span]:::Time-Span
 C3([http://www.rdm.net/time-span/0002]):::URI -->|crm:P82b_end_of_the_end| D4(["1985-12-25T23:59:59-04:00"^^xsd:dateTime]):::Literal
-A1([https://www.rdm.net/person/0001]):::URI -->|crm:P98i_was_born| B3([https://www.rdm.net/event/0001]):::Literal
-B3([https://www.rdm.net/event/0001]):::URI -->|crm:P4_has_time-span| C4([http://www.rdm.net/time-span/0001]):::Literal
-C4([http://www.rdm.net/time-span/0001]) -->|rdf:type| D5[crm:E52_Time-Span]:::Time-Span
-C4([http://www.rdm.net/time-span/0001]):::URI -->|crm:P82b_end_of_the_end| D6(["1900-02-20T23:59:59-04:00"^^xsd:dateTime]):::Literal
-C4([http://www.rdm.net/time-span/0001]):::URI -->|crm:P82a_begin_of_the_begin| D7(["1900-02-20T00:00:00-04:00"^^xsd:dateTime]):::Literal
-B3([https://www.rdm.net/event/0001]):::URI -->|crm:P7_took_place_at| C5([http://www.rdm.net/place/0001]):::Literal
-C5([http://www.rdm.net/place/0001]) -->|rdf:type| D8[crm:E53_Place]:::Place
-B3([https://www.rdm.net/event/0001]) -->|rdf:type| C6[crm:E67_Birth]:::Temporal_Entity
+A1([https://www.rdm.net/person/0001]):::URI -->|crm:P98i_was_born| B2([https://www.rdm.net/event/0001]):::Literal
+B2([https://www.rdm.net/event/0001]):::URI -->|crm:P7_took_place_at| C4([http://www.rdm.net/place/0001]):::Literal
+C4([http://www.rdm.net/place/0001]) -->|rdf:type| D5[crm:E53_Place]:::Place
+B2([https://www.rdm.net/event/0001]) -->|rdf:type| C5[crm:E67_Birth]:::Temporal_Entity
+B2([https://www.rdm.net/event/0001]):::URI -->|crm:P4_has_time-span| C6([http://www.rdm.net/time-span/0001]):::Literal
+C6([http://www.rdm.net/time-span/0001]):::URI -->|crm:P82b_end_of_the_end| D6(["1900-02-20T23:59:59-04:00"^^xsd:dateTime]):::Literal
+C6([http://www.rdm.net/time-span/0001]) -->|rdf:type| D7[crm:E52_Time-Span]:::Time-Span
+C6([http://www.rdm.net/time-span/0001]):::URI -->|crm:P82a_begin_of_the_begin| D8(["1900-02-20T00:00:00-04:00"^^xsd:dateTime]):::Literal
+A1([https://www.rdm.net/person/0001]) -->|rdf:type| B3[crm:E21_Person]:::Actor
+
 </div>
 
 ### Other examples from MAC dataset
