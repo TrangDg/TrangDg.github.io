@@ -108,8 +108,9 @@ For example, the triples mapped to the gender pattern mentioned above would look
 <iframe frameborder="0" style="width:100%;height:323px;" src="https://app.diagrams.net?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Conventions_4.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1C8p1lpiLNDykkf1HUK4SVfJ6jf0p6UQ5%26export%3Ddownload"></iframe>
 
 In this diagram, each instance (the instances of Jean Paul Riopelle, of the gender Male, and of the type Gender) are linked together through properties in accordance with the structure of the corresponding pattern in the model.
-
-```mermaid
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+<div class="mermaid">
 graph TD
       	A1(https://chin-rcip.ca/e39/0000001) -->|crm:P98i_was_born| B1(https://chin-rcip.ca/event/start/0000001)
 		B1(https://chin-rcip.ca/event/start/0000001):::Temporal_Entity -->|rdf:type| C1[crm:E67_Birth]:::Temporal_Entity
@@ -138,4 +139,4 @@ graph TD
 		classDef Conceptual_Object fill:#FFD700, stroke:#000000;
 		classDef Physical_Object fill:#D2B48C, stroke:#000000;
 		classDef Actor fill:#F9A8C2, stroke:#000000;
-```    
+</div>    
