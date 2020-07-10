@@ -1,8 +1,5 @@
 # Visualization of RDF data using Mermaid JS
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
-
 ### Philippe's RDF example of Existence pattern
 
 ```html
@@ -38,7 +35,7 @@
 
 #### Diagram
 
-<div class="mermaid">
+<div class="mermaid" onclick="sizeToggle(this)">
 graph TD
 classDef Literal fill:#f2f2f2,stroke:#a6a6a6;
 classDef URI fill:#cccccc,stroke:#000000;
@@ -77,7 +74,7 @@ A1([https://www.rdm.net/person/0001]) -->|rdf:type| B3[crm:E21_Person]:::Actor
 
 #### Diagram of Identifier and Applellation of <i>Eugène Atget</i>:
 
-<div class="mermaid">
+<div class="mermaid" onclick="sizeToggle(this)">
 	graph TD
    	classDef default fill:#FFFFFF,stroke:#000000;
 		classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
@@ -131,7 +128,7 @@ A1([https://www.rdm.net/person/0001]) -->|rdf:type| B3[crm:E21_Person]:::Actor
 
 ####  Diagram of the Birth Event pattern of <i>Eugène Atget</i>:
 
-<div class="mermaid">
+<div class="mermaid" onclick="sizeToggle(this)">
 	graph TD
 classDef Literal fill:#ffcccc,stroke:#ff4d4d;
 classDef URI fill:#ff9999,stroke:#000000;
@@ -165,7 +162,7 @@ A1([https://chin-rcip.ca/e39/0000001]):::URI -->|rdfs:label| B3(["''Eugène Atge
 
 ####  Diagram of the Relationship pattern of <i>François Baillairgé</i>and <i>William-Duval Baillairgé</i>:
 
-<div class="mermaid">
+<div class="mermaid" onclick="sizeToggle(this)">
 	graph TD
 classDef Literal fill:#f2f2f2,stroke:#a6a6a6;
 classDef URI fill:#cccccc,stroke:#000000;
@@ -207,3 +204,45 @@ B1([urn:uuid:d672c449-1473-4a86-8969-0749a5e27f0c]) -->|rdf:type| C4[crm:PC14_ca
 A1([https://chin-rcip.ca/e39/0000002]):::URI -->|rdfs:label| B2(["''François Baillairgé''@fr"]):::Literal
 A1([https://chin-rcip.ca/e39/0000002]) -->|rdf:type| B3[crm:E21_Person]:::Actor
 </div>
+
+<style>
+	.mermaid {
+		border: 1px dashed #808080;
+	    border-radius: 5px;
+	    margin: 10px;
+	    padding: 3px;
+	    overflow: scroll;
+	}
+	svg {
+		/*width: 100%;
+		height: 100%;*/
+		cursor: pointer;
+	}
+	
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
+<!-- <script>mermaid.initialize({startOnLoad:true});</script> -->
+ <script>
+    var config = {
+        startOnLoad:true,
+        flowchart:{
+                useMaxWidth:true,
+                htmlLabels:true,
+                curve:'basis',
+                rankSpacing:100
+        }
+    };
+    mermaid.initialize(config);
+</script>
+
+<script type="text/javascript">
+	function sizeToggle(element) {
+		var svg = element.firstChild;
+		if (svg.attributes.getNamedItem("width").value === "100%") {
+			svg.getAttributeNode("width").value = svg.style.maxWidth;
+		} else {
+			svg.getAttributeNode("width").value =  "100%";
+		}
+	}
+</script>
