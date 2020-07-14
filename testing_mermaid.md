@@ -259,7 +259,7 @@ A1([https://chin-rcip.ca/e39/0000002]) -->|rdf:type| B3[crm:E21_Person]:::Actor
                 useMaxWidth:true,
                 htmlLabels:true,
                 curve:'basis',
-                rankSpacing:100
+                rankSpacing:50
         }
     };
     mermaid.initialize(config);
