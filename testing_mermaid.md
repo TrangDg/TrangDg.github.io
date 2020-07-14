@@ -75,54 +75,70 @@ A1([https://www.rdm.net/person/0001]) -->|rdf:type| B3[crm:E21_Person]:::Actor
 #### Diagram of Identifier and Applellation of <i>Eugène Atget</i>:
 
 <div class="mermaid" onclick="sizeToggle(this)">
-	graph TD
-   	classDef default fill:#FFFFFF,stroke:#000000;
-		classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
-		classDef Temporal_Entity fill:#00C9E6, stroke:#000000;
-		classDef Type fill:#E18312, stroke:#000000;
-		classDef Time-Span fill:#2C9C91, stroke:#000000;
-		classDef Appellation fill:#FFEB7F, stroke:#000000;
-		classDef Place fill:#008836, stroke:#000000;
-		classDef Persistent_Item fill:#B266B2, stroke:#000000;
-		classDef Conceptual_Object fill:#FFD700, stroke:#000000;
-		classDef Physical_Object fill:#D2B48C, stroke:#000000;
-		classDef Actor fill:#F9A8C2, stroke:#000000;
-   	A1([https://chin-rcip.ca/e39/0000001]):::Actor -->|rdf:type| B1[crm:E21_Person]:::Actor
-	A1([https://chin-rcip.ca/e39/0000001]) -->|crm:P1_is_identified_by| B2([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988])
-	B2([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988]) -->|crm:P2_has_type| C1([https://chin-rcip.ca/type/id/MAC_Artistes_ID])
-	C1([https://chin-rcip.ca/type/id/MAC_Artistes_ID]):::Type -->|rdf:type| D1[crm:E55_Type]:::Type
-	C1([https://chin-rcip.ca/type/id/MAC_Artistes_ID]) -->|rdfs:label| D2(["''MAC_Artistes_ID''@en"])
-	B2([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988]) -->|rdfs:label| C2(["''Identifiant de Atget, Eugène''@fr"])
-	B2([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988]):::Appellation -->|rdf:type| C3[crm:E42_Identifier]:::Appellation
-	B2([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988]) -->|rdfs:label| C4(["''Identifier of Atget, Eugène''@en"])
-	B2([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988]) -->|crm:P190_has_symbolic_content| C5(["''380''@en"])
-	A1([https://chin-rcip.ca/e39/0000001]) -->|crm:P1_is_identified_by| B3([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38])
-	B3([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|rdfs:label| C6(["''Appellation complète de Atget, Eugène''@fr"])
-	B3([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|crm:P106_is_composed_of| C7([urn:uuid:31944458-26ee-49eb-987a-e969e391b397])
-	C7([urn:uuid:31944458-26ee-49eb-987a-e969e391b397]) -->|rdfs:label| D3(["''Partie de l’appellation complète de Atget, Eugène''@fr"])
-	C7([urn:uuid:31944458-26ee-49eb-987a-e969e391b397]):::Appellation -->|rdf:type| D4[crm:E41_Appellation]:::Appellation
-	C7([urn:uuid:31944458-26ee-49eb-987a-e969e391b397]) -->|crm:P190_has_symbolic_content| D5(["''Eugène''@fr"])
-	C7([urn:uuid:31944458-26ee-49eb-987a-e969e391b397]) -->|rdfs:label| D6(["''Part of the full appellation of Atget, Eugène''@en"])
-	B3([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|rdfs:label| C8(["''Full appellation of Atget, Eugène''@en"])
-	B3([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]):::Conceptual_Object -->|rdf:type| C9[crm:E33_Linguistic_Object]:::Conceptual_Object
-	B3([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|crm:P190_has_symbolic_content| C10(["''Atget, Eugène''@fr"])
-	B3([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|crm:P2_has_type| C11([aat:300404688])
-	C11([aat:300404688]) -->|crm:P2_has_type| D7([https://chin-rcip.ca/type/appellation_type])
-	D7([https://chin-rcip.ca/type/appellation_type]) -->|rdfs:label| E1(["''Appellation Type''@en"])
-	D7([https://chin-rcip.ca/type/appellation_type]):::Type -->|rdf:type| E2[crm:E55_Type]:::Type
-	C11([aat:300404688]) -->|rdfs:label| D8(["''full name''@en"])
-	C11([aat:300404688]):::Type -->|rdf:type| D9[crm:E55_Type]:::Type
-	B3([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|crm:P106_is_composed_of| C12([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339])
-	C12([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339]):::Appellation -->|rdf:type| D10[crm:E41_Appellation]:::Appellation
-	C12([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339]) -->|crm:P190_has_symbolic_content| D11(["''Atget''@fr"])
-	C12([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339]) -->|crm:P2_has_type| D12([aat:300404652])
-	D12([aat:300404652]) -->|crm:P2_has_type| E3([https://chin-rcip.ca/type/appellation_part_type])
-	D12([aat:300404652]) -->|rdfs:label| E4(["''last name''@en"])
-	D12([aat:300404652]):::Type -->|rdf:type| E5[crm:E55_Type]:::Type
-	C12([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339]) -->|rdfs:label| D13(["''Part of the full appellation of Atget, Eugène''@en"])
-	C12([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339]) -->|rdfs:label| D14(["''Partie de l’appellation complète de Atget, Eugène''@fr"])
-	B3([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]):::Appellation -->|rdf:type| C13[crm:E41_Appellation]:::Appellation
-	A1([https://chin-rcip.ca/e39/0000001]) -->|rdfs:label| B4(["''Eugène Atget''@fr"])
+graph TD
+classDef Literal fill:#f2f2f2,stroke:#000000;
+classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
+classDef CRM_Entity_URI fill:#FFFFFF,stroke:#000000;
+classDef Temporal_Entity fill:#00C9E6, stroke:#000000;
+classDef Temporal_Entity_URI fill:#99f1ff,stroke:#000000;
+classDef Type fill:#E18312, stroke:#000000;
+classDef Type_URI fill:#f6c588,stroke:#000000;
+classDef Time-Span fill:#2C9C91, stroke:#000000;
+classDef Time-Span_URI fill:#9be4dc,stroke:#000000;
+classDef Appellation fill:#FFEB7F, stroke:#000000;
+classDef Appellation_URI fill:#fff6cc,stroke:#000000;
+classDef Place fill:#008836, stroke:#000000;
+classDef Place_URI fill:#33ff85,stroke:#000000;
+classDef Persistent_Item fill:#B266B2, stroke:#000000;
+classDef Persistent_Item_URI fill:#dcbcdc,stroke:#000000;
+classDef Conceptual_Object fill:#FFD700, stroke:#000000;
+classDef Conceptual_Object_URI fill:#fff099,stroke:#000000;
+classDef Physical_Object fill:#D2B48C, stroke:#000000;
+classDef Physical_Object_URI fill:#eadbc8,stroke:#000000;
+classDef Actor fill:#f58aad, stroke:#000000;
+classDef Actor_URI fill:#fbd0de,stroke:#000000;
+classDef PC_Classes fill:#4ce600, stroke:#000000;
+classDef PC_Classes_URI fill:#bbff99,stroke:#000000;
+classDef Multi_URI fill:#cccccc,stroke:#000000;
+0([https://chin-rcip.ca/e39/0000001]) -->|crm:P1_is_identified_by| 1([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38])
+0([https://chin-rcip.ca/e39/0000001]):::Actor_URI -->|rdf:type| 2(["crm:E21_Person"]):::Actor
+0([https://chin-rcip.ca/e39/0000001]) -->|crm:P1_is_identified_by| 3([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988])
+1([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|crm:P2_has_type| 4(["aat:300404688"])
+1([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|crm:P106_is_composed_of| 5([urn:uuid:31944458-26ee-49eb-987a-e969e391b397])
+1([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]):::Conceptual_Object_URI -->|rdf:type| 6["crm:E33_Linguistic_Object"]:::Conceptual_Object
+1([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|rdfs:label| 7(["''Full appellation of Atget, Eugène''@en"]):::Literal
+1([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|crm:P190_has_symbolic_content| 8(["''Atget, Eugène''@fr"]):::Literal
+1([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|crm:P106_is_composed_of| 9([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339])
+1([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]) -->|rdfs:label| 10(["''Appellation complète de Atget, Eugène''@fr"]):::Literal
+1([urn:uuid:61ee1fcc-ab0a-42de-a97f-577c82daaa38]):::Multi_URI -->|rdf:type| 11["crm:E41_Appellation"]:::Appellation
+3([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988]) -->|rdfs:label| 12(["''Identifiant de Atget, Eugène''@fr"]):::Literal
+3([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988]) -->|rdfs:label| 13(["''Identifier of Atget, Eugène''@en"]):::Literal
+3([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988]):::Appellation_URI -->|rdf:type| 14["crm:E42_Identifier"]:::Appellation
+3([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988]) -->|crm:P2_has_type| 15([https://chin-rcip.ca/type/id/MAC_Artistes_ID])
+3([urn:uuid:d15f3774-d59c-4fea-9de9-d67bb4f17988]) -->|crm:P190_has_symbolic_content| 16(["''380''@en"]):::Literal
+4(["aat:300404688"]):::Type_URI -->|rdf:type| 17["crm:E55_Type"]:::Type
+4(["aat:300404688"]) -->|rdfs:label| 18(["''full name''@en"]):::Literal
+4(["aat:300404688"]) -->|crm:P2_has_type| 19([https://chin-rcip.ca/type/appellation_type])
+5([urn:uuid:31944458-26ee-49eb-987a-e969e391b397]) -->|rdfs:label| 20(["''Part of the full appellation of Atget, Eugène''@en"]):::Literal
+5([urn:uuid:31944458-26ee-49eb-987a-e969e391b397]) -->|rdfs:label| 21(["''Partie de l’appellation complète de Atget, Eugène''@fr"]):::Literal
+5([urn:uuid:31944458-26ee-49eb-987a-e969e391b397]):::Appellation_URI -->|rdf:type| 22["crm:E41_Appellation"]:::Appellation
+5([urn:uuid:31944458-26ee-49eb-987a-e969e391b397]) -->|crm:P190_has_symbolic_content| 23(["''Eugène''@fr"]):::Literal
+9([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339]) -->|rdfs:label| 24(["''Partie de l’appellation complète de Atget, Eugène''@fr"]):::Literal
+9([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339]) -->|rdfs:label| 25(["''Part of the full appellation of Atget, Eugène''@en"]):::Literal
+9([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339]) -->|crm:P190_has_symbolic_content| 26(["''Atget''@fr"]):::Literal
+9([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339]) -->|crm:P2_has_type| 27(["aat:300404652"])
+9([urn:uuid:048747f0-daf7-4fae-bf5f-4d6cc4cce339]):::Appellation_URI -->|rdf:type| 28["crm:E41_Appellation"]:::Appellation
+15([https://chin-rcip.ca/type/id/MAC_Artistes_ID]) -->|rdfs:label| 29(["''MAC_Artistes_ID''@en"]):::Literal
+15([https://chin-rcip.ca/type/id/MAC_Artistes_ID]):::Type_URI -->|rdf:type| 30["crm:E55_Type"]:::Type
+19([https://chin-rcip.ca/type/appellation_type]):::Type_URI -->|rdf:type| 31["crm:E55_Type"]:::Type
+19([https://chin-rcip.ca/type/appellation_type]) -->|rdfs:label| 32(["''Appellation Type''@en"]):::Literal
+27(["aat:300404652"]) -->|crm:P2_has_type| 33([https://chin-rcip.ca/type/appellation_part_type])
+27(["aat:300404652"]):::Type_URI -->|rdf:type| 34["crm:E55_Type"]:::Type
+27(["aat:300404652"]) -->|rdfs:label| 35(["''last name''@en"]):::Literal
+33([https://chin-rcip.ca/type/appellation_part_type]):::Type_URI -->|rdf:type| 36["crm:E55_Type"]:::Type
+33([https://chin-rcip.ca/type/appellation_part_type]) -->|rdfs:label| 37(["''Appellation Part Type''@en"]):::Literal
+0([https://chin-rcip.ca/e39/0000001]) -->|rdf:label| 38(["Eugène Atget"]):::Literal
+
 
 </div>
 
