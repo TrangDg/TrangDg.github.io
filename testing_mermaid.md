@@ -37,36 +37,48 @@
 
 <div class="mermaid" onclick="sizeToggle(this)">
 graph TD
-classDef Literal fill:#f2f2f2,stroke:#a6a6a6;
-classDef URI fill:#cccccc,stroke:#000000;
+classDef Literal fill:#f2f2f2,stroke:#000000;
 classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
+classDef CRM_Entity_URI fill:#FFFFFF,stroke:#000000;
 classDef Temporal_Entity fill:#00C9E6, stroke:#000000;
+classDef Temporal_Entity_URI fill:#99f1ff,stroke:#000000;
 classDef Type fill:#E18312, stroke:#000000;
+classDef Type_URI fill:#f6c588,stroke:#000000;
 classDef Time-Span fill:#2C9C91, stroke:#000000;
+classDef Time-Span_URI fill:#9be4dc,stroke:#000000;
 classDef Appellation fill:#FFEB7F, stroke:#000000;
+classDef Appellation_URI fill:#fff6cc,stroke:#000000;
 classDef Place fill:#008836, stroke:#000000;
+classDef Place_URI fill:#33ff85,stroke:#000000;
 classDef Persistent_Item fill:#B266B2, stroke:#000000;
+classDef Persistent_Item_URI fill:#dcbcdc,stroke:#000000;
 classDef Conceptual_Object fill:#FFD700, stroke:#000000;
+classDef Conceptual_Object_URI fill:#fff099,stroke:#000000;
 classDef Physical_Object fill:#D2B48C, stroke:#000000;
-classDef Actor fill:#F9A8C2, stroke:#000000;
-classDef PC_Classes fill:#bbff99, stroke:#000000;
-A1([https://www.rdm.net/person/0001]):::URI -->|crm:P100i_died_in| B1([https://www.rdm.net/event/0002]):::Literal
-B1([https://www.rdm.net/event/0002]):::URI -->|crm:P7_took_place_at| C1([http://www.rdm.net/place/0002]):::Literal
-C1([http://www.rdm.net/place/0002]) -->|rdf:type| D1[crm:E53_Place]:::Place
-B1([https://www.rdm.net/event/0002]) -->|rdf:type| C2[crm:E69_Death]:::Temporal_Entity
-B1([https://www.rdm.net/event/0002]):::URI -->|crm:P4_has_time-span| C3([http://www.rdm.net/time-span/0002]):::Literal
-C3([http://www.rdm.net/time-span/0002]):::URI -->|crm:P82a_begin_of_the_begin| D2(["''1985-12-25T00:00:00-04:00''^^xsd:dateTime"]):::Literal
-C3([http://www.rdm.net/time-span/0002]) -->|rdf:type| D3[crm:E52_Time-Span]:::Time-Span
-C3([http://www.rdm.net/time-span/0002]):::URI -->|crm:P82b_end_of_the_end| D4(["''1985-12-25T23:59:59-04:00''^^xsd:dateTime"]):::Literal
-A1([https://www.rdm.net/person/0001]):::URI -->|crm:P98i_was_born| B2([https://www.rdm.net/event/0001]):::Literal
-B2([https://www.rdm.net/event/0001]):::URI -->|crm:P7_took_place_at| C4([http://www.rdm.net/place/0001]):::Literal
-C4([http://www.rdm.net/place/0001]) -->|rdf:type| D5[crm:E53_Place]:::Place
-B2([https://www.rdm.net/event/0001]) -->|rdf:type| C5[crm:E67_Birth]:::Temporal_Entity
-B2([https://www.rdm.net/event/0001]):::URI -->|crm:P4_has_time-span| C6([http://www.rdm.net/time-span/0001]):::Literal
-C6([http://www.rdm.net/time-span/0001]):::URI -->|crm:P82b_end_of_the_end| D6(["''1900-02-20T23:59:59-04:00''^^xsd:dateTime"]):::Literal
-C6([http://www.rdm.net/time-span/0001]) -->|rdf:type| D7[crm:E52_Time-Span]:::Time-Span
-C6([http://www.rdm.net/time-span/0001]):::URI -->|crm:P82a_begin_of_the_begin| D8(["''1900-02-20T00:00:00-04:00''^^xsd:dateTime"]):::Literal
-A1([https://www.rdm.net/person/0001]) -->|rdf:type| B3[crm:E21_Person]:::Actor
+classDef Physical_Object_URI fill:#eadbc8,stroke:#000000;
+classDef Actor fill:#f58aad, stroke:#000000;
+classDef Actor_URI fill:#fbd0de,stroke:#000000;
+classDef PC_Classes fill:#4ce600, stroke:#000000;
+classDef PC_Classes_URI fill:#bbff99,stroke:#000000;
+classDef Multi_URI fill:#cccccc,stroke:#000000;
+0([https://www.rdm.net/person/0001]) -->|crm:P100i_died_in| 1([https://www.rdm.net/event/0002])
+0([https://www.rdm.net/person/0001]):::Actor_URI -->|rdf:type| 2["crm:E21_Person"]:::Actor
+0([https://www.rdm.net/person/0001]) -->|crm:P98i_was_born| 3([https://www.rdm.net/event/0001])
+1([https://www.rdm.net/event/0002]) -->|crm:P7_took_place_at| 4([http://www.rdm.net/place/0002])
+1([https://www.rdm.net/event/0002]) -->|crm:P4_has_time-span| 5([http://www.rdm.net/time-span/0002])
+1([https://www.rdm.net/event/0002]):::Temporal_Entity_URI -->|rdf:type| 6["crm:E69_Death"]:::Temporal_Entity
+3([https://www.rdm.net/event/0001]) -->|crm:P7_took_place_at| 7([http://www.rdm.net/place/0001])
+3([https://www.rdm.net/event/0001]):::Temporal_Entity_URI -->|rdf:type| 8["crm:E67_Birth"]:::Temporal_Entity
+3([https://www.rdm.net/event/0001]) -->|crm:P4_has_time-span| 9([http://www.rdm.net/time-span/0001])
+4([http://www.rdm.net/place/0002]):::Place_URI -->|rdf:type| 10["crm:E53_Place"]:::Place
+5([http://www.rdm.net/time-span/0002]) -->|crm:P82b_end_of_the_end| 11(["''1985-12-25T23:59:59-04:00''^^xsd:dateTime"]):::Literal
+5([http://www.rdm.net/time-span/0002]) -->|crm:P82a_begin_of_the_begin| 12(["''1985-12-25T00:00:00-04:00''^^xsd:dateTime"]):::Literal
+5([http://www.rdm.net/time-span/0002]):::Time-Span_URI -->|rdf:type| 13["crm:E52_Time-Span"]:::Time-Span
+7([http://www.rdm.net/place/0001]):::Place_URI -->|rdf:type| 14["crm:E53_Place"]:::Place
+9([http://www.rdm.net/time-span/0001]) -->|crm:P82a_begin_of_the_begin| 15(["''1900-02-20T00:00:00-04:00''^^xsd:dateTime"]):::Literal
+9([http://www.rdm.net/time-span/0001]):::Time-Span_URI -->|rdf:type| 16["crm:E52_Time-Span"]:::Time-Span
+9([http://www.rdm.net/time-span/0001]) -->|crm:P82b_end_of_the_end| 17(["''1900-02-20T23:59:59-04:00''^^xsd:dateTime"]):::Literal
+
 
 </div>
 
