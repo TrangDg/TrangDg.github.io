@@ -5,6 +5,7 @@
 ```html
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.rdm.net/person/0001> a crm:E21_Person ;
@@ -79,7 +80,98 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 9([http://www.rdm.net/time-span/0001]):::Time-Span_URI -->|rdf:type| 16["crm:E52_Time-Span"]:::Time-Span
 9([http://www.rdm.net/time-span/0001]) -->|crm:P82b_end_of_the_end| 17(["''1900-02-20T23:59:59-04:00''^^xsd:dateTime"]):::Literal
 
+</div>
 
+### Example of Dates pattern with Qualifiers (circa)
+
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+# Samuel Oliver Tazewell produced a print titled "Chaudiere Falls, Lower Canada" circa 1832-1833.
+
+# Source Artefacts Canada: https://app.pch.gc.ca/application/artefacts_hum/detailler_detail.app?d=ACTD2FBB7817-22D1-465A-B748-396414803594&w=&t=5&i=false&n=0&p=a&o=a&f=na&k=c.&pID=161&r=50&s=s&in=RiverBrink+Art+Museum&colId=&v=none&l=l&lang=fr
+
+<https://www.heritage.data.canada.ca/e39/0001> a crm:E21_Person ;
+	crm:P14i_performed <https://www.heritage.data.canada.ca/e5/0001> ;
+	crm:P1_is_identified_by <https://www.heritage.data.canada.ca/e41/0001> .
+
+<https://www.heritage.data.canada.ca/e41/0001> a crm:E41_Appellation, crm:E33_Linguistic_Object ;
+	crm:P190_has_symbolic_content "Samuel Oliver Tazewell"^^xsd:string .
+
+<https://www.heritage.data.canada.ca/e5/0001> a crm:E12_Production ;
+	crm:P4_has_time-span <https://www.heritage.data.canada.ca/e52/0001> ;
+	crm:P108_has_produced <https://www.heritage.data.canada.ca/e18/0001>.
+
+<https://www.heritage.data.canada.ca/e18/0001> a crm:E24_Physical_Human-Made_Thing ;
+	crm:P2_has_type aat:300041273 ;
+	crm:P102_has_title <https://www.heritage.data.canada.ca/e41/0002> .
+
+<https://www.heritage.data.canada.ca/e41/0002> a crm:E35_Title ;
+	crm:P190_has_symbolic_content "Chaudiere Falls, Lower Canada"@en .
+
+aat:300041273 a crm:E55_Type ;
+	rdfs:label "prints (visual works)"@en .
+
+<https://www.heritage.data.canada.ca/e52/0001> a crm:E52_Time-Span ;
+	crm:P82a_begin_of_the_begin "1832"^^xsd:dateTime ;
+	crm:P82b_end_of_the_end "1833"^^xsd:dateTime ;
+	crm:P79_beginning_is_qualified_by "circa"@la ;
+	crm:P80_end_is_qualified_by "circa"@la . 
+
+```
+#### Diagram
+
+<div class="mermaid" onclick="sizeToggle(this)">
+graph TD
+classDef Literal fill:#f2f2f2,stroke:#000000;
+classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
+classDef CRM_Entity_URI fill:#FFFFFF,stroke:#000000;
+classDef Temporal_Entity fill:#00C9E6, stroke:#000000;
+classDef Temporal_Entity_URI fill:#99f1ff,stroke:#000000;
+classDef Type fill:#E18312, stroke:#000000;
+classDef Type_URI fill:#f6c588,stroke:#000000;
+classDef Time-Span fill:#2C9C91, stroke:#000000;
+classDef Time-Span_URI fill:#9be4dc,stroke:#000000;
+classDef Appellation fill:#FFEB7F, stroke:#000000;
+classDef Appellation_URI fill:#fff6cc,stroke:#000000;
+classDef Place fill:#008836, stroke:#000000;
+classDef Place_URI fill:#33ff85,stroke:#000000;
+classDef Persistent_Item fill:#B266B2, stroke:#000000;
+classDef Persistent_Item_URI fill:#dcbcdc,stroke:#000000;
+classDef Conceptual_Object fill:#FFD700, stroke:#000000;
+classDef Conceptual_Object_URI fill:#fff099,stroke:#000000;
+classDef Physical_Object fill:#D2B48C, stroke:#000000;
+classDef Physical_Object_URI fill:#eadbc8,stroke:#000000;
+classDef Actor fill:#f58aad, stroke:#000000;
+classDef Actor_URI fill:#fbd0de,stroke:#000000;
+classDef PC_Classes fill:#4ce600, stroke:#000000;
+classDef PC_Classes_URI fill:#bbff99,stroke:#000000;
+classDef Multi_URI fill:#cccccc,stroke:#000000;
+0([https://www.heritage.data.canada.ca/e39/0001]):::Actor_URI -->|rdf:type| 1["crm:E21_Person"]:::Actor
+0([https://www.heritage.data.canada.ca/e39/0001]) -->|crm:P1_is_identified_by| 2([https://www.heritage.data.canada.ca/e41/0001])
+0([https://www.heritage.data.canada.ca/e39/0001]) -->|crm:P14i_performed| 3([https://www.heritage.data.canada.ca/e5/0001])
+2([https://www.heritage.data.canada.ca/e41/0001]):::Conceptual_Object_URI -->|rdf:type| 4["crm:E33_Linguistic_Object"]:::Conceptual_Object
+2([https://www.heritage.data.canada.ca/e41/0001]):::Multi_URI -->|rdf:type| 5["crm:E41_Appellation"]:::Appellation
+2([https://www.heritage.data.canada.ca/e41/0001]) -->|crm:P190_has_symbolic_content| 6(["''Samuel Oliver Tazewell''^^xsd:string"]):::Literal
+3([https://www.heritage.data.canada.ca/e5/0001]) -->|crm:P108_has_produced| 7([https://www.heritage.data.canada.ca/e18/0001])
+3([https://www.heritage.data.canada.ca/e5/0001]) -->|crm:P4_has_time-span| 8([https://www.heritage.data.canada.ca/e52/0001])
+3([https://www.heritage.data.canada.ca/e5/0001]):::Temporal_Entity_URI -->|rdf:type| 9["crm:E12_Production"]:::Temporal_Entity
+7([https://www.heritage.data.canada.ca/e18/0001]) -->|crm:P2_has_type| 10(["aat:300041273"])
+7([https://www.heritage.data.canada.ca/e18/0001]) -->|crm:P102_has_title| 11([https://www.heritage.data.canada.ca/e41/0002])
+7([https://www.heritage.data.canada.ca/e18/0001]):::Persistent_Item_URI -->|rdf:type| 12["crm:E24_Physical_Human-Made_Thing"]:::Persistent_Item
+8([https://www.heritage.data.canada.ca/e52/0001]) -->|crm:P80_end_is_qualified_by| 13(["''circa''@la"]):::Literal
+8([https://www.heritage.data.canada.ca/e52/0001]) -->|crm:P79_beginning_is_qualified_by| 14(["''circa''@la"]):::Literal
+8([https://www.heritage.data.canada.ca/e52/0001]):::Time-Span_URI -->|rdf:type| 15["crm:E52_Time-Span"]:::Time-Span
+8([https://www.heritage.data.canada.ca/e52/0001]) -->|crm:P82b_end_of_the_end| 16(["''1833''^^xsd:dateTime"]):::Literal
+8([https://www.heritage.data.canada.ca/e52/0001]) -->|crm:P82a_begin_of_the_begin| 17(["''1832''^^xsd:dateTime"]):::Literal
+10(["aat:300041273"]):::Type_URI -->|rdf:type| 18["crm:E55_Type"]:::Type
+10(["aat:300041273"]) -->|rdfs:label| 19(["''prints (visual works)''@en"]):::Literal
+11([https://www.heritage.data.canada.ca/e41/0002]):::Appellation_URI -->|rdf:type| 20["crm:E35_Title"]:::Appellation
+11([https://www.heritage.data.canada.ca/e41/0002]) -->|crm:P190_has_symbolic_content| 21(["''Chaudiere Falls, Lower Canada''@en"]):::Literal
 </div>
 
 ### Other examples from MAC dataset
@@ -198,10 +290,9 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 7(["geo:2998517"]) -->|rdfs:label| 14(["''Libourne, France''@fr"]):::Literal
 0([https://chin-rcip.ca/e39/0000001]) -->|rdf:label| 15(["Eugène Atget"]):::Literal
 
-
 </div>
 
-####  Diagram of the Relationship pattern of <i>François Baillairgé</i>and <i>William-Duval Baillairgé</i>:
+####  Diagram of the Relationship pattern of <i>François Baillairgé</i> and <i>William-Duval Baillairgé</i>:
 
 <div class="mermaid" onclick="sizeToggle(this)">
 	graph TD
