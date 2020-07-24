@@ -2,7 +2,7 @@
 
 ### Philippe's RDF example of Existence pattern
 
-```html
+```turtle
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -31,7 +31,6 @@
 <http://www.rdm.net/place/0001> a crm:E53_Place .
 
 <http://www.rdm.net/place/0002> a crm:E53_Place .
-
 ```
 
 #### Diagram
@@ -121,7 +120,6 @@ aat:300041273 a crm:E55_Type ;
 	crm:P82b_end_of_the_end "1833"^^xsd:dateTime ;
 	crm:P79_beginning_is_qualified_by "circa"@la ;
 	crm:P80_end_is_qualified_by "circa"@la . 
-
 ```
 #### Diagram
 
