@@ -1,10 +1,10 @@
 
-(function(){
-  var toJson = function(res){ return res.json(); };
+// (function(){
+//   var toJson = function(res){ return res.json(); };
 
-   var cy = window.cy = cytoscape({
+   var cy = cytoscape({
         container: document.getElementById('cy'),
-        elements: fetch('data.json').then(toJson),
+        elements: fetch('data.json').then(response => response.json()),
 
         layout: {
           name: 'circle'
@@ -34,4 +34,4 @@
           },
           ],      
       });
-})();
+// })();

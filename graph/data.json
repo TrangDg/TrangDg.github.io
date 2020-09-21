@@ -1,4 +1,4 @@
-
+[
           // nodes
   { "data": { "id": "criteria" } },
   { "data": { "id": "b" } },
@@ -42,3 +42,4 @@
       "target": "e"
     }
   }
+]
