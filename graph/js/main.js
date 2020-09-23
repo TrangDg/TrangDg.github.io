@@ -1403,8 +1403,8 @@ var data = [
                'target-arrow-color': '#303030',
                'text-background-color': '#ffffff',
                'text-background-opacity': 1,
-               'text-rotation': 'autorotate',
-                  'edgeLength': 20
+               // 'text-rotation': 'autorotate',
+                  // 'edgeLength': 20
             }
           },
           {
