@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <title>Matching Venn</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="venn.js/venn.js"></script>
+
+
+    <style media="screen">
+    .venntooltip {
+      position: absolute;
+      text-align: center;
+      width: 80px;
+      text-decoration: underline ;
+      height: 10px;
+      color: #000;
+      padding-top: 2px;
+      padding-bottom: 10px;
+      border: 0px;
+      border-radius: 8px;
+      opacity: 50;
+    }
+
+    </style>
+</head>
+<body>
+
+
+      <p>This Venn diagram represents the overlap between the different authorities.  </p>
+      <div id="venn"></div>
+
+<script>
+$.getJSON( "matching-venn.json", function(sets) {
+
+    var chart = venn.VennDiagram()
+                     .width(500)
+                     .height(500);
+
+    var div = d3.select("#venn")
+    div.datum(sets).call(chart);
+
+    var tooltip = d3.select("body").append("div")
+        .attr("class", "venntooltip");
+
+    div.selectAll("path")
+        .style("stroke-opacity", 0)
+        .style("stroke", "#fff")
+        .style("stroke-width", 3)
+
+    div.selectAll("g")
+        .on("mouseover", function(d, i) {
+            // sort all the areas relative to the current item
+            venn.sortAreas(div, d);
+
+            // Display a tooltip with the current size
+            tooltip.transition().duration(400).style("opacity", .9);
+            tooltip.text(d.size);
+
+            // highlight the current path
+            var selection = d3.select(this).transition("tooltip").duration(400);
+            selection.select("path")
+                .style("fill-opacity", d.sets.length == 1 ? .4 : .1)
+                .style("stroke-opacity", 1);
+        })
+
+        .on("mousemove", function() {
+            tooltip.style("left", (d3.event.pageX) + "px")
+                   .style("top", (d3.event.pageY - 28) + "px");
+        })
+
+        .on("mouseout", function(d, i) {
+            tooltip.transition().duration(400).style("opacity", 0);
+            var selection = d3.select(this).transition("tooltip").duration(400);
+            selection.select("path")
+                .style("fill-opacity", d.sets.length == 1 ? .25 : .0)
+                .style("stroke-opacity", 0);
+        });
+});
+</script>
+
+</body>
+</html>
