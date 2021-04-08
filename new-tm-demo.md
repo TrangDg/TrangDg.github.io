@@ -1,4 +1,4 @@
-<main>
+<main markdown="1">
 	<div class="column sidebar">
 		<ul>
 			<li>Birth/Death of People and Formation/Dissolution of Groups</li>
@@ -254,6 +254,11 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 		cursor: pointer;
 	}
 	
+	main {
+		display: flex;
+		flex-flow: row;
+	}
+
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -284,8 +289,9 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 	}
 
 	$(".tab").on("click", function(){
-		$(this).show();
-		$(this).siblings().hide();
+		var tab_id = $(this).attr("href");
+		$("#"+tab_id).show();
+		$("#"+tab_id).siblings().hide();
 	})
 </script>
 
