@@ -33,7 +33,11 @@ The project [linked.art](https://linked.art/model/actor/#birth-and-death-formati
 “After death, people are still instances of Person which is a subclass of Actor, even though they can no longer carry out activities. People in comas or otherwise completely incapacitated also cannot carry out activities, but are not temporarily non-Actors. The modeling that death is a transformation from an instance of Person to an instance of Thing adds complexity for the sake of purity, but does not add any actual value. Thus a burial activity ([aat:300263485](http://vocab.getty.edu/aat/300263485)) buries a Person, not a Thing-that-used-to-be-a-Person. However if the skeleton is then dug up and exhibited, it is exhibited as a Thing. There is, therefore, a transition at some undetermined point.”
 ```
 
-*Ontological Diagram*
+<a name="039_Pattern_BirthDeath_p"></a>039_Pattern_BirthDeath_p
+<iframe frameborder="0" style="width:100%;height:800px;" src="https://viewer.diagrams.net/?target=blank&highlight=0000ff&edit=_blank&layers=1&nav=1&title=039_Pattern_BirthDeath_p.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D107d_h_4kMQ-nrshmNQv2YpY3ZFIMXs-j%26export%3Ddownload"></iframe>
+
+<a name="042_Pattern_GroupFormationDissolution_p"></a>042_Pattern_GroupFormationDissolution_p
+<iframe frameborder="0" style="width:100%;height:600px;" src="https://viewer.diagrams.net/?target=blank&highlight=0000ff&edit=_blank&layers=1&nav=1&title=042_Pattern_GroupFormationDissolution_p.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1P7hRu-rR8y22b1OOxripnPIqsD4pP2BW%26export%3Ddownload"></iframe>
 
 ### Challenges and limits of this pattern
 
@@ -97,7 +101,7 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 9([http://www.rdm.net/time-span/0001]) -->|crm:P82b_end_of_the_end| 17(["''1900-02-20T23:59:59-04:00''^^xsd:dateTime"]):::Literal
 
 </div>
-  <div id="tabs-1-ttl" style="display:none">
+  <div id="tabs-1-ttl" style="display:none" markdown="1">
    
 ```turtle
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
@@ -130,7 +134,7 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 <http://www.rdm.net/place/0002> a crm:E53_Place .
 ```
   </div>
-  <div id="tabs-1-json" style="display:none">
+  <div id="tabs-1-json" style="display:none" markdown="1">
 
 ```json
 {
