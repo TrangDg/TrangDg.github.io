@@ -1,11 +1,3 @@
-<main markdown="1">
-	<div class="column sidebar">
-		<ul>
-			<li>Birth/Death of People and Formation/Dissolution of Groups</li>
-		</ul>
-	</div>
-	<div class="column content">
-        <div class="main-content wrapper">
           
 # Birth/Death of People and Formation/Dissolution of Groups
 
@@ -59,7 +51,7 @@ This pattern is relatively standard, as birth and death are important parts of t
     <li><a href="#tabs-1-ttl" class="tab">Turle</a></li>
     <li><a href="#tabs-1-json" class="tab">JSON-LD</a></li>
   </ul>
-  <div class="tabs-content">
+<div class="tabs-content">
 <div id="tabs-1-graph" class="mermaid" onclick="sizeToggle(this)">
 graph TD
 classDef Literal fill:#f2f2f2,stroke:#000000;
@@ -232,11 +224,11 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 ```
 
   </div>
+
 </div>
+
 </div>
-        </div>
-      </div>
-</main>
+
 
 
 
@@ -290,6 +282,7 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 
 	$(".tab").on("click", function(){
 		var tab_id = $(this).attr("href");
+		console.log(tab_id)
 		$("#"+tab_id).show();
 		$("#"+tab_id).siblings().hide();
 	})
