@@ -283,8 +283,8 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 	$(".tab").on("click", function(){
 		var tab_id = $(this).attr("href");
 		console.log(tab_id)
-		$("#"+tab_id).show();
-		$("#"+tab_id).siblings().hide();
+		$(tab_id).show();
+		$(tab_id).siblings().hide();
 	})
 </script>
 
