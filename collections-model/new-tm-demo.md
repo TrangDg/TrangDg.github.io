@@ -451,7 +451,9 @@ geo:6174041 a crm:E53_Place ;
 		height: 100%;*/
 		cursor: pointer;
 	}
-	
+	a.clickable:hover {
+        box-shadow: 0 0 6px rgb(35 173 255);
+    }
 	/*main {
 		display: flex;
 		flex-flow: row;
