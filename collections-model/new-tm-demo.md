@@ -455,7 +455,7 @@ geo:6174041 a crm:E53_Place ;
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"></script>
 <!-- <script>mermaid.initialize({startOnLoad:true});</script> -->
 <script>
     var config = {
