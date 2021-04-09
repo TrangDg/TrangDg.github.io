@@ -91,7 +91,7 @@ This pattern is relatively standard, as birth and death are important parts of t
 
 <div id="tabs-1">
   <ul class="tabs-buttons">
-    <li name="tabs-1-graph" class="tab">Instances graph</li>
+    <li name="tabs-1-graph" class="tab active">Instances graph</li>
     <li name="tabs-1-ttl" class="tab">Turtle</li>
     <li name="tabs-1-json" class="tab">JSON-LD</li>
   </ul>
@@ -423,11 +423,13 @@ geo:6174041 a crm:E53_Place ;
 	.tabs-buttons {
 		display: flex;
 		list-style-type: none;
+        padding: 0;
+        margin: 0;
 	}
 	.tabs-buttons li {
-		padding: 0;
-        margin: 0;
 		border: solid 1px #cccccc;
+        margin-top: 0;
+        padding: 5px;
 	}
 	.tab.active {
 		background-color: lightblue;
