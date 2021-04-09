@@ -77,7 +77,7 @@ click 22 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-s
 click 11 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-end" _blank
 click 13 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-end" _blank
 click 25 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-begin" _blank
-</div>g
+</div>
 
 ### Challenges and limits of this pattern
 
