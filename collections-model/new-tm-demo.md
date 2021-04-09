@@ -56,27 +56,34 @@ classDef Physical_Thing fill:#E1BA9C, stroke:#000000;
 classDef Actor fill:#ffbdca, stroke:#000000;
 classDef PC_Classes fill:#cc80ff, stroke:#000000;
 classDef Multi fill:#cccccc,stroke:#000000;
-4["crm:E67_Birth"]:::Temporal_Entity -->|crm:P7_took_place_at| 9["crm:E53_Place"]:::Place
-10["crm:E21_Person"]:::Actor -->|crm:P98i_was_born| 4["crm:E67_Birth"]:::Temporal_Entity
-4["crm:E67_Birth"]:::Temporal_Entity -->|crm:P4_has_time-span| 11["crm:E52_Time-Span"]:::Time-Span
-7["crm:E52_Time-Span"]:::Time-Span -->|crm:P82a_begin_of_the_begin| 13[rdfs:Literal]:::Literal
-14["crm:E9_Move"]:::Temporal_Entity -->|crm:P27_moved_from| 9["crm:E53_Place"]:::Place
-14["crm:E9_Move"]:::Temporal_Entity -->|crm:P25_moved| 10["crm:E21_Person"]:::Actor
-10["crm:E21_Person"]:::Actor -->|crm:P100i_died_in| 2["crm:E69_Death"]:::Temporal_Entity
-14["crm:E9_Move"]:::Temporal_Entity -->|crm:P26_moved_to| 0["crm:E53_Place"]:::Place
-2["crm:E69_Death"]:::Temporal_Entity -->|crm:P120_occurs_before| 14["crm:E9_Move"]:::Temporal_Entity
-2["crm:E69_Death"]:::Temporal_Entity -->|crm:P4_has_time-span| 7["crm:E52_Time-Span"]:::Time-Span
-11["crm:E52_Time-Span"]:::Time-Span -->|crm:P82b_end_of_the_end| 30[rdfs:Literal]:::Literal
-7["crm:E52_Time-Span"]:::Time-Span -->|crm:P82b_end_of_the_end| 31[rdfs:Literal]:::Literal
-2["crm:E69_Death"]:::Temporal_Entity -->|crm:P7_took_place_at| 9["crm:E53_Place"]:::Place
-11["crm:E52_Time-Span"]:::Time-Span -->|crm:P82a_begin_of_the_begin| 33[rdfs:Literal]:::Literal
-</div>
+0["crm:E67_Birth"]:::Temporal_Entity -->|crm:P4_has_time-span| 1["crm:E52_Time-Span"]:::Time-Span
+0["crm:E67_Birth"]:::Temporal_Entity -->|crm:P7_took_place_at| 2["Birth Place<br>crm:E53_Place"]:::Place
+4["crm:E69_Death"]:::Temporal_Entity -->|crm:P7_took_place_at| 5["Death Place<br>crm:E53_Place"]:::Place
+1["crm:E52_Time-Span"]:::Time-Span -->|crm:P82b_end_of_the_end| 11[Birth Date End<br>rdfs:Literal]:::Literal
+12["crm:E52_Time-Span"]:::Time-Span -->|crm:P82b_end_of_the_end| 13[Death Date End<br>rdfs:Literal]:::Literal
+1["crm:E52_Time-Span"]:::Time-Span -->|crm:P82a_begin_of_the_begin| 22[Birth Date Begin<br>rdfs:Literal]:::Literal
+7["crm:E21_Person"]:::Actor -->|crm:P100i_died_in| 4["crm:E69_Death"]:::Temporal_Entity
+16["crm:E9_Move"]:::Temporal_Entity -->|crm:P26_moved_to| 20["Final Disposition Place<br>crm:E53_Place"]:::Place
+12["crm:E52_Time-Span"]:::Time-Span -->|crm:P82a_begin_of_the_begin| 25[Death Date Begin<br>rdfs:Literal]:::Literal
+4["crm:E69_Death"]:::Temporal_Entity -->|crm:P120_occurs_before| 16["crm:E9_Move"]:::Temporal_Entity
+7["crm:E21_Person"]:::Actor -->|crm:P98i_was_born| 0["crm:E67_Birth"]:::Temporal_Entity
+16["crm:E9_Move"]:::Temporal_Entity -->|crm:P25_moved| 7["crm:E21_Person"]:::Actor
+4["crm:E69_Death"]:::Temporal_Entity -->|crm:P4_has_time-span| 12["crm:E52_Time-Span"]:::Time-Span
+16["crm:E9_Move"]:::Temporal_Entity -->|crm:P27_moved_from| 5["Death Place<br>crm:E53_Place"]:::Place
+click 2 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-place" _blank
+click 5 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-place" _blank
+click 20 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#final-disposition-place" _blank
+click 22 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-begin" _blank
+click 11 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-end" _blank
+click 13 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-end" _blank
+click 25 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-begin" _blank
+</div>g
 
 ### Challenges and limits of this pattern
 
 This pattern is relatively standard, as birth and death are important parts of the documentation of actors, and therefore widely used by other projects, such as Linked.art or SARI. Nonetheless, the modellisation of the final resting location, and especially the use of the E9_Move event, is ontologically discutable, as in the pure CIDOC CRM logic, an extra step of stating that the E21_Person has become a E20_Biological_Object have been omitted.
 
-|***For further information***<br/>![GitHub Mark](https://user-images.githubusercontent.com/48293227/104475587-49182180-558d-11eb-87fc-9f95190cb332.png)*Related Github Issues:*<br/>- [Issue #16 - Do we need a family relationship pattern? And what to do with parents?](https://github.com/chin-rcip/chin-rcip/issues/16)<br/>*Equivalent external data models:*<br/>- Linked.art model: [Birth and Death/Formation and Dissolution pattern](https://linked.art/model/actor/#birth-and-death-formation-and-dissolution).<br/>- SARI model: [Person existence](https://docs.swissartresearch.net/et/persons/#existence) and [group existence](https://docs.swissartresearch.net/et/group/#existence) patterns.|
+|***For further information***<br/><br/>![GitHub Mark](https://user-images.githubusercontent.com/48293227/104475587-49182180-558d-11eb-87fc-9f95190cb332.png)*Related Github Issues:*<br/>- [Issue #16 - Do we need a family relationship pattern? And what to do with parents?](https://github.com/chin-rcip/chin-rcip/issues/16)<br/><br/>*Equivalent external data models:*<br/>- Linked.art model: [Birth and Death/Formation and Dissolution pattern](https://linked.art/model/actor/#birth-and-death-formation-and-dissolution).<br/>- SARI model: [Person existence](https://docs.swissartresearch.net/et/persons/#existence) and [group existence](https://docs.swissartresearch.net/et/group/#existence) patterns.|
 
 ### Examples
 
@@ -418,16 +425,17 @@ geo:6174041 a crm:E53_Place ;
 		list-style-type: none;
 	}
 	.tabs-buttons li {
-		padding: 5px;
+		padding: 0;
+        margin: 0;
 		border: solid 1px #cccccc;
 	}
-	.tab .active {
+	.tab.active {
 		background-color: lightblue;
 	}
 	.tabs-content {
 		border: 1px dashed #808080;
 	    border-radius: 5px;
-	    margin: 10px;
+	    /*margin: 10px;*/
 	    padding: 3px;
 	    max-height: 400px;
 	    overflow: scroll;
