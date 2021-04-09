@@ -1,0 +1,191 @@
+[
+  {
+    "@id": "https://dopheda.info/crm_e63/0001_0338",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E67_Birth"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
+      {
+        "@id": "https://dopheda.info/crm_e52/0001_0281"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
+      {
+        "@id": "https://www.geonames.org/6174041"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Événement de naissance de Emily Carr"
+      },
+      {
+        "@language": "en",
+        "@value": "Birth event of Emily Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e39/0001_0285",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P100i_died_in": [
+      {
+        "@id": "https://dopheda.info/crm_e64/0001_0302"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P98i_was_born": [
+      {
+        "@id": "https://dopheda.info/crm_e63/0001_0338"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Emily Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e64/0001_0302",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E69_Death"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before": [
+      {
+        "@id": "https://dopheda.info/crm_e5/0001_0346"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
+      {
+        "@id": "https://dopheda.info/crm_e52/0001_0275"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
+      {
+        "@id": "https://www.geonames.org/6174041"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Événement de mort de Emily Carr"
+      },
+      {
+        "@language": "en",
+        "@value": "Death event of Emily Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e52/0001_0281",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
+      {
+        "@value": "1871-12-13T00:00:00Z"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
+      {
+        "@value": "1871-12-13T23:59:59Z"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Durée de l’événement de naissance de Emily Carr"
+      },
+      {
+        "@language": "en",
+        "@value": "Time-Span of Birth of Emily Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e52/0001_0275",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
+      {
+        "@value": "1945-03-02T00:00:00Z"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
+      {
+        "@value": "1945-03-02T23:59:59Z"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Time-Span of Death of Emily Carr"
+      },
+      {
+        "@language": "fr",
+        "@value": "Durée de l’événement de mort de Emily Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e5/0001_0346",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E9_Move"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P25_moved": [
+      {
+        "@id": "https://dopheda.info/crm_e39/0001_0285"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P26_moved_to": [
+      {
+        "@id": "https://www.wikidata.org/wiki/Q7369187"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P27_moved_from": [
+      {
+        "@id": "https://www.geonames.org/6174041"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Move to burial place of Emily Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.geonames.org/6174041",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Victoria"
+      },
+      {
+        "@language": "en",
+        "@value": "Victoria"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.wikidata.org/wiki/Q7369187",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "cimetière de Ross Bay"
+      },
+      {
+        "@language": "en",
+        "@value": "Ross Bay Cemetery"
+      }
+    ]
+  }
+]

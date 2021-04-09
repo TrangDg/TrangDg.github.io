@@ -1,0 +1,62 @@
+graph TD
+classDef Literal fill:#ffffff,stroke:#000000;
+classDef CRM_Entity fill:#ffffff,stroke:#000000;
+classDef CRM_Entity_URI fill:#ffffff,stroke:#000000;
+classDef Temporal_Entity fill:#82c3ec, stroke:#000000;
+classDef Temporal_Entity_URI fill:#d2e9f9,stroke:#000000;
+classDef Type fill:#fab565, stroke:#000000;
+classDef Type_URI fill:#fde7ce,stroke:#000000;
+classDef Time-Span fill:#86bcc8, stroke:#000000;
+classDef Time-Span_URI fill:#dcebef,stroke:#000000;
+classDef Appellation fill:#fef3ba, stroke:#000000;
+classDef Appellation_URI fill:#fffae6,stroke:#000000;
+classDef Place fill:#94cc7d, stroke:#000000;
+classDef Place_URI fill:#e1f1da,stroke:#000000;
+classDef Persistent_Item fill:#ffffff, stroke:#000000;
+classDef Persistent_Item_URI fill:#ffffff,stroke:#000000;
+classDef Conceptual_Object fill:#fddc34, stroke:#000000;
+classDef Conceptual_Object_URI fill:#fef6cd,stroke:#000000;
+classDef Physical_Thing fill:#e1ba9c, stroke:#000000;
+classDef Physical_Thing_URI fill:#f3e5d8,stroke:#000000;
+classDef Actor fill:#ffbdca, stroke:#000000;
+classDef Actor_URI fill:#ffe6eb,stroke:#000000;
+classDef PC_Classes fill:#cc80ff, stroke:#000000;
+classDef PC_Classes_URI fill:#ebccff,stroke:#000000;
+classDef Multi_URI fill:#cccccc,stroke:#000000;
+
+0(["https://dopheda.info/crm_e64/0001_0302"]) -->|rdfs:label| 1(["''Death event of Emily Carr''@en"]):::Literal
+2(["https://dopheda.info/crm_e39/0001_0285"]):::Actor_URI -->|rdf:type| 3["crm:E21_Person"]:::Actor
+0(["https://dopheda.info/crm_e64/0001_0302"]) -->|crm:P120_occurs_before| 4(["https://dopheda.info/crm_e5/0001_0346"])
+5(["https://dopheda.info/crm_e52/0001_0275"]) -->|rdfs:label| 6(["''Time-Span of Death of Emily Carr''@en"]):::Literal
+0(["https://dopheda.info/crm_e64/0001_0302"]) -->|rdfs:label| 7(["''Événement de mort de Emily Carr''@fr"]):::Literal
+8(["wd:Q7369187"]):::Place_URI -->|rdf:type| 9["crm:E53_Place"]:::Place
+10(["https://dopheda.info/crm_e63/0001_0338"]) -->|crm:P7_took_place_at| 11(["geo:6174041"])
+10(["https://dopheda.info/crm_e63/0001_0338"]):::Temporal_Entity_URI -->|rdf:type| 12["crm:E67_Birth"]:::Temporal_Entity
+4(["https://dopheda.info/crm_e5/0001_0346"]) -->|rdfs:label| 13(["''Move to burial place of Emily Carr''"]):::Literal
+0(["https://dopheda.info/crm_e64/0001_0302"]) -->|crm:P7_took_place_at| 11(["geo:6174041"])
+5(["https://dopheda.info/crm_e52/0001_0275"]) -->|crm:P82b_end_of_the_end| 14(["''1945-03-02T23:59:59Z''"]):::Literal
+4(["https://dopheda.info/crm_e5/0001_0346"]):::Temporal_Entity_URI -->|rdf:type| 15["crm:E9_Move"]:::Temporal_Entity
+4(["https://dopheda.info/crm_e5/0001_0346"]) -->|crm:P25_moved| 2(["https://dopheda.info/crm_e39/0001_0285"])
+2(["https://dopheda.info/crm_e39/0001_0285"]) -->|crm:P100i_died_in| 0(["https://dopheda.info/crm_e64/0001_0302"])
+5(["https://dopheda.info/crm_e52/0001_0275"]):::Time-Span_URI -->|rdf:type| 16["crm:E52_Time-Span"]:::Time-Span
+10(["https://dopheda.info/crm_e63/0001_0338"]) -->|crm:P4_has_time-span| 17(["https://dopheda.info/crm_e52/0001_0281"])
+8(["wd:Q7369187"]) -->|rdfs:label| 18(["''cimetière de Ross Bay''@fr"]):::Literal
+2(["https://dopheda.info/crm_e39/0001_0285"]) -->|crm:P98i_was_born| 10(["https://dopheda.info/crm_e63/0001_0338"])
+17(["https://dopheda.info/crm_e52/0001_0281"]) -->|rdfs:label| 19(["''Durée de l’événement de naissance de Emily Carr''@fr"]):::Literal
+11(["geo:6174041"]):::Place_URI -->|rdf:type| 20["crm:E53_Place"]:::Place
+17(["https://dopheda.info/crm_e52/0001_0281"]) -->|crm:P82b_end_of_the_end| 21(["''1871-12-13T23:59:59Z''"]):::Literal
+0(["https://dopheda.info/crm_e64/0001_0302"]) -->|crm:P4_has_time-span| 5(["https://dopheda.info/crm_e52/0001_0275"])
+5(["https://dopheda.info/crm_e52/0001_0275"]) -->|crm:P82a_begin_of_the_begin| 22(["''1945-03-02T00:00:00Z''"]):::Literal
+8(["wd:Q7369187"]) -->|rdfs:label| 23(["''Ross Bay Cemetery''@en"]):::Literal
+17(["https://dopheda.info/crm_e52/0001_0281"]) -->|crm:P82a_begin_of_the_begin| 24(["''1871-12-13T00:00:00Z''"]):::Literal
+5(["https://dopheda.info/crm_e52/0001_0275"]) -->|rdfs:label| 25(["''Durée de l’événement de mort de Emily Carr''@fr"]):::Literal
+10(["https://dopheda.info/crm_e63/0001_0338"]) -->|rdfs:label| 26(["''Événement de naissance de Emily Carr''@fr"]):::Literal
+4(["https://dopheda.info/crm_e5/0001_0346"]) -->|crm:P27_moved_from| 11(["geo:6174041"])
+17(["https://dopheda.info/crm_e52/0001_0281"]) -->|rdfs:label| 27(["''Time-Span of Birth of Emily Carr''@en"]):::Literal
+4(["https://dopheda.info/crm_e5/0001_0346"]) -->|crm:P26_moved_to| 8(["wd:Q7369187"])
+2(["https://dopheda.info/crm_e39/0001_0285"]) -->|rdfs:label| 28(["''Emily Carr''@en"]):::Literal
+11(["geo:6174041"]) -->|rdfs:label| 29(["''Victoria''@fr"]):::Literal
+11(["geo:6174041"]) -->|rdfs:label| 30(["''Victoria''@en"]):::Literal
+17(["https://dopheda.info/crm_e52/0001_0281"]):::Time-Span_URI -->|rdf:type| 31["crm:E52_Time-Span"]:::Time-Span
+10(["https://dopheda.info/crm_e63/0001_0338"]) -->|rdfs:label| 32(["''Birth event of Emily Carr''@en"]):::Literal
+0(["https://dopheda.info/crm_e64/0001_0302"]):::Temporal_Entity_URI -->|rdf:type| 33["crm:E69_Death"]:::Temporal_Entity

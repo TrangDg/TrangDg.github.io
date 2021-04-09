@@ -1,0 +1,33 @@
+graph TD
+classDef Literal fill:#FFFFFF,stroke:#000000;
+classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
+classDef Temporal_Entity fill:#82C3EC, stroke:#000000;
+classDef Type fill:#FAB565, stroke:#000000;
+classDef Time-Span fill:#86BCC8, stroke:#000000;
+classDef Appellation fill:#FEF3BA, stroke:#000000;
+classDef Place fill:#94CC7D, stroke:#000000;
+classDef Persistent_Item fill:#FFFFFF, stroke:#000000;
+classDef Conceptual_Object fill:#FDDC34, stroke:#000000;
+classDef Physical_Thing fill:#E1BA9C, stroke:#000000;
+classDef Actor fill:#ffbdca, stroke:#000000;
+classDef PC_Classes fill:#cc80ff, stroke:#000000;
+classDef Multi fill:#cccccc,stroke:#000000;
+
+
+
+
+
+4["crm:E67_Birth"]:::Temporal_Entity -->|crm:P7_took_place_at| 9["crm:E53_Place"]:::Place
+10["crm:E21_Person"]:::Actor -->|crm:P98i_was_born| 4["crm:E67_Birth"]:::Temporal_Entity
+4["crm:E67_Birth"]:::Temporal_Entity -->|crm:P4_has_time-span| 11["crm:E52_Time-Span"]:::Time-Span
+7["crm:E52_Time-Span"]:::Time-Span -->|crm:P82a_begin_of_the_begin| 13[rdfs:Literal]:::Literal
+14["crm:E9_Move"]:::Temporal_Entity -->|crm:P27_moved_from| 9["crm:E53_Place"]:::Place
+14["crm:E9_Move"]:::Temporal_Entity -->|crm:P25_moved| 10["crm:E21_Person"]:::Actor
+10["crm:E21_Person"]:::Actor -->|crm:P100i_died_in| 2["crm:E69_Death"]:::Temporal_Entity
+14["crm:E9_Move"]:::Temporal_Entity -->|crm:P26_moved_to| 0["crm:E53_Place"]:::Place
+2["crm:E69_Death"]:::Temporal_Entity -->|crm:P120_occurs_before| 14["crm:E9_Move"]:::Temporal_Entity
+2["crm:E69_Death"]:::Temporal_Entity -->|crm:P4_has_time-span| 7["crm:E52_Time-Span"]:::Time-Span
+11["crm:E52_Time-Span"]:::Time-Span -->|crm:P82b_end_of_the_end| 30[rdfs:Literal]:::Literal
+7["crm:E52_Time-Span"]:::Time-Span -->|crm:P82b_end_of_the_end| 31[rdfs:Literal]:::Literal
+2["crm:E69_Death"]:::Temporal_Entity -->|crm:P7_took_place_at| 9["crm:E53_Place"]:::Place
+11["crm:E52_Time-Span"]:::Time-Span -->|crm:P82a_begin_of_the_begin| 33[rdfs:Literal]:::Literal
