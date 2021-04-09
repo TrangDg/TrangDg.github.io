@@ -425,6 +425,7 @@ geo:6174041 a crm:E53_Place ;
 		list-style-type: none;
         padding: 0;
         margin: 0;
+        cursor: pointer;
 	}
 	.tabs-buttons li {
 		border: solid 1px #cccccc;
@@ -440,8 +441,11 @@ geo:6174041 a crm:E53_Place ;
 	    /*margin: 10px;*/
 	    padding: 3px;
 	    max-height: 400px;
-	    overflow: scroll;
+	    overflow: auto;
 	}
+    .mermaid {
+        overflow: auto;
+    }
 	svg {
 		/*width: 100%;
 		height: 100%;*/
@@ -463,7 +467,7 @@ geo:6174041 a crm:E53_Place ;
     var config = {
         startOnLoad:true,
         flowchart:{
-                useMaxWidth:true,
+                // useMaxWidth:true,
                 htmlLabels:true,
                 curve:'basis',
                 rankSpacing:50
