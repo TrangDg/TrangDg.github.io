@@ -465,7 +465,8 @@ geo:6174041 a crm:E53_Place ;
                 htmlLabels:true,
                 curve:'basis',
                 rankSpacing:50
-        }
+        },
+        securityLevel:'loose',
     };
     mermaid.initialize(config);
 </script>
