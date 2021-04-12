@@ -449,7 +449,7 @@ geo:6174041 a crm:E53_Place ;
 	svg {
 		/*width: 100%;
 		height: 100%;*/
-		cursor: pointer;
+		cursor: zoom-in;
 	}
 	.clickable:hover > * {
         stroke-width: 3px !important;
@@ -482,12 +482,14 @@ geo:6174041 a crm:E53_Place ;
 <script type="text/javascript">
 	function sizeToggle(element) {
 		var svg = element.firstChild;
-		if (svg.attributes.getNamedItem("width").value === "100%") {
-			svg.getAttributeNode("width").value = svg.style.maxWidth;
+		if ($(svg).attr("width") === "100%") {
+            $(svg).css("cursor", 'zoom-out');
+			$(svg).attr("width", svg.style.maxWidth);
 		} else {
-			svg.getAttributeNode("width").value =  "100%";
+            $(svg).css("cursor", 'zoom-in');
+			$(svg).attr("width", "100%");
 		}
-	}
+	};
 
 	$(".tab").on("click", function(){
 		var tab_id = $(this).attr("name");
