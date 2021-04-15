@@ -1,1 +1,110 @@
-[{"sets": ["AC"], "size": 4999106}, {"sets": ["NOM"], "size": 3461957}, {"sets": ["RVM"], "size": 1899128}, {"sets": ["AAT"], "size": 1965787}, {"sets": ["AC", "NOM"], "size": 3461957}, {"sets": ["AC", "RVM"], "size": 1899128}, {"sets": ["AC", "AAT"], "size": 1965787}, {"sets": ["NOM", "AC"], "size": 3461957}, {"sets": ["NOM", "RVM"], "size": 1681914}, {"sets": ["NOM", "AAT"], "size": 1876006}, {"sets": ["RVM", "AC"], "size": 1899128}, {"sets": ["RVM", "NOM"], "size": 1681914}, {"sets": ["RVM", "AAT"], "size": 921325}, {"sets": ["AAT", "AC"], "size": 1965787}, {"sets": ["AAT", "RVM"], "size": 921325}, {"sets": ["AAT", "NOM"], "size": 1876006}]
+[
+    {
+        "sets": [
+            "AC"
+        ],
+        "size": 4999152
+    },
+    {
+        "sets": [
+            "NOM"
+        ],
+        "size": 3621473
+    },
+    {
+        "sets": [
+            "RVM"
+        ],
+        "size": 1899126
+    },
+    {
+        "sets": [
+            "AAT"
+        ],
+        "size": 1965787
+    },
+    {
+        "sets": [
+            "AC",
+            "NOM"
+        ],
+        "size": 3621473
+    },
+    {
+        "sets": [
+            "AC",
+            "RVM"
+        ],
+        "size": 1899126
+    },
+    {
+        "sets": [
+            "AC",
+            "AAT"
+        ],
+        "size": 1965787
+    },
+    {
+        "sets": [
+            "NOM",
+            "AC"
+        ],
+        "size": 3621473
+    },
+    {
+        "sets": [
+            "NOM",
+            "RVM"
+        ],
+        "size": 1713322
+    },
+    {
+        "sets": [
+            "NOM",
+            "AAT"
+        ],
+        "size": 1910478
+    },
+    {
+        "sets": [
+            "RVM",
+            "AC"
+        ],
+        "size": 1899126
+    },
+    {
+        "sets": [
+            "RVM",
+            "NOM"
+        ],
+        "size": 1713322
+    },
+    {
+        "sets": [
+            "RVM",
+            "AAT"
+        ],
+        "size": 921325
+    },
+    {
+        "sets": [
+            "AAT",
+            "AC"
+        ],
+        "size": 1965787
+    },
+    {
+        "sets": [
+            "AAT",
+            "RVM"
+        ],
+        "size": 921325
+    },
+    {
+        "sets": [
+            "AAT",
+            "NOM"
+        ],
+        "size": 1919478
+    }
+]
