@@ -3,40 +3,48 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<https://dopheda.info/crm_e39/0001_0285> a crm:E21_Person ;
+<https://dopheda.info/crm_e39/0001_0368> a crm:E21_Person ;
     rdfs:label "Emily Carr"@en ;
-    crm:P100i_died_in <https://dopheda.info/crm_e64/0001_0302> ;
-    crm:P98i_was_born <https://dopheda.info/crm_e63/0001_0338> .
+    crm:P100i_died_in <https://dopheda.info/crm_e64/0001_0389> ;
+    crm:P1_is_identified_by <https://dopheda.info/crm_e41/0001_0385> ;
+    crm:P98i_was_born <https://dopheda.info/crm_e63/0001_0367> .
 
-<https://dopheda.info/crm_e5/0001_0346> a crm:E9_Move ;
-    rdfs:label "Move to burial place of Emily Carr" ;
-    crm:P25_moved <https://dopheda.info/crm_e39/0001_0285> ;
+<https://dopheda.info/crm_e41/0001_0385> a crm:E33_Linguistic_Object,
+        crm:E41_Appellation ;
+    rdfs:label "Full appellation of Emily Carr"@en,
+        "Appellation complète de Emily Carr"@fr ;
+    crm:P190_has_symbolic_content "Emily Carr"@en .
+
+<https://dopheda.info/crm_e5/0001_0370> a crm:E9_Move ;
+    rdfs:label "Move to burial place of Emily Carr"@en,
+        "Déplacement au lieu de sépulture de Emily Carr"@fr ;
+    crm:P25_moved <https://dopheda.info/crm_e39/0001_0368> ;
     crm:P26_moved_to wd:Q7369187 ;
     crm:P27_moved_from geo:6174041 .
 
-<https://dopheda.info/crm_e52/0001_0275> a crm:E52_Time-Span ;
-    rdfs:label "Time-Span of Death of Emily Carr"@en,
-        "Durée de l’événement de mort de Emily Carr"@fr ;
-    crm:P82a_begin_of_the_begin "1945-03-02T00:00:00Z" ;
-    crm:P82b_end_of_the_end "1945-03-02T23:59:59Z" .
-
-<https://dopheda.info/crm_e52/0001_0281> a crm:E52_Time-Span ;
+<https://dopheda.info/crm_e52/0001_0416> a crm:E52_Time-Span ;
     rdfs:label "Time-Span of Birth of Emily Carr"@en,
         "Durée de l’événement de naissance de Emily Carr"@fr ;
     crm:P82a_begin_of_the_begin "1871-12-13T00:00:00Z" ;
     crm:P82b_end_of_the_end "1871-12-13T23:59:59Z" .
 
-<https://dopheda.info/crm_e63/0001_0338> a crm:E67_Birth ;
+<https://dopheda.info/crm_e52/0001_0422> a crm:E52_Time-Span ;
+    rdfs:label "Time-Span of Death of Emily Carr"@en,
+        "Durée de l’événement de mort de Emily Carr"@fr ;
+    crm:P82a_begin_of_the_begin "1945-03-02T00:00:00Z" ;
+    crm:P82b_end_of_the_end "1945-03-02T23:59:59Z" .
+
+<https://dopheda.info/crm_e63/0001_0367> a crm:E67_Birth ;
     rdfs:label "Birth event of Emily Carr"@en,
         "Événement de naissance de Emily Carr"@fr ;
-    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0281> ;
+    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0416> ;
     crm:P7_took_place_at geo:6174041 .
 
-<https://dopheda.info/crm_e64/0001_0302> a crm:E69_Death ;
+<https://dopheda.info/crm_e64/0001_0389> a crm:E69_Death ;
     rdfs:label "Death event of Emily Carr"@en,
         "Événement de mort de Emily Carr"@fr ;
-    crm:P120_occurs_before <https://dopheda.info/crm_e5/0001_0346> ;
-    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0275> ;
+    crm:P120_occurs_before <https://dopheda.info/crm_e5/0001_0370> ;
+    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0422> ;
     crm:P7_took_place_at geo:6174041 .
 
 wd:Q7369187 a crm:E53_Place ;

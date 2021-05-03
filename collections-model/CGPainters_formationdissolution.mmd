@@ -1,0 +1,60 @@
+graph TD
+classDef Literal fill:#ffffff,stroke:#000000;
+classDef CRM_Entity fill:#ffffff,stroke:#000000;
+classDef CRM_Entity_URI fill:#ffffff,stroke:#000000;
+classDef Temporal_Entity fill:#82c3ec, stroke:#000000;
+classDef Temporal_Entity_URI fill:#d2e9f9,stroke:#000000;
+classDef Type fill:#fab565, stroke:#000000;
+classDef Type_URI fill:#fde7ce,stroke:#000000;
+classDef Time-Span fill:#86bcc8, stroke:#000000;
+classDef Time-Span_URI fill:#dcebef,stroke:#000000;
+classDef Appellation fill:#fef3ba, stroke:#000000;
+classDef Appellation_URI fill:#fffae6,stroke:#000000;
+classDef Place fill:#94cc7d, stroke:#000000;
+classDef Place_URI fill:#e1f1da,stroke:#000000;
+classDef Persistent_Item fill:#ffffff, stroke:#000000;
+classDef Persistent_Item_URI fill:#ffffff,stroke:#000000;
+classDef Conceptual_Object fill:#fddc34, stroke:#000000;
+classDef Conceptual_Object_URI fill:#fef6cd,stroke:#000000;
+classDef Physical_Thing fill:#e1ba9c, stroke:#000000;
+classDef Physical_Thing_URI fill:#f3e5d8,stroke:#000000;
+classDef Actor fill:#ffbdca, stroke:#000000;
+classDef Actor_URI fill:#ffe6eb,stroke:#000000;
+classDef PC_Classes fill:#cc80ff, stroke:#000000;
+classDef PC_Classes_URI fill:#ebccff,stroke:#000000;
+classDef Multi_URI fill:#cccccc,stroke:#000000;
+
+0(["https://dopheda.info/crm_e63/0001_0418"]) -->|crm:P4_has_time-span| 1(["https://dopheda.info/crm_e52/0001_0421"])
+2(["https://dopheda.info/crm_e39/0001_0396"]) -->|crm:P99i_was_dissolved_by| 3(["https://dopheda.info/crm_e64/0001_0398"])
+4(["geo:6167865"]) -->|rdfs:label| 5(["''Toronto''@fr"]):::Literal
+6(["https://dopheda.info/crm_e41/0001_0441"]) -->|rdfs:label| 7(["''Appellation complète de A. J. Casson''@fr"]):::Literal
+8(["https://dopheda.info/crm_e52/0001_0391"]) -->|crm:P82a_begin_of_the_begin| 9(["''1969-01-01T00:00:00Z''"]):::Literal
+0(["https://dopheda.info/crm_e63/0001_0418"]):::Temporal_Entity_URI -->|rdf:type| 10["crm:E66_Formation"]:::Temporal_Entity
+11(["https://dopheda.info/crm_e39/0001_0420"]) -->|crm:P1_is_identified_by| 6(["https://dopheda.info/crm_e41/0001_0441"])
+1(["https://dopheda.info/crm_e52/0001_0421"]):::Time-Span_URI -->|rdf:type| 12["crm:E52_Time-Span"]:::Time-Span
+4(["geo:6167865"]) -->|rdfs:label| 13(["''Toronto''@en"]):::Literal
+0(["https://dopheda.info/crm_e63/0001_0418"]) -->|crm:P7_took_place_at| 4(["geo:6167865"])
+1(["https://dopheda.info/crm_e52/0001_0421"]) -->|crm:P82a_begin_of_the_begin| 14(["''1933-02-01T00:00:00Z''"]):::Literal
+4(["geo:6167865"]):::Place_URI -->|rdf:type| 15["crm:E53_Place"]:::Place
+8(["https://dopheda.info/crm_e52/0001_0391"]):::Time-Span_URI -->|rdf:type| 16["crm:E52_Time-Span"]:::Time-Span
+1(["https://dopheda.info/crm_e52/0001_0421"]) -->|rdfs:label| 17(["''Durée de l’événement de formation de Canadian Group of Painters''@fr"]):::Literal
+1(["https://dopheda.info/crm_e52/0001_0421"]) -->|rdfs:label| 18(["''Time-Span of the formation event of Canadian Group of Painters''@en"]):::Literal
+3(["https://dopheda.info/crm_e64/0001_0398"]) -->|rdfs:label| 19(["''Événement de dissolution de Canadian Group of Painters''@fr"]):::Literal
+6(["https://dopheda.info/crm_e41/0001_0441"]) -->|crm:P190_has_symbolic_content| 20(["''A. J. Casson''@en"]):::Literal
+3(["https://dopheda.info/crm_e64/0001_0398"]) -->|rdfs:label| 21(["''Dissolution event of Canadian Group of Painters''@en"]):::Literal
+6(["https://dopheda.info/crm_e41/0001_0441"]) -->|rdfs:label| 22(["''Full appellation of A. J. Casson''@en"]):::Literal
+2(["https://dopheda.info/crm_e39/0001_0396"]) -->|rdfs:label| 23(["''Canadian Group of Painters''@en"]):::Literal
+8(["https://dopheda.info/crm_e52/0001_0391"]) -->|crm:P82b_end_of_the_end| 24(["''1969-12-31T23:59:59Z''"]):::Literal
+1(["https://dopheda.info/crm_e52/0001_0421"]) -->|crm:P82b_end_of_the_end| 25(["''1933-02-28T23:59:59Z''"]):::Literal
+0(["https://dopheda.info/crm_e63/0001_0418"]) -->|rdfs:label| 26(["''Événement de formation de Canadian Group of Painters''@fr"]):::Literal
+11(["https://dopheda.info/crm_e39/0001_0420"]):::Actor_URI -->|rdf:type| 27["crm:E21_Person"]:::Actor
+2(["https://dopheda.info/crm_e39/0001_0396"]):::Actor_URI -->|rdf:type| 28["crm:E74_Group"]:::Actor
+8(["https://dopheda.info/crm_e52/0001_0391"]) -->|rdfs:label| 29(["''Time-Span of the dissolution event of Canadian Group of Painters''@en"]):::Literal
+8(["https://dopheda.info/crm_e52/0001_0391"]) -->|rdfs:label| 30(["''Durée de l’événement de dissolution de Canadian Group of Painters''@fr"]):::Literal
+3(["https://dopheda.info/crm_e64/0001_0398"]) -->|crm:P4_has_time-span| 8(["https://dopheda.info/crm_e52/0001_0391"])
+6(["https://dopheda.info/crm_e41/0001_0441"]):::Conceptual_Object_URI -->|rdf:type| 31["crm:E33_Linguistic_Object"]:::Conceptual_Object
+3(["https://dopheda.info/crm_e64/0001_0398"]):::Temporal_Entity_URI -->|rdf:type| 32["crm:E68_Dissolution"]:::Temporal_Entity
+6(["https://dopheda.info/crm_e41/0001_0441"]):::Multi_URI -->|rdf:type| 33["crm:E41_Appellation"]:::Appellation
+0(["https://dopheda.info/crm_e63/0001_0418"]) -->|rdfs:label| 34(["''Formation event of Canadian Group of Painters''@en"]):::Literal
+0(["https://dopheda.info/crm_e63/0001_0418"]) -->|crm:P14_carried_out_by| 11(["https://dopheda.info/crm_e39/0001_0420"])
+2(["https://dopheda.info/crm_e39/0001_0396"]) -->|crm:P95i_was_formed_by| 0(["https://dopheda.info/crm_e63/0001_0418"])

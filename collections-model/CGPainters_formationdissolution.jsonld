@@ -1,0 +1,178 @@
+[
+  {
+    "@id": "https://dopheda.info/crm_e64/0001_0398",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E68_Dissolution"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
+      {
+        "@id": "https://dopheda.info/crm_e52/0001_0391"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Dissolution event of Canadian Group of Painters"
+      },
+      {
+        "@language": "fr",
+        "@value": "Événement de dissolution de Canadian Group of Painters"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e63/0001_0418",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E66_Formation"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by": [
+      {
+        "@id": "https://dopheda.info/crm_e39/0001_0420"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
+      {
+        "@id": "https://dopheda.info/crm_e52/0001_0421"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
+      {
+        "@id": "https://www.geonames.org/6167865"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Événement de formation de Canadian Group of Painters"
+      },
+      {
+        "@language": "en",
+        "@value": "Formation event of Canadian Group of Painters"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e52/0001_0421",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
+      {
+        "@value": "1933-02-01T00:00:00Z"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
+      {
+        "@value": "1933-02-28T23:59:59Z"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Durée de l’événement de formation de Canadian Group of Painters"
+      },
+      {
+        "@language": "en",
+        "@value": "Time-Span of the formation event of Canadian Group of Painters"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e41/0001_0441",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+      "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content": [
+      {
+        "@language": "en",
+        "@value": "A. J. Casson"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Appellation complète de A. J. Casson"
+      },
+      {
+        "@language": "en",
+        "@value": "Full appellation of A. J. Casson"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e52/0001_0391",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
+      {
+        "@value": "1969-01-01T00:00:00Z"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
+      {
+        "@value": "1969-12-31T23:59:59Z"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Time-Span of the dissolution event of Canadian Group of Painters"
+      },
+      {
+        "@language": "fr",
+        "@value": "Durée de l’événement de dissolution de Canadian Group of Painters"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.geonames.org/6167865",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Toronto"
+      },
+      {
+        "@language": "en",
+        "@value": "Toronto"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e39/0001_0420",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by": [
+      {
+        "@id": "https://dopheda.info/crm_e41/0001_0441"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e39/0001_0396",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E74_Group"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by": [
+      {
+        "@id": "https://dopheda.info/crm_e63/0001_0418"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P99i_was_dissolved_by": [
+      {
+        "@id": "https://dopheda.info/crm_e64/0001_0398"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Canadian Group of Painters"
+      }
+    ]
+  }
+]

@@ -39,45 +39,6 @@ The project [linked.art](https://linked.art/model/actor/#birth-and-death-formati
 <a name="042_Pattern_GroupFormationDissolution_p"></a>042_Pattern_GroupFormationDissolution_p
 <iframe frameborder="0" style="width:100%;height:600px;" src="https://viewer.diagrams.net/?target=blank&highlight=0000ff&edit=_blank&layers=1&nav=1&title=042_Pattern_GroupFormationDissolution_p.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1P7hRu-rR8y22b1OOxripnPIqsD4pP2BW%26export%3Ddownload"></iframe>
 
-*Mermaid diagram*
-
-<div class="mermaid" onclick="sizeToggle(this)">
-graph TD
-classDef Literal fill:#FFFFFF,stroke:#000000;
-classDef CRM_Entity fill:#FFFFFF,stroke:#000000;
-classDef Temporal_Entity fill:#82C3EC, stroke:#000000;
-classDef Type fill:#FAB565, stroke:#000000;
-classDef Time-Span fill:#86BCC8, stroke:#000000;
-classDef Appellation fill:#FEF3BA, stroke:#000000;
-classDef Place fill:#94CC7D, stroke:#000000;
-classDef Persistent_Item fill:#FFFFFF, stroke:#000000;
-classDef Conceptual_Object fill:#FDDC34, stroke:#000000;
-classDef Physical_Thing fill:#E1BA9C, stroke:#000000;
-classDef Actor fill:#ffbdca, stroke:#000000;
-classDef PC_Classes fill:#cc80ff, stroke:#000000;
-classDef Multi fill:#cccccc,stroke:#000000;
-0["crm:E67_Birth"]:::Temporal_Entity -->|crm:P4_has_time-span| 1["crm:E52_Time-Span"]:::Time-Span
-0["crm:E67_Birth"]:::Temporal_Entity -->|crm:P7_took_place_at| 2["Birth Place<br>crm:E53_Place"]:::Place
-4["crm:E69_Death"]:::Temporal_Entity -->|crm:P7_took_place_at| 5["Death Place<br>crm:E53_Place"]:::Place
-1["crm:E52_Time-Span"]:::Time-Span -->|crm:P82b_end_of_the_end| 11[Birth Date End<br>rdfs:Literal]:::Literal
-12["crm:E52_Time-Span"]:::Time-Span -->|crm:P82b_end_of_the_end| 13[Death Date End<br>rdfs:Literal]:::Literal
-1["crm:E52_Time-Span"]:::Time-Span -->|crm:P82a_begin_of_the_begin| 22[Birth Date Begin<br>rdfs:Literal]:::Literal
-7["crm:E21_Person"]:::Actor -->|crm:P100i_died_in| 4["crm:E69_Death"]:::Temporal_Entity
-16["crm:E9_Move"]:::Temporal_Entity -->|crm:P26_moved_to| 20["Final Disposition Place<br>crm:E53_Place"]:::Place
-12["crm:E52_Time-Span"]:::Time-Span -->|crm:P82a_begin_of_the_begin| 25[Death Date Begin<br>rdfs:Literal]:::Literal
-4["crm:E69_Death"]:::Temporal_Entity -->|crm:P120_occurs_before| 16["crm:E9_Move"]:::Temporal_Entity
-7["crm:E21_Person"]:::Actor -->|crm:P98i_was_born| 0["crm:E67_Birth"]:::Temporal_Entity
-16["crm:E9_Move"]:::Temporal_Entity -->|crm:P25_moved| 7["crm:E21_Person"]:::Actor
-4["crm:E69_Death"]:::Temporal_Entity -->|crm:P4_has_time-span| 12["crm:E52_Time-Span"]:::Time-Span
-16["crm:E9_Move"]:::Temporal_Entity -->|crm:P27_moved_from| 5["Death Place<br>crm:E53_Place"]:::Place
-click 2 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-place" _blank
-click 5 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-place" _blank
-click 20 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#final-disposition-place" _blank
-click 22 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-begin" _blank
-click 11 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-end" _blank
-click 13 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-end" _blank
-click 25 href "https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-begin" _blank
-</div>
 
 ### Challenges and limits of this pattern
 
@@ -88,6 +49,8 @@ This pattern is relatively standard, as birth and death are important parts of t
 ### Examples
 
 *Birth and Death of Emily Carr*
+
+Emily Carr was born on the 13th of December 1871 in Victoria (Canada) and died on the 2nd of March 1945, also in Victoria (BC, Canada). She was buried at Ross Bay Cemetery (Victoria, BC, Canada).
 
 <div id="tabs-1">
   <ul class="tabs-buttons">
@@ -122,43 +85,49 @@ classDef Actor_URI fill:#ffe6eb,stroke:#000000;
 classDef PC_Classes fill:#cc80ff, stroke:#000000;
 classDef PC_Classes_URI fill:#ebccff,stroke:#000000;
 classDef Multi_URI fill:#cccccc,stroke:#000000;
-0(["https://dopheda.info/crm_e64/0001_0302"]) -->|rdfs:label| 1(["''Death event of Emily Carr''@en"]):::Literal
-2(["https://dopheda.info/crm_e39/0001_0285"]):::Actor_URI -->|rdf:type| 3["crm:E21_Person"]:::Actor
-0(["https://dopheda.info/crm_e64/0001_0302"]) -->|crm:P120_occurs_before| 4(["https://dopheda.info/crm_e5/0001_0346"])
-5(["https://dopheda.info/crm_e52/0001_0275"]) -->|rdfs:label| 6(["''Time-Span of Death of Emily Carr''@en"]):::Literal
-0(["https://dopheda.info/crm_e64/0001_0302"]) -->|rdfs:label| 7(["''Événement de mort de Emily Carr''@fr"]):::Literal
-8(["wd:Q7369187"]):::Place_URI -->|rdf:type| 9["crm:E53_Place"]:::Place
-10(["https://dopheda.info/crm_e63/0001_0338"]) -->|crm:P7_took_place_at| 11(["geo:6174041"])
-10(["https://dopheda.info/crm_e63/0001_0338"]):::Temporal_Entity_URI -->|rdf:type| 12["crm:E67_Birth"]:::Temporal_Entity
-4(["https://dopheda.info/crm_e5/0001_0346"]) -->|rdfs:label| 13(["''Move to burial place of Emily Carr''"]):::Literal
-0(["https://dopheda.info/crm_e64/0001_0302"]) -->|crm:P7_took_place_at| 11(["geo:6174041"])
-5(["https://dopheda.info/crm_e52/0001_0275"]) -->|crm:P82b_end_of_the_end| 14(["''1945-03-02T23:59:59Z''"]):::Literal
-4(["https://dopheda.info/crm_e5/0001_0346"]):::Temporal_Entity_URI -->|rdf:type| 15["crm:E9_Move"]:::Temporal_Entity
-4(["https://dopheda.info/crm_e5/0001_0346"]) -->|crm:P25_moved| 2(["https://dopheda.info/crm_e39/0001_0285"])
-2(["https://dopheda.info/crm_e39/0001_0285"]) -->|crm:P100i_died_in| 0(["https://dopheda.info/crm_e64/0001_0302"])
-5(["https://dopheda.info/crm_e52/0001_0275"]):::Time-Span_URI -->|rdf:type| 16["crm:E52_Time-Span"]:::Time-Span
-10(["https://dopheda.info/crm_e63/0001_0338"]) -->|crm:P4_has_time-span| 17(["https://dopheda.info/crm_e52/0001_0281"])
-8(["wd:Q7369187"]) -->|rdfs:label| 18(["''cimetière de Ross Bay''@fr"]):::Literal
-2(["https://dopheda.info/crm_e39/0001_0285"]) -->|crm:P98i_was_born| 10(["https://dopheda.info/crm_e63/0001_0338"])
-17(["https://dopheda.info/crm_e52/0001_0281"]) -->|rdfs:label| 19(["''Durée de l’événement de naissance de Emily Carr''@fr"]):::Literal
-11(["geo:6174041"]):::Place_URI -->|rdf:type| 20["crm:E53_Place"]:::Place
-17(["https://dopheda.info/crm_e52/0001_0281"]) -->|crm:P82b_end_of_the_end| 21(["''1871-12-13T23:59:59Z''"]):::Literal
-0(["https://dopheda.info/crm_e64/0001_0302"]) -->|crm:P4_has_time-span| 5(["https://dopheda.info/crm_e52/0001_0275"])
-5(["https://dopheda.info/crm_e52/0001_0275"]) -->|crm:P82a_begin_of_the_begin| 22(["''1945-03-02T00:00:00Z''"]):::Literal
-8(["wd:Q7369187"]) -->|rdfs:label| 23(["''Ross Bay Cemetery''@en"]):::Literal
-17(["https://dopheda.info/crm_e52/0001_0281"]) -->|crm:P82a_begin_of_the_begin| 24(["''1871-12-13T00:00:00Z''"]):::Literal
-5(["https://dopheda.info/crm_e52/0001_0275"]) -->|rdfs:label| 25(["''Durée de l’événement de mort de Emily Carr''@fr"]):::Literal
-10(["https://dopheda.info/crm_e63/0001_0338"]) -->|rdfs:label| 26(["''Événement de naissance de Emily Carr''@fr"]):::Literal
-4(["https://dopheda.info/crm_e5/0001_0346"]) -->|crm:P27_moved_from| 11(["geo:6174041"])
-17(["https://dopheda.info/crm_e52/0001_0281"]) -->|rdfs:label| 27(["''Time-Span of Birth of Emily Carr''@en"]):::Literal
-4(["https://dopheda.info/crm_e5/0001_0346"]) -->|crm:P26_moved_to| 8(["wd:Q7369187"])
-2(["https://dopheda.info/crm_e39/0001_0285"]) -->|rdfs:label| 28(["''Emily Carr''@en"]):::Literal
-11(["geo:6174041"]) -->|rdfs:label| 29(["''Victoria''@fr"]):::Literal
-11(["geo:6174041"]) -->|rdfs:label| 30(["''Victoria''@en"]):::Literal
-17(["https://dopheda.info/crm_e52/0001_0281"]):::Time-Span_URI -->|rdf:type| 31["crm:E52_Time-Span"]:::Time-Span
-10(["https://dopheda.info/crm_e63/0001_0338"]) -->|rdfs:label| 32(["''Birth event of Emily Carr''@en"]):::Literal
-0(["https://dopheda.info/crm_e64/0001_0302"]):::Temporal_Entity_URI -->|rdf:type| 33["crm:E69_Death"]:::Temporal_Entity
-
+0(["https://dopheda.info/crm_e52/0001_0416"]) -->|crm:P82a_begin_of_the_begin| 1(["''1871-12-13T00:00:00Z''"]):::Literal
+0(["https://dopheda.info/crm_e52/0001_0416"]):::Time-Span_URI -->|rdf:type| 2["crm:E52_Time-Span"]:::Time-Span
+3(["https://dopheda.info/crm_e41/0001_0385"]):::Appellation_URI -->|rdf:type| 4["crm:E41_Appellation"]:::Appellation
+5(["geo:6174041"]):::Place_URI -->|rdf:type| 6["crm:E53_Place"]:::Place
+7(["https://dopheda.info/crm_e5/0001_0370"]) -->|rdfs:label| 8(["''Move to burial place of Emily Carr''@en"]):::Literal
+9(["https://dopheda.info/crm_e52/0001_0422"]) -->|crm:P82a_begin_of_the_begin| 10(["''1945-03-02T00:00:00Z''"]):::Literal
+5(["geo:6174041"]) -->|rdfs:label| 11(["''Victoria''@en"]):::Literal
+12(["https://dopheda.info/crm_e63/0001_0367"]) -->|crm:P7_took_place_at| 5(["geo:6174041"])
+13(["https://dopheda.info/crm_e64/0001_0389"]) -->|crm:P7_took_place_at| 5(["geo:6174041"])
+9(["https://dopheda.info/crm_e52/0001_0422"]) -->|crm:P82b_end_of_the_end| 14(["''1945-03-02T23:59:59Z''"]):::Literal
+15(["https://dopheda.info/crm_e39/0001_0368"]) -->|rdfs:label| 16(["''Emily Carr''@en"]):::Literal
+17(["wd:Q7369187"]):::Place_URI -->|rdf:type| 18["crm:E53_Place"]:::Place
+12(["https://dopheda.info/crm_e63/0001_0367"]) -->|rdfs:label| 19(["''Événement de naissance de Emily Carr''@fr"]):::Literal
+7(["https://dopheda.info/crm_e5/0001_0370"]) -->|crm:P25_moved| 15(["https://dopheda.info/crm_e39/0001_0368"])
+15(["https://dopheda.info/crm_e39/0001_0368"]):::Actor_URI -->|rdf:type| 20["crm:E21_Person"]:::Actor
+12(["https://dopheda.info/crm_e63/0001_0367"]) -->|rdfs:label| 21(["''Birth event of Emily Carr''@en"]):::Literal
+3(["https://dopheda.info/crm_e41/0001_0385"]) -->|rdfs:label| 22(["''Appellation complète de Emily Carr''@fr"]):::Literal
+15(["https://dopheda.info/crm_e39/0001_0368"]) -->|crm:P98i_was_born| 12(["https://dopheda.info/crm_e63/0001_0367"])
+9(["https://dopheda.info/crm_e52/0001_0422"]):::Time-Span_URI -->|rdf:type| 23["crm:E52_Time-Span"]:::Time-Span
+5(["geo:6174041"]) -->|rdfs:label| 24(["''Victoria''@fr"]):::Literal
+0(["https://dopheda.info/crm_e52/0001_0416"]) -->|rdfs:label| 25(["''Time-Span of Birth of Emily Carr''@en"]):::Literal
+12(["https://dopheda.info/crm_e63/0001_0367"]):::Temporal_Entity_URI -->|rdf:type| 26["crm:E67_Birth"]:::Temporal_Entity
+9(["https://dopheda.info/crm_e52/0001_0422"]) -->|rdfs:label| 27(["''Durée de l’événement de mort de Emily Carr''@fr"]):::Literal
+3(["https://dopheda.info/crm_e41/0001_0385"]) -->|crm:P190_has_symbolic_content| 28(["''Emily Carr''@en"]):::Literal
+3(["https://dopheda.info/crm_e41/0001_0385"]) -->|rdfs:label| 29(["''Full appellation of Emily Carr''@en"]):::Literal
+7(["https://dopheda.info/crm_e5/0001_0370"]) -->|rdfs:label| 30(["''Déplacement au lieu de sépulture de Emily Carr''@fr"]):::Literal
+15(["https://dopheda.info/crm_e39/0001_0368"]) -->|crm:P100i_died_in| 13(["https://dopheda.info/crm_e64/0001_0389"])
+13(["https://dopheda.info/crm_e64/0001_0389"]) -->|rdfs:label| 31(["''Death event of Emily Carr''@en"]):::Literal
+17(["wd:Q7369187"]) -->|rdfs:label| 32(["''cimetière de Ross Bay''@fr"]):::Literal
+0(["https://dopheda.info/crm_e52/0001_0416"]) -->|rdfs:label| 33(["''Durée de l’événement de naissance de Emily Carr''@fr"]):::Literal
+12(["https://dopheda.info/crm_e63/0001_0367"]) -->|crm:P4_has_time-span| 0(["https://dopheda.info/crm_e52/0001_0416"])
+3(["https://dopheda.info/crm_e41/0001_0385"]):::Multi_URI -->|rdf:type| 34["crm:E33_Linguistic_Object"]:::Conceptual_Object
+7(["https://dopheda.info/crm_e5/0001_0370"]) -->|crm:P27_moved_from| 5(["geo:6174041"])
+15(["https://dopheda.info/crm_e39/0001_0368"]) -->|crm:P1_is_identified_by| 3(["https://dopheda.info/crm_e41/0001_0385"])
+13(["https://dopheda.info/crm_e64/0001_0389"]) -->|rdfs:label| 35(["''Événement de mort de Emily Carr''@fr"]):::Literal
+9(["https://dopheda.info/crm_e52/0001_0422"]) -->|rdfs:label| 36(["''Time-Span of Death of Emily Carr''@en"]):::Literal
+0(["https://dopheda.info/crm_e52/0001_0416"]) -->|crm:P82b_end_of_the_end| 37(["''1871-12-13T23:59:59Z''"]):::Literal
+17(["wd:Q7369187"]) -->|rdfs:label| 38(["''Ross Bay Cemetery''@en"]):::Literal
+13(["https://dopheda.info/crm_e64/0001_0389"]) -->|crm:P120_occurs_before| 7(["https://dopheda.info/crm_e5/0001_0370"])
+13(["https://dopheda.info/crm_e64/0001_0389"]):::Temporal_Entity_URI -->|rdf:type| 39["crm:E69_Death"]:::Temporal_Entity
+7(["https://dopheda.info/crm_e5/0001_0370"]) -->|crm:P26_moved_to| 17(["wd:Q7369187"])
+7(["https://dopheda.info/crm_e5/0001_0370"]):::Temporal_Entity_URI -->|rdf:type| 40["crm:E9_Move"]:::Temporal_Entity
+13(["https://dopheda.info/crm_e64/0001_0389"]) -->|crm:P4_has_time-span| 9(["https://dopheda.info/crm_e52/0001_0422"])
 
 </div>
   <div id="tabs-1-ttl" style="display:none" markdown="1">
@@ -169,40 +138,48 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<https://dopheda.info/crm_e39/0001_0285> a crm:E21_Person ;
+<https://dopheda.info/crm_e39/0001_0368> a crm:E21_Person ;
     rdfs:label "Emily Carr"@en ;
-    crm:P100i_died_in <https://dopheda.info/crm_e64/0001_0302> ;
-    crm:P98i_was_born <https://dopheda.info/crm_e63/0001_0338> .
+    crm:P100i_died_in <https://dopheda.info/crm_e64/0001_0389> ;
+    crm:P1_is_identified_by <https://dopheda.info/crm_e41/0001_0385> ;
+    crm:P98i_was_born <https://dopheda.info/crm_e63/0001_0367> .
 
-<https://dopheda.info/crm_e5/0001_0346> a crm:E9_Move ;
-    rdfs:label "Move to burial place of Emily Carr" ;
-    crm:P25_moved <https://dopheda.info/crm_e39/0001_0285> ;
+<https://dopheda.info/crm_e41/0001_0385> a crm:E33_Linguistic_Object,
+        crm:E41_Appellation ;
+    rdfs:label "Full appellation of Emily Carr"@en,
+        "Appellation complète de Emily Carr"@fr ;
+    crm:P190_has_symbolic_content "Emily Carr"@en .
+
+<https://dopheda.info/crm_e5/0001_0370> a crm:E9_Move ;
+    rdfs:label "Move to burial place of Emily Carr"@en,
+        "Déplacement au lieu de sépulture de Emily Carr"@fr ;
+    crm:P25_moved <https://dopheda.info/crm_e39/0001_0368> ;
     crm:P26_moved_to wd:Q7369187 ;
     crm:P27_moved_from geo:6174041 .
 
-<https://dopheda.info/crm_e52/0001_0275> a crm:E52_Time-Span ;
-    rdfs:label "Time-Span of Death of Emily Carr"@en,
-        "Durée de l’événement de mort de Emily Carr"@fr ;
-    crm:P82a_begin_of_the_begin "1945-03-02T00:00:00Z" ;
-    crm:P82b_end_of_the_end "1945-03-02T23:59:59Z" .
-
-<https://dopheda.info/crm_e52/0001_0281> a crm:E52_Time-Span ;
+<https://dopheda.info/crm_e52/0001_0416> a crm:E52_Time-Span ;
     rdfs:label "Time-Span of Birth of Emily Carr"@en,
         "Durée de l’événement de naissance de Emily Carr"@fr ;
     crm:P82a_begin_of_the_begin "1871-12-13T00:00:00Z" ;
     crm:P82b_end_of_the_end "1871-12-13T23:59:59Z" .
 
-<https://dopheda.info/crm_e63/0001_0338> a crm:E67_Birth ;
+<https://dopheda.info/crm_e52/0001_0422> a crm:E52_Time-Span ;
+    rdfs:label "Time-Span of Death of Emily Carr"@en,
+        "Durée de l’événement de mort de Emily Carr"@fr ;
+    crm:P82a_begin_of_the_begin "1945-03-02T00:00:00Z" ;
+    crm:P82b_end_of_the_end "1945-03-02T23:59:59Z" .
+
+<https://dopheda.info/crm_e63/0001_0367> a crm:E67_Birth ;
     rdfs:label "Birth event of Emily Carr"@en,
         "Événement de naissance de Emily Carr"@fr ;
-    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0281> ;
+    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0416> ;
     crm:P7_took_place_at geo:6174041 .
 
-<https://dopheda.info/crm_e64/0001_0302> a crm:E69_Death ;
+<https://dopheda.info/crm_e64/0001_0389> a crm:E69_Death ;
     rdfs:label "Death event of Emily Carr"@en,
         "Événement de mort de Emily Carr"@fr ;
-    crm:P120_occurs_before <https://dopheda.info/crm_e5/0001_0346> ;
-    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0275> ;
+    crm:P120_occurs_before <https://dopheda.info/crm_e5/0001_0370> ;
+    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0422> ;
     crm:P7_took_place_at geo:6174041 .
 
 wd:Q7369187 a crm:E53_Place ;
@@ -212,6 +189,8 @@ wd:Q7369187 a crm:E53_Place ;
 geo:6174041 a crm:E53_Place ;
     rdfs:label "Victoria"@en,
         "Victoria"@fr .
+
+
 ```
   </div>
   <div id="tabs-1-json" style="display:none" markdown="1">
@@ -219,44 +198,23 @@ geo:6174041 a crm:E53_Place ;
 ```json
 [
   {
-    "@id": "https://dopheda.info/crm_e63/0001_0338",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E67_Birth"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
-      {
-        "@id": "https://dopheda.info/crm_e52/0001_0281"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
-      {
-        "@id": "https://www.geonames.org/6174041"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "fr",
-        "@value": "Événement de naissance de Emily Carr"
-      },
-      {
-        "@language": "en",
-        "@value": "Birth event of Emily Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e39/0001_0285",
+    "@id": "https://dopheda.info/crm_e39/0001_0368",
     "@type": [
       "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
     ],
     "http://www.cidoc-crm.org/cidoc-crm/P100i_died_in": [
       {
-        "@id": "https://dopheda.info/crm_e64/0001_0302"
+        "@id": "https://dopheda.info/crm_e64/0001_0389"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by": [
+      {
+        "@id": "https://dopheda.info/crm_e41/0001_0385"
       }
     ],
     "http://www.cidoc-crm.org/cidoc-crm/P98i_was_born": [
       {
-        "@id": "https://dopheda.info/crm_e63/0001_0338"
+        "@id": "https://dopheda.info/crm_e63/0001_0367"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -267,18 +225,119 @@ geo:6174041 a crm:E53_Place ;
     ]
   },
   {
-    "@id": "https://dopheda.info/crm_e64/0001_0302",
+    "@id": "https://dopheda.info/crm_e39/0001_0430",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by": [
+      {
+        "@id": "https://dopheda.info/crm_e41/0001_0388"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e63/0001_0367",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E67_Birth"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
+      {
+        "@id": "https://dopheda.info/crm_e52/0001_0416"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
+      {
+        "@id": "https://www.geonames.org/6174041"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P96_by_mother": [
+      {
+        "@id": "https://dopheda.info/crm_e39/0001_0430"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P97_from_father": [
+      {
+        "@id": "https://dopheda.info/crm_e39/0001_0444"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Birth event of Emily Carr"
+      },
+      {
+        "@language": "fr",
+        "@value": "Événement de naissance de Emily Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e5/0001_0370",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E9_Move"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P25_moved": [
+      {
+        "@id": "https://dopheda.info/crm_e39/0001_0368"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P26_moved_to": [
+      {
+        "@id": "https://www.wikidata.org/wiki/Q7369187"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P27_moved_from": [
+      {
+        "@id": "https://www.geonames.org/6174041"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Move to burial place of Emily Carr"
+      },
+      {
+        "@language": "fr",
+        "@value": "Déplacement au lieu de sépulture de Emily Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e41/0001_0388",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+      "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content": [
+      {
+        "@language": "en",
+        "@value": "Emily Sauders Carr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Appellation complète de Emily Sauders Carr"
+      },
+      {
+        "@language": "en",
+        "@value": "Full appellation of Emily Sauders Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e64/0001_0389",
     "@type": [
       "http://www.cidoc-crm.org/cidoc-crm/E69_Death"
     ],
     "http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before": [
       {
-        "@id": "https://dopheda.info/crm_e5/0001_0346"
+        "@id": "https://dopheda.info/crm_e5/0001_0370"
       }
     ],
     "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
       {
-        "@id": "https://dopheda.info/crm_e52/0001_0275"
+        "@id": "https://dopheda.info/crm_e52/0001_0422"
       }
     ],
     "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
@@ -288,43 +347,17 @@ geo:6174041 a crm:E53_Place ;
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@language": "fr",
-        "@value": "Événement de mort de Emily Carr"
-      },
-      {
         "@language": "en",
         "@value": "Death event of Emily Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e52/0001_0281",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
-      {
-        "@value": "1871-12-13T00:00:00Z"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
-      {
-        "@value": "1871-12-13T23:59:59Z"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "fr",
-        "@value": "Durée de l’événement de naissance de Emily Carr"
       },
       {
-        "@language": "en",
-        "@value": "Time-Span of Birth of Emily Carr"
+        "@language": "fr",
+        "@value": "Événement de mort de Emily Carr"
       }
     ]
   },
   {
-    "@id": "https://dopheda.info/crm_e52/0001_0275",
+    "@id": "https://dopheda.info/crm_e52/0001_0422",
     "@type": [
       "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
     ],
@@ -350,44 +383,101 @@ geo:6174041 a crm:E53_Place ;
     ]
   },
   {
-    "@id": "https://dopheda.info/crm_e5/0001_0346",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E9_Move"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P25_moved": [
-      {
-        "@id": "https://dopheda.info/crm_e39/0001_0285"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P26_moved_to": [
-      {
-        "@id": "https://www.wikidata.org/wiki/Q7369187"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P27_moved_from": [
-      {
-        "@id": "https://www.geonames.org/6174041"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Move to burial place of Emily Carr"
-      }
-    ]
-  },
-  {
     "@id": "https://www.geonames.org/6174041",
     "@type": [
       "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@language": "fr",
+        "@language": "en",
         "@value": "Victoria"
       },
       {
-        "@language": "en",
+        "@language": "fr",
         "@value": "Victoria"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e41/0001_0394",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+      "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content": [
+      {
+        "@language": "en",
+        "@value": "Richard Carr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Appellation complète de Richard Carr"
+      },
+      {
+        "@language": "en",
+        "@value": "Full appellation of Richard Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e39/0001_0444",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by": [
+      {
+        "@id": "https://dopheda.info/crm_e41/0001_0394"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e52/0001_0416",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
+      {
+        "@value": "1871-12-13T00:00:00Z"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
+      {
+        "@value": "1871-12-13T23:59:59Z"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Time-Span of Birth of Emily Carr"
+      },
+      {
+        "@language": "fr",
+        "@value": "Durée de l’événement de naissance de Emily Carr"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e41/0001_0385",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation",
+      "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content": [
+      {
+        "@language": "en",
+        "@value": "Emily Carr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Appellation complète de Emily Carr"
+      },
+      {
+        "@language": "en",
+        "@value": "Full appellation of Emily Carr"
       }
     ]
   },
@@ -398,12 +488,12 @@ geo:6174041 a crm:E53_Place ;
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@language": "fr",
-        "@value": "cimetière de Ross Bay"
-      },
-      {
         "@language": "en",
         "@value": "Ross Bay Cemetery"
+      },
+      {
+        "@language": "fr",
+        "@value": "cimetière de Ross Bay"
       }
     ]
   }
@@ -416,8 +506,320 @@ geo:6174041 a crm:E53_Place ;
 
 </div>
 
+*Formation and dissolution of the Canadian Group of Painters*
+
+The Canadian Group of Painters was formed in Toronto in 1933 by 28 canadian artists, among which A. J. Casson (depicted alone in the example for simplicity). It was dissolved in 1969 at an unknown place, and by an unknown actor.
+
+<div id="tabs-2">
+  <ul class="tabs-buttons">
+    <li name="tabs-2-graph" class="tab active">Instances graph</li>
+    <li name="tabs-2-ttl" class="tab">Turtle</li>
+    <li name="tabs-2-json" class="tab">JSON-LD</li>
+  </ul>
+<div class="tabs-content">
+<div id="tabs-2-graph" class="mermaid" onclick="sizeToggle(this)">
+graph TD
+classDef Literal fill:#ffffff,stroke:#000000;
+classDef CRM_Entity fill:#ffffff,stroke:#000000;
+classDef CRM_Entity_URI fill:#ffffff,stroke:#000000;
+classDef Temporal_Entity fill:#82c3ec, stroke:#000000;
+classDef Temporal_Entity_URI fill:#d2e9f9,stroke:#000000;
+classDef Type fill:#fab565, stroke:#000000;
+classDef Type_URI fill:#fde7ce,stroke:#000000;
+classDef Time-Span fill:#86bcc8, stroke:#000000;
+classDef Time-Span_URI fill:#dcebef,stroke:#000000;
+classDef Appellation fill:#fef3ba, stroke:#000000;
+classDef Appellation_URI fill:#fffae6,stroke:#000000;
+classDef Place fill:#94cc7d, stroke:#000000;
+classDef Place_URI fill:#e1f1da,stroke:#000000;
+classDef Persistent_Item fill:#ffffff, stroke:#000000;
+classDef Persistent_Item_URI fill:#ffffff,stroke:#000000;
+classDef Conceptual_Object fill:#fddc34, stroke:#000000;
+classDef Conceptual_Object_URI fill:#fef6cd,stroke:#000000;
+classDef Physical_Thing fill:#e1ba9c, stroke:#000000;
+classDef Physical_Thing_URI fill:#f3e5d8,stroke:#000000;
+classDef Actor fill:#ffbdca, stroke:#000000;
+classDef Actor_URI fill:#ffe6eb,stroke:#000000;
+classDef PC_Classes fill:#cc80ff, stroke:#000000;
+classDef PC_Classes_URI fill:#ebccff,stroke:#000000;
+classDef Multi_URI fill:#cccccc,stroke:#000000;
+0(["https://dopheda.info/crm_e63/0001_0418"]) -->|crm:P4_has_time-span| 1(["https://dopheda.info/crm_e52/0001_0421"])
+2(["https://dopheda.info/crm_e39/0001_0396"]) -->|crm:P99i_was_dissolved_by| 3(["https://dopheda.info/crm_e64/0001_0398"])
+4(["geo:6167865"]) -->|rdfs:label| 5(["''Toronto''@fr"]):::Literal
+6(["https://dopheda.info/crm_e41/0001_0441"]) -->|rdfs:label| 7(["''Appellation complète de A. J. Casson''@fr"]):::Literal
+8(["https://dopheda.info/crm_e52/0001_0391"]) -->|crm:P82a_begin_of_the_begin| 9(["''1969-01-01T00:00:00Z''"]):::Literal
+0(["https://dopheda.info/crm_e63/0001_0418"]):::Temporal_Entity_URI -->|rdf:type| 10["crm:E66_Formation"]:::Temporal_Entity
+11(["https://dopheda.info/crm_e39/0001_0420"]) -->|crm:P1_is_identified_by| 6(["https://dopheda.info/crm_e41/0001_0441"])
+1(["https://dopheda.info/crm_e52/0001_0421"]):::Time-Span_URI -->|rdf:type| 12["crm:E52_Time-Span"]:::Time-Span
+4(["geo:6167865"]) -->|rdfs:label| 13(["''Toronto''@en"]):::Literal
+0(["https://dopheda.info/crm_e63/0001_0418"]) -->|crm:P7_took_place_at| 4(["geo:6167865"])
+1(["https://dopheda.info/crm_e52/0001_0421"]) -->|crm:P82a_begin_of_the_begin| 14(["''1933-02-01T00:00:00Z''"]):::Literal
+4(["geo:6167865"]):::Place_URI -->|rdf:type| 15["crm:E53_Place"]:::Place
+8(["https://dopheda.info/crm_e52/0001_0391"]):::Time-Span_URI -->|rdf:type| 16["crm:E52_Time-Span"]:::Time-Span
+1(["https://dopheda.info/crm_e52/0001_0421"]) -->|rdfs:label| 17(["''Durée de l’événement de formation de Canadian Group of Painters''@fr"]):::Literal
+1(["https://dopheda.info/crm_e52/0001_0421"]) -->|rdfs:label| 18(["''Time-Span of the formation event of Canadian Group of Painters''@en"]):::Literal
+3(["https://dopheda.info/crm_e64/0001_0398"]) -->|rdfs:label| 19(["''Événement de dissolution de Canadian Group of Painters''@fr"]):::Literal
+6(["https://dopheda.info/crm_e41/0001_0441"]) -->|crm:P190_has_symbolic_content| 20(["''A. J. Casson''@en"]):::Literal
+3(["https://dopheda.info/crm_e64/0001_0398"]) -->|rdfs:label| 21(["''Dissolution event of Canadian Group of Painters''@en"]):::Literal
+6(["https://dopheda.info/crm_e41/0001_0441"]) -->|rdfs:label| 22(["''Full appellation of A. J. Casson''@en"]):::Literal
+2(["https://dopheda.info/crm_e39/0001_0396"]) -->|rdfs:label| 23(["''Canadian Group of Painters''@en"]):::Literal
+8(["https://dopheda.info/crm_e52/0001_0391"]) -->|crm:P82b_end_of_the_end| 24(["''1969-12-31T23:59:59Z''"]):::Literal
+1(["https://dopheda.info/crm_e52/0001_0421"]) -->|crm:P82b_end_of_the_end| 25(["''1933-02-28T23:59:59Z''"]):::Literal
+0(["https://dopheda.info/crm_e63/0001_0418"]) -->|rdfs:label| 26(["''Événement de formation de Canadian Group of Painters''@fr"]):::Literal
+11(["https://dopheda.info/crm_e39/0001_0420"]):::Actor_URI -->|rdf:type| 27["crm:E21_Person"]:::Actor
+2(["https://dopheda.info/crm_e39/0001_0396"]):::Actor_URI -->|rdf:type| 28["crm:E74_Group"]:::Actor
+8(["https://dopheda.info/crm_e52/0001_0391"]) -->|rdfs:label| 29(["''Time-Span of the dissolution event of Canadian Group of Painters''@en"]):::Literal
+8(["https://dopheda.info/crm_e52/0001_0391"]) -->|rdfs:label| 30(["''Durée de l’événement de dissolution de Canadian Group of Painters''@fr"]):::Literal
+3(["https://dopheda.info/crm_e64/0001_0398"]) -->|crm:P4_has_time-span| 8(["https://dopheda.info/crm_e52/0001_0391"])
+6(["https://dopheda.info/crm_e41/0001_0441"]):::Conceptual_Object_URI -->|rdf:type| 31["crm:E33_Linguistic_Object"]:::Conceptual_Object
+3(["https://dopheda.info/crm_e64/0001_0398"]):::Temporal_Entity_URI -->|rdf:type| 32["crm:E68_Dissolution"]:::Temporal_Entity
+6(["https://dopheda.info/crm_e41/0001_0441"]):::Multi_URI -->|rdf:type| 33["crm:E41_Appellation"]:::Appellation
+0(["https://dopheda.info/crm_e63/0001_0418"]) -->|rdfs:label| 34(["''Formation event of Canadian Group of Painters''@en"]):::Literal
+0(["https://dopheda.info/crm_e63/0001_0418"]) -->|crm:P14_carried_out_by| 11(["https://dopheda.info/crm_e39/0001_0420"])
+2(["https://dopheda.info/crm_e39/0001_0396"]) -->|crm:P95i_was_formed_by| 0(["https://dopheda.info/crm_e63/0001_0418"])
 
 
+</div>
+  <div id="tabs-2-ttl" style="display:none" markdown="1">
+   
+```turtle
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix geo: <https://www.geonames.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://dopheda.info/crm_e39/0001_0396> a crm:E74_Group ;
+    rdfs:label "Canadian Group of Painters"@en ;
+    crm:P95i_was_formed_by <https://dopheda.info/crm_e63/0001_0418> ;
+    crm:P99i_was_dissolved_by <https://dopheda.info/crm_e64/0001_0398> .
+
+<https://dopheda.info/crm_e39/0001_0420> a crm:E21_Person ;
+    crm:P1_is_identified_by <https://dopheda.info/crm_e41/0001_0441> .
+
+<https://dopheda.info/crm_e41/0001_0441> a crm:E33_Linguistic_Object,
+        crm:E41_Appellation ;
+    rdfs:label "Full appellation of A. J. Casson"@en,
+        "Appellation complète de A. J. Casson"@fr ;
+    crm:P190_has_symbolic_content "A. J. Casson"@en .
+
+<https://dopheda.info/crm_e52/0001_0391> a crm:E52_Time-Span ;
+    rdfs:label "Time-Span of the dissolution event of Canadian Group of Painters"@en,
+        "Durée de l’événement de dissolution de Canadian Group of Painters"@fr ;
+    crm:P82a_begin_of_the_begin "1969-01-01T00:00:00Z" ;
+    crm:P82b_end_of_the_end "1969-12-31T23:59:59Z" .
+
+<https://dopheda.info/crm_e52/0001_0421> a crm:E52_Time-Span ;
+    rdfs:label "Time-Span of the formation event of Canadian Group of Painters"@en,
+        "Durée de l’événement de formation de Canadian Group of Painters"@fr ;
+    crm:P82a_begin_of_the_begin "1933-02-01T00:00:00Z" ;
+    crm:P82b_end_of_the_end "1933-02-28T23:59:59Z" .
+
+<https://dopheda.info/crm_e63/0001_0418> a crm:E66_Formation ;
+    rdfs:label "Formation event of Canadian Group of Painters"@en,
+        "Événement de formation de Canadian Group of Painters"@fr ;
+    crm:P14_carried_out_by <https://dopheda.info/crm_e39/0001_0420> ;
+    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0421> ;
+    crm:P7_took_place_at geo:6167865 .
+
+<https://dopheda.info/crm_e64/0001_0398> a crm:E68_Dissolution ;
+    rdfs:label "Dissolution event of Canadian Group of Painters"@en,
+        "Événement de dissolution de Canadian Group of Painters"@fr ;
+    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0391> .
+
+geo:6167865 a crm:E53_Place ;
+    rdfs:label "Toronto"@en,
+        "Toronto"@fr .
+
+
+```
+  </div>
+  <div id="tabs-2-json" style="display:none" markdown="1">
+
+```json
+[
+  {
+    "@id": "https://dopheda.info/crm_e64/0001_0398",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E68_Dissolution"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
+      {
+        "@id": "https://dopheda.info/crm_e52/0001_0391"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Dissolution event of Canadian Group of Painters"
+      },
+      {
+        "@language": "fr",
+        "@value": "Événement de dissolution de Canadian Group of Painters"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e63/0001_0418",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E66_Formation"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by": [
+      {
+        "@id": "https://dopheda.info/crm_e39/0001_0420"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
+      {
+        "@id": "https://dopheda.info/crm_e52/0001_0421"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
+      {
+        "@id": "https://www.geonames.org/6167865"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Événement de formation de Canadian Group of Painters"
+      },
+      {
+        "@language": "en",
+        "@value": "Formation event of Canadian Group of Painters"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e52/0001_0421",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
+      {
+        "@value": "1933-02-01T00:00:00Z"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
+      {
+        "@value": "1933-02-28T23:59:59Z"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Durée de l’événement de formation de Canadian Group of Painters"
+      },
+      {
+        "@language": "en",
+        "@value": "Time-Span of the formation event of Canadian Group of Painters"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e41/0001_0441",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+      "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content": [
+      {
+        "@language": "en",
+        "@value": "A. J. Casson"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Appellation complète de A. J. Casson"
+      },
+      {
+        "@language": "en",
+        "@value": "Full appellation of A. J. Casson"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e52/0001_0391",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
+      {
+        "@value": "1969-01-01T00:00:00Z"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
+      {
+        "@value": "1969-12-31T23:59:59Z"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Time-Span of the dissolution event of Canadian Group of Painters"
+      },
+      {
+        "@language": "fr",
+        "@value": "Durée de l’événement de dissolution de Canadian Group of Painters"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.geonames.org/6167865",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "fr",
+        "@value": "Toronto"
+      },
+      {
+        "@language": "en",
+        "@value": "Toronto"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e39/0001_0420",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by": [
+      {
+        "@id": "https://dopheda.info/crm_e41/0001_0441"
+      }
+    ]
+  },
+  {
+    "@id": "https://dopheda.info/crm_e39/0001_0396",
+    "@type": [
+      "http://www.cidoc-crm.org/cidoc-crm/E74_Group"
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by": [
+      {
+        "@id": "https://dopheda.info/crm_e63/0001_0418"
+      }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P99i_was_dissolved_by": [
+      {
+        "@id": "https://dopheda.info/crm_e64/0001_0398"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Canadian Group of Painters"
+      }
+    ]
+  }
+]
+```
+
+  </div>
+
+</div>
+
+</div>
 
 <style>
 	.tabs-buttons {
