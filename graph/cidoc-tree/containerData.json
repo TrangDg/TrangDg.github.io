@@ -16,7 +16,7 @@
           "name": "record_uri: /repositories/repo:id/archival_objects/:id",
           "children": [
             {
-              "name": "notes",
+              "name": "Series Title",
               "children": [
                 {
                   "name": "",
