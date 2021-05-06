@@ -1,0 +1,74 @@
+{
+  "name": "/repositories/:id",
+  "children": [
+    {
+      "name": "parent_institution_name",
+      "children": [
+        {"name": "Institution Name (e.g. The Getty Research Institute)"}
+      ]
+    },
+    {
+      "name": "name",
+      "children": [
+        {"name": "Department Name (e.g. Special Collections; Institutional Records and Archives)"}
+      ]
+    },
+    {
+      "name": "agent_representation",
+      "children": [
+        {
+          "name": "ref: /agents/corporate_entities/:id",
+          "children": [
+            {
+              "name": "agent_contacts",
+              "children": [
+                {
+                  "name": "address_1",
+                  "children": [
+                    {"name": "Street Address"}
+                  ]
+                },
+                {
+                  "name": "city",
+                  "children": [
+                    {"name": "City"}
+                  ]
+                },
+                {
+                  "name": "post_code",
+                  "children": [
+                    {"name": "Postcode"}
+                  ]
+                },
+                {
+                  "name": "email",
+                  "children": [
+                    {"name": "Email"}
+                  ]
+                },
+                {
+                  "name": "telephones",
+                  "children": [
+                    {"name": "number_type: 'business'"},
+                    {
+                      "name": "number",
+                      "children": [
+                        {"name": "Telephone Number"}
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "url",
+      "children": [
+        {"name": "URL (e.g. http://hdl.handle.net/10020/askref)"}
+      ]
+    }
+  ]
+}

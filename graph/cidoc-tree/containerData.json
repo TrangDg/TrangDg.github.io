@@ -1,0 +1,232 @@
+{
+  "name": "/repositories/repo:id/resources/:id/tree",
+  "children": [
+    {
+      "name": "children",
+      "children": [
+        {"name": "has_children: true"},
+        {"name": "level: series/collection"},
+        {
+          "name": "(component_id +) title",
+          "children": [
+            {"name": "Series Title"}
+          ]
+        },
+        {
+          "name": "record_uri: /repositories/repo:id/archival_objects/:id",
+          "children": [
+            {
+              "name": "notes",
+              "children": [
+                {
+                  "name": "",
+                  "children": [
+                    {"name": "type: scopecontent"},
+                    {
+                      "name": "subnotes",
+                      "children": [
+                        {
+                          "name": "content",
+                          "children": [
+                            {"name": "Series Scope Note"}
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "",
+                  "children": [
+                    {"name": "type: arrangement"},
+                    {
+                      "name": "subnotes",
+                      "children": [
+                        {
+                          "name": "content",
+                          "children": [
+                            {"name": "Series Arrangement"}
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }                   
+              ]
+            }
+          ]
+        },
+        {
+          "name": "children",
+          "children": [
+            {"name": "has_children: true/false"},
+            {"name": "level: subseries/file/ia"},
+            {
+              "name": "(component_id +) title",
+              "children": [
+                {"name": "Subseries/File Title"}
+              ]
+            },
+            {
+              "name": "record_uri: /repositories/repo:id/archival_objects/:id",
+              "children": [
+                {
+                  "name": "notes",
+                  "children": [
+                    {
+                      "name": "",
+                      "children": [
+                        {"name": "type: scopecontent"},
+                        {
+                          "name": "subnotes",
+                          "children": [
+                            {
+                              "name": "content",
+                              "children": [
+                                {"name": "Subseries/File - Scope Note"}
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "",
+                      "children": [
+                        {"name": "type: odd"},
+                        {"name": "label: NOTE: "},
+                        {
+                          "name": "subnotes",
+                          "children": [
+                            {
+                              "name": "content",
+                              "children": [
+                                {"name": "File - Other Notes"}
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "",
+                      "children": [
+                        {"name": "type: physdesc"},
+                        {
+                          "name": "content",
+                          "children": [
+                            {"name": "File - Physical Description (e.g. '(1 photograph, 8 x 10 inches)'"}
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "",
+                      "children": [
+                        {"name": "type: arrangement"},
+                        {
+                          "name": "subnotes",
+                          "children": [
+                            {
+                              "name": "content",
+                              "children": [
+                                {"name": "Subseries/File - Arrangement"}
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }                                   
+                  ]
+                },
+                {
+                  "name": "instances",
+                  "children": [
+                    {
+                      "name": "",
+                      "children": [
+                        {"name": "instance_type: 'digital_object'"},
+                        {
+                          "name": "digital_object",
+                          "children": [
+                            {
+                              "name": "ref: '/repositories/repo:id/digital_objects/:id'",
+                              "children": [
+                                {
+                                  "name": "title",
+                                  "children": [
+                                    {"name": "Digital object's Title"}
+                                  ]
+                                },
+                                {
+                                  "name": "file_versions",
+                                  "children": [
+                                    {
+                                      "name": "file_uri: 'http://hdl.handle.net/10020/...'",
+                                      "children": [
+                                        {"name": "<link to digital object>"}
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "",
+                      "children": [
+                        {"name": "instance_type: 'mixed_materials'"},
+                        {
+                          "name": "sub_container",
+                          "children": [
+                            {
+                              "name": "top_container",
+                              "children": [
+                                {
+                                  "name": "ref: '/repositories/repo:id/top_containers/:id'",
+                                  "children": [
+                                    {
+                                      "name": "type",
+                                      "children": [
+                                        {"name": "Top Container Type (Box, Flatfile  , etc.)"}
+                                      ]
+                                    },
+                                    {
+                                      "name": "indicator",
+                                      "children": [
+                                        {"name": "Top Container Number (1; 1-7...)"}
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "type_2",
+                              "children": [
+                                {"name": "Secondery Container Type (Folder, Item, etc.)"}
+                              ]
+                            },
+                            {
+                              "name": "indicator_2",
+                              "children": [
+                                {"name": "Secondery Container Number"}
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]  
+    }
+  ] 
+}

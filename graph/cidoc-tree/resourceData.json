@@ -1,0 +1,467 @@
+{
+  "name": "/repositories/repo:id/resources/id",
+  "children": [
+    {
+      "name": "title",
+      "children": [
+        {"name": "Title"}
+      ]
+    },
+    {
+      "name": "dates",
+      "children": [
+        {"name": "label: creation"},
+        {
+          "name": "expression",
+          "children": [
+            {"name": "Dates"}
+          ]
+        }  
+      ]
+    },
+    {
+      "name": "id_0 (+id_1+id_2)",
+      "children": [
+        {"name": "Number"}
+      ]
+    },
+    {
+      "name": "extents",
+      "children": [
+        {
+          "name": "number + extent_type (+ container_summary)",
+          "children": [
+            {"name": "Extent"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "finding_aid_author",
+      "children": [
+        {"name": "Author"}
+      ]
+    },
+    {
+      "name": "linked_agents",
+      "children": [
+        {
+          "name": "",
+          "children": [
+            {"name": "role: creator"},
+            {"name": "relator: cre/com"},
+            {
+              "name": "ref: /agents/people/:id",
+              "children": [
+                {
+                  "name": "title",
+                  "parent": "role: creator",
+                  "children": [
+                    {"name": "Creator/Collector"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "role: creator"},
+            {"name": "relator: ctb"},
+            {
+              "name": "ref: /agents/corporate_entities/:id",
+              "children": [
+                {
+                  "name": "title",
+                  "children": [
+                    {"name": "Contributors"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "role: subject"},
+            {
+              "name": "ref: /agents/people/:id",
+              "children": [
+                {
+                  "name": "title",
+                  "children": [
+                    {"name": "Indexing Terms"},
+                    {"name": "Subjects - Names"}
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "ref: /agents/corporate_entities/:id",
+              "children": [
+                {
+                  "name": "title",
+                  "children": [
+                    {"name": "Indexing Terms"},
+                    {"name": "Subjects - Corporate Bodies"}
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "ref: /agents/families/:id",
+              "children": [
+                {
+                  "name": "title",
+                  "children": [
+                    {"name": "Indexing Terms"},
+                    {"name": "Subjects - Family Names"}
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "subjects",
+      "children": [
+        {
+          "name": "ref: /subjects/:id",
+          "children": [
+            {
+              "name": "title",
+              "children": [
+                {"name": "Indexing Terms"}
+              ]
+            },
+            {
+              "name": "terms",
+              "children": [
+                {
+                  "name": "term_type",
+                  "children": [
+                    {
+                      "name": "cultural_context",
+                      "children": [
+                        {"name": "Subjects - Topics"}
+                      ]
+                    },
+                    {
+                      "name": "genre_form",
+                      "children": [
+                        {"name": "Genres and Forms of Material"}
+                      ]
+                    },
+                    {
+                      "name": "geographic",
+                      "children": [
+                        {"name": "Subjects - Places"}
+                      ]
+                    },
+                    {
+                      "name": "occupation"
+                    },
+                    {
+                      "name": "topical",
+                      "children": [
+                        {"name": "Subjects - Topics"}
+                      ]
+                    },
+                    {
+                      "name": "uniform_title",
+                      "children": [
+                        {"name": "Subjects - Titles"}
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "notes",
+      "children": [
+        {
+          "name": "",
+          "children": [
+            {"name": "type: abstract"},
+            {"name": "label: Abstract"},
+            {
+              "name": "content",
+              "children": [
+                {"name": "Abstract"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: physloc"},
+            {"name": "label: Request Materials"},
+            {
+              "name": "content",
+              "children": [
+                {"name": "Request Materials"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: langmaterial"},
+            {"name": "label: Language"},
+            {
+              "name": "content",
+              "children": [
+                {"name": "Language"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "jsonmodeltype: note_bibliography"},
+            {"name": "label: Bibliography"},
+            {
+              "name": "content",
+              "children": [
+                {"name": "Bibliography"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: bioghist"},
+            {"name": "label: Biographical/Historical Note"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Biographical/Historical Note"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: scopecontent"},
+            {"name": "label: Scope and Content of Collection"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Scope and Content of Collection"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: arrangement"},
+            {"name": "label: Arrangement"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Arrangement"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: accessrestrict"},
+            {"name": "label: Access"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Access"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: userestrict"},
+            {"name": "label: Publication Rights"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Publication Rights"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: relatedmaterial"},
+            {"name": "label: Related Archival Materials"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Related Material"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: separatedmaterial"},
+            {"name": "label: Separated Material"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Related Material"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: altformavail"},
+            {"name": "label: Digitalized Material / Digital Collection"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Related Material - Digitalized Material/Digital Collection"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: prefercite"},
+            {"name": "label: Preferred Citation"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Preferred Citation"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: acqinfo"},
+            {"name": "label: Acquisition Information / Immediate Source of Acquisition note"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Acquisition Information"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: processinfo"},
+            {"name": "label: Processing History"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Processing History"}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "children": [
+            {"name": "type: appraisal"},
+            {
+              "name": "subnotes",
+              "children": [
+                {
+                  "name": "content",
+                  "children": [
+                    {"name": "Appraisal"}
+                  ]
+                }
+              ]
+            }
+          ]
+        }     
+      ]
+    },
+    { 
+      "name": "tree",
+      "children": [
+        {"name": "ref: /repositories/repo:id/resources/:id/tree"}
+      ]
+    } 
+  ]  
+}
