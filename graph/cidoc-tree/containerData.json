@@ -1,5 +1,6 @@
 {
   "name": "/repositories/repo:id/resources/:id/tree",
+  "color": "temporal_entity",
   "children": [
     {
       "name": "children",

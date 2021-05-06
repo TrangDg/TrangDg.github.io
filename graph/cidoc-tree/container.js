@@ -66,7 +66,8 @@ d3.json("containerData.json", function(error, treeData) {
 
   // adds the circle to the node
   node.append("circle")
-    .attr("r", 5);
+    .attr("r", 5)
+    .attr("class", function(d) { return d.data.color; });
 
   // adds the text to the node
   node.append("text")
