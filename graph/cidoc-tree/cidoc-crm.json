@@ -1,0 +1,34 @@
+{
+    "name": "E1_CRM_Entity",
+    "class": "e1",
+    "children": [
+        {
+            "name": "E52_Time-Span",
+            "class": "#86bcc8"
+        },
+        {
+            "name": "E54_Dimension",
+            "class": "#ffffff"
+        },
+        {
+            "name": "E77_Persistent_Item",
+            "class": "#ffffff"
+        },
+        {
+            "name": "E2_Temporal_Entity",
+            "class": "#82c3ec"
+        },
+        {
+            "name": "E59_Primitive_Value",
+            "class": "#ffffff"
+        },
+        {
+            "name": "E92_Spacetime_Volume",
+            "class": "#ffffff"
+        },
+        {
+            "name": "E53_Place",
+            "class": "#94cc7d"
+        }
+    ]
+}

@@ -31,7 +31,7 @@ var treemap = d3.tree()
   .size([height, width]);
 
 // load the external data
-d3.json("resourceData.json", function(error, treeData) {
+d3.json("cidoc-crm.json", function(error, treeData) {
   if (error) throw error;
 
   //  assigns the data to a hierarchy using parent-child relationships

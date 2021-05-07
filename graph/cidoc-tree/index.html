@@ -5,7 +5,7 @@
     
 .node circle {
   /*fill: #fff;*/
-  stroke: steelblue;
+  /*stroke: steelblue;*/
   stroke-width: 3px;
 }
 .node text { font: 12px sans-serif; }
@@ -28,20 +28,27 @@
 .tabcontent {
 	display: none;
 }
-.temporal_entity {
-	fill: red;
-}
+
+.e2 { stroke: #82c3ec; }
+.e55 {stroke: #fab565;}
+.e52 {stroke: #86bcc8;}
+.e41 {stroke: #fef3ba;}
+.e53 {stroke: #94cc7d;}
+.e28 {stroke: #fddc34;}
+.e18 {stroke: #e1ba9c;}
+.e39 {stroke: #ffbdca}
+.e1 {stroke: black;}
 </style>
 
 <body>
 	<div class="tab">
-	  <button class="tablinks" id="resourceTab" onclick="openGraph(event, 'resource')">Resource</button>
-	  <button class="tablinks" id="containerTab" onclick="openGraph(event, 'containerList')">Container List</button>
-	  <button class="tablinks" id="repositoryTab" onclick="openGraph(event, 'repository')">Repository</button>
+	  <button class="tablinks" id="resourceTab" onclick="openGraph(event, 'resource')">CIDOC CRM</button>
+<!-- 	  <button class="tablinks" id="containerTab" onclick="openGraph(event, 'containerList')">Container List</button>
+	  <button class="tablinks" id="repositoryTab" onclick="openGraph(event, 'repository')">Repository</button> -->
 	</div>
 	<div id="resource" class="tabcontent"></div>
-	<div id="containerList" class="tabcontent"></div>
-	<div id="repository" class="tabcontent"></div>
+<!-- 	<div id="containerList" class="tabcontent"></div>
+	<div id="repository" class="tabcontent"></div> -->
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="http://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -67,12 +74,12 @@ document.getElementById("resourceTab").click();
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <!-- Load script according to active tab -->
 <script>
-	$.getScript("resource.js")
+	$.getScript("cidoc-crm.js")
 	$("#resourceTab").click(function() {
-        $.getScript("resource.js");
+        $.getScript("cidoc-crm.js");
     })
 </script>
-<script>
+<!-- <script>
     $("#containerTab").click(function() {
         $.getScript("container.js");
     })
@@ -81,5 +88,5 @@ document.getElementById("resourceTab").click();
     $("#repositoryTab").click(function() {
         $.getScript("repository.js");
     })
-</script>
+</script> -->
 </body>
