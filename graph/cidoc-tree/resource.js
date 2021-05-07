@@ -67,7 +67,7 @@ d3.json("cidoc-crm.json", function(error, treeData) {
   // adds the circle to the node
   node.append("circle")
     .attr("r", 5)
-    .attr("class", function(d) { return d.data.color; });
+    .attr("class", function(d) { return d.data.class; });
 
   // adds the text to the node
   node.append("text")
