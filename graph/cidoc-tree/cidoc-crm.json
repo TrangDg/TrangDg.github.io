@@ -4,31 +4,31 @@
     "children": [
         {
             "name": "E52_Time-Span",
-            "class": "#86bcc8"
-        },
-        {
-            "name": "E54_Dimension",
-            "class": "#ffffff"
-        },
-        {
-            "name": "E77_Persistent_Item",
-            "class": "#ffffff"
-        },
-        {
-            "name": "E2_Temporal_Entity",
-            "class": "#82c3ec"
-        },
-        {
-            "name": "E59_Primitive_Value",
-            "class": "#ffffff"
-        },
-        {
-            "name": "E92_Spacetime_Volume",
-            "class": "#ffffff"
+            "class": "e52"
         },
         {
             "name": "E53_Place",
-            "class": "#94cc7d"
+            "class": "e53"
+        },
+        {
+            "name": "E77_Persistent_Item",
+            "class": "e1"
+        },
+        {
+            "name": "E92_Spacetime_Volume",
+            "class": "e1"
+        },
+        {
+            "name": "E54_Dimension",
+            "class": "e1"
+        },
+        {
+            "name": "E59_Primitive_Value",
+            "class": "e1"
+        },
+        {
+            "name": "E2_Temporal_Entity",
+            "class": "e2"
         }
     ]
 }
