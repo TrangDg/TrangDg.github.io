@@ -628,8 +628,6 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 geo:6167865 a crm:E53_Place ;
     rdfs:label "Toronto"@en,
         "Toronto"@fr .
-
-
 ```
   </div>
   <div id="tabs-2-json" style="display:none" markdown="1">
@@ -911,10 +909,10 @@ geo:6167865 a crm:E53_Place ;
          .then((data) => $("#"+exId+"_graph").text(data));
         fetch('./examples/'+exId+'.ttl')
         .then(response => response.text())
-         .then((data) => $("#"+exId+"_ttl").text("```turtle\n"+data+"```"));
+         .then((data) => $("#"+exId+"_ttl").text("\n```turtle\n"+data+"\n```"));
         fetch('./examples/'+exId+'.json')
         .then(response => response.text())
-         .then((data) => $("#"+exId+"_json").text("```json\n"+data+"```"));
+         .then((data) => $("#"+exId+"_json").text("\n```json\n"+data+"\n```"));
     }
 
     
