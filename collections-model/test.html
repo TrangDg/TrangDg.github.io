@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+
+<div id="0001_100_birth-death">
+  <ul class="tabs-buttons">
+    <li name="0001_100_birth-death_graph" class="tab active">Instances graph</li>
+    <li name="0001_100_birth-death_ttl" class="tab">Turtle</li>
+    <li name="0001_100_birth-death_json" class="tab">JSON-LD</li>
+  </ul>
+<div class="tabs-content">
+<div id="0001_100_birth-death_graph" class="mermaid" onclick="sizeToggle(this)">
+</div>
+  <div id="0001_100_birth-death_ttl" style="display:none" markdown="1">
+
+  </div>
+  <div id="0001_100_birth-death_json" style="display:none" markdown="1">
+
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+<style>
+	.tabs-buttons {
+		display: flex;
+		list-style-type: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+	}
+	.tabs-buttons li {
+		border: solid 1px #cccccc;
+        margin-top: 0;
+        padding: 5px;
+	}
+	.tab.active {
+		background-color: lightblue;
+	}
+	.tabs-content {
+		border: 1px dashed #808080;
+	    border-radius: 5px;
+	    /*margin: 10px;*/
+	    padding: 3px;
+	    max-height: 400px;
+	    overflow: auto;
+	}
+    .mermaid {
+        overflow: auto;
+    }
+	svg {
+		/*width: 100%;
+		height: 100%;*/
+		cursor: zoom-in;
+	}
+	.clickable:hover > * {
+        stroke-width: 3px !important;
+    }
+	/*main {
+		display: flex;
+		flex-flow: row;
+	}*/
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"></script>
+<!-- <script>mermaid.initialize({startOnLoad:true});</script> -->
+<script>
+    var config = {
+        startOnLoad:true,
+        flowchart:{
+                useMaxWidth:true,
+                htmlLabels:true,
+                curve:'basis',
+                rankSpacing:50
+        },
+        securityLevel:'loose',
+    };
+    mermaid.initialize(config);
+</script>
+
+<script type="text/javascript">
+	function sizeToggle(element) {
+		var svg = element.firstChild;
+		if ($(svg).attr("width") === "100%") {
+            $(svg).css("cursor", 'zoom-out');
+			$(svg).attr("width", svg.style.maxWidth);
+		} else {
+            $(svg).css("cursor", 'zoom-in');
+			$(svg).attr("width", "100%");
+		}
+	};
+
+	$(".tab").on("click", function(){
+		var tab_id = $(this).attr("name");
+		console.log(tab_id)
+		$("#"+tab_id).show();
+		$("#"+tab_id).siblings().hide();
+		$(this).addClass("active");
+		$(this).siblings().removeClass("active");
+	});
+
+    $(document).ready(function(){
+        $(".clickable foreignObject > div").wrapInner("<b></b>");
+    });
+     fetch('/mmd/0001_100_birth-death.txt')
+		  .then(response => response.text())
+		  .then((data) => 
+		    $("#0001_100_birth-death_graph").text(data)
+		  );
+</script>
+
+</httml>
