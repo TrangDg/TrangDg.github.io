@@ -9,65 +9,7 @@
   </ul>
 <div class="tabs-content">
 <div id="0001_100_birth-death_graph" class="mermaid" onclick="sizeToggle(this)">
-	graph TD
-classDef Literal fill:#ffffff,stroke:#000000;
-classDef E1_CRM_Entity fill:#ffffff,stroke:#000000;
-classDef E1_CRM_Entity_URI fill:#ffffff,stroke:#000000;
-classDef E2_Temporal_Entity fill:#82c3ec, stroke:#000000;
-classDef E2_Temporal_Entity_URI fill:#d2e9f9,stroke:#000000;
-classDef E55_Type fill:#fab565, stroke:#000000;
-classDef E55_Type_URI fill:#fde7ce,stroke:#000000;
-classDef E52_Time-Span fill:#86bcc8, stroke:#000000;
-classDef E52_Time-Span_URI fill:#dcebef,stroke:#000000;
-classDef E41_Appellation fill:#fef3ba, stroke:#000000;
-classDef E41_Appellation_URI fill:#fffae6,stroke:#000000;
-classDef E53_Place fill:#94cc7d, stroke:#000000;
-classDef E53_Place_URI fill:#e1f1da,stroke:#000000;
-classDef E77_Persistent_Item fill:#ffffff, stroke:#000000;
-classDef E77_Persistent_Item_URI fill:#ffffff,stroke:#000000;
-classDef E28_Conceptual_Object fill:#fddc34, stroke:#000000;
-classDef E28_Conceptual_Object_URI fill:#fef6cd,stroke:#000000;
-classDef E18_Physical_Thing fill:#e1ba9c, stroke:#000000;
-classDef E18_Physical_Thing_URI fill:#f3e5d8,stroke:#000000;
-classDef E39_Actor fill:#ffbdca, stroke:#000000;
-classDef E39_Actor_URI fill:#ffe6eb,stroke:#000000;
-classDef Typed_CRM_Property fill:#cc80ff, stroke:#000000;
-classDef Typed_CRM_Property_URI fill:#ebccff,stroke:#000000;
-classDef Multi_URI fill:#cccccc,stroke:#000000;
 
-0(["vocab:3004"]) -->|rdfs:label| 1(["''Notre-Dame Cemetery (Ottawa, ON, Canada)''@en"]):::Literal
-2(["https://dopheda.info/crm_e52/7869F20E-669F-4B7A-ACCE-C587FB1E7549"]) -->|crm:P82b_end_of_the_end| 3(["''1908-12-23T23:59:59Z''"]):::Literal
-4(["actor:0001_105"]):::E39_Actor_URI -->|rdf:type| 5["crm:E21_Person"]:::E39_Actor
-2(["https://dopheda.info/crm_e52/7869F20E-669F-4B7A-ACCE-C587FB1E7549"]) -->|crm:P82a_begin_of_the_begin| 6(["''1908-12-23T00:00:00Z''"]):::Literal
-4(["actor:0001_105"]) -->|rdfs:label| 7(["''Massih Karsh''@en"]):::Literal
-8(["https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769"]) -->|crm:P97_from_father| 4(["actor:0001_105"])
-9(["actor:0001_104"]) -->|rdfs:label| 10(["''Bahiyah Nakash''@en"]):::Literal
-11(["https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525"]):::E2_Temporal_Entity_URI -->|rdf:type| 12["crm:E9_Move"]:::E2_Temporal_Entity
-0(["vocab:3004"]):::E53_Place_URI -->|rdf:type| 13["crm:E53_Place"]:::E53_Place
-9(["actor:0001_104"]):::E39_Actor_URI -->|rdf:type| 14["crm:E21_Person"]:::E39_Actor
-15(["https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9"]) -->|crmarcheo:AP28_occurs_before| 11(["https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525"])
-8(["https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769"]):::E2_Temporal_Entity_URI -->|rdf:type| 16["crm:E67_Birth"]:::E2_Temporal_Entity
-11(["https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525"]) -->|crm:P25_moved| 17(["actor:0001_100"])
-17(["actor:0001_100"]):::E39_Actor_URI -->|rdf:type| 18["crm:E21_Person"]:::E39_Actor
-17(["actor:0001_100"]) -->|rdfs:label| 19(["''Yousuf Karsh''@en"]):::Literal
-17(["actor:0001_100"]) -->|crm:P100i_died_in| 15(["https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9"])
-8(["https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769"]) -->|crm:P7_took_place_at| 20(["vocab:3001"])
-17(["actor:0001_100"]) -->|crm:P98i_was_born| 8(["https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769"])
-21(["https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED"]) -->|crm:P82b_end_of_the_end| 22(["''2002-07-13T23:59:59Z''"]):::Literal
-11(["https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525"]) -->|crm:P26_moved_to| 0(["vocab:3004"])
-15(["https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9"]) -->|crm:P7_took_place_at| 23(["vocab:3002"])
-15(["https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9"]) -->|crm:P4_has_time-span| 21(["https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED"])
-21(["https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED"]) -->|crm:P82a_begin_of_the_begin| 24(["''2002-07-13T00:00:00Z''"]):::Literal
-20(["vocab:3001"]):::E53_Place_URI -->|rdf:type| 25["crm:E53_Place"]:::E53_Place
-2(["https://dopheda.info/crm_e52/7869F20E-669F-4B7A-ACCE-C587FB1E7549"]):::E52_Time-Span_URI -->|rdf:type| 26["crm:E52_Time-Span"]:::E52_Time-Span
-20(["vocab:3001"]) -->|rdfs:label| 27(["''Mardin (Ottoman Empire)''@en"]):::Literal
-8(["https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769"]) -->|crm:P4_has_time-span| 2(["https://dopheda.info/crm_e52/7869F20E-669F-4B7A-ACCE-C587FB1E7549"])
-21(["https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED"]):::E52_Time-Span_URI -->|rdf:type| 28["crm:E52_Time-Span"]:::E52_Time-Span
-15(["https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9"]):::E2_Temporal_Entity_URI -->|rdf:type| 29["crm:E69_Death"]:::E2_Temporal_Entity
-11(["https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525"]) -->|crm:P27_moved_from| 23(["vocab:3002"])
-8(["https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769"]) -->|crm:P96_by_mother| 9(["actor:0001_104"])
-23(["vocab:3002"]) -->|rdfs:label| 30(["''Boston (MA, USA)''@en"]):::Literal
-23(["vocab:3002"]):::E53_Place_URI -->|rdf:type| 31["crm:E53_Place"]:::E53_Place
 
 </div>
   <div id="0001_100_birth-death_ttl" style="display:none" markdown="1">
@@ -141,6 +83,9 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
         },
         securityLevel:'loose',
     };
+    fetch('./mmd/0001_100_birth-death.txt')
+    	.then(response => response.text())
+		 .then((data) => $("#0001_100_birth-death_graph").text(data));
     mermaid.initialize(config);
 </script>
 
@@ -166,11 +111,6 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 	});
 
     $(document).ready(function(){
-    	fetch('./mmd/0001_100_birth-death.txt')
-		  .then(response => response.text())
-		  .then((data) => 
-		    $("#0001_100_birth-death_graph").text(data)
-		  );
         $(".clickable foreignObject > div").wrapInner("<b></b>");
     });
     
