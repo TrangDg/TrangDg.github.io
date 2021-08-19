@@ -113,13 +113,13 @@
     var example = $(".example"), y;
     for (y = 0; y < example.length; y++){
     	var exId = $(example[y]).attr("id");
-    	fetch('./example/'+exId+'.txt')
+    	fetch('./examples/'+exId+'.txt')
     	.then(response => response.text())
 		 .then((data) => $("#"+exId+"_graph").text(data));
-		fetch('./example/'+exId+'.ttl')
+		fetch('./examples/'+exId+'.ttl')
     	.then(response => response.text())
 		 .then((data) => $("#"+exId+"_ttl").text(data));
-		fetch('./example/'+exId+'.json')
+		fetch('./examples/'+exId+'.json')
     	.then(response => response.text())
 		 .then((data) => $("#"+exId+"_json").text(data));
     }
