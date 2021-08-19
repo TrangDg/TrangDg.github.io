@@ -108,7 +108,7 @@
     $(document).ready(function(){
         $(".clickable foreignObject > div").wrapInner("<b></b>");
     });
-     fetch('/mmd/0001_100_birth-death.txt')
+     fetch('./mmd/0001_100_birth-death.txt')
 		  .then(response => response.text())
 		  .then((data) => 
 		    $("#0001_100_birth-death_graph").text(data)
