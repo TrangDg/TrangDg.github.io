@@ -821,6 +821,30 @@ geo:6167865 a crm:E53_Place ;
 
 </div>
 
+
+<div id="0001_100_birth-death" class="example">
+  <ul class="tabs-buttons">
+    <li name="0001_100_birth-death_graph" class="tab active">Instances graph</li>
+    <li name="0001_100_birth-death_ttl" class="tab">Turtle</li>
+    <li name="0001_100_birth-death_json" class="tab">JSON-LD</li>
+  </ul>
+<div class="tabs-content">
+<div id="0001_100_birth-death_graph" class="mermaid" onclick="sizeToggle(this)">
+
+
+</div>
+<div id="0001_100_birth-death_ttl" class="turtle" style="display:none" markdown="1">
+
+</div>
+<div id="0001_100_birth-death_json" class="json" style="display:none" markdown="1">
+
+</div>
+
+</div>
+
+</div>
+
+
 <style>
 	.tabs-buttons {
 		display: flex;
@@ -868,16 +892,32 @@ geo:6167865 a crm:E53_Place ;
 <script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"></script>
 <!-- <script>mermaid.initialize({startOnLoad:true});</script> -->
 <script>
-    var config = {
+     var config = {
         startOnLoad:true,
         flowchart:{
-                // useMaxWidth:true,
+                useMaxWidth:true,
                 htmlLabels:true,
                 curve:'basis',
                 rankSpacing:50
         },
         securityLevel:'loose',
     };
+    
+    var example = $(".example"), y;
+    for (y = 0; y < example.length; y++){
+        var exId = $(example[y]).attr("id");
+        fetch('./examples/'+exId+'.txt')
+        .then(response => response.text())
+         .then((data) => $("#"+exId+"_graph").text(data));
+        fetch('./examples/'+exId+'.ttl')
+        .then(response => response.text())
+         .then((data) => $("#"+exId+"_ttl").text("```turtle\n"+data+"```"));
+        fetch('./examples/'+exId+'.json')
+        .then(response => response.text())
+         .then((data) => $("#"+exId+"_json").text("```json\n"+data+"```"));
+    }
+
+    
     mermaid.initialize(config);
 </script>
 
