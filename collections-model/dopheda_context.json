@@ -119,10 +119,12 @@
 			"@id": "crm:P4_has_time-span"
 		},
 		"begin_of_the_begin": {
-			"@id": "crm:P82a_begin_of_the_begin"
+			"@id": "crm:P82a_begin_of_the_begin",
+			"@type": "xsd:dateTime"
 		},
 		"end_of_the_end": {
-			"@id": "crm:P82b_end_of_the_end"
+			"@id": "crm:P82b_end_of_the_end",
+			"@type": "xsd:dateTime"
 		},
 		"has_range": {
 			"@id": "crm:P02_has_range"
