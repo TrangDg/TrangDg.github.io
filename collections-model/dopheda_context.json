@@ -1,6 +1,7 @@
 {
 	"@context": {
-		"@version": 2.2,
+		"@version": 1.1,
+		"@vocab": "https://dopheda.info/",
 		"crm": "http://www.cidoc-crm.org/cidoc-crm/",
 		"crmdig": "http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/",
 	    "crmsci": "http://www.cidoc-crm.org/cidoc-crm/CRMsci/",
@@ -12,9 +13,10 @@
 	    "dct": "http://purl.org/dc/terms/", 	     
 	    "xsd": "http://www.w3.org/2001/XMLSchema#",
 	    "vocab": "https://vocab.example.info/",
-	    "actor": "https://dopheda.info/crm_e39/",
+	    "actor": "crm_e39/",
 	    "_label": {
-	      	"@id": "rdfs:label"
+	      	"@id": "rdfs:label",
+	      	"@container": "@language"
 	    },
 		"Digital_Object": {
 			"@id": "crmdig:D1_Digital_Object"
