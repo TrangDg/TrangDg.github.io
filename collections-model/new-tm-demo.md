@@ -117,77 +117,108 @@ The Unknown Soldier (Actor Appellation) died in France as a soldier during the F
 #### Example 5
 Ramses II died around 1213 BCE according to the egyptian chronology (Hornung & al. 2006, 476-478). His body was embalmed and deposited in tomb KV7 in the Valley of Kings (modern-day Egypt), but was soon moved and transferred into other tombs by Egyptian priests to protect it from looting, and finally discovered in tomb TT320 in 1881 (Wikipedia 2021).
 In this example, the mummy transferred, or at least discovered by archæologists, should no longer be considered a `E21_Person` but rather a `E20_Biological_Object` which could be moved. At the moment, this transformation is not documented as part of the death pattern. .
+
 ## Related documentation
+
 ### External models
-Linked.art’s [birth and death/formation and dissolution](https://linked.art/model/actor/#birth-and-death-formation-and-dissolution) pattern
-Digital Object Reference Data Model’s [person existence](https://docs.swissartresearch.net/et/persons/#existence) pattern
+
+- Linked.art’s [birth and death/formation and dissolution](https://linked.art/model/actor/#birth-and-death-formation-and-dissolution) pattern
+- Digital Object Reference Data Model’s [person existence](https://docs.swissartresearch.net/et/persons/#existence) pattern
+
+
 ### Entry nodes
 This pattern contains the following nodes:
-[Birth/Formation Date Begin](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-begin)
-[Birth/Formation Date Begin Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-begin-qualifier)
-[Birth/Formation Date End](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-end)
-[Birth/Formation Date End Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-end-qualifier)
-[Birth/Formation Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-place)
-[Death/Dissolution Date Begin](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-begin)
-[Death/Dissolution Date Begin Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-begin-qualifier)
-[Death/Dissolution Date End](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-end)
-[Death/Dissolution Date End Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-end-qualifier)
-[Death/Dissolution Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-place)
-[Father Appellation](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#father-appellation)
-[Final Disposition Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#final-disposition-place)
-[Mother Appellation](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#mother-appellation)
-###CIDOC CRM Entities
-`E9_Move`
-`E21_Person`
-`E33_Linguistic_Object`
-`E41_Appellation`
-`E52_Time-Span`
-`E53_Place`
-`E55_Type`
-`E67_Birth`
-`E69_Death`
-`P1_is_identified_by`
-`P2_has_type`
-`P4_has_time-span`
-`P7_took_place_at`
-`P25_moved`
-`P26_moved_to`
-`P27_moved_from`
-`P79_beginning_is_qualified_by`
-`P80_end_is_qualified_by`
-`P82a_at_some_time_within`
-`P82b_at_some_time_within`
-`P96_by_mother`
-`P97_from_father`
-`P98_brought_into_life`
-`P100_was_death_of`
-`P190_has_symbolic_content`
-`AP28_occurs_before`(`P120_occurs_before`)
+
+- [Birth/Formation Date Begin](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-begin)
+- [Birth/Formation Date Begin Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-begin-qualifier)
+- [Birth/Formation Date End](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-end)
+- [Birth/Formation Date End Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-end-qualifier)
+- [Birth/Formation Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-place)
+- [Death/Dissolution Date Begin](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-begin)
+- [Death/Dissolution Date Begin Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-begin-qualifier)
+- [Death/Dissolution Date End](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-end)
+- [Death/Dissolution Date End Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-end-qualifier)
+- [Death/Dissolution Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-place)
+- [Father Appellation](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#father-appellation)
+- [Final Disposition Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#final-disposition-place)
+- [Mother Appellation](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#mother-appellation)
+
+### CIDOC CRM Entities
+
+- `E9_Move`
+- `E21_Person`
+- `E33_Linguistic_Object`
+- `E41_Appellation`
+- `E52_Time-Span`
+- `E53_Place`
+- `E55_Type`
+- `E67_Birth`
+- `E69_Death`
+- `P1_is_identified_by`
+- `P2_has_type`
+- `P4_has_time-span`
+- `P7_took_place_at`
+- `P25_moved`
+- `P26_moved_to`
+- `P27_moved_from`
+- `P79_beginning_is_qualified_by`
+- `P80_end_is_qualified_by`
+- `P82a_at_some_time_within`
+- `P82b_at_some_time_within`
+- `P96_by_mother`
+- `P97_from_father`
+- `P98_brought_into_life`
+- `P100_was_death_of`
+- `P190_has_symbolic_content`
+- `AP28_occurs_before`(`P120_occurs_before`)
+
 ## Discussion
+
 ### Rationale
 The distinction between biological filiation (i.e. biologically being the mother and father of a person) and parentship (i.e. the social relationship the person has to their parents and vice-versa) are considered distinct in the context of this model so that each type of parental affiliation can be precisely and accurately recorded. The recording of parental and family interactions is modelled using the [relationship pattern](https://chin-rcip.github.io/collections-model/en/target-model/current/social-bonds#relationships). As such, the biological lineage modelling addressed in this pattern should be employed when the goal is to document *genealogical* information. 
 The modelling of the final resting location, and especially the use of the `E9_Move` event, is ontologically disputable. Representing the post-death move of the `E21_Person` to their grave through an `E9_Move` event is the simplest modelling solution to the representation of the intentional moving of human remains. However, it is conceptually problematic since the remains of the dead person are technically no longer fully this `E21_Person` instance. The logic of CIDOC CRM dictates the creation of a `E20_Biological_Object` instance to replace the `E21_Person` instance through an instance of `E81_Transformation`. This is because, otherwise, the pattern (as it currently stands) indicates that the person was moved and buried alive. However, this longer and more precise modelling is highly complex and would create nodes that would considerably weigh down the model, significantly complexify queries, and unnecessarily burden users. Because there are very few examples of alive people being buried that are recorded (especially as such) in heritage collections, it seems preferable to compromise on semantic preciseness and adopt a simpler model, assuming actors will be buried whilst dead. This is discussed in the [issue #72](https://github.com/chin-rcip/collections-model/issues/72)
+
 ### Related Github issues
-[16 “Do we need a family relationship pattern? And what to do with parents?”](https://github.com/chin-rcip/collections-model/issues/16)
-[72 “How to model Resting Place?”](https://github.com/chin-rcip/collections-model/issues/72)
+
+- [16 “Do we need a family relationship pattern? And what to do with parents?”](https://github.com/chin-rcip/collections-model/issues/16)
+- [72 “How to model Resting Place?”](https://github.com/chin-rcip/collections-model/issues/72)
+
 ## Bibliography
+
 Baldissera, Lisa. Emily Carr: Life & Work. Canadian Online Art Book Project. Toronto, CA-ON: Art Canada Institute / Institut de l’art canadien, 2015. https://www.aci-iac.ca/art-books/emily-carr/. 
+
 Brumberg, H. L., D. Dozor, and S. G. Golombek. ‘History of the Birth Certificate: From Inception to the Future of Electronic Data’. Journal of Perinatology 32, no. 6 (June 2012): 407–11. https://doi.org/10.1038/jp.2012.3.
+
 Devlin, Stacy, and Emily Cuggy. ‘Settler Records, Indigenous Histories: Challenges in Indigenous Genealogical Research’. Active History (blog), 7 December 2017. https://activehistory.ca/2017/12/settler-records-indigenous-histories-challenges-in-indigenous-genealogical-research/.
+
 Doerr, Martin, and Christian Emil Ore, eds. Definition of the CIDOC Conceptual Reference Model. CIDOC CRM Documentations, 7.0.1. Paris, FR: International Council of Museums (ICOM), 2020. http://www.cidoc-crm.org/sites/default/files/CIDOC%20CRM_v.7.0.1_%2018-10-2020.pdf.
+
 Editors of Encyclopaedia Britannica. ‘Yousuf Karsh’. In Encyclopedia Britannica. London, GB: Britannica, n.d. https://www.britannica.com/biography/Yousuf-Karsh.
+
 FamilySearch. ‘Canada Cemeteries’. FamilySearch Wiki, 7 April 2020. https://www.familysearch.org/wiki/en/Canada_Cemeteries.
+
 Foot, Richard. ‘Canada’s Unknown Soldier’. In The Canadian Encyclopedia. 2014. Reprint, Toronto, CA-ON: Historica Canada, 3 October 2018. https://www.thecanadianencyclopedia.ca/en/article/unknown-soldier.
+
 Hamilton, Michelle. ‘“Anyone Not on the List Might as Well Be Dead”: Aboriginal Peoples and the Censuses of Canada, 1851–1916’. Journal of the Canadian Historical Association / Revue de La Société Historique Du Canada 18, no. 1 (2007): 57–79. https://doi.org/10.7202/018254ar.
+
 Hornung, Erik, Rolf Krauss, and David A. Warburton, eds. 2006. Ancient Egyptian Chronology. Leiden, NL-ZH; Boston, US-MA: Brill.
+
 Library and Archives Canada. ‘Births, Marriages and Deaths Recorded in Canada’. Library and Archives Canada, 9 September 2020. https://www.bac-lac.gc.ca/eng/discover/vital-statistics-births-marriages-deaths/births-marriages-deaths-recorded/Pages/births-marriages-deaths-recorded.aspx.
+
 linked.art. ‘Linked Art Data Model’. linked.art, 2021. https://linked.art/model/index.html.
+
 Musée d’art contemporain de Montréal. ‘David Altmejd’. MAC Montréal, 2015. http://staging.macm.org/en/exhibitions/david-altmejd/.
+
 OCLC. Virtual International Authority File Guidelines. 2015. Reprint, Dublin, US-OH: OCLC, 2019. https://www.oclc.org/content/dam/oclc/viaf/VIAF%20Guidelines.pdf.
+
 Royal British Columbia Museum. ‘Resources for First Nations Genealogical Research at the BC Archives’. Royal British Columbia Museum, November 2018. https://royalbcmuseum.bc.ca/sites/default/files/sites/default/files/images/resources_for_first_nations_genealogical_research_at_the_bcarchives_2018.pdf.
+
 Shadbolt, Doris. ‘Emily Carr’. In The Canadian Encyclopedia. 2013. Reprint, Toronto, CA-ON: Historica Canada, 28 August 2015. https://www.thecanadianencyclopedia.ca/en/article/emily-carr.
+
 Skidmore, Colleen. ‘Yousuf Karsh’. In The Canadian Encyclopedia. 2010. Reprint, Toronto, CA-ON: Historica Canada, 4 March 2015. https://www.thecanadianencyclopedia.ca/en/article/yousuf-karsh.
+
 Wikidata. ‘Place of Burial (P119)’. Wikidata, 9 April 2021. https://www.wikidata.org/wiki/Property:P119.
+
 Wikipedia. 2021. “Ramesses II.” In Wikipedia. San Francisco, US-CA: Wikipedia. https://en.wikipedia.org/wiki/Ramesses_II.
 
 
@@ -254,16 +285,16 @@ Wikipedia. 2021. “Ramesses II.” In Wikipedia. San Francisco, US-CA: Wikipedi
     
     var example = $(".example"), y;
     for (y = 0; y < example.length; y++){
-        var exId = $(example[y]).attr("id");
+        let exId = $(example[y]).attr("id");
         fetch('./examples/'+exId+'.txt')
-        .then(response => response.text())
-         .then((data) => $("#"+exId+"_graph").text(data));
+        .then(response1 => response1.text())
+         .then((data1) => $("#"+exId+"_graph").text(data1));
         fetch('./examples/'+exId+'.ttl')
-        .then(response => response.text())
-         .then((data) => $("#"+exId+"_ttl code").text(data));
+        .then(response2 => response2.text())
+         .then((data2) => $("#"+exId+"_ttl code").text(data2));
         fetch('./examples/'+exId+'.json')
-        .then(response => response.text())
-         .then((data) => $("#"+exId+"_json code").text(data));
+        .then(response3 => response3.text())
+         .then((data3) => $("#"+exId+"_json code").text(data3));
     };
 
     
