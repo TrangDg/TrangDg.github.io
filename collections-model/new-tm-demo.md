@@ -1,4 +1,7 @@
-          
+<head>
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.css" rel="stylesheet" />
+</head>
+
 # Birth/Death of People and Formation/Dissolution of Groups
 
 ### Description of the information documented
@@ -583,51 +586,7 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
   <div id="tabs-2-ttl" style="display:none" markdown="1">
    
 ```turtle
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix geo: <https://www.geonames.org/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-<https://dopheda.info/crm_e39/0001_0396> a crm:E74_Group ;
-    rdfs:label "Canadian Group of Painters"@en ;
-    crm:P95i_was_formed_by <https://dopheda.info/crm_e63/0001_0418> ;
-    crm:P99i_was_dissolved_by <https://dopheda.info/crm_e64/0001_0398> .
-
-<https://dopheda.info/crm_e39/0001_0420> a crm:E21_Person ;
-    crm:P1_is_identified_by <https://dopheda.info/crm_e41/0001_0441> .
-
-<https://dopheda.info/crm_e41/0001_0441> a crm:E33_Linguistic_Object,
-        crm:E41_Appellation ;
-    rdfs:label "Full appellation of A. J. Casson"@en,
-        "Appellation complète de A. J. Casson"@fr ;
-    crm:P190_has_symbolic_content "A. J. Casson"@en .
-
-<https://dopheda.info/crm_e52/0001_0391> a crm:E52_Time-Span ;
-    rdfs:label "Time-Span of the dissolution event of Canadian Group of Painters"@en,
-        "Durée de l’événement de dissolution de Canadian Group of Painters"@fr ;
-    crm:P82a_begin_of_the_begin "1969-01-01T00:00:00Z" ;
-    crm:P82b_end_of_the_end "1969-12-31T23:59:59Z" .
-
-<https://dopheda.info/crm_e52/0001_0421> a crm:E52_Time-Span ;
-    rdfs:label "Time-Span of the formation event of Canadian Group of Painters"@en,
-        "Durée de l’événement de formation de Canadian Group of Painters"@fr ;
-    crm:P82a_begin_of_the_begin "1933-02-01T00:00:00Z" ;
-    crm:P82b_end_of_the_end "1933-02-28T23:59:59Z" .
-
-<https://dopheda.info/crm_e63/0001_0418> a crm:E66_Formation ;
-    rdfs:label "Formation event of Canadian Group of Painters"@en,
-        "Événement de formation de Canadian Group of Painters"@fr ;
-    crm:P14_carried_out_by <https://dopheda.info/crm_e39/0001_0420> ;
-    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0421> ;
-    crm:P7_took_place_at geo:6167865 .
-
-<https://dopheda.info/crm_e64/0001_0398> a crm:E68_Dissolution ;
-    rdfs:label "Dissolution event of Canadian Group of Painters"@en,
-        "Événement de dissolution de Canadian Group of Painters"@fr ;
-    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0391> .
-
-geo:6167865 a crm:E53_Place ;
-    rdfs:label "Toronto"@en,
-        "Toronto"@fr .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> . @prefix crmarcheo: <http://www.cidoc-crm.org/cidoc-crm/CRMarchaeo/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix vocab: <https://vocab.example.info/> . <https://dopheda.info/crm_e39/0001_100> a crm:E21_Person ; rdfs:label "Yousuf Karsh"@en ; crm:P100i_died_in <https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9> ; crm:P98i_was_born <https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769> . <https://dopheda.info/crm_e39/0001_104> a crm:E21_Person ; rdfs:label "Bahiyah Nakash"@en . <https://dopheda.info/crm_e39/0001_105> a crm:E21_Person ; rdfs:label "Massih Karsh"@en . <https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525> a crm:E9_Move ; crm:P25_moved <https://dopheda.info/crm_e39/0001_100> ; crm:P26_moved_to vocab:3004 ; crm:P27_moved_from vocab:3002 . <https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED> a crm:E52_Time-Span ; crm:P82a_begin_of_the_begin "2002-07-13T00:00:00Z" ; crm:P82b_end_of_the_end "2002-07-13T23:59:59Z" . <https://dopheda.info/crm_e52/7869F20E-669F-4B7A-ACCE-C587FB1E7549> a crm:E52_Time-Span ; crm:P82a_begin_of_the_begin "1908-12-23T00:00:00Z" ; crm:P82b_end_of_the_end "1908-12-23T23:59:59Z" . <https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769> a crm:E67_Birth ; crm:P4_has_time-span <https://dopheda.info/crm_e52/7869F20E-669F-4B7A-ACCE-C587FB1E7549> ; crm:P7_took_place_at vocab:3001 ; crm:P96_by_mother <https://dopheda.info/crm_e39/0001_104> ; crm:P97_from_father <https://dopheda.info/crm_e39/0001_105> . <https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9> a crm:E69_Death ; crmarcheo:AP28_occurs_before <https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525> ; crm:P4_has_time-span <https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED> ; crm:P7_took_place_at vocab:3002 . vocab:3001 a crm:E53_Place ; rdfs:label "Mardin (Ottoman Empire)"@en . vocab:3004 a crm:E53_Place ; rdfs:label "Notre-Dame Cemetery (Ottawa, ON, Canada)"@en . vocab:3002 a crm:E53_Place ; rdfs:label "Boston (MA, USA)"@en .
 ```
   </div>
   <div id="tabs-2-json" style="display:none" markdown="1">
@@ -832,10 +791,10 @@ geo:6167865 a crm:E53_Place ;
 
 </div>
 <div id="0001_100_birth-death_ttl" class="turtle" style="display:none" markdown="1">
-
+<pre><code class="language-turtle"></code></pre>
 </div>
 <div id="0001_100_birth-death_json" class="json" style="display:none" markdown="1">
-
+<pre><code class="language-json"></code></pre>
 </div>
 
 </div>
@@ -909,11 +868,11 @@ geo:6167865 a crm:E53_Place ;
          .then((data) => $("#"+exId+"_graph").text(data));
         fetch('./examples/'+exId+'.ttl')
         .then(response => response.text())
-         .then((data) => $("#"+exId+"_ttl").text("\n```turtle\n"+data+"\n```"));
+         .then((data) => $("#"+exId+"_ttl code").text(data));
         fetch('./examples/'+exId+'.json')
         .then(response => response.text())
-         .then((data) => $("#"+exId+"_json").text("\n```json\n"+data+"\n```"));
-    }
+         .then((data) => $("#"+exId+"_json code").text(data));
+    };
 
     
     mermaid.initialize(config);
@@ -941,3 +900,5 @@ geo:6167865 a crm:E53_Place ;
 	})
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/prism-core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
