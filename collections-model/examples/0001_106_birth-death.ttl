@@ -1,0 +1,46 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmarcheo: <http://www.cidoc-crm.org/cidoc-crm/CRMarchaeo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vocab: <https://vocab.example.info/> .
+
+<https://dopheda.info/crm_e39/0001_106> a crm:E21_Person ;
+    rdfs:label "Emily Carr"@en ;
+    crm:P100i_died_in <https://dopheda.info/crm_e64/E6FDD171-8317-47F9-B17E-587F64690CE5> ;
+    crm:P98i_was_born <https://dopheda.info/crm_e63/20424F44-011C-4355-BE18-B2C4927407BF> .
+
+<https://dopheda.info/crm_e39/0001_107> a crm:E21_Person ;
+    rdfs:label "Emily (Saunders) Carr"@en .
+
+<https://dopheda.info/crm_e39/0001_108> a crm:E21_Person ;
+    rdfs:label "Richard Carr"@en .
+
+<https://dopheda.info/crm_e5/2CA08905-DDF5-44CE-B857-6CFE37AB5988> a crm:E9_Move ;
+    crm:P25_moved <https://dopheda.info/crm_e39/0001_106> ;
+    crm:P26_moved_to vocab:3006 ;
+    crm:P27_moved_from vocab:3005 .
+
+<https://dopheda.info/crm_e52/8222FAD3-811B-46ED-AF3D-EC32231E1EAB> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1871-12-13T00:00:00" ;
+    crm:P82b_end_of_the_end "1871-12-13T23:59:59Z" .
+
+<https://dopheda.info/crm_e52/8A91E3AF-FD4B-41A2-B5EE-813F023871CE> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1945-03-02T00:00:00Z" ;
+    crm:P82b_end_of_the_end "1945-03-02T23:59:59Z" .
+
+<https://dopheda.info/crm_e63/20424F44-011C-4355-BE18-B2C4927407BF> a crm:E67_Birth ;
+    crm:P4_has_time-span <https://dopheda.info/crm_e52/8222FAD3-811B-46ED-AF3D-EC32231E1EAB> ;
+    crm:P7_took_place_at vocab:3005 ;
+    crm:P96_by_mother <https://dopheda.info/crm_e39/0001_107> ;
+    crm:P97_from_father <https://dopheda.info/crm_e39/0001_108> .
+
+<https://dopheda.info/crm_e64/E6FDD171-8317-47F9-B17E-587F64690CE5> a crm:E69_Death ;
+    crmarcheo:AP28_occurs_before <https://dopheda.info/crm_e5/2CA08905-DDF5-44CE-B857-6CFE37AB5988> ;
+    crm:P4_has_time-span <https://dopheda.info/crm_e52/8A91E3AF-FD4B-41A2-B5EE-813F023871CE> ;
+    crm:P7_took_place_at vocab:3005 .
+
+vocab:3006 a crm:E53_Place ;
+    rdfs:label "Ross Bay Cemetery (Victoria, BC, Canada)"@en .
+
+vocab:3005 a crm:E53_Place ;
+    rdfs:label "Victoria (BC, Canada)"@en .
+

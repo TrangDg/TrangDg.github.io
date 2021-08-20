@@ -1,0 +1,100 @@
+{
+  "@context": "https://trangdg.github.io/collections-model/dopheda_context.json",
+  "@graph": [
+    {
+      "@id": "actor:0001_106",
+      "@type": "Person",
+      "_label": {
+        "en": "Emily Carr"
+      },
+      "died_in": {
+        "@id": "https://dopheda.info/crm_e64/E6FDD171-8317-47F9-B17E-587F64690CE5"
+      },
+      "was_born": {
+        "@id": "https://dopheda.info/crm_e63/20424F44-011C-4355-BE18-B2C4927407BF"
+      }
+    },
+    {
+      "@id": "vocab:3005",
+      "@type": "Place",
+      "_label": {
+        "en": "Victoria (BC, Canada)"
+      }
+    },
+    {
+      "@id": "actor:0001_107",
+      "@type": "Person",
+      "_label": {
+        "en": "Emily (Saunders) Carr"
+      }
+    },
+    {
+      "@id": "https://dopheda.info/crm_e64/E6FDD171-8317-47F9-B17E-587F64690CE5",
+      "@type": "Death",
+      "has_time-span": {
+        "@id": "https://dopheda.info/crm_e52/8A91E3AF-FD4B-41A2-B5EE-813F023871CE"
+      },
+      "occurs_before": {
+        "@id": "https://dopheda.info/crm_e5/2CA08905-DDF5-44CE-B857-6CFE37AB5988"
+      },
+      "took_place_at": {
+        "@id": "vocab:3005"
+      }
+    },
+    {
+      "@id": "https://dopheda.info/crm_e63/20424F44-011C-4355-BE18-B2C4927407BF",
+      "@type": "Birth",
+      "by_mother": {
+        "@id": "actor:0001_107"
+      },
+      "from_father": {
+        "@id": "actor:0001_108"
+      },
+      "has_time-span": {
+        "@id": "https://dopheda.info/crm_e52/8222FAD3-811B-46ED-AF3D-EC32231E1EAB"
+      },
+      "took_place_at": {
+        "@id": "vocab:3005"
+      }
+    },
+    {
+      "@id": "vocab:3006",
+      "@type": "Place",
+      "_label": {
+        "en": "Ross Bay Cemetery (Victoria, BC, Canada)"
+      }
+    },
+    {
+      "@id": "https://dopheda.info/crm_e52/8222FAD3-811B-46ED-AF3D-EC32231E1EAB",
+      "@type": "Time-Span",
+      "crm:P82a_begin_of_the_begin": "1871-12-13T00:00:00",
+      "crm:P82b_end_of_the_end": "1871-12-13T23:59:59Z"
+    },
+    {
+      "@id": "actor:0001_108",
+      "@type": "Person",
+      "_label": {
+        "en": "Richard Carr"
+      }
+    },
+    {
+      "@id": "https://dopheda.info/crm_e52/8A91E3AF-FD4B-41A2-B5EE-813F023871CE",
+      "@type": "Time-Span",
+      "crm:P82a_begin_of_the_begin": "1945-03-02T00:00:00Z",
+      "crm:P82b_end_of_the_end": "1945-03-02T23:59:59Z"
+    },
+    {
+      "@id": "https://dopheda.info/crm_e5/2CA08905-DDF5-44CE-B857-6CFE37AB5988",
+      "@type": "Move",
+      "moved": {
+        "@id": "actor:0001_106"
+      },
+      "moved_from": {
+        "@id": "vocab:3005"
+      },
+      "moved_to": {
+        "@id": "vocab:3006"
+      }
+    }
+  ]
+}

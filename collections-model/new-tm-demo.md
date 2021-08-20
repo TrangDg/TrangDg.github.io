@@ -2,782 +2,51 @@
 <link href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.css" rel="stylesheet" />
 </head>
 
-# Birth/Death of People and Formation/Dissolution of Groups
+# Birth and Death of a Person
+## At glance
+This pattern can be used to represent the information pertaining to the lifespan of a person (birth and death) .  This includes: 
+Date and location of the birth of a person;
+Biological parents of a person; 
+Date and location of the death of a person; 
+Location of the remains (burial place) of a person. 
+It pertains specifically to the vital information of persons and not to their relationships, or to the vital information of non-human agents (e.g. animals or groups) or non-living humans (e.g. human remains). As such, it does not include: 
+Adoptive parents of a person (use the [relationship](/collections-model/en/target-model/current/relationships) pattern instead); 
+Relationship of a person to their parents (i.e. the pattern describes biological parenthood rather than the social bond between the person and their parents) (use the [relationship](/collections-model/en/target-model/current/relationships) pattern instead);
+Belonging of a person to a family (use the [family belonging](/collections-model/en/target-model/current/family-belonging) pattern instead);
+Cause of the death of the person;
+Date and location of the birth of a non-human agent such as an animal or thing;
+Date and location of the birth and death of a non-human agent such as an animal or thing; 
+Location of the remains (burial place) of a non-human agent such as an animal or thing.  
 
-### Description of the information documented
+## Introduction and context
+### Statement of need
+The recording of vital statistics pertaining to the birth and death of people dates back to Antiquity when such information was used by states to determine taxation and estimate military manpower (Brumberg & al 2012, 407). It is a statistically and culturally important part of heritage data that is often used to situate actors within larger societal and demographic trends, and is a key element of genealogy and family history research (Library and Archives Canada 2020 §Births, Marriages and Deaths Recorded in Canada§). 
+Such data is useful to visualize trends in family composition, genealogical lineage, localization of actors in space and time, or national belonging (i.e. since polities can change over time, for example Yousuf Karsh was born in modern-day Turkey at a time when it was the Ottoman Empire (Editors of Encyclopaedia Britannica n.d., “Yousuf Karsh” §Yousuf Karsh§)). Burial locations, in particular, can be indicative of social mores and practices surrounding death, and are increasingly recorded by players interested in genealogy or heritage data such as [Wikidata](https://www.wikidata.org/wiki/Property:P119) (Wikidata 2021 §place of burial (P119)§) or [genealogical institutes](https://www.familysearch.org/wiki/en/Canada_Cemeteries) (FamilySearch 2020 §Canada Cemeteries§).
+Yet, it is important to keep in mind that vital information is often inconsistently or problematically recorded, and census data is heavily framed by census methodology so that any such use of vital information must be heavily pondered (Hamilton 2008 §“Anyone not on the list might as well be dead”: Aboriginal Peoples and the Censuses of Canada, 1851–1916§). For example, colonial records of Indigenous ancestry are notoriously flawed and have often either not recorded Indigenous actors, or done so using colonial methods of collecting, recording, and archiving that do not encompass the traditions and concepts deemed relevant to their ancestry by Indigenous Peoples (Devlin & Cuggy 2017 §Settler Records, Indigenous Histories: Challenges in Indigenous Genealogical Research§; Royal British Columbia Museum 2018 §Resources for First Nations Genealogical Research at the BC Archives§). As such, such uses of vital records should be done critically and cautiously. 
+It is not only statistically meaningful, but also crucial to the disambiguation of actors (i.e. two different people might have the same name by happenstance, or a single person might be associated to several names or spellings of a name) as it can be used to confirm someone’s identity (OCLC 2019, 4 §Virtual International Authority File Guidelines§). 
+Because such information is commonly used by heritage institutions as well as relied upon for disambiguation purposes, it is likely to be amongst the most widely documented. This, in turn, means that such vital data will predictably be amongst the most subject to exchange and mobilization by several providers. Interoperability with other relevant models is thus of importance in the development of these patterns.  
+This indicates a need for an identification of who was born when, where, and to whom (biological mother and father), as well as when and where they died, and where their remains are located. 
+## Description of the pattern
+The Birth and Death pattern is based on a modelling approach where an event embodies the “creation” and “ending” of the entity (an `E21_Person` instance). 
+The birth of a person is modelled as follows :
+A `E21_Person` instance is linked fromto their `E67_Birth`instance through the property `P98_brought_into_life` that is linked to an instance of `E21_Person` representing the person’s biological mother using the property `P96_by_mother` to link to the `E21_Person`instance of said mother, identified by an instance of both `E41_Appellation` and `E33_Linguistic_Object`pointing to the mother’s name value entered in the [mother appellation](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#mother-appellation) entry node. 
+Similarly, from the same instance of `E67_Birth`, the person is linked to an instance of `E21_Person` representing their biological father using the property `P97_from_father` to link to the `E21_Person`instance of said father, identified by an instance of both `E41_Appellation` and `E33_Linguistic_Object`pointing to the father’s name value entered in the [father appellation](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#father-appellation) entry node. 
+Where the birth occurred is indicated by an instance of `E53_Place` whose value is entered in the [Birth Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-place) entry node. The instance of `E53_Place` is linked to the instance of`E67_Birth`through the property `P7_took_place_at` .
+When it occurred is indicated by a [datation pattern](/collections-model/en/target-model/current/datation) linked to the `E67_Birth`instance through the property `P4_has_time-span`. 
+The death of a person is modelled as follows: 
+A `E21_Person` instance is linked to their `E69_Death`instance through the property `P100_was_death_of` as well as to an `E9_Move`instance using the property `P25_moved`, together with the property `P26_moved_to` tothat captures the moving of the deceased’s body from their last location to their [final disposition place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#final-disposition-place), which is indicated as a `E55_Type`instance of “Burial Place” through the property `P2_has_type`. 
+The `E69_Death` instance is indicated as having necessarily occurred *before* the `E9_Move` instance by using the CRMarcheo property `AP28_occurs_before`. 
+Where the death occurred is indicated an instance of `E53_Place` whose value is entered in the [Death Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-place) entry node. This instance of `E53_Place` is linked to the instance of `E69_Death` through the property `P7_took_place_at`, as well as also linked to the `E9_Move`instance through the property of `P27_moved_from`. 
+When the death occurred is indicated by a [datation pattern](/collections-model/en/target-model/current/datation) linked to the `E69_Death`instance through the property `P4_has_time-span`.  
 
-Among the information documenting actors, the dates and places of the creation and ending of an actor are particularly important. Indeed, this kind of information is often used to distinguish an individual between homonyms. Therefore, the patterns pertaining to the birth and death of people, and formation and dissolution of groups should be straightforward and follow the standard CIDOC CRM modellisation.
-
-In this pattern, the place and date of the creation of the actor are recorded, as well as the actors involved in the formation and dissolution of groups. The burial location of an individual is included in this pattern.
-
-However, parents are not recorded in this pattern. Although it is possible to document biological filiation with the use of the properties `P96_from_mother` and `P97_from_father` between the birth events and the parents, it has been decided that it is best to have consistency throughout the model and document family relationships in the [Relationship pattern](https://chin-rcip.github.io/collections-model/en/target-model/current/social-bonds#relationships). Moreover, it is best to document relationships as social constructs, rather than to document biological parenthood. For more information, see [github issue #16](https://github.com/chin-rcip/collections-model/issues/16).
-
-### Description of the pattern
-
-The Birth/Death and Formation/Dissolution patterns use the same modelling approach where an event embodies the “creation” and “ending” of an `E39_Actor` (per CIDOC CRM custom). Those events are then linked to the places and dates they happened.
-
-Instances of the event `E67_Birth` are linked to instances of `E21_Person` through the property `P98_brought_into_life`, while instances of `E74_Group` are linked to instances of the event `E66_Formation` with the property `P95_has_formed`. Similarly, instances of the events `E69_Death` and `E68_Dissolution` are respectively linked to instances of `E21_Person` and `E74_Group` with the properties `P100_was_death_of` and `P99_dissolved`.
-
-Instances of the events are then linked to instances of `E53_Place` and `E52_Time`-Span likewise other patterns. For a more detailed account on date modellisation, see the [Dates pattern](https://chin-rcip.github.io/collections-model/en/target-model/current/general-concepts#dates-pattern).
-
-The formation of a group can be enacted by any instances of `E39_Actor` (i.e. this actor does not *have* to be the *official* founder of the group, and can be either instances of `E21_Person` or `E74_Group`). Instances of the event `E66_Formation` would be linked to instances of this founding `E39_Actor` through the property `P14_carried_out_by`. Similarly, the dissolution of a group can be the doing of a `E39_Actor` (including another group).
-
-In association with the `E69_Death` event, the accounting of the location of the remains of a deceased individual is necessary, as it is information often recorded, especially in the case of famous people.
-
-There are two ways to model such information:
-- with an `E24_Physical_Human-Made_Thing` instance representing the grave;
-- through a `E9_Move` event of the `E21_Person` instance to the location of their grave after their death.
-The main challenge with creating an `E24_Physical_Human-Made_Thing` as a representation of the grave is to link this `E24_Physical_Human-Made_Thing` instance with the `E21_Person` instance cannot be done simply.
-
-Representing the post-death move of the `E21_Person` to their grave through an `E9_Move` event is easier to model, but it is conceptually problematic as a dead person is technically no longer an `E21_Person` capable of carrying out activities such as moving. The logic of CIDOC CRM dictates the creation of a new `E20_Biological_Object` to replace the `E21_Person`. Technically, it would be necessary to create an `E5_Event` to represent the transformation of the `E21_Person` into an `E18_Physical_Thing` through an `E81_transformation` so that it is not induced that the person was buried alive. In the absence of a simple solution and because of the complexity and heaviness such a pattern would entail, CHIN has decided to compromise on semantic preciseness and to adopt a simpler model, assuming actors will be buried whilst dead: a `E9_Move` event has been chosen to represent the location of the grave, without creating a new `E20_Biological_Object` in place of the `E21_Person`.
-
-The project [linked.art](https://linked.art/model/actor/#birth-and-death-formation-and-dissolution) came to the same conclusion and stated that:
-
->“After death, people are still instances of Person which is a subclass of Actor, even though they can no longer carry out activities. People in comas or otherwise completely incapacitated also cannot carry out activities, but are not temporarily non-Actors. The modeling that death is a transformation from an instance of Person to an instance of Thing adds complexity for the sake of purity, but does not add any actual value. Thus a burial activity ([aat:300263485](http://vocab.getty.edu/aat/300263485)) buries a Person, not a Thing-that-used-to-be-a-Person. However if the skeleton is then dug up and exhibited, it is exhibited as a Thing. There is, therefore, a transition at some undetermined point.”
-
-
+## Diagram
 <a name="039_Pattern_BirthDeath_p"></a>039_Pattern_BirthDeath_p
 <iframe frameborder="0" style="width:100%;height:800px;" src="https://viewer.diagrams.net/?target=blank&highlight=0000ff&edit=_blank&layers=1&nav=1&title=039_Pattern_BirthDeath_p.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D107d_h_4kMQ-nrshmNQv2YpY3ZFIMXs-j%26export%3Ddownload"></iframe>
 
-<a name="042_Pattern_GroupFormationDissolution_p"></a>042_Pattern_GroupFormationDissolution_p
-<iframe frameborder="0" style="width:100%;height:600px;" src="https://viewer.diagrams.net/?target=blank&highlight=0000ff&edit=_blank&layers=1&nav=1&title=042_Pattern_GroupFormationDissolution_p.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1P7hRu-rR8y22b1OOxripnPIqsD4pP2BW%26export%3Ddownload"></iframe>
-
-
-### Challenges and limits of this pattern
-
-This pattern is relatively standard, as birth and death are important parts of the documentation of actors, and therefore widely used by other projects, such as Linked.art or SARI. Nonetheless, the modellisation of the final resting location, and especially the use of the `E9_Move` event, is ontologically discutable, as in the pure CIDOC CRM logic, an extra step of stating that the `E21_Person` has become a `E20_Biological_Object` have been omitted.
-
-|***For further information***<br/><br/>![GitHub Mark](https://user-images.githubusercontent.com/48293227/104475587-49182180-558d-11eb-87fc-9f95190cb332.png)*Related Github Issues:*<br/>- [Issue #16 - Do we need a family relationship pattern? And what to do with parents?](https://github.com/chin-rcip/chin-rcip/issues/16)<br/><br/>*Equivalent external data models:*<br/>- Linked.art model: [Birth and Death/Formation and Dissolution pattern](https://linked.art/model/actor/#birth-and-death-formation-and-dissolution).<br/>- SARI model: [Person existence](https://docs.swissartresearch.net/et/persons/#existence) and [group existence](https://docs.swissartresearch.net/et/group/#existence) patterns.|
-
-### Examples
-
-*Birth and Death of Emily Carr*
-
-Emily Carr was born on the 13th of December 1871 in Victoria (Canada) and died on the 2nd of March 1945, also in Victoria (BC, Canada). She was buried at Ross Bay Cemetery (Victoria, BC, Canada).
-
-<div id="tabs-1">
-  <ul class="tabs-buttons">
-    <li name="tabs-1-graph" class="tab active">Instances graph</li>
-    <li name="tabs-1-ttl" class="tab">Turtle</li>
-    <li name="tabs-1-json" class="tab">JSON-LD</li>
-  </ul>
-<div class="tabs-content">
-<div id="tabs-1-graph" class="mermaid" onclick="sizeToggle(this)">
-graph TD
-classDef Literal fill:#ffffff,stroke:#000000;
-classDef CRM_Entity fill:#ffffff,stroke:#000000;
-classDef CRM_Entity_URI fill:#ffffff,stroke:#000000;
-classDef Temporal_Entity fill:#82c3ec, stroke:#000000;
-classDef Temporal_Entity_URI fill:#d2e9f9,stroke:#000000;
-classDef Type fill:#fab565, stroke:#000000;
-classDef Type_URI fill:#fde7ce,stroke:#000000;
-classDef Time-Span fill:#86bcc8, stroke:#000000;
-classDef Time-Span_URI fill:#dcebef,stroke:#000000;
-classDef Appellation fill:#fef3ba, stroke:#000000;
-classDef Appellation_URI fill:#fffae6,stroke:#000000;
-classDef Place fill:#94cc7d, stroke:#000000;
-classDef Place_URI fill:#e1f1da,stroke:#000000;
-classDef Persistent_Item fill:#ffffff, stroke:#000000;
-classDef Persistent_Item_URI fill:#ffffff,stroke:#000000;
-classDef Conceptual_Object fill:#fddc34, stroke:#000000;
-classDef Conceptual_Object_URI fill:#fef6cd,stroke:#000000;
-classDef Physical_Thing fill:#e1ba9c, stroke:#000000;
-classDef Physical_Thing_URI fill:#f3e5d8,stroke:#000000;
-classDef Actor fill:#ffbdca, stroke:#000000;
-classDef Actor_URI fill:#ffe6eb,stroke:#000000;
-classDef PC_Classes fill:#cc80ff, stroke:#000000;
-classDef PC_Classes_URI fill:#ebccff,stroke:#000000;
-classDef Multi_URI fill:#cccccc,stroke:#000000;
-0(["https://dopheda.info/crm_e52/0001_0416"]) -->|crm:P82a_begin_of_the_begin| 1(["''1871-12-13T00:00:00Z''"]):::Literal
-0(["https://dopheda.info/crm_e52/0001_0416"]):::Time-Span_URI -->|rdf:type| 2["crm:E52_Time-Span"]:::Time-Span
-3(["https://dopheda.info/crm_e41/0001_0385"]):::Appellation_URI -->|rdf:type| 4["crm:E41_Appellation"]:::Appellation
-5(["geo:6174041"]):::Place_URI -->|rdf:type| 6["crm:E53_Place"]:::Place
-7(["https://dopheda.info/crm_e5/0001_0370"]) -->|rdfs:label| 8(["''Move to burial place of Emily Carr''@en"]):::Literal
-9(["https://dopheda.info/crm_e52/0001_0422"]) -->|crm:P82a_begin_of_the_begin| 10(["''1945-03-02T00:00:00Z''"]):::Literal
-5(["geo:6174041"]) -->|rdfs:label| 11(["''Victoria''@en"]):::Literal
-12(["https://dopheda.info/crm_e63/0001_0367"]) -->|crm:P7_took_place_at| 5(["geo:6174041"])
-13(["https://dopheda.info/crm_e64/0001_0389"]) -->|crm:P7_took_place_at| 5(["geo:6174041"])
-9(["https://dopheda.info/crm_e52/0001_0422"]) -->|crm:P82b_end_of_the_end| 14(["''1945-03-02T23:59:59Z''"]):::Literal
-15(["https://dopheda.info/crm_e39/0001_0368"]) -->|rdfs:label| 16(["''Emily Carr''@en"]):::Literal
-17(["wd:Q7369187"]):::Place_URI -->|rdf:type| 18["crm:E53_Place"]:::Place
-12(["https://dopheda.info/crm_e63/0001_0367"]) -->|rdfs:label| 19(["''Événement de naissance de Emily Carr''@fr"]):::Literal
-7(["https://dopheda.info/crm_e5/0001_0370"]) -->|crm:P25_moved| 15(["https://dopheda.info/crm_e39/0001_0368"])
-15(["https://dopheda.info/crm_e39/0001_0368"]):::Actor_URI -->|rdf:type| 20["crm:E21_Person"]:::Actor
-12(["https://dopheda.info/crm_e63/0001_0367"]) -->|rdfs:label| 21(["''Birth event of Emily Carr''@en"]):::Literal
-3(["https://dopheda.info/crm_e41/0001_0385"]) -->|rdfs:label| 22(["''Appellation complète de Emily Carr''@fr"]):::Literal
-15(["https://dopheda.info/crm_e39/0001_0368"]) -->|crm:P98i_was_born| 12(["https://dopheda.info/crm_e63/0001_0367"])
-9(["https://dopheda.info/crm_e52/0001_0422"]):::Time-Span_URI -->|rdf:type| 23["crm:E52_Time-Span"]:::Time-Span
-5(["geo:6174041"]) -->|rdfs:label| 24(["''Victoria''@fr"]):::Literal
-0(["https://dopheda.info/crm_e52/0001_0416"]) -->|rdfs:label| 25(["''Time-Span of Birth of Emily Carr''@en"]):::Literal
-12(["https://dopheda.info/crm_e63/0001_0367"]):::Temporal_Entity_URI -->|rdf:type| 26["crm:E67_Birth"]:::Temporal_Entity
-9(["https://dopheda.info/crm_e52/0001_0422"]) -->|rdfs:label| 27(["''Durée de l’événement de mort de Emily Carr''@fr"]):::Literal
-3(["https://dopheda.info/crm_e41/0001_0385"]) -->|crm:P190_has_symbolic_content| 28(["''Emily Carr''@en"]):::Literal
-3(["https://dopheda.info/crm_e41/0001_0385"]) -->|rdfs:label| 29(["''Full appellation of Emily Carr''@en"]):::Literal
-7(["https://dopheda.info/crm_e5/0001_0370"]) -->|rdfs:label| 30(["''Déplacement au lieu de sépulture de Emily Carr''@fr"]):::Literal
-15(["https://dopheda.info/crm_e39/0001_0368"]) -->|crm:P100i_died_in| 13(["https://dopheda.info/crm_e64/0001_0389"])
-13(["https://dopheda.info/crm_e64/0001_0389"]) -->|rdfs:label| 31(["''Death event of Emily Carr''@en"]):::Literal
-17(["wd:Q7369187"]) -->|rdfs:label| 32(["''cimetière de Ross Bay''@fr"]):::Literal
-0(["https://dopheda.info/crm_e52/0001_0416"]) -->|rdfs:label| 33(["''Durée de l’événement de naissance de Emily Carr''@fr"]):::Literal
-12(["https://dopheda.info/crm_e63/0001_0367"]) -->|crm:P4_has_time-span| 0(["https://dopheda.info/crm_e52/0001_0416"])
-3(["https://dopheda.info/crm_e41/0001_0385"]):::Multi_URI -->|rdf:type| 34["crm:E33_Linguistic_Object"]:::Conceptual_Object
-7(["https://dopheda.info/crm_e5/0001_0370"]) -->|crm:P27_moved_from| 5(["geo:6174041"])
-15(["https://dopheda.info/crm_e39/0001_0368"]) -->|crm:P1_is_identified_by| 3(["https://dopheda.info/crm_e41/0001_0385"])
-13(["https://dopheda.info/crm_e64/0001_0389"]) -->|rdfs:label| 35(["''Événement de mort de Emily Carr''@fr"]):::Literal
-9(["https://dopheda.info/crm_e52/0001_0422"]) -->|rdfs:label| 36(["''Time-Span of Death of Emily Carr''@en"]):::Literal
-0(["https://dopheda.info/crm_e52/0001_0416"]) -->|crm:P82b_end_of_the_end| 37(["''1871-12-13T23:59:59Z''"]):::Literal
-17(["wd:Q7369187"]) -->|rdfs:label| 38(["''Ross Bay Cemetery''@en"]):::Literal
-13(["https://dopheda.info/crm_e64/0001_0389"]) -->|crm:P120_occurs_before| 7(["https://dopheda.info/crm_e5/0001_0370"])
-13(["https://dopheda.info/crm_e64/0001_0389"]):::Temporal_Entity_URI -->|rdf:type| 39["crm:E69_Death"]:::Temporal_Entity
-7(["https://dopheda.info/crm_e5/0001_0370"]) -->|crm:P26_moved_to| 17(["wd:Q7369187"])
-7(["https://dopheda.info/crm_e5/0001_0370"]):::Temporal_Entity_URI -->|rdf:type| 40["crm:E9_Move"]:::Temporal_Entity
-13(["https://dopheda.info/crm_e64/0001_0389"]) -->|crm:P4_has_time-span| 9(["https://dopheda.info/crm_e52/0001_0422"])
-
-</div>
-  <div id="tabs-1-ttl" style="display:none" markdown="1">
-   
-```turtle
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix geo: <https://www.geonames.org/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix wd: <https://www.wikidata.org/wiki/> .
-
-<https://dopheda.info/crm_e39/0001_0368> a crm:E21_Person ;
-    rdfs:label "Emily Carr"@en ;
-    crm:P100i_died_in <https://dopheda.info/crm_e64/0001_0389> ;
-    crm:P1_is_identified_by <https://dopheda.info/crm_e41/0001_0385> ;
-    crm:P98i_was_born <https://dopheda.info/crm_e63/0001_0367> .
-
-<https://dopheda.info/crm_e41/0001_0385> a crm:E33_Linguistic_Object,
-        crm:E41_Appellation ;
-    rdfs:label "Full appellation of Emily Carr"@en,
-        "Appellation complète de Emily Carr"@fr ;
-    crm:P190_has_symbolic_content "Emily Carr"@en .
-
-<https://dopheda.info/crm_e5/0001_0370> a crm:E9_Move ;
-    rdfs:label "Move to burial place of Emily Carr"@en,
-        "Déplacement au lieu de sépulture de Emily Carr"@fr ;
-    crm:P25_moved <https://dopheda.info/crm_e39/0001_0368> ;
-    crm:P26_moved_to wd:Q7369187 ;
-    crm:P27_moved_from geo:6174041 .
-
-<https://dopheda.info/crm_e52/0001_0416> a crm:E52_Time-Span ;
-    rdfs:label "Time-Span of Birth of Emily Carr"@en,
-        "Durée de l’événement de naissance de Emily Carr"@fr ;
-    crm:P82a_begin_of_the_begin "1871-12-13T00:00:00Z" ;
-    crm:P82b_end_of_the_end "1871-12-13T23:59:59Z" .
-
-<https://dopheda.info/crm_e52/0001_0422> a crm:E52_Time-Span ;
-    rdfs:label "Time-Span of Death of Emily Carr"@en,
-        "Durée de l’événement de mort de Emily Carr"@fr ;
-    crm:P82a_begin_of_the_begin "1945-03-02T00:00:00Z" ;
-    crm:P82b_end_of_the_end "1945-03-02T23:59:59Z" .
-
-<https://dopheda.info/crm_e63/0001_0367> a crm:E67_Birth ;
-    rdfs:label "Birth event of Emily Carr"@en,
-        "Événement de naissance de Emily Carr"@fr ;
-    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0416> ;
-    crm:P7_took_place_at geo:6174041 .
-
-<https://dopheda.info/crm_e64/0001_0389> a crm:E69_Death ;
-    rdfs:label "Death event of Emily Carr"@en,
-        "Événement de mort de Emily Carr"@fr ;
-    crm:P120_occurs_before <https://dopheda.info/crm_e5/0001_0370> ;
-    crm:P4_has_time-span <https://dopheda.info/crm_e52/0001_0422> ;
-    crm:P7_took_place_at geo:6174041 .
-
-wd:Q7369187 a crm:E53_Place ;
-    rdfs:label "Ross Bay Cemetery"@en,
-        "cimetière de Ross Bay"@fr .
-
-geo:6174041 a crm:E53_Place ;
-    rdfs:label "Victoria"@en,
-        "Victoria"@fr .
-
-
-```
-  </div>
-  <div id="tabs-1-json" style="display:none" markdown="1">
-
-```json
-[
-  {
-    "@id": "https://dopheda.info/crm_e39/0001_0368",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P100i_died_in": [
-      {
-        "@id": "https://dopheda.info/crm_e64/0001_0389"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by": [
-      {
-        "@id": "https://dopheda.info/crm_e41/0001_0385"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P98i_was_born": [
-      {
-        "@id": "https://dopheda.info/crm_e63/0001_0367"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Emily Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e39/0001_0430",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by": [
-      {
-        "@id": "https://dopheda.info/crm_e41/0001_0388"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e63/0001_0367",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E67_Birth"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
-      {
-        "@id": "https://dopheda.info/crm_e52/0001_0416"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
-      {
-        "@id": "https://www.geonames.org/6174041"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P96_by_mother": [
-      {
-        "@id": "https://dopheda.info/crm_e39/0001_0430"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P97_from_father": [
-      {
-        "@id": "https://dopheda.info/crm_e39/0001_0444"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Birth event of Emily Carr"
-      },
-      {
-        "@language": "fr",
-        "@value": "Événement de naissance de Emily Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e5/0001_0370",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E9_Move"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P25_moved": [
-      {
-        "@id": "https://dopheda.info/crm_e39/0001_0368"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P26_moved_to": [
-      {
-        "@id": "https://www.wikidata.org/wiki/Q7369187"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P27_moved_from": [
-      {
-        "@id": "https://www.geonames.org/6174041"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Move to burial place of Emily Carr"
-      },
-      {
-        "@language": "fr",
-        "@value": "Déplacement au lieu de sépulture de Emily Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e41/0001_0388",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
-      "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content": [
-      {
-        "@language": "en",
-        "@value": "Emily Sauders Carr"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "fr",
-        "@value": "Appellation complète de Emily Sauders Carr"
-      },
-      {
-        "@language": "en",
-        "@value": "Full appellation of Emily Sauders Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e64/0001_0389",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E69_Death"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before": [
-      {
-        "@id": "https://dopheda.info/crm_e5/0001_0370"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
-      {
-        "@id": "https://dopheda.info/crm_e52/0001_0422"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
-      {
-        "@id": "https://www.geonames.org/6174041"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Death event of Emily Carr"
-      },
-      {
-        "@language": "fr",
-        "@value": "Événement de mort de Emily Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e52/0001_0422",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
-      {
-        "@value": "1945-03-02T00:00:00Z"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
-      {
-        "@value": "1945-03-02T23:59:59Z"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Time-Span of Death of Emily Carr"
-      },
-      {
-        "@language": "fr",
-        "@value": "Durée de l’événement de mort de Emily Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://www.geonames.org/6174041",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Victoria"
-      },
-      {
-        "@language": "fr",
-        "@value": "Victoria"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e41/0001_0394",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
-      "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content": [
-      {
-        "@language": "en",
-        "@value": "Richard Carr"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "fr",
-        "@value": "Appellation complète de Richard Carr"
-      },
-      {
-        "@language": "en",
-        "@value": "Full appellation of Richard Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e39/0001_0444",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by": [
-      {
-        "@id": "https://dopheda.info/crm_e41/0001_0394"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e52/0001_0416",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
-      {
-        "@value": "1871-12-13T00:00:00Z"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
-      {
-        "@value": "1871-12-13T23:59:59Z"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Time-Span of Birth of Emily Carr"
-      },
-      {
-        "@language": "fr",
-        "@value": "Durée de l’événement de naissance de Emily Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e41/0001_0385",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation",
-      "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content": [
-      {
-        "@language": "en",
-        "@value": "Emily Carr"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "fr",
-        "@value": "Appellation complète de Emily Carr"
-      },
-      {
-        "@language": "en",
-        "@value": "Full appellation of Emily Carr"
-      }
-    ]
-  },
-  {
-    "@id": "https://www.wikidata.org/wiki/Q7369187",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Ross Bay Cemetery"
-      },
-      {
-        "@language": "fr",
-        "@value": "cimetière de Ross Bay"
-      }
-    ]
-  }
-]
-```
-
-  </div>
-
-</div>
-
-</div>
-
-*Formation and dissolution of the Canadian Group of Painters*
-
-The Canadian Group of Painters was formed in Toronto in 1933 by 28 canadian artists, among which A. J. Casson (depicted alone in the example for simplicity). It was dissolved in 1969 at an unknown place, and by an unknown actor.
-
-<div id="tabs-2">
-  <ul class="tabs-buttons">
-    <li name="tabs-2-graph" class="tab active">Instances graph</li>
-    <li name="tabs-2-ttl" class="tab">Turtle</li>
-    <li name="tabs-2-json" class="tab">JSON-LD</li>
-  </ul>
-<div class="tabs-content">
-<div id="tabs-2-graph" class="mermaid" onclick="sizeToggle(this)">
-graph TD
-classDef Literal fill:#ffffff,stroke:#000000;
-classDef CRM_Entity fill:#ffffff,stroke:#000000;
-classDef CRM_Entity_URI fill:#ffffff,stroke:#000000;
-classDef Temporal_Entity fill:#82c3ec, stroke:#000000;
-classDef Temporal_Entity_URI fill:#d2e9f9,stroke:#000000;
-classDef Type fill:#fab565, stroke:#000000;
-classDef Type_URI fill:#fde7ce,stroke:#000000;
-classDef Time-Span fill:#86bcc8, stroke:#000000;
-classDef Time-Span_URI fill:#dcebef,stroke:#000000;
-classDef Appellation fill:#fef3ba, stroke:#000000;
-classDef Appellation_URI fill:#fffae6,stroke:#000000;
-classDef Place fill:#94cc7d, stroke:#000000;
-classDef Place_URI fill:#e1f1da,stroke:#000000;
-classDef Persistent_Item fill:#ffffff, stroke:#000000;
-classDef Persistent_Item_URI fill:#ffffff,stroke:#000000;
-classDef Conceptual_Object fill:#fddc34, stroke:#000000;
-classDef Conceptual_Object_URI fill:#fef6cd,stroke:#000000;
-classDef Physical_Thing fill:#e1ba9c, stroke:#000000;
-classDef Physical_Thing_URI fill:#f3e5d8,stroke:#000000;
-classDef Actor fill:#ffbdca, stroke:#000000;
-classDef Actor_URI fill:#ffe6eb,stroke:#000000;
-classDef PC_Classes fill:#cc80ff, stroke:#000000;
-classDef PC_Classes_URI fill:#ebccff,stroke:#000000;
-classDef Multi_URI fill:#cccccc,stroke:#000000;
-0(["https://dopheda.info/crm_e63/0001_0418"]) -->|crm:P4_has_time-span| 1(["https://dopheda.info/crm_e52/0001_0421"])
-2(["https://dopheda.info/crm_e39/0001_0396"]) -->|crm:P99i_was_dissolved_by| 3(["https://dopheda.info/crm_e64/0001_0398"])
-4(["geo:6167865"]) -->|rdfs:label| 5(["''Toronto''@fr"]):::Literal
-6(["https://dopheda.info/crm_e41/0001_0441"]) -->|rdfs:label| 7(["''Appellation complète de A. J. Casson''@fr"]):::Literal
-8(["https://dopheda.info/crm_e52/0001_0391"]) -->|crm:P82a_begin_of_the_begin| 9(["''1969-01-01T00:00:00Z''"]):::Literal
-0(["https://dopheda.info/crm_e63/0001_0418"]):::Temporal_Entity_URI -->|rdf:type| 10["crm:E66_Formation"]:::Temporal_Entity
-11(["https://dopheda.info/crm_e39/0001_0420"]) -->|crm:P1_is_identified_by| 6(["https://dopheda.info/crm_e41/0001_0441"])
-1(["https://dopheda.info/crm_e52/0001_0421"]):::Time-Span_URI -->|rdf:type| 12["crm:E52_Time-Span"]:::Time-Span
-4(["geo:6167865"]) -->|rdfs:label| 13(["''Toronto''@en"]):::Literal
-0(["https://dopheda.info/crm_e63/0001_0418"]) -->|crm:P7_took_place_at| 4(["geo:6167865"])
-1(["https://dopheda.info/crm_e52/0001_0421"]) -->|crm:P82a_begin_of_the_begin| 14(["''1933-02-01T00:00:00Z''"]):::Literal
-4(["geo:6167865"]):::Place_URI -->|rdf:type| 15["crm:E53_Place"]:::Place
-8(["https://dopheda.info/crm_e52/0001_0391"]):::Time-Span_URI -->|rdf:type| 16["crm:E52_Time-Span"]:::Time-Span
-1(["https://dopheda.info/crm_e52/0001_0421"]) -->|rdfs:label| 17(["''Durée de l’événement de formation de Canadian Group of Painters''@fr"]):::Literal
-1(["https://dopheda.info/crm_e52/0001_0421"]) -->|rdfs:label| 18(["''Time-Span of the formation event of Canadian Group of Painters''@en"]):::Literal
-3(["https://dopheda.info/crm_e64/0001_0398"]) -->|rdfs:label| 19(["''Événement de dissolution de Canadian Group of Painters''@fr"]):::Literal
-6(["https://dopheda.info/crm_e41/0001_0441"]) -->|crm:P190_has_symbolic_content| 20(["''A. J. Casson''@en"]):::Literal
-3(["https://dopheda.info/crm_e64/0001_0398"]) -->|rdfs:label| 21(["''Dissolution event of Canadian Group of Painters''@en"]):::Literal
-6(["https://dopheda.info/crm_e41/0001_0441"]) -->|rdfs:label| 22(["''Full appellation of A. J. Casson''@en"]):::Literal
-2(["https://dopheda.info/crm_e39/0001_0396"]) -->|rdfs:label| 23(["''Canadian Group of Painters''@en"]):::Literal
-8(["https://dopheda.info/crm_e52/0001_0391"]) -->|crm:P82b_end_of_the_end| 24(["''1969-12-31T23:59:59Z''"]):::Literal
-1(["https://dopheda.info/crm_e52/0001_0421"]) -->|crm:P82b_end_of_the_end| 25(["''1933-02-28T23:59:59Z''"]):::Literal
-0(["https://dopheda.info/crm_e63/0001_0418"]) -->|rdfs:label| 26(["''Événement de formation de Canadian Group of Painters''@fr"]):::Literal
-11(["https://dopheda.info/crm_e39/0001_0420"]):::Actor_URI -->|rdf:type| 27["crm:E21_Person"]:::Actor
-2(["https://dopheda.info/crm_e39/0001_0396"]):::Actor_URI -->|rdf:type| 28["crm:E74_Group"]:::Actor
-8(["https://dopheda.info/crm_e52/0001_0391"]) -->|rdfs:label| 29(["''Time-Span of the dissolution event of Canadian Group of Painters''@en"]):::Literal
-8(["https://dopheda.info/crm_e52/0001_0391"]) -->|rdfs:label| 30(["''Durée de l’événement de dissolution de Canadian Group of Painters''@fr"]):::Literal
-3(["https://dopheda.info/crm_e64/0001_0398"]) -->|crm:P4_has_time-span| 8(["https://dopheda.info/crm_e52/0001_0391"])
-6(["https://dopheda.info/crm_e41/0001_0441"]):::Conceptual_Object_URI -->|rdf:type| 31["crm:E33_Linguistic_Object"]:::Conceptual_Object
-3(["https://dopheda.info/crm_e64/0001_0398"]):::Temporal_Entity_URI -->|rdf:type| 32["crm:E68_Dissolution"]:::Temporal_Entity
-6(["https://dopheda.info/crm_e41/0001_0441"]):::Multi_URI -->|rdf:type| 33["crm:E41_Appellation"]:::Appellation
-0(["https://dopheda.info/crm_e63/0001_0418"]) -->|rdfs:label| 34(["''Formation event of Canadian Group of Painters''@en"]):::Literal
-0(["https://dopheda.info/crm_e63/0001_0418"]) -->|crm:P14_carried_out_by| 11(["https://dopheda.info/crm_e39/0001_0420"])
-2(["https://dopheda.info/crm_e39/0001_0396"]) -->|crm:P95i_was_formed_by| 0(["https://dopheda.info/crm_e63/0001_0418"])
-
-
-</div>
-  <div id="tabs-2-ttl" style="display:none" markdown="1">
-   
-```turtle
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> . @prefix crmarcheo: <http://www.cidoc-crm.org/cidoc-crm/CRMarchaeo/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix vocab: <https://vocab.example.info/> . <https://dopheda.info/crm_e39/0001_100> a crm:E21_Person ; rdfs:label "Yousuf Karsh"@en ; crm:P100i_died_in <https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9> ; crm:P98i_was_born <https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769> . <https://dopheda.info/crm_e39/0001_104> a crm:E21_Person ; rdfs:label "Bahiyah Nakash"@en . <https://dopheda.info/crm_e39/0001_105> a crm:E21_Person ; rdfs:label "Massih Karsh"@en . <https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525> a crm:E9_Move ; crm:P25_moved <https://dopheda.info/crm_e39/0001_100> ; crm:P26_moved_to vocab:3004 ; crm:P27_moved_from vocab:3002 . <https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED> a crm:E52_Time-Span ; crm:P82a_begin_of_the_begin "2002-07-13T00:00:00Z" ; crm:P82b_end_of_the_end "2002-07-13T23:59:59Z" . <https://dopheda.info/crm_e52/7869F20E-669F-4B7A-ACCE-C587FB1E7549> a crm:E52_Time-Span ; crm:P82a_begin_of_the_begin "1908-12-23T00:00:00Z" ; crm:P82b_end_of_the_end "1908-12-23T23:59:59Z" . <https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769> a crm:E67_Birth ; crm:P4_has_time-span <https://dopheda.info/crm_e52/7869F20E-669F-4B7A-ACCE-C587FB1E7549> ; crm:P7_took_place_at vocab:3001 ; crm:P96_by_mother <https://dopheda.info/crm_e39/0001_104> ; crm:P97_from_father <https://dopheda.info/crm_e39/0001_105> . <https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9> a crm:E69_Death ; crmarcheo:AP28_occurs_before <https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525> ; crm:P4_has_time-span <https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED> ; crm:P7_took_place_at vocab:3002 . vocab:3001 a crm:E53_Place ; rdfs:label "Mardin (Ottoman Empire)"@en . vocab:3004 a crm:E53_Place ; rdfs:label "Notre-Dame Cemetery (Ottawa, ON, Canada)"@en . vocab:3002 a crm:E53_Place ; rdfs:label "Boston (MA, USA)"@en .
-```
-  </div>
-  <div id="tabs-2-json" style="display:none" markdown="1">
-
-```json
-[
-  {
-    "@id": "https://dopheda.info/crm_e64/0001_0398",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E68_Dissolution"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
-      {
-        "@id": "https://dopheda.info/crm_e52/0001_0391"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Dissolution event of Canadian Group of Painters"
-      },
-      {
-        "@language": "fr",
-        "@value": "Événement de dissolution de Canadian Group of Painters"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e63/0001_0418",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E66_Formation"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by": [
-      {
-        "@id": "https://dopheda.info/crm_e39/0001_0420"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
-      {
-        "@id": "https://dopheda.info/crm_e52/0001_0421"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
-      {
-        "@id": "https://www.geonames.org/6167865"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "fr",
-        "@value": "Événement de formation de Canadian Group of Painters"
-      },
-      {
-        "@language": "en",
-        "@value": "Formation event of Canadian Group of Painters"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e52/0001_0421",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
-      {
-        "@value": "1933-02-01T00:00:00Z"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
-      {
-        "@value": "1933-02-28T23:59:59Z"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "fr",
-        "@value": "Durée de l’événement de formation de Canadian Group of Painters"
-      },
-      {
-        "@language": "en",
-        "@value": "Time-Span of the formation event of Canadian Group of Painters"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e41/0001_0441",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
-      "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content": [
-      {
-        "@language": "en",
-        "@value": "A. J. Casson"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "fr",
-        "@value": "Appellation complète de A. J. Casson"
-      },
-      {
-        "@language": "en",
-        "@value": "Full appellation of A. J. Casson"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e52/0001_0391",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin": [
-      {
-        "@value": "1969-01-01T00:00:00Z"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end": [
-      {
-        "@value": "1969-12-31T23:59:59Z"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Time-Span of the dissolution event of Canadian Group of Painters"
-      },
-      {
-        "@language": "fr",
-        "@value": "Durée de l’événement de dissolution de Canadian Group of Painters"
-      }
-    ]
-  },
-  {
-    "@id": "https://www.geonames.org/6167865",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "fr",
-        "@value": "Toronto"
-      },
-      {
-        "@language": "en",
-        "@value": "Toronto"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e39/0001_0420",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by": [
-      {
-        "@id": "https://dopheda.info/crm_e41/0001_0441"
-      }
-    ]
-  },
-  {
-    "@id": "https://dopheda.info/crm_e39/0001_0396",
-    "@type": [
-      "http://www.cidoc-crm.org/cidoc-crm/E74_Group"
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by": [
-      {
-        "@id": "https://dopheda.info/crm_e63/0001_0418"
-      }
-    ],
-    "http://www.cidoc-crm.org/cidoc-crm/P99i_was_dissolved_by": [
-      {
-        "@id": "https://dopheda.info/crm_e64/0001_0398"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Canadian Group of Painters"
-      }
-    ]
-  }
-]
-```
-
-  </div>
-
-</div>
-
-</div>
-
+## Examples
+### Typical cases
+#### Example 1
+Yousuf Karsh (Actor Appellation) was born on the 23 of December 1908 (Birth Date Begin, Birth Date End))  in Mardin (Ottoman Empire) (Birth Place) to Bahiyah Nakash (Mother Appellation) and Massih Karsh (Father Appellation). He died on the 13th of July 2002 Death Date Begin, Death Date End) in Boston (MA, USA) (Death Place) and is buried at Notre-Dame Cemetery (Final Disposition Place) in Ottawa (ON, Canada) (Editors of Encyclopaedia Britannica n.d. §Yousuf Karsh§; Skidmore [2010] 2015 §Yousuf Karsh§).
 
 <div id="0001_100_birth-death" class="example">
   <ul class="tabs-buttons">
@@ -787,8 +56,6 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
   </ul>
 <div class="tabs-content">
 <div id="0001_100_birth-death_graph" class="mermaid" onclick="sizeToggle(this)">
-
-
 </div>
 <div id="0001_100_birth-death_ttl" class="turtle" style="display:none" markdown="1">
 <pre><code class="language-turtle"></code></pre>
@@ -796,10 +63,135 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 <div id="0001_100_birth-death_json" class="json" style="display:none" markdown="1">
 <pre><code class="language-json"></code></pre>
 </div>
-
+</div>
 </div>
 
+
+#### Example 2
+Emily Carr (Actor Appellation) was born on the 13th of December 1871 in Victoria (BC, Canada) was born to Emily (Saunders) Carr (Mother Appellation) and Richard Carr (Father Appellation). She died on the 2nd of March 1945, also in Victoria (BC, Canada), and was buried at Ross Bay Cemetery (Victoria, BC, Canada) (Baldissera 2015, 4  §Emily Carr: Life & Work§).
+
+<div id="0001_106_birth-death" class="example">
+  <ul class="tabs-buttons">
+    <li name="0001_106_birth-death_graph" class="tab active">Instances graph</li>
+    <li name="0001_106_birth-death_ttl" class="tab">Turtle</li>
+    <li name="0001_106_birth-death_json" class="tab">JSON-LD</li>
+  </ul>
+<div class="tabs-content">
+<div id="0001_106_birth-death_graph" class="mermaid" onclick="sizeToggle(this)">
 </div>
+<div id="0001_106_birth-death_ttl" class="turtle" style="display:none" markdown="1">
+<pre><code class="language-turtle"></code></pre>
+</div>
+<div id="0001_106_birth-death_json" class="json" style="display:none" markdown="1">
+<pre><code class="language-json"></code></pre>
+</div>
+</div>
+</div>
+
+
+#### Example 3
+David Altmejd (Actor Appellation) was born in 1974 in Montréal (QC, Canada) (Musée d’art contemporain de Montréal 2015 §David Altmejd§). 
+
+<div id="0001_109_birth-death" class="example">
+  <ul class="tabs-buttons">
+    <li name="0001_109_birth-death_graph" class="tab active">Instances graph</li>
+    <li name="0001_109_birth-death_ttl" class="tab">Turtle</li>
+    <li name="0001_109_birth-death_json" class="tab">JSON-LD</li>
+  </ul>
+<div class="tabs-content">
+<div id="0001_109_birth-death_graph" class="mermaid" onclick="sizeToggle(this)">
+</div>
+<div id="0001_109_birth-death_ttl" class="turtle" style="display:none" markdown="1">
+<pre><code class="language-turtle"></code></pre>
+</div>
+<div id="0001_109_birth-death_json" class="json" style="display:none" markdown="1">
+<pre><code class="language-json"></code></pre>
+</div>
+</div>
+</div>
+
+
+### Edge cases
+#### Example 4
+The Unknown Soldier (Actor Appellation) died in France as a soldier during the First World War. Their death thus occurred between the 3rd of October 1914 (when the first Canadian contingent sailed for Europe) and the 11th of November 1918 (when fighting stopped for Canadians, though the war ended officially with the Treaty of Versailles on the 28th of June 1919). They were buried at the Cabaret-Rouge War Cemetery near Vimy (France) before the moving of their remains in a commemorative sarcophagus in Ottawa (ON, Canada). At the moment, their move from their place of death to their burial place would not represent their passage in Cabaret-Rouge and only indicate a move from France (where they died between 1914 and 1917) to Canada (in 2000) (Foot 2018 §Canada’s Unknown Soldier§). 
+#### Example 5
+Ramses II died around 1213 BCE according to the egyptian chronology (Hornung & al. 2006, 476-478). His body was embalmed and deposited in tomb KV7 in the Valley of Kings (modern-day Egypt), but was soon moved and transferred into other tombs by Egyptian priests to protect it from looting, and finally discovered in tomb TT320 in 1881 (Wikipedia 2021).
+In this example, the mummy transferred, or at least discovered by archæologists, should no longer be considered a `E21_Person` but rather a `E20_Biological_Object` which could be moved. At the moment, this transformation is not documented as part of the death pattern. .
+## Related documentation
+### External models
+Linked.art’s [birth and death/formation and dissolution](https://linked.art/model/actor/#birth-and-death-formation-and-dissolution) pattern
+Digital Object Reference Data Model’s [person existence](https://docs.swissartresearch.net/et/persons/#existence) pattern
+### Entry nodes
+This pattern contains the following nodes:
+[Birth/Formation Date Begin](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-begin)
+[Birth/Formation Date Begin Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-begin-qualifier)
+[Birth/Formation Date End](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-end)
+[Birth/Formation Date End Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-date-end-qualifier)
+[Birth/Formation Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#birthformation-place)
+[Death/Dissolution Date Begin](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-begin)
+[Death/Dissolution Date Begin Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-begin-qualifier)
+[Death/Dissolution Date End](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-end)
+[Death/Dissolution Date End Qualifier](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-date-end-qualifier)
+[Death/Dissolution Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#deathdissolution-place)
+[Father Appellation](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#father-appellation)
+[Final Disposition Place](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#final-disposition-place)
+[Mother Appellation](https://chin-rcip.github.io/collections-model/en/semantic-paths-specification/current/entry-nodes#mother-appellation)
+###CIDOC CRM Entities
+`E9_Move`
+`E21_Person`
+`E33_Linguistic_Object`
+`E41_Appellation`
+`E52_Time-Span`
+`E53_Place`
+`E55_Type`
+`E67_Birth`
+`E69_Death`
+`P1_is_identified_by`
+`P2_has_type`
+`P4_has_time-span`
+`P7_took_place_at`
+`P25_moved`
+`P26_moved_to`
+`P27_moved_from`
+`P79_beginning_is_qualified_by`
+`P80_end_is_qualified_by`
+`P82a_at_some_time_within`
+`P82b_at_some_time_within`
+`P96_by_mother`
+`P97_from_father`
+`P98_brought_into_life`
+`P100_was_death_of`
+`P190_has_symbolic_content`
+`AP28_occurs_before`(`P120_occurs_before`)
+## Discussion
+### Rationale
+The distinction between biological filiation (i.e. biologically being the mother and father of a person) and parentship (i.e. the social relationship the person has to their parents and vice-versa) are considered distinct in the context of this model so that each type of parental affiliation can be precisely and accurately recorded. The recording of parental and family interactions is modelled using the [relationship pattern](https://chin-rcip.github.io/collections-model/en/target-model/current/social-bonds#relationships). As such, the biological lineage modelling addressed in this pattern should be employed when the goal is to document *genealogical* information. 
+The modelling of the final resting location, and especially the use of the `E9_Move` event, is ontologically disputable. Representing the post-death move of the `E21_Person` to their grave through an `E9_Move` event is the simplest modelling solution to the representation of the intentional moving of human remains. However, it is conceptually problematic since the remains of the dead person are technically no longer fully this `E21_Person` instance. The logic of CIDOC CRM dictates the creation of a `E20_Biological_Object` instance to replace the `E21_Person` instance through an instance of `E81_Transformation`. This is because, otherwise, the pattern (as it currently stands) indicates that the person was moved and buried alive. However, this longer and more precise modelling is highly complex and would create nodes that would considerably weigh down the model, significantly complexify queries, and unnecessarily burden users. Because there are very few examples of alive people being buried that are recorded (especially as such) in heritage collections, it seems preferable to compromise on semantic preciseness and adopt a simpler model, assuming actors will be buried whilst dead. This is discussed in the [issue #72](https://github.com/chin-rcip/collections-model/issues/72)
+### Related Github issues
+[16 “Do we need a family relationship pattern? And what to do with parents?”](https://github.com/chin-rcip/collections-model/issues/16)
+[72 “How to model Resting Place?”](https://github.com/chin-rcip/collections-model/issues/72)
+## Bibliography
+Baldissera, Lisa. Emily Carr: Life & Work. Canadian Online Art Book Project. Toronto, CA-ON: Art Canada Institute / Institut de l’art canadien, 2015. https://www.aci-iac.ca/art-books/emily-carr/. 
+Brumberg, H. L., D. Dozor, and S. G. Golombek. ‘History of the Birth Certificate: From Inception to the Future of Electronic Data’. Journal of Perinatology 32, no. 6 (June 2012): 407–11. https://doi.org/10.1038/jp.2012.3.
+Devlin, Stacy, and Emily Cuggy. ‘Settler Records, Indigenous Histories: Challenges in Indigenous Genealogical Research’. Active History (blog), 7 December 2017. https://activehistory.ca/2017/12/settler-records-indigenous-histories-challenges-in-indigenous-genealogical-research/.
+Doerr, Martin, and Christian Emil Ore, eds. Definition of the CIDOC Conceptual Reference Model. CIDOC CRM Documentations, 7.0.1. Paris, FR: International Council of Museums (ICOM), 2020. http://www.cidoc-crm.org/sites/default/files/CIDOC%20CRM_v.7.0.1_%2018-10-2020.pdf.
+Editors of Encyclopaedia Britannica. ‘Yousuf Karsh’. In Encyclopedia Britannica. London, GB: Britannica, n.d. https://www.britannica.com/biography/Yousuf-Karsh.
+FamilySearch. ‘Canada Cemeteries’. FamilySearch Wiki, 7 April 2020. https://www.familysearch.org/wiki/en/Canada_Cemeteries.
+Foot, Richard. ‘Canada’s Unknown Soldier’. In The Canadian Encyclopedia. 2014. Reprint, Toronto, CA-ON: Historica Canada, 3 October 2018. https://www.thecanadianencyclopedia.ca/en/article/unknown-soldier.
+Hamilton, Michelle. ‘“Anyone Not on the List Might as Well Be Dead”: Aboriginal Peoples and the Censuses of Canada, 1851–1916’. Journal of the Canadian Historical Association / Revue de La Société Historique Du Canada 18, no. 1 (2007): 57–79. https://doi.org/10.7202/018254ar.
+Hornung, Erik, Rolf Krauss, and David A. Warburton, eds. 2006. Ancient Egyptian Chronology. Leiden, NL-ZH; Boston, US-MA: Brill.
+Library and Archives Canada. ‘Births, Marriages and Deaths Recorded in Canada’. Library and Archives Canada, 9 September 2020. https://www.bac-lac.gc.ca/eng/discover/vital-statistics-births-marriages-deaths/births-marriages-deaths-recorded/Pages/births-marriages-deaths-recorded.aspx.
+linked.art. ‘Linked Art Data Model’. linked.art, 2021. https://linked.art/model/index.html.
+Musée d’art contemporain de Montréal. ‘David Altmejd’. MAC Montréal, 2015. http://staging.macm.org/en/exhibitions/david-altmejd/.
+OCLC. Virtual International Authority File Guidelines. 2015. Reprint, Dublin, US-OH: OCLC, 2019. https://www.oclc.org/content/dam/oclc/viaf/VIAF%20Guidelines.pdf.
+Royal British Columbia Museum. ‘Resources for First Nations Genealogical Research at the BC Archives’. Royal British Columbia Museum, November 2018. https://royalbcmuseum.bc.ca/sites/default/files/sites/default/files/images/resources_for_first_nations_genealogical_research_at_the_bcarchives_2018.pdf.
+Shadbolt, Doris. ‘Emily Carr’. In The Canadian Encyclopedia. 2013. Reprint, Toronto, CA-ON: Historica Canada, 28 August 2015. https://www.thecanadianencyclopedia.ca/en/article/emily-carr.
+Skidmore, Colleen. ‘Yousuf Karsh’. In The Canadian Encyclopedia. 2010. Reprint, Toronto, CA-ON: Historica Canada, 4 March 2015. https://www.thecanadianencyclopedia.ca/en/article/yousuf-karsh.
+Wikidata. ‘Place of Burial (P119)’. Wikidata, 9 April 2021. https://www.wikidata.org/wiki/Property:P119.
+Wikipedia. 2021. “Ramesses II.” In Wikipedia. San Francisco, US-CA: Wikipedia. https://en.wikipedia.org/wiki/Ramesses_II.
+
+
+
 
 
 <style>
