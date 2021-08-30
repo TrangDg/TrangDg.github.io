@@ -14,6 +14,7 @@
 	    "xsd": "http://www.w3.org/2001/XMLSchema#",
 	    "vocab": "https://vocab.example.info/",
 	    "actor": "crm_e39/",
+	    "object": "crm_e18",
 	    "_label": {
 	      	"@id": "rdfs:label",
 	      	"@container": "@language"

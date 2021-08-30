@@ -1,113 +1,73 @@
 {
   "@context": "https://trangdg.github.io/collections-model/dopheda_context.json",
-  "@graph": [
-    {
-      "@id": "vocab:3001",
-      "@type": "Place",
-      "_label": {
-        "@language": "en",
-        "@value": "Mardin (Ottoman Empire)"
-      }
-    },
-    {
-      "@id": "vocab:3004",
-      "@type": "Place",
-      "_label": {
-        "@language": "en",
-        "@value": "Notre-Dame Cemetery (Ottawa, ON, Canada)"
-      }
-    },
-    {
-      "@id": "https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED",
-      "@type": "Time-Span",
-      "crm:P82a_begin_of_the_begin": "2002-07-13T00:00:00Z",
-      "crm:P82b_end_of_the_end": "2002-07-13T23:59:59Z"
-    },
-    {
-      "@id": "https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9",
-      "@type": "Death",
-      "has_time-span": {
-        "@id": "https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED"
-      },
-      "occurs_before": {
-        "@id": "https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525"
-      },
-      "took_place_at": {
-        "@id": "vocab:3002"
-      }
-    },
-    {
-      "@id": "actor:0001_104",
-      "@type": "Person",
-      "_label": {
-        "@language": "en",
-        "@value": "Bahiyah Nakash"
-      }
-    },
-    {
-      "@id": "https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769",
-      "@type": "Birth",
-      "by_mother": {
-        "@id": "actor:0001_104"
-      },
-      "from_father": {
-        "@id": "actor:0001_105"
-      },
-      "has_time-span": {
-        "@id": "https://dopheda.info/crm_e52/7869F20E-669F-4B7A-ACCE-C587FB1E7549"
-      },
-      "took_place_at": {
-        "@id": "vocab:3001"
-      }
-    },
-    {
+  "@id": "actor:0001_100",
+  "@type": "Person",
+  "died_in": {
+    "@id": "https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9",
+    "@type": "Death",
+    "occurs_before": {
       "@id": "https://dopheda.info/crm_e5/1051EEF5-0E72-4AB0-9183-D35E8B6D3525",
       "@type": "Move",
       "moved": {
         "@id": "actor:0001_100"
       },
-      "moved_from": {
-        "@id": "vocab:3002"
-      },
       "moved_to": {
-        "@id": "vocab:3004"
+        "@id": "vocab:3004",
+        "@type": "Place",
+        "_label": {
+          "en": "Notre-Dame Cemetery (Ottawa, ON, Canada)"
+        }
+      },
+      "moved_from": {
+        "@id": "vocab:3002",
+        "@type": "Place",
+        "_label": {
+          "en": "Boston (MA, USA)"
+        }
       }
     },
-    {
+    "has_time-span": {
+      "@id": "https://dopheda.info/crm_e52/614E2ABE-6CB7-4468-AEE2-389DA43898ED",
+      "@type": "Time-Span",
+      "crm:P82a_begin_of_the_begin": "2002-07-13T00:00:00Z",
+      "crm:P82b_end_of_the_end": "2002-07-13T23:59:59Z"
+    },
+    "took_place_at": {
+      "@id": "vocab:3002"
+    }
+  },
+  "was_born": {
+    "@id": "https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769",
+    "@type": "Birth",
+    "has_time-span": {
       "@id": "https://dopheda.info/crm_e52/7869F20E-669F-4B7A-ACCE-C587FB1E7549",
       "@type": "Time-Span",
       "crm:P82a_begin_of_the_begin": "1908-12-23T00:00:00Z",
       "crm:P82b_end_of_the_end": "1908-12-23T23:59:59Z"
     },
-    {
-      "@id": "vocab:3002",
+    "took_place_at": {
+      "@id": "vocab:3001",
       "@type": "Place",
       "_label": {
-        "@language": "en",
-        "@value": "Boston (MA, USA)"
+        "en": "Mardin (Ottoman Empire)"
       }
     },
-    {
-      "@id": "actor:0001_100",
+    "by_mother": {
+      "@id": "actor:0001_104",
       "@type": "Person",
       "_label": {
-        "@language": "en",
-        "@value": "Yousuf Karsh"
-      },
-      "died_in": {
-        "@id": "https://dopheda.info/crm_e64/5F48EEFB-D59C-4536-810D-D88C9F3583A9"
-      },
-      "was_born": {
-        "@id": "https://dopheda.info/crm_e63/72C74784-6EFE-4304-9979-D93980680769"
+        "en": "Bahiyah Nakash"
       }
     },
-    {
+    "from_father": {
       "@id": "actor:0001_105",
       "@type": "Person",
       "_label": {
-        "@language": "en",
-        "@value": "Massih Karsh"
+        "en": "Massih Karsh"
       }
     }
-  ]
+  },
+  "_label": {
+    "en": "Yousuf Karsh"
+  }
 }
