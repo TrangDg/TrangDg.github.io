@@ -26,12 +26,12 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 
 0(["vocab:3007"]) -->|rdfs:label| 1(["''Montréal (QC, Canada)''@en"]):::Literal
 2(["actor:0001_109"]) -->|rdfs:label| 3(["''David Altmejd''@en"]):::Literal
-4(["https://dopheda.info/crm_e52/E098D413-2048-42C1-AE51-9C755B0D3752"]):::E52_Time-Span_URI -->|rdf:type| 5["crm:E52_Time-Span"]:::E52_Time-Span
-4(["https://dopheda.info/crm_e52/E098D413-2048-42C1-AE51-9C755B0D3752"]) -->|crm:P82a_begin_of_the_begin| 6(["''1974-01-01T00:00:00Z''"]):::Literal
+4(["-"]):::E52_Time-Span_URI -->|rdf:type| 5["crm:E52_Time-Span"]:::E52_Time-Span
+4(["-"]) -->|crm:P82a_begin_of_the_begin| 6(["''1974-01-01T00:00:00Z''"]):::Literal
 0(["vocab:3007"]):::E53_Place_URI -->|rdf:type| 7["crm:E53_Place"]:::E53_Place
-4(["https://dopheda.info/crm_e52/E098D413-2048-42C1-AE51-9C755B0D3752"]) -->|crm:P82b_end_of_the_end| 8(["''1974-12-31T23:59:59Z''"]):::Literal
-9(["https://dopheda.info/crm_e63/7A9C9958-18A0-4793-8415-FE92BD88E062"]) -->|crm:P7_took_place_at| 0(["vocab:3007"])
-9(["https://dopheda.info/crm_e63/7A9C9958-18A0-4793-8415-FE92BD88E062"]) -->|crm:P4_has_time-span| 4(["https://dopheda.info/crm_e52/E098D413-2048-42C1-AE51-9C755B0D3752"])
+4(["-"]) -->|crm:P82b_end_of_the_end| 8(["''1974-12-31T23:59:59Z''"]):::Literal
+9(["-"]) -->|crm:P7_took_place_at| 0(["vocab:3007"])
+9(["-"]) -->|crm:P4_has_time-span| 4(["-"])
 2(["actor:0001_109"]):::E39_Actor_URI -->|rdf:type| 10["crm:E21_Person"]:::E39_Actor
-2(["actor:0001_109"]) -->|crm:P98i_was_born| 9(["https://dopheda.info/crm_e63/7A9C9958-18A0-4793-8415-FE92BD88E062"])
-9(["https://dopheda.info/crm_e63/7A9C9958-18A0-4793-8415-FE92BD88E062"]):::E2_Temporal_Entity_URI -->|rdf:type| 11["crm:E67_Birth"]:::E2_Temporal_Entity
+2(["actor:0001_109"]) -->|crm:P98i_was_born| 9(["-"])
+9(["-"]):::E2_Temporal_Entity_URI -->|rdf:type| 11["crm:E67_Birth"]:::E2_Temporal_Entity

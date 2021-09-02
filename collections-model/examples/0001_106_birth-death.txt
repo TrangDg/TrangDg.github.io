@@ -28,30 +28,30 @@ classDef Multi_URI fill:#cccccc,stroke:#000000;
 2(["vocab:3006"]) -->|rdfs:label| 3(["''Ross Bay Cemetery (Victoria, BC, Canada)''@en"]):::Literal
 0(["actor:0001_107"]):::E39_Actor_URI -->|rdf:type| 4["crm:E21_Person"]:::E39_Actor
 5(["actor:0001_106"]) -->|rdfs:label| 6(["''Emily Carr''@en"]):::Literal
-7(["https://dopheda.info/crm_e5/2CA08905-DDF5-44CE-B857-6CFE37AB5988"]) -->|crm:P25_moved| 5(["actor:0001_106"])
+7("-") -->|crm:P25_moved| 5(["actor:0001_106"])
 5(["actor:0001_106"]):::E39_Actor_URI -->|rdf:type| 8["crm:E21_Person"]:::E39_Actor
 9(["actor:0001_108"]) -->|rdfs:label| 10(["''Richard Carr''@en"]):::Literal
-11(["https://dopheda.info/crm_e52/8A91E3AF-FD4B-41A2-B5EE-813F023871CE"]) -->|crm:P82b_end_of_the_end| 12(["''1945-03-02T23:59:59Z''"]):::Literal
-13(["https://dopheda.info/crm_e64/E6FDD171-8317-47F9-B17E-587F64690CE5"]) -->|crmarcheo:AP28_occurs_before| 7(["https://dopheda.info/crm_e5/2CA08905-DDF5-44CE-B857-6CFE37AB5988"])
-14(["https://dopheda.info/crm_e52/8222FAD3-811B-46ED-AF3D-EC32231E1EAB"]):::E52_Time-Span_URI -->|rdf:type| 15["crm:E52_Time-Span"]:::E52_Time-Span
-13(["https://dopheda.info/crm_e64/E6FDD171-8317-47F9-B17E-587F64690CE5"]) -->|crm:P7_took_place_at| 16(["vocab:3005"])
-5(["actor:0001_106"]) -->|crm:P98i_was_born| 17(["https://dopheda.info/crm_e63/20424F44-011C-4355-BE18-B2C4927407BF"])
-17(["https://dopheda.info/crm_e63/20424F44-011C-4355-BE18-B2C4927407BF"]) -->|crm:P4_has_time-span| 14(["https://dopheda.info/crm_e52/8222FAD3-811B-46ED-AF3D-EC32231E1EAB"])
-13(["https://dopheda.info/crm_e64/E6FDD171-8317-47F9-B17E-587F64690CE5"]) -->|crm:P4_has_time-span| 11(["https://dopheda.info/crm_e52/8A91E3AF-FD4B-41A2-B5EE-813F023871CE"])
-7(["https://dopheda.info/crm_e5/2CA08905-DDF5-44CE-B857-6CFE37AB5988"]) -->|crm:P26_moved_to| 2(["vocab:3006"])
-17(["https://dopheda.info/crm_e63/20424F44-011C-4355-BE18-B2C4927407BF"]) -->|crm:P97_from_father| 9(["actor:0001_108"])
-14(["https://dopheda.info/crm_e52/8222FAD3-811B-46ED-AF3D-EC32231E1EAB"]) -->|crm:P82a_begin_of_the_begin| 18(["''1871-12-13T00:00:00''"]):::Literal
-17(["https://dopheda.info/crm_e63/20424F44-011C-4355-BE18-B2C4927407BF"]) -->|crm:P7_took_place_at| 16(["vocab:3005"])
-17(["https://dopheda.info/crm_e63/20424F44-011C-4355-BE18-B2C4927407BF"]) -->|crm:P96_by_mother| 0(["actor:0001_107"])
-13(["https://dopheda.info/crm_e64/E6FDD171-8317-47F9-B17E-587F64690CE5"]):::E2_Temporal_Entity_URI -->|rdf:type| 19["crm:E69_Death"]:::E2_Temporal_Entity
-7(["https://dopheda.info/crm_e5/2CA08905-DDF5-44CE-B857-6CFE37AB5988"]):::E2_Temporal_Entity_URI -->|rdf:type| 20["crm:E9_Move"]:::E2_Temporal_Entity
+11("-") -->|crm:P82b_end_of_the_end| 12(["''1945-03-02T23:59:59Z''"]):::Literal
+13("-") -->|crmarcheo:AP28_occurs_before| 7("-")
+14("-"):::E52_Time-Span_URI -->|rdf:type| 15["crm:E52_Time-Span"]:::E52_Time-Span
+13("-") -->|crm:P7_took_place_at| 16(["vocab:3005"])
+5(["actor:0001_106"]) -->|crm:P98i_was_born| 17("-")
+17("-") -->|crm:P4_has_time-span| 14("-")
+13("-") -->|crm:P4_has_time-span| 11("-")
+7("-") -->|crm:P26_moved_to| 2(["vocab:3006"])
+17("-") -->|crm:P97_from_father| 9(["actor:0001_108"])
+14("-") -->|crm:P82a_begin_of_the_begin| 18(["''1871-12-13T00:00:00''"]):::Literal
+17("-") -->|crm:P7_took_place_at| 16(["vocab:3005"])
+17("-") -->|crm:P96_by_mother| 0(["actor:0001_107"])
+13("-"):::E2_Temporal_Entity_URI -->|rdf:type| 19["crm:E69_Death"]:::E2_Temporal_Entity
+7("-"):::E2_Temporal_Entity_URI -->|rdf:type| 20["crm:E9_Move"]:::E2_Temporal_Entity
 2(["vocab:3006"]):::E53_Place_URI -->|rdf:type| 21["crm:E53_Place"]:::E53_Place
-7(["https://dopheda.info/crm_e5/2CA08905-DDF5-44CE-B857-6CFE37AB5988"]) -->|crm:P27_moved_from| 16(["vocab:3005"])
+7("-") -->|crm:P27_moved_from| 16(["vocab:3005"])
 16(["vocab:3005"]) -->|rdfs:label| 22(["''Victoria (BC, Canada)''@en"]):::Literal
 9(["actor:0001_108"]):::E39_Actor_URI -->|rdf:type| 23["crm:E21_Person"]:::E39_Actor
 16(["vocab:3005"]):::E53_Place_URI -->|rdf:type| 24["crm:E53_Place"]:::E53_Place
-11(["https://dopheda.info/crm_e52/8A91E3AF-FD4B-41A2-B5EE-813F023871CE"]):::E52_Time-Span_URI -->|rdf:type| 25["crm:E52_Time-Span"]:::E52_Time-Span
-14(["https://dopheda.info/crm_e52/8222FAD3-811B-46ED-AF3D-EC32231E1EAB"]) -->|crm:P82b_end_of_the_end| 26(["''1871-12-13T23:59:59Z''"]):::Literal
-5(["actor:0001_106"]) -->|crm:P100i_died_in| 13(["https://dopheda.info/crm_e64/E6FDD171-8317-47F9-B17E-587F64690CE5"])
-11(["https://dopheda.info/crm_e52/8A91E3AF-FD4B-41A2-B5EE-813F023871CE"]) -->|crm:P82a_begin_of_the_begin| 27(["''1945-03-02T00:00:00Z''"]):::Literal
-17(["https://dopheda.info/crm_e63/20424F44-011C-4355-BE18-B2C4927407BF"]):::E2_Temporal_Entity_URI -->|rdf:type| 28["crm:E67_Birth"]:::E2_Temporal_Entity
+11("-"):::E52_Time-Span_URI -->|rdf:type| 25["crm:E52_Time-Span"]:::E52_Time-Span
+14("-") -->|crm:P82b_end_of_the_end| 26(["''1871-12-13T23:59:59Z''"]):::Literal
+5(["actor:0001_106"]) -->|crm:P100i_died_in| 13("-")
+11("-") -->|crm:P82a_begin_of_the_begin| 27(["''1945-03-02T00:00:00Z''"]):::Literal
+17("-"):::E2_Temporal_Entity_URI -->|rdf:type| 28["crm:E67_Birth"]:::E2_Temporal_Entity
