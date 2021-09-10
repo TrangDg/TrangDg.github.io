@@ -286,13 +286,13 @@ Wikipedia. 2021. “Ramesses II.” In Wikipedia. San Francisco, US-CA: Wikipedi
     var example = $(".example"), y;
     for (y = 0; y < example.length; y++){
         let exId = $(example[y]).attr("id");
-        fetch('./examples/'+exId+'.txt')
+        fetch('./examples/mmd/'+exId+'.txt')
         .then(response1 => response1.text())
          .then((data1) => $("#"+exId+"_graph").text(data1));
-        fetch('./examples/'+exId+'.ttl')
+        fetch('./examples/turtle/'+exId+'.ttl')
         .then(response2 => response2.text())
          .then((data2) => $("#"+exId+"_ttl code").text(data2));
-        fetch('./examples/'+exId+'.json')
+        fetch('./examples/json-ld/'+exId+'.json')
         .then(response3 => response3.text())
          .then((data3) => $("#"+exId+"_json code").text(data3));
     };
