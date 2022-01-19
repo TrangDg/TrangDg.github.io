@@ -3,7 +3,7 @@ var data = [
         "data": {
             "id": "nom:label-00002",
             "label": "nom:label-00002\nskosxl:Label\nschema:CreativeWork",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -17,7 +17,7 @@ var data = [
         "data": {
             "id": "nom:image-1",
             "label": "nom:image-1\nschema:ImageObject",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -31,7 +31,7 @@ var data = [
         "data": {
             "id": "nom:label-00001",
             "label": "nom:label-00001\nskosxl:Label\nschema:CreativeWork",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -45,21 +45,21 @@ var data = [
         "data": {
             "id": "nom:definition-1",
             "label": "nom:definition-1\nschema:CreativeWork",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
         "data": {
             "id": "nom:source-1",
             "label": "nom:source-1\nschema:Thing",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
         "data": {
             "id": "nom:source-2",
             "label": "nom:source-2\nschema:Thing",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -73,7 +73,7 @@ var data = [
         "data": {
             "id": "nom:14960",
             "label": "nom:14960\nschema:CreativeWork\nskos:Concept",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -87,7 +87,7 @@ var data = [
         "data": {
             "id": "nom:contributor-1",
             "label": "nom:contributor-1\nschema:Thing",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -101,28 +101,28 @@ var data = [
         "data": {
             "id": "nom:image-org-1",
             "label": "nom:image-org-1\nschema:ImageObject",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
         "data": {
             "id": "<https://app.pch.gc.ca/public_info/nomenclature/images/11695_20210401181000.jpg>",
             "label": "<https://app.pch.gc.ca/public_info/nomenclature/images/11695_20210401181000.jpg>",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
         "data": {
             "id": "nom:label-00003",
             "label": "nom:label-00003\nskosxl:Label\nschema:CreativeWork",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
         "data": {
             "id": "lexinfo:feminine",
             "label": "lexinfo:feminine",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -136,7 +136,7 @@ var data = [
         "data": {
             "id": "nom:definition-2",
             "label": "nom:definition-2\nschema:CreativeWork",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -171,7 +171,7 @@ var data = [
         "data": {
             "id": "<https://nomenclature.info/nom/>",
             "label": "<https://nomenclature.info/nom/>",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -185,14 +185,14 @@ var data = [
         "data": {
             "id": "<http://d-nb.info/gnd/4058247-4>",
             "label": "<http://d-nb.info/gnd/4058247-4>",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
         "data": {
             "id": "nom:label-00004",
             "label": "nom:label-00004\nskosxl:Label\nschema:CreativeWork",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -206,14 +206,14 @@ var data = [
         "data": {
             "id": "<https://www.zotero.org/groups/2375389/ctfn__gtcn/items/itemKey/8WCZX8ZE>",
             "label": "<https://www.zotero.org/groups/2375389/ctfn__gtcn/items/itemKey/8WCZX8ZE>",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
         "data": {
             "id": "nom:contributor-2",
             "label": "nom:contributor-2\nschema:Thing",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -241,7 +241,7 @@ var data = [
         "data": {
             "id": "nom:4756",
             "label": "nom:4756",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -262,7 +262,7 @@ var data = [
         "data": {
             "id": "<https://commons.wikimedia.org/wiki/File:NSRW_Dirigible_Balloon.png>",
             "label": "<https://commons.wikimedia.org/wiki/File:NSRW_Dirigible_Balloon.png>",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -297,7 +297,7 @@ var data = [
         "data": {
             "id": "nom:label-00005",
             "label": "nom:label-00005\nskosxl:Label\nschema:CreativeWork",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
@@ -339,7 +339,7 @@ var data = [
         "data": {
             "id": "nom:1091",
             "label": "nom:1091",
-            "color": "#f58aad"
+            "color": "#b3e6ff"
         }
     },
     {
