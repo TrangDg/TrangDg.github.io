@@ -1,6 +1,3 @@
-<!doctype html>
-
-<html>
 
 <head>
     <title>Nomenclature - Publication Model</title>
@@ -35,4 +32,3 @@
     <!-- <script src="./js/main.js"></script> -->
     <script src="main.js"></script>
 </body>
-</html>
