@@ -106,7 +106,483 @@ nomo:invertedFormOf a owl:ObjectProperty;
   rdfs:comment "Used only for multi-word English labels"@en, "Utilisée seulement pour les termes anglais à mots multiples"@fr;
   skos:example "\"Box, Drink\" is the inverted form of \"Drink Box\""@en, "\"Box, Drink\" est la forme inversée de \"Drink Box\""@fr.
 
+# Partial external ontologies and vocabularies
 
+## schema.org
+
+schema:Collection a rdfs:Class ;
+    rdfs:label "Collection" ;
+    rdfs:comment "A collection of items e.g. creative works or products." ;
+    rdfs:subClassOf schema:CreativeWork ;
+    schema:isPartOf <https://bib.schema.org> .
+
+schema:CreativeWork a rdfs:Class ;
+    rdfs:label "CreativeWork" ;
+    rdfs:comment "The most generic kind of creative work, including books, movies, photographs, software programs, etc." ;
+    rdfs:subClassOf schema:Thing ;
+    schema:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> .
+
+schema:DataDownload a rdfs:Class ;
+    rdfs:label "DataDownload" ;
+    rdfs:comment "A dataset in downloadable form." ;
+    rdfs:subClassOf schema:MediaObject ;
+    owl:equivalentClass dcat:Distribution ;
+    schema:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass> .
+
+schema:Dataset a rdfs:Class ;
+    rdfs:label "Dataset" ;
+    rdfs:comment "A body of structured information describing some topic(s) of interest." ;
+    rdfs:subClassOf schema:CreativeWork ;
+    owl:equivalentClass dctype:Dataset,
+        void:Dataset,
+        dcat:Dataset ;
+    schema:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass> .
+
+schema:DefinedTermSet a rdfs:Class ;
+    rdfs:label "DefinedTermSet" ;
+    rdfs:comment "A set of defined terms for example a set of categories or a classification scheme, a glossary, dictionary or enumeration." ;
+    rdfs:subClassOf schema:CreativeWork ;
+    schema:isPartOf <https://pending.schema.org> ;
+    schema:source <https://github.com/schemaorg/schemaorg/issues/894> .
+
+schema:ImageObject a rdfs:Class ;
+    rdfs:label "ImageObject" ;
+    rdfs:comment "An image file." ;
+    rdfs:subClassOf schema:MediaObject ;
+    owl:equivalentClass dctype:Image .
+
+schema:Organization a rdfs:Class ;
+    rdfs:label "Organization" ;
+    rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
+    rdfs:subClassOf schema:Thing .
+
+schema:StructuredValue a rdfs:Class ;
+    rdfs:label "StructuredValue" ;
+    rdfs:comment "Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing." ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:about a rdf:Property ;
+    rdfs:label "about" ;
+    rdfs:comment "The subject matter of the content." ;
+    schema:domainIncludes schema:CommunicateAction,
+        schema:CreativeWork,
+        schema:Event ;
+    schema:inverseOf schema:subjectOf ;
+    schema:rangeIncludes schema:Thing ;
+    schema:source <https://github.com/schemaorg/schemaorg/issues/1670> .
+
+schema:alternateName a rdf:Property ;
+    rdfs:label "alternateName" ;
+    rdfs:comment "An alias for the item." ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:Text .
+
+schema:citation a rdf:Property ;
+    rdfs:label "citation" ;
+    rdfs:comment "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc." ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:CreativeWork,
+        schema:Text .
+
+schema:contentSize a rdf:Property ;
+    rdfs:label "contentSize" ;
+    rdfs:comment "File size in (mega/kilo) bytes." ;
+    schema:domainIncludes schema:MediaObject ;
+    schema:rangeIncludes schema:Text .
+
+schema:contentUrl a rdf:Property ;
+    rdfs:label "contentUrl" ;
+    rdfs:comment "Actual bytes of the media object, for example the image file or video file." ;
+    schema:domainIncludes schema:MediaObject ;
+    schema:rangeIncludes schema:URL .
+
+schema:contributor a rdf:Property ;
+    rdfs:label "contributor" ;
+    rdfs:comment "A secondary contributor to the CreativeWork or Event." ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:Event ;
+    schema:rangeIncludes schema:Organization,
+        schema:Person .
+
+schema:creator a rdf:Property ;
+    rdfs:label "creator" ;
+    rdfs:comment "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork." ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:UserComments ;
+    schema:rangeIncludes schema:Organization,
+        schema:Person .
+
+schema:creditText a rdf:Property ;
+    rdfs:label "creditText" ;
+    rdfs:comment "Text that can be used to credit person(s) and/or organization(s) associated with a published Creative Work." ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:isPartOf <https://pending.schema.org> ;
+    schema:rangeIncludes schema:Text ;
+    schema:source <https://github.com/schemaorg/schemaorg/issues/2659> .
+
+schema:dateCreated a rdf:Property ;
+    rdfs:label "dateCreated" ;
+    rdfs:comment "The date on which the CreativeWork was created or the item was added to a DataFeed." ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:DataFeedItem ;
+    schema:rangeIncludes schema:Date,
+        schema:DateTime .
+
+schema:description a rdf:Property ;
+    rdfs:label "description" ;
+    rdfs:comment "A description of the item." ;
+    owl:equivalentProperty dct:description ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:Text .
+
+schema:distribution a rdf:Property ;
+    rdfs:label "distribution" ;
+    rdfs:comment "A downloadable form of this dataset, at a specific location, in a specific format." ;
+    schema:domainIncludes schema:Dataset ;
+    schema:rangeIncludes schema:DataDownload .
+
+schema:encodingFormat a rdf:Property ;
+    rdfs:label "encodingFormat" ;
+    rdfs:comment """Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).
+
+In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.
+
+Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.""" ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:MediaObject ;
+    schema:rangeIncludes schema:Text,
+        schema:URL .
+
+schema:image a rdf:Property ;
+    rdfs:label "image" ;
+    rdfs:comment "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]." ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:ImageObject,
+        schema:URL .
+
+schema:inLanguage a rdf:Property ;
+    rdfs:label "inLanguage" ;
+    rdfs:comment "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]]." ;
+    schema:domainIncludes schema:BroadcastService,
+        schema:CommunicateAction,
+        schema:CreativeWork,
+        schema:Event,
+        schema:LinkRole,
+        schema:PronounceableText,
+        schema:WriteAction ;
+    schema:rangeIncludes schema:Language,
+        schema:Text ;
+    schema:source <https://github.com/schemaorg/schemaorg/issues/2382> .
+
+schema:isPartOf a rdf:Property ;
+    rdfs:label "isPartOf" ;
+    rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of." ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:inverseOf schema:hasPart ;
+    schema:rangeIncludes schema:CreativeWork,
+        schema:URL .
+
+schema:keywords a rdf:Property ;
+    rdfs:label "keywords" ;
+    rdfs:comment "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property." ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:Event,
+        schema:Organization,
+        schema:Place,
+        schema:Product ;
+    schema:rangeIncludes schema:DefinedTerm,
+        schema:Text,
+        schema:URL .
+
+schema:license a rdf:Property ;
+    rdfs:label "license" ;
+    rdfs:comment "A license document that applies to this content, typically indicated by URL." ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:CreativeWork,
+        schema:URL .
+
+schema:name a rdf:Property ;
+    rdfs:label "name" ;
+    rdfs:comment "The name of the item." ;
+    rdfs:subPropertyOf rdfs:label ;
+    owl:equivalentProperty dcterms:title ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:Text .
+
+schema:position a rdf:Property ;
+    rdfs:label "position" ;
+    rdfs:comment "The position of an item in a series or sequence of items." ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:ListItem ;
+    schema:rangeIncludes schema:Integer,
+        schema:Text .
+
+schema:publisher a rdf:Property ;
+    rdfs:label "publisher" ;
+    rdfs:comment "The publisher of the creative work." ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:Organization,
+        schema:Person .
+
+schema:sameAs a rdf:Property ;
+    rdfs:label "sameAs" ;
+    rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:URL .
+
+schema:thumbnail a rdf:Property ;
+    rdfs:label "thumbnail" ;
+    rdfs:comment "Thumbnail image for an image or video." ;
+    schema:domainIncludes schema:ImageObject,
+        schema:VideoObject ;
+    schema:rangeIncludes schema:ImageObject .
+
+schema:thumbnailUrl a rdf:Property ;
+    rdfs:label "thumbnailUrl" ;
+    rdfs:comment "A thumbnail image relevant to the Thing." ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:URL .
+
+schema:url a rdf:Property ;
+    rdfs:label "url" ;
+    rdfs:comment "URL of the item." ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:URL .
+
+schema:value a rdf:Property ;
+    rdfs:label "value" ;
+    rdfs:comment "The value of the quantitative value or property value node.\\n\\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\\n* For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator." ;
+    schema:domainIncludes schema:MonetaryAmount,
+        schema:PropertyValue,
+        schema:QuantitativeValue ;
+    schema:rangeIncludes schema:Boolean,
+        schema:Number,
+        schema:StructuredValue,
+        schema:Text ;
+    schema:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> .
+
+## lingvoj
+
+lingvoj:Lingvo 
+    a owl:Class ;    
+    rdfs:label "Sprache"@de , "Language"@en ,"Lingvo"@eo , "Lenguaje"@es , "Kieli"@fi , "Langue"@fr , "Linguaggio"@it , "言語"@ja , "Taal"@nl , "Språk"@no , "Jezyk"@pl , "Idioma"@pt , "Язык"@ru , "Språk"@sv , "Dil"@tr , "语言"@zh ;    
+    rdfs:subClassOf dct:LinguisticSystem , <http://www.loc.gov/mads/rdf/v1#Language> ;
+    owl:equivalentClass schema:Language, <http://d-nb.info/standards/elementset/gnd#Language>, <http://purl.org/linguistics/gold/Language> , <http://www.ontotext.com/proton/protontop#Language> ;
+    lvont:somewhatSameAs lvont:Language ;
+    vann:example  <http://lexvo.org/id/iso639-3/fra>, <http://id.loc.gov/vocabulary/iso639-1/ja> ;      
+    rdfs:comment "A language used in spoken or written human communication, or in which a resource is written or recorded. It is recommended to use instances defined on the basis of ISO 639 codes, such as those in examples"@en ;
+    rdfs:comment "Una lengua utilizada en la comunicación oral o escrita entre personas, o en la que se escribe o graba un recurso. Se recomienda el uso de las instancias definidas según los códigos ISO 639, como los que aparecen en los ejemplos"@es ;
+    rdfs:comment "Une langue utilisée dans la communication orale ou écrite entre humains, ou dans laquelle une ressource est écrite ou enregistrée. Il est recommandé d'utiliser des instances définies sur la base d'un code ISO 639, comme dans les exemples"@fr ;
+    rdfs:comment "Een taal gebruikt in geschreven of gesproken communicatie tussen mensen of in welke een bron is geschreven of opgenomen. Het is aan te raden instanties te gebruiken gedefinieerd op basis van de ISO 630 codes, zoals in deze voorbeelden"@nl ;
+    rdfs:comment "会話または記述による人間のコミュニケーションで使用される言語、または資源が記述または記録される言語。例にあるような、ISO 639コードに基づいて定義されたインスタンスを使用することが推奨される"@ja ;
+    rdfs:comment "Um idioma utilizado na comunicação oral ou escrita entre pessoas, ou na que se escreve ou grava um recurso. Recomenda-se a utilização das instâncias definidas segundo os códigos ISO 639, como os que aparecem nos excemplos"@pt .
+    
+lingvoj:tag
+    a owl:DatatypeProperty;
+    rdfs:label "language tag"@en ;
+    rdfs:label "tag de langue"@fr ;
+    rdfs:label "etiqueta"@es ;
+    rdfs:label "言語タグ"@ja ;
+    rdfs:label "taal tag"@nl ;
+    rdfs:label "tag de idioma"@pt ;
+    rdfs:comment "The tag to use for the language, for example as value of xml:lang. See https://tools.ietf.org/html/bcp47"@en ;
+    rdfs:comment "Le tag à utiliser pour la langue, par exemple comme valeur de xml:lang. Voir https://tools.ietf.org/html/bcp47"@fr ;
+    rdfs:comment "La etiqueta a utilizar para el lenguaje, por ejemplo como valor de xml:lang. Ver https://tools.ietf.org/html/bcp47"@es ;
+    rdfs:comment "例えばxml:langの値として、言語に用いるタグ。https://tools.ietf.org/html/bcp47を参照"@ja ;
+    rdfs:comment "A tag para ser usada, por exemplo como valor de xml:lang. Ver https://tools.ietf.org/html/bcp47"@pt ;
+    rdfs:subPropertyOf dct:identifier ;
+    rdfs:domain lingvoj:Lingvo.
+
+## changeset
+
+cs:ChangeSet
+    a                 owl:Class ;
+    rdfs:isDefinedBy  <http://purl.org/vocab/changeset/schema> ;
+    rdfs:label        "ChangeSet"@en ;
+    rdfs:subClassOf   [ a                   owl:Class ;
+                        owl:intersectionOf  ( [ a                   owl:Restriction ;
+                                                owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                                                owl:onProperty      cs:statement
+                                              ] [ a                   owl:Restriction ;
+                                                  owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onProperty      cs:previousChangeSet
+                                                ] [ a                   owl:Restriction ;
+                                                    owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onProperty      cs:subjectOfChange
+                                                  ] [ a                   owl:Restriction ;
+                                                      owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onProperty      cs:createdDate
+                                                    ] [ a                   owl:Restriction ;
+                                                        owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onProperty      cs:creatorName
+                                                      ] [ a                   owl:Restriction ;
+                                                          owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onProperty      cs:changeReason
+                                                        ] )
+                      ] ;
+    dct:issued        "2005-12-14" ;
+    skos:changeNote   [ rdf:value    "Improved documentation" ;
+                        dct:creator  "Ian Davis" ;
+                        dct:date     "2006-03-21"
+                      ] ;
+    skos:definition   "The encapsulation of a delta between two versions of a resource description"@en ;
+    skos:historyNote  [ rdf:value    "Added property cardinality restrictions" ;
+                        dct:creator  "Ian Davis" ;
+                        dct:date     "2006-03-21"
+                      ] .
+
+cs:subjectOfChange
+        a                 owl:ObjectProperty ;
+        rdfs:domain       cs:ChangeSet ;
+        rdfs:isDefinedBy  <http://purl.org/vocab/changeset/schema> ;
+        rdfs:label        "subjectOfChange"@en ;
+        rdfs:range        rdfs:Resource ;
+        dct:issued        "2005-12-14" ;
+        skos:changeNote   [ rdf:value    "Added definitition and documentation" ;
+                            dct:creator  "Ian Davis" ;
+                            dct:date     "2006-03-21"
+                          ] ;
+        skos:definition   "the resource to which this set of changes applies"@en ;
+        skos:historyNote  [ rdf:value    "Made owl:ObjectProperty" ;
+                            dct:creator  "Ian Davis" ;
+                            dct:date     "2006-03-21"
+                          ] .
+
+cs:createdDate
+        a                   owl:DatatypeProperty ;
+        rdfs:comment        "\n      The date should be in W3CDTF format\n    "@en ;
+        rdfs:domain         cs:ChangeSet ;
+        rdfs:isDefinedBy    <http://purl.org/vocab/changeset/schema> ;
+        rdfs:label          "createdDate"@en ;
+        rdfs:subPropertyOf  dc:date ;
+        dct:issued          "2005-12-14" ;
+        skos:definition     "the date that the changeset was created"@en ;
+        skos:historyNote    [ rdf:value    "Made owl:DatatypeProperty" ;
+                              dct:creator  "Ian Davis" ;
+                              dct:date     "2006-03-21"
+                            ] .
+
+cs:addition
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "\n      By convention the subject of the triple being added should be the same as the subjectOfChange\n    "@en ;
+        rdfs:domain         cs:ChangeSet ;
+        rdfs:isDefinedBy    <http://purl.org/vocab/changeset/schema> ;
+        rdfs:label          "addition"@en ;
+        rdfs:range          rdf:Statement ;
+        rdfs:subPropertyOf  cs:statement ;
+        dct:issued          "2005-12-14" ;
+        skos:changeNote     [ rdf:value    "Added definitition and documentation" ;
+                              dct:creator  "Ian Davis" ;
+                              dct:date     "2006-03-21"
+                            ] ;
+        skos:definition     "a triple to be added to the resource description"@en ;
+        skos:historyNote    [ rdf:value    "Made a sub-property of statement" ;
+                              dct:creator  "Ian Davis" ;
+                              dct:date     "2006-03-21"
+                            ] ;
+        skos:historyNote    [ rdf:value    "Made owl:ObjectProperty" ;
+                              dct:creator  "Ian Davis" ;
+                              dct:date     "2006-03-21"
+                            ] .
+
+cs:removal
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "\n      By convention the subject of the triple being removed should be the same as the subjectOfChange\n    "@en ;
+        rdfs:domain         cs:ChangeSet ;
+        rdfs:isDefinedBy    <http://purl.org/vocab/changeset/schema> ;
+        rdfs:label          "removal"@en ;
+        rdfs:range          rdf:Statement ;
+        rdfs:subPropertyOf  cs:statement ;
+        dct:issued          "2005-12-14" ;
+        skos:changeNote     [ rdf:value    "Added definitition and documentation" ;
+                              dct:creator  "Ian Davis" ;
+                              dct:date     "2006-03-21"
+                            ] ;
+        skos:definition     "a triple to be removed from the resource description"@en ;
+        skos:historyNote    [ rdf:value    "Made owl:ObjectProperty" ;
+                              dct:creator  "Ian Davis" ;
+                              dct:date     "2006-03-21"
+                            ] ;
+        skos:historyNote    [ rdf:value    "Made a sub-property of statement" ;
+                              dct:creator  "Ian Davis" ;
+                              dct:date     "2006-03-21"
+                            ] .
+
+## DSNotify
+
+dsn:CreateEvent a owl:Class ;
+    rdfs:label "create event"@en-US ;
+    rdfs:comment "An event class describing that a particular resource was 'created' in a dataset. This means that one or more triples having the associated resource as subject or object were created in the corresponding RDF model."@en-US ;
+    rdfs:subClassOf dsn:ResourceChangeEvent .
+
+dsn:MoveEvent a owl:Class ;
+    rdfs:label "Move event"@en-US ;
+    rdfs:comment "An event class describing that a particular resource was 'moved' in a dataset or between datasets. This means that all triples having the associated older resource as subject/object were replaced by triples having the target resource as subject/object in the corresponding RDF models. "@en-US ;
+    rdfs:subClassOf dsn:ResourceChangeEvent .
+
+dsn:RemoveEvent a owl:Class ;
+    rdfs:label "Remove event"@en-US ;
+    rdfs:comment "An event class describing that a particular resource was 'removed' from a dataset. This means that all triples having the associated resource as subject or object were removed from the corresponding RDF model."@en-US ;
+    rdfs:subClassOf dsn:ResourceChangeEvent .
+
+dsn:UpdateEvent a owl:Class ;
+    rdfs:label "Update event"@en-US ;
+    rdfs:comment "An event class describing that a particular resource was 'updated' in a dataset. This means that some triples having the associated resource as subject or object were modified/created/removed in the corresponding RDF model."@en-US ;
+    rdfs:subClassOf dsn:ResourceChangeEvent .
+
+dsn:sourceResource a owl:DatatypeProperty ;
+    rdfs:label "source resource"@en-US ;
+    rdfs:comment "The identifier (URI) of a resource that was published under a new URI (i.e., when a MoveEvent occurred)."@en-US ;
+    rdfs:domain dsn:MoveEvent ;
+    rdfs:range xsd:anyURI .
+
+dsn:targetResource a owl:DatatypeProperty ;
+    rdfs:label "target resource"@en-US ;
+    rdfs:comment "The identifier (URI) of a resource that was affected by the corresponding event."@en-US ;
+    rdfs:domain dsn:ResourceChangeEvent ;
+    rdfs:range xsd:anyURI .
+
+## FOAF
+
+foaf:Agent a rdfs:Class, owl:Class ;
+    vs:term_status "stable" ;
+    rdfs:label "Agent" ;
+    rdfs:comment "An agent (eg. person, group, software or physical artifact)." ;
+    owl:equivalentClass dct:Agent .
+
+foaf:name a rdf:Property ;
+    vs:term_status "testing" ;
+    rdfs:label "name" ;
+    rdfs:comment "A name for some thing." ;
+    a owl:DatatypeProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range rdfs:Literal ;
+    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+    rdfs:subPropertyOf rdfs:label .
+
+foaf:nick a rdf:Property ;
+    vs:term_status "testing" ;
+    rdfs:label "nickname" ;
+    rdfs:comment "A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames)." ;
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+foaf:primaryTopic a rdf:Property ;
+    vs:term_status "stable" ;
+    rdfs:label "primary topic" ;
+    rdfs:comment "The primary topic of some page or document." ;
+    a owl:FunctionalProperty , owl:ObjectProperty ;
+    rdfs:domain foaf:Document ;
+    rdfs:range owl:Thing ;
+    owl:inverseOf foaf:isPrimaryTopicOf ;
+    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+## lexinfo
+
+lexinfo:Gender
+    a owl:Class ;
+    rdfs:label "gender"@en ;
+    owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> .
 
 ## Languages
 
