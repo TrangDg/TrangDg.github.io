@@ -1,0 +1,2875 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontologie de Nomenclature pour le catalogage des objets de musée</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://nomenclature.info/nom/ontology/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://nomenclature.info/nom/ontology/","name":"Ontologie de Nomenclature pour le catalogage des objets de musée", "headline":"L'ontologie de NOM définit les valeurs utilisées dans Nomenclature pour le catalogage des objets de musée. Elle utilise les ontologies SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset.", "datePublished":"2022-04-22", "version":"1.0", "license":"http://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"https://nomenclature.info/nom/agent/2","url":"https://nomenclature.info/nom/agent/2"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Sommaire</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> <a href="index-fr.html"><b>fr</b></a> </div>
+<h1>Ontologie de Nomenclature pour le catalogage des objets de musée</h1>
+<h2>Release  2022-04-22</h2>
+
+
+<dl>
+<dt>R&eacute;vision:</dt>
+<dd>1.0</dd>
+<dt>Auteurs:</dt>
+<dd><a href="https://nomenclature.info/nom/agent/2">https://nomenclature.info/nom/agent/2</a></dd>
+
+<dt>T&eacute;l&eacute;charger s&eacute;rialisation:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Licence: </dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Citer en tant que:</dt>
+<dd>https://nomenclature.info/nom/agent/2. Ontologie de Nomenclature pour le catalogage des objets de musée. Revision: 1.0.</dd>
+</dl>
+
+<a href="provenance/provenance-fr.html" target="_blank">Provenance de cette page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>R&eacute;sum&eacute;</h2><span class="markdown">
+L'ontologie de NOM définit les valeurs utilisées dans Nomenclature pour le catalogage des objets de musée. Elle utilise les ontologies SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> retour au <a href="#toc">sommaire</a></span></h2>
+<span class="markdown">
+Ceci est une introduction automatique. L'introduction doit d&eacute;crire bri&egrave; vement l'ontologie, motiver son d&eacute;veloppement, l'&eacute;tat de l'art, les objectifs.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Espaces de noms d&eacute;clar&eacute;s</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Espaces de noms utilis&eacute;s dans ce document </caption>
+<tbody>
+<tr><td><b>nomo</b></td><td>&lt;https://nomenclature.info/nom/ontology/&gt;</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td><b>schema</b></td><td>&lt;http://schema.org&gt;</td></tr>
+<tr><td><b>nomAgent</b></td><td>&lt;https://nomenclature.info/nom/agent&gt;</td></tr>
+<tr><td><b>nomSource</b></td><td>&lt;https://nomenclature.info/nom/source&gt;</td></tr>
+<tr><td><b>lvont</b></td><td>&lt;http://lexvo.org/ontology&gt;</td></tr>
+<tr><td><b>protontop</b></td><td>&lt;http://www.ontotext.com/proton/protontop&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>swh</b></td><td>&lt;http://schema.semantic-web.at/ppt/history&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>lexinfo</b></td><td>&lt;http://www.lexinfo.net/ontology/3.0/lexinfo&gt;</td></tr>
+<tr><td><b>error</b></td><td>&lt;http://org.semanticweb.owlapi/error&gt;</td></tr>
+<tr><td><b>nomBib</b></td><td>&lt;https://nomenclature.info/nom/biblio&gt;</td></tr>
+<tr><td><b>wd</b></td><td>&lt;http://www.wikidata.org/entity&gt;</td></tr>
+<tr><td><b>nom</b></td><td>&lt;https://nomenclature.info/nom&gt;</td></tr>
+<tr><td><b>spif</b></td><td>&lt;http://spinrdf.org/spif&gt;</td></tr>
+<tr><td><b>gold</b></td><td>&lt;http://purl.org/linguistics/gold&gt;</td></tr>
+<tr><td><b>dct</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>aat</b></td><td>&lt;http://vocab.getty.edu/aat&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>lingvoj</b></td><td>&lt;http://www.lingvoj.org/ontology&gt;</td></tr>
+<tr><td><b>gnd</b></td><td>&lt;http://d-nb.info/standards/elementset/gnd&gt;</td></tr>
+<tr><td><b>dcat</b></td><td>&lt;http://www.w3.org/ns/dcat&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
+<tr><td><b>nomLang</b></td><td>&lt;https://nomenclature.info/nom/lang&gt;</td></tr>
+<tr><td><b>void</b></td><td>&lt;http://rdfs.org/ns/void&gt;</td></tr>
+<tr><td><b>skosxl</b></td><td>&lt;http://www.w3.org/2008/05/skos-xl&gt;</td></tr>
+<tr><td><b>nomLevel</b></td><td>&lt;https://nomenclature.info/nom/level&gt;</td></tr>
+<tr><td><b>cs</b></td><td>&lt;http://purl.org/vocab/changeset/schema&gt;</td></tr>
+<tr><td><b>nomRev</b></td><td>&lt;https://nomenclature.info/nom/revision&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>dctype</b></td><td>&lt;http://purl.org/dc/dcmitype&gt;</td></tr>
+<tr><td><b>v1</b></td><td>&lt;http://www.loc.gov/mads/rdf/v1&gt;</td></tr>
+<tr><td><b>vs</b></td><td>&lt;http://www.w3.org/2003/06/sw-vocab-status/ns&gt;</td></tr>
+<tr><td><b>dsn</b></td><td>&lt;http://purl.org/dsnotify/vocab/eventset&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Ontologie de Nomenclature pour le catalogage des objets de musée: Aper&ccedil;u <span class="backlink"> retour au <a href="#toc">sommaire</a></span></h2>
+<span class="markdown">
+Cette ontologie a les classes et propri&eacute;t&eacute;s suivantes.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/Agent" title="http://purl.org/dc/terms/Agent">
+         <span>agent</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/changeset/schema#ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">ChangeSet</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Collection" title="http://schema.org/Collection">Collection</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dsnotify/vocab/eventset/CreateEvent"
+         title="http://purl.org/dsnotify/vocab/eventset/CreateEvent">create event</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork">CreativeWork</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/DataDownload" title="http://schema.org/DataDownload">DataDownload</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/dcmitype/Dataset" title="http://purl.org/dc/dcmitype/Dataset">
+         <span>dataset</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">
+         <span>dataset</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/DefinedTermSet" title="http://schema.org/DefinedTermSet">DefinedTermSet</a>
+   </li>
+   <li>
+      <a href="#http://www.lexinfo.net/ontology/3.0/lexinfo#Gender"
+         title="http://www.lexinfo.net/ontology/3.0/lexinfo#Gender">gender</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/dcmitype/Image" title="http://purl.org/dc/dcmitype/Image">
+         <span>image</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/ImageObject" title="http://schema.org/ImageObject">ImageObject</a>
+   </li>
+   <li>
+      <a href="#http://d-nb.info/standards/elementset/gnd#Language"
+         title="http://d-nb.info/standards/elementset/gnd#Language">
+         <span>language</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/linguistics/gold/Language" title="http://purl.org/linguistics/gold/Language">
+         <span>language</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Language" title="http://schema.org/Language">
+         <span>language</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dsnotify/vocab/eventset/MoveEvent"
+         title="http://purl.org/dsnotify/vocab/eventset/MoveEvent">Move event</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/Organization" title="http://schema.org/Organization">Organization</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dsnotify/vocab/eventset/RemoveEvent"
+         title="http://purl.org/dsnotify/vocab/eventset/RemoveEvent">Remove event</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/StructuredValue" title="http://schema.org/StructuredValue">StructuredValue</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dsnotify/vocab/eventset/UpdateEvent"
+         title="http://purl.org/dsnotify/vocab/eventset/UpdateEvent">Update event</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://purl.org/vocab/changeset/schema#addition" title="http://purl.org/vocab/changeset/schema#addition">addition</a>
+   </li>
+   <li>
+      <a href="#invertedFormOf"
+         title="https://nomenclature.info/nom/ontology/invertedFormOf">forme inversée de</a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/primaryTopic" title="http://xmlns.com/foaf/0.1/primaryTopic">primary topic</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/changeset/schema#removal" title="http://purl.org/vocab/changeset/schema#removal">removal</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/changeset/schema#subjectOfChange"
+         title="http://purl.org/vocab/changeset/schema#subjectOfChange">subjectOfChange</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://purl.org/vocab/changeset/schema#createdDate"
+         title="http://purl.org/vocab/changeset/schema#createdDate">createdDate</a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/nick" title="http://xmlns.com/foaf/0.1/nick">nickname</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dsnotify/vocab/eventset/sourceResource"
+         title="http://purl.org/dsnotify/vocab/eventset/sourceResource">source resource</a>
+   </li>
+   <li>
+      <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dsnotify/vocab/eventset/targetResource"
+         title="http://purl.org/dsnotify/vocab/eventset/targetResource">target resource</a>
+   </li>
+</ul><h4>Individus nomm&eacute;s</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://nomenclature.info/nom/agent/1" title="https://nomenclature.info/nom/agent/1">
+         <span>1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/agent/2" title="https://nomenclature.info/nom/agent/2">
+         <span>2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/agent/3" title="https://nomenclature.info/nom/agent/3">
+         <span>3</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/agent/4" title="https://nomenclature.info/nom/agent/4">
+         <span>4</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/source/AAT" title="https://nomenclature.info/nom/source/AAT">
+         <span>a a t</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/en" title="https://nomenclature.info/nom/lang/en">anglais</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/en-ca" title="https://nomenclature.info/nom/lang/en-ca">anglais canadien</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/level/1" title="https://nomenclature.info/nom/level/1">Catégorie</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/level/2" title="https://nomenclature.info/nom/level/2">Classe</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/cr" title="https://nomenclature.info/nom/lang/cr">cri</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/cr-latn" title="https://nomenclature.info/nom/lang/cr-latn">cri en écriture latine</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/source/CultureFr-architecturales"
+         title="https://nomenclature.info/nom/source/CultureFr-architecturales">
+         <span>culture fr architecturales</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/source/CultureFr-archives"
+         title="https://nomenclature.info/nom/source/CultureFr-archives">
+         <span>culture fr archives</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/source/CultureFr-Joconde"
+         title="https://nomenclature.info/nom/source/CultureFr-Joconde">
+         <span>culture fr joconde</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/source/CultureFr-mobiliers"
+         title="https://nomenclature.info/nom/source/CultureFr-mobiliers">
+         <span>culture fr mobiliers</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/source/DBpedia" title="https://nomenclature.info/nom/source/DBpedia">
+         <span>d bpedia</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/es" title="https://nomenclature.info/nom/lang/es">espagnol</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/fr" title="https://nomenclature.info/nom/lang/fr">français</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/fr-ca" title="https://nomenclature.info/nom/lang/fr-ca">français canadien</a>
+   </li>
+   <li>
+      <a href="#http://www.lexinfo.net/ontology/3.0/lexinfo#feminine"
+         title="http://www.lexinfo.net/ontology/3.0/lexinfo#feminine">féminin</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/source/GND" title="https://nomenclature.info/nom/source/GND">
+         <span>g n d</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/hai" title="https://nomenclature.info/nom/lang/hai">haïda</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/hai-latn" title="https://nomenclature.info/nom/lang/hai-latn">haïda en écriture latine</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/he" title="https://nomenclature.info/nom/lang/he">hébreu</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/he-latn" title="https://nomenclature.info/nom/lang/he-latn">hébreu en écriture latine</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/iu" title="https://nomenclature.info/nom/lang/iu">inuktitut</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/iu-latn" title="https://nomenclature.info/nom/lang/iu-latn">inuktitut en écriture latine</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/iro" title="https://nomenclature.info/nom/lang/iro">iroquoien</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/iro-latn" title="https://nomenclature.info/nom/lang/iro-latn">iroquoien en écriture latine</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/source/LCSH" title="https://nomenclature.info/nom/source/LCSH">
+         <span>l c s h</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/" title="https://nomenclature.info/nom/lang/">
+         <span>lang:</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.lexinfo.net/ontology/3.0/lexinfo#masculine"
+         title="http://www.lexinfo.net/ontology/3.0/lexinfo#masculine">masculin</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/moh" title="https://nomenclature.info/nom/lang/moh">mohawk</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/moh-latn" title="https://nomenclature.info/nom/lang/moh-latn">mohawk en écriture latine</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/oj" title="https://nomenclature.info/nom/lang/oj">ojibwé</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/lang/oj-latn" title="https://nomenclature.info/nom/lang/oj-latn">ojibwé en écriture latine</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/source/RAMEAU" title="https://nomenclature.info/nom/source/RAMEAU">
+         <span>r a m e a u</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/level/3" title="https://nomenclature.info/nom/level/3">Sous-classe</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/level/4" title="https://nomenclature.info/nom/level/4">Terme primaire</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/level/5" title="https://nomenclature.info/nom/level/5">Terme secondaire</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/level/6" title="https://nomenclature.info/nom/level/6">Terme tertiaire</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300404671" title="http://vocab.getty.edu/aat/300404671">Termes en ordre naturel</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300404672" title="http://vocab.getty.edu/aat/300404672">Termes inversés</a>
+   </li>
+   <li>
+      <a href="#https://nomenclature.info/nom/source/WD" title="https://nomenclature.info/nom/source/WD">
+         <span>w d</span>
+      </a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Ontologie de Nomenclature pour le catalogage des objets de musée: Description <span class="backlink"> retour au <a href="#toc">sommaire</a></span></h2>
+<span class="markdown">
+Ceci est une description automatique pour l'ontologie. La description doit comprendre un texte explicatif ainsi que des diagrammes illustrant comment les classes sont li&eacute;es, des exemples d'utilisation, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">R&eacute;ference crois&eacute;e pour Ontologie de Nomenclature pour le catalogage des objets de musée classes, propri&eacute;t&eacute;s et data-propri&eacute;t&eacute;s <span class="backlink"> retour au <a href="#toc">sommaire</a></span></h2>
+Cette section donne les d&eacute;tails de chaque classe et propri&eacute;t&eacute; d&eacute;finie par  Ontologie de Nomenclature pour le catalogage des objets de musée.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/dc/terms/Agent" title="http://purl.org/dc/terms/Agent">
+            <span>agent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/changeset/schema#ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">ChangeSet</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Collection" title="http://schema.org/Collection">Collection</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dsnotify/vocab/eventset/CreateEvent"
+            title="http://purl.org/dsnotify/vocab/eventset/CreateEvent">create event</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork">CreativeWork</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/DataDownload" title="http://schema.org/DataDownload">DataDownload</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/dcmitype/Dataset" title="http://purl.org/dc/dcmitype/Dataset">
+            <span>dataset</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">
+            <span>dataset</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/DefinedTermSet" title="http://schema.org/DefinedTermSet">DefinedTermSet</a>
+      </li>
+      <li>
+         <a href="#http://www.lexinfo.net/ontology/3.0/lexinfo#Gender"
+            title="http://www.lexinfo.net/ontology/3.0/lexinfo#Gender">gender</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/dcmitype/Image" title="http://purl.org/dc/dcmitype/Image">
+            <span>image</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/ImageObject" title="http://schema.org/ImageObject">ImageObject</a>
+      </li>
+      <li>
+         <a href="#http://d-nb.info/standards/elementset/gnd#Language"
+            title="http://d-nb.info/standards/elementset/gnd#Language">
+            <span>language</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/linguistics/gold/Language" title="http://purl.org/linguistics/gold/Language">
+            <span>language</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Language" title="http://schema.org/Language">
+            <span>language</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dsnotify/vocab/eventset/MoveEvent"
+            title="http://purl.org/dsnotify/vocab/eventset/MoveEvent">Move event</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Organization" title="http://schema.org/Organization">Organization</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dsnotify/vocab/eventset/RemoveEvent"
+            title="http://purl.org/dsnotify/vocab/eventset/RemoveEvent">Remove event</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/StructuredValue" title="http://schema.org/StructuredValue">StructuredValue</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dsnotify/vocab/eventset/UpdateEvent"
+            title="http://purl.org/dsnotify/vocab/eventset/UpdateEvent">Update event</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/dc/terms/Agent">
+      <h3>agent<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/Agent</p>
+      <dl class="description">
+         <dt>Est équivalent à</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://xmlns.com/foaf/0.1/Agent">
+      <h3>Agent<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/Agent</p>
+      <div class="comment">
+         <span class="markdown">An agent (eg. person, group, software or physical artifact).</span>
+      </div>
+      <dl>
+         <dt>Statut</dt>
+         <dd>stable</dd>
+      </dl>
+      <dl class="description">
+         <dt>a pour membres</dt>
+         <dd>
+            <a href="#https://nomenclature.info/nom/agent/1" title="https://nomenclature.info/nom/agent/1">1</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/agent/2" title="https://nomenclature.info/nom/agent/2">2</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/agent/3" title="https://nomenclature.info/nom/agent/3">3</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/agent/4" title="https://nomenclature.info/nom/agent/4">4</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/changeset/schema#ChangeSet">
+      <h3>ChangeSet<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/changeset/schema#ChangeSet</p>
+      <div class="comment">
+         <span class="markdown">The encapsulation of a delta between two versions of a resource description</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="http://purl.org/vocab/changeset/schema">http://purl.org/vocab/changeset/schema</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd/>
+         <dt>a pour domaine</dt>
+         <dd>
+            <a href="#http://purl.org/vocab/changeset/schema#addition" title="http://purl.org/vocab/changeset/schema#addition">addition</a>
+            <sup class="type-op" title="Propriété d'objet">op</sup>, <a href="#http://purl.org/vocab/changeset/schema#createdDate"
+               title="http://purl.org/vocab/changeset/schema#createdDate">createdDate</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup>, <a href="#http://purl.org/vocab/changeset/schema#removal" title="http://purl.org/vocab/changeset/schema#removal">removal</a>
+            <sup class="type-op" title="Propriété d'objet">op</sup>, <a href="#http://purl.org/vocab/changeset/schema#subjectOfChange"
+               title="http://purl.org/vocab/changeset/schema#subjectOfChange">subjectOfChange</a>
+            <sup class="type-op" title="Propriété d'objet">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Collection">
+      <h3>Collection<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Collection</p>
+      <div class="comment">
+         <span class="markdown">A collection of items e.g. creative works or products.</span>
+      </div>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork">CreativeWork</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour membres</dt>
+         <dd>
+            <a href="#https://nomenclature.info/nom/level/1" title="https://nomenclature.info/nom/level/1">Catégorie</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/level/2" title="https://nomenclature.info/nom/level/2">Classe</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/level/3" title="https://nomenclature.info/nom/level/3">Sous-classe</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/level/4" title="https://nomenclature.info/nom/level/4">Terme primaire</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/level/5" title="https://nomenclature.info/nom/level/5">Terme secondaire</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/level/6" title="https://nomenclature.info/nom/level/6">Terme tertiaire</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/dsnotify/vocab/eventset/CreateEvent">
+      <h3>create event<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dsnotify/vocab/eventset/CreateEvent</p>
+      <div class="comment">
+         <span class="markdown">An event class describing that a particular resource was 'created' in a dataset. This means that one or more triples having the associated resource as subject or object were created in the corresponding RDF model.</span>
+      </div>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"
+               target="_blank"
+               title="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent">resource change event</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/CreativeWork">
+      <h3>CreativeWork<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/CreativeWork</p>
+      <div class="comment">
+         <span class="markdown">The most generic kind of creative work, including books, movies, photographs, software programs, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="http://schema.org/Thing"
+               target="_blank"
+               title="http://schema.org/Thing">thing</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour sous-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Collection" title="http://schema.org/Collection">Collection</a>
+            <sup class="type-c" title="classe">c</sup>, <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>, <a href="#http://schema.org/DefinedTermSet" title="http://schema.org/DefinedTermSet">DefinedTermSet</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour domaine</dt>
+         <dd>
+            <a href="http://schema.org/isPartOf"
+               target="_blank"
+               title="http://schema.org/isPartOf">isPartOf</a>, <a href="http://schema.org/position"
+               target="_blank"
+               title="http://schema.org/position">position</a>
+         </dd>
+         <dt>a pour cible</dt>
+         <dd>
+            <a href="http://schema.org/isPartOf"
+               target="_blank"
+               title="http://schema.org/isPartOf">isPartOf</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/DataDownload">
+      <h3>DataDownload<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/DataDownload</p>
+      <div class="comment">
+         <span class="markdown">A dataset in downloadable form.</span>
+      </div>
+      <dl class="description">
+         <dt>Est équivalent à</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/dcat#Distribution"
+               target="_blank"
+               title="http://www.w3.org/ns/dcat#Distribution">distribution</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="http://schema.org/MediaObject"
+               target="_blank"
+               title="http://schema.org/MediaObject">media object</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/dc/dcmitype/Dataset">
+      <h3>dataset<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/dcmitype/Dataset</p>
+      <dl class="description">
+         <dt>Est équivalent à</dt>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://rdfs.org/ns/void#Dataset">
+      <h3>dataset<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://rdfs.org/ns/void#Dataset</p>
+      <dl class="description">
+         <dt>Est équivalent à</dt>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour membres</dt>
+         <dd>
+            <a href="#https://nomenclature.info/nom/source/AAT" title="https://nomenclature.info/nom/source/AAT">a a t</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/CultureFr-architecturales"
+               title="https://nomenclature.info/nom/source/CultureFr-architecturales">culture fr architecturales</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/CultureFr-archives"
+               title="https://nomenclature.info/nom/source/CultureFr-archives">culture fr archives</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/CultureFr-Joconde"
+               title="https://nomenclature.info/nom/source/CultureFr-Joconde">culture fr joconde</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/CultureFr-mobiliers"
+               title="https://nomenclature.info/nom/source/CultureFr-mobiliers">culture fr mobiliers</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/DBpedia" title="https://nomenclature.info/nom/source/DBpedia">d bpedia</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/GND" title="https://nomenclature.info/nom/source/GND">g n d</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/LCSH" title="https://nomenclature.info/nom/source/LCSH">l c s h</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/RAMEAU" title="https://nomenclature.info/nom/source/RAMEAU">r a m e a u</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/WD" title="https://nomenclature.info/nom/source/WD">w d</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Dataset">
+      <h3>Dataset<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Dataset</p>
+      <div class="comment">
+         <span class="markdown">A body of structured information describing some topic(s) of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>Est équivalent à</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/dcat#Dataset"
+               target="_blank"
+               title="http://www.w3.org/ns/dcat#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork">CreativeWork</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour membres</dt>
+         <dd>
+            <a href="#https://nomenclature.info/nom/source/AAT" title="https://nomenclature.info/nom/source/AAT">a a t</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/CultureFr-architecturales"
+               title="https://nomenclature.info/nom/source/CultureFr-architecturales">culture fr architecturales</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/CultureFr-archives"
+               title="https://nomenclature.info/nom/source/CultureFr-archives">culture fr archives</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/CultureFr-Joconde"
+               title="https://nomenclature.info/nom/source/CultureFr-Joconde">culture fr joconde</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/CultureFr-mobiliers"
+               title="https://nomenclature.info/nom/source/CultureFr-mobiliers">culture fr mobiliers</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/DBpedia" title="https://nomenclature.info/nom/source/DBpedia">d bpedia</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/GND" title="https://nomenclature.info/nom/source/GND">g n d</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/LCSH" title="https://nomenclature.info/nom/source/LCSH">l c s h</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/RAMEAU" title="https://nomenclature.info/nom/source/RAMEAU">r a m e a u</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/source/WD" title="https://nomenclature.info/nom/source/WD">w d</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/DefinedTermSet">
+      <h3>DefinedTermSet<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/DefinedTermSet</p>
+      <div class="comment">
+         <span class="markdown">A set of defined terms for example a set of categories or a classification scheme, a glossary, dictionary or enumeration.</span>
+      </div>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork">CreativeWork</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.lexinfo.net/ontology/3.0/lexinfo#Gender">
+      <h3>gender<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.lexinfo.net/ontology/3.0/lexinfo#Gender</p>
+      <dl>
+         <dt>Précédente version:
+        </dt>
+         <dd>
+            <a href="http://www.lexinfo.net/ontology/2.0/lexinfo#Gender">http://www.lexinfo.net/ontology/2.0/lexinfo#Gender</a> (<a href="http://www.essepuntato.it/lode/owlapi/http://www.lexinfo.net/ontology/2.0/lexinfo#Gender">Visualiser avec LODE
+                    </a>)</dd>
+      </dl>
+      <dl class="description">
+         <dt>a pour membres</dt>
+         <dd>
+            <a href="#http://www.lexinfo.net/ontology/3.0/lexinfo#feminine"
+               title="http://www.lexinfo.net/ontology/3.0/lexinfo#feminine">féminin</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#http://www.lexinfo.net/ontology/3.0/lexinfo#masculine"
+               title="http://www.lexinfo.net/ontology/3.0/lexinfo#masculine">masculin</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/dc/dcmitype/Image">
+      <h3>image<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/dcmitype/Image</p>
+      <dl class="description">
+         <dt>Est équivalent à</dt>
+         <dd>
+            <a href="#http://schema.org/ImageObject" title="http://schema.org/ImageObject">ImageObject</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/ImageObject">
+      <h3>ImageObject<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/ImageObject</p>
+      <div class="comment">
+         <span class="markdown">An image file.</span>
+      </div>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="http://schema.org/MediaObject"
+               target="_blank"
+               title="http://schema.org/MediaObject">media object</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://d-nb.info/standards/elementset/gnd#Language">
+      <h3>language<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://d-nb.info/standards/elementset/gnd#Language</p>
+      <dl class="description">
+         <dt>Est équivalent à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/linguistics/gold/Language">
+      <h3>language<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/linguistics/gold/Language</p>
+      <dl class="description">
+         <dt>Est équivalent à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Language">
+      <h3>language<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Language</p>
+      <dl class="description">
+         <dt>Est équivalent à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.lingvoj.org/ontology#Lingvo">
+      <h3>Langue<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.lingvoj.org/ontology#Lingvo</p>
+      <div class="comment">
+         <span class="markdown">Une langue utilisée dans la communication orale ou écrite entre humains, ou dans laquelle une ressource est écrite ou enregistrée. Il est recommandé d'utiliser des instances définies sur la base d'un code ISO 639, comme dans les exemples</span>
+      </div>
+      <dl>
+         <dt>Exemple</dt>
+         <dd>
+            <a href="http://id.loc.gov/vocabulary/iso639-1/ja">http://id.loc.gov/vocabulary/iso639-1/ja</a>
+         </dd>
+         <dd>
+            <a href="http://lexvo.org/id/iso639-3/fra">http://lexvo.org/id/iso639-3/fra</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>Est équivalent à</dt>
+         <dd>
+            <a href="http://www.ontotext.com/proton/protontop#Language"
+               target="_blank"
+               title="http://www.ontotext.com/proton/protontop#Language">language</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="http://www.loc.gov/mads/rdf/v1#Language"
+               target="_blank"
+               title="http://www.loc.gov/mads/rdf/v1#Language">language</a>
+            <sup class="type-c" title="classe">c</sup>, <a href="http://purl.org/dc/terms/LinguisticSystem"
+               target="_blank"
+               title="http://purl.org/dc/terms/LinguisticSystem">linguistic system</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour domaine</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup>
+         </dd>
+         <dt>a pour membres</dt>
+         <dd>
+            <a href="#https://nomenclature.info/nom/lang/en" title="https://nomenclature.info/nom/lang/en">anglais</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/en-ca" title="https://nomenclature.info/nom/lang/en-ca">anglais canadien</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/cr" title="https://nomenclature.info/nom/lang/cr">cri</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/cr-latn" title="https://nomenclature.info/nom/lang/cr-latn">cri en écriture latine</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/es" title="https://nomenclature.info/nom/lang/es">espagnol</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/fr" title="https://nomenclature.info/nom/lang/fr">français</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/fr-ca" title="https://nomenclature.info/nom/lang/fr-ca">français canadien</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/hai" title="https://nomenclature.info/nom/lang/hai">haïda</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/hai-latn" title="https://nomenclature.info/nom/lang/hai-latn">haïda en écriture latine</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/he" title="https://nomenclature.info/nom/lang/he">hébreu</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/he-latn" title="https://nomenclature.info/nom/lang/he-latn">hébreu en écriture latine</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/iu" title="https://nomenclature.info/nom/lang/iu">inuktitut</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/iu-latn" title="https://nomenclature.info/nom/lang/iu-latn">inuktitut en écriture latine</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/iro" title="https://nomenclature.info/nom/lang/iro">iroquoien</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/iro-latn" title="https://nomenclature.info/nom/lang/iro-latn">iroquoien en écriture latine</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/moh" title="https://nomenclature.info/nom/lang/moh">mohawk</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/moh-latn" title="https://nomenclature.info/nom/lang/moh-latn">mohawk en écriture latine</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/oj" title="https://nomenclature.info/nom/lang/oj">ojibwé</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>, <a href="#https://nomenclature.info/nom/lang/oj-latn" title="https://nomenclature.info/nom/lang/oj-latn">ojibwé en écriture latine</a>
+            <sup class="type-ni" title="Individu nommé">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/dsnotify/vocab/eventset/MoveEvent">
+      <h3>Move event<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dsnotify/vocab/eventset/MoveEvent</p>
+      <div class="comment">
+         <span class="markdown">An event class describing that a particular resource was 'moved' in a dataset or between datasets. This means that all triples having the associated older resource as subject/object were replaced by triples having the target resource as subject/object in the corresponding RDF models. </span>
+      </div>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"
+               target="_blank"
+               title="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent">resource change event</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour domaine</dt>
+         <dd>
+            <a href="#http://purl.org/dsnotify/vocab/eventset/sourceResource"
+               title="http://purl.org/dsnotify/vocab/eventset/sourceResource">source resource</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Organization">
+      <h3>Organization<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Organization</p>
+      <div class="comment">
+         <span class="markdown">An organization such as a school, NGO, corporation, club, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="http://schema.org/Thing"
+               target="_blank"
+               title="http://schema.org/Thing">thing</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/dsnotify/vocab/eventset/RemoveEvent">
+      <h3>Remove event<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dsnotify/vocab/eventset/RemoveEvent</p>
+      <div class="comment">
+         <span class="markdown">An event class describing that a particular resource was 'removed' from a dataset. This means that all triples having the associated resource as subject or object were removed from the corresponding RDF model.</span>
+      </div>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"
+               target="_blank"
+               title="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent">resource change event</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/StructuredValue">
+      <h3>StructuredValue<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/StructuredValue</p>
+      <div class="comment">
+         <span class="markdown">Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.</span>
+      </div>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="http://schema.org/Intangible"
+               target="_blank"
+               title="http://schema.org/Intangible">intangible</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/dsnotify/vocab/eventset/UpdateEvent">
+      <h3>Update event<sup class="type-c" title="classe">c</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#classes">Retour vers les classes</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dsnotify/vocab/eventset/UpdateEvent</p>
+      <div class="comment">
+         <span class="markdown">An event class describing that a particular resource was 'updated' in a dataset. This means that some triples having the associated resource as subject or object were modified/created/removed in the corresponding RDF model.</span>
+      </div>
+      <dl class="description">
+         <dt>a pour super-classes</dt>
+         <dd>
+            <a href="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"
+               target="_blank"
+               title="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent">resource change event</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h2>Propriétés d'objet</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/vocab/changeset/schema#addition" title="http://purl.org/vocab/changeset/schema#addition">addition</a>
+      </li>
+      <li>
+         <a href="#invertedFormOf"
+            title="https://nomenclature.info/nom/ontology/invertedFormOf">forme inversée de</a>
+      </li>
+      <li>
+         <a href="#http://xmlns.com/foaf/0.1/primaryTopic" title="http://xmlns.com/foaf/0.1/primaryTopic">primary topic</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/changeset/schema#removal" title="http://purl.org/vocab/changeset/schema#removal">removal</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/changeset/schema#subjectOfChange"
+            title="http://purl.org/vocab/changeset/schema#subjectOfChange">subjectOfChange</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/vocab/changeset/schema#addition">
+      <h3>addition<sup class="type-op" title="Propriété d'objet">op</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#objectproperties">Retour vers les propriétés d'objet</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/changeset/schema#addition</p>
+      <div class="comment">
+         <span class="markdown">
+      By convention the subject of the triple being added should be the same as the subjectOfChange
+    </span>
+      </div>
+      <div class="comment">
+         <span class="markdown">a triple to be added to the resource description</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="http://purl.org/vocab/changeset/schema">http://purl.org/vocab/changeset/schema</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>a pour super-propriétés</dt>
+            <dd>
+               <a href="http://purl.org/vocab/changeset/schema#statement"
+                  target="_blank"
+                  title="http://purl.org/vocab/changeset/schema#statement">statement</a>
+               <sup class="type-op" title="Propriété d'objet">op</sup>
+            </dd>
+            <dt>a pour domaine</dt>
+            <dd>
+               <a href="#http://purl.org/vocab/changeset/schema#ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">ChangeSet</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+            <dt>a pour cible</dt>
+            <dd>
+               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+                  target="_blank"
+                  title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">statement</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="invertedFormOf">
+      <h3>forme inversée de<sup class="type-op" title="Propriété d'objet">op</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#objectproperties">Retour vers les propriétés d'objet</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/ontology/invertedFormOf</p>
+      <div class="comment">
+         <span class="markdown">Utilisée seulement pour les termes anglais à mots multiples</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="https://nomenclature.info/nom/ontology/">https://nomenclature.info/nom/ontology/</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Exemple</dt>
+         <dd>
+            <pre>"Box, Drink" est la forme inversée de "Drink Box"</pre>
+         </dd>
+         <dd>
+            <pre>"Box, Drink" is the inverted form of "Drink Box"</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>a pour super-propriétés</dt>
+            <dd>
+               <a href="http://www.w3.org/2008/05/skos-xl#labelRelation"
+                  target="_blank"
+                  title="http://www.w3.org/2008/05/skos-xl#labelRelation">label relation</a>
+               <sup class="type-op" title="Propriété d'objet">op</sup>
+            </dd>
+            <dt>a pour domaine</dt>
+            <dd>
+               <a href="http://www.w3.org/2008/05/skos-xl#Label"
+                  target="_blank"
+                  title="http://www.w3.org/2008/05/skos-xl#Label">label</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+            <dt>a pour cible</dt>
+            <dd>
+               <a href="http://www.w3.org/2008/05/skos-xl#Label"
+                  target="_blank"
+                  title="http://www.w3.org/2008/05/skos-xl#Label">label</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://xmlns.com/foaf/0.1/primaryTopic">
+      <h3>primary topic<sup class="type-op" title="Propriété d'objet">op</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#objectproperties">Retour vers les propriétés d'objet</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/primaryTopic</p>
+      <div class="comment">
+         <span class="markdown">The primary topic of some page or document.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Statut</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>a pour caractéristiques:
+                </strong> Fonctionnel</p>
+         <dl>
+            <dt>a pour domaine</dt>
+            <dd>
+               <a href="http://xmlns.com/foaf/0.1/Document"
+                  target="_blank"
+                  title="http://xmlns.com/foaf/0.1/Document">document</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+            <dt>a pour cible</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+            <dt>est inverse de</dt>
+            <dd>
+               <a href="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"
+                  target="_blank"
+                  title="http://xmlns.com/foaf/0.1/isPrimaryTopicOf">is primary topic of</a>
+               <sup class="type-op" title="Propriété d'objet">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/changeset/schema#removal">
+      <h3>removal<sup class="type-op" title="Propriété d'objet">op</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#objectproperties">Retour vers les propriétés d'objet</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/changeset/schema#removal</p>
+      <div class="comment">
+         <span class="markdown">
+      By convention the subject of the triple being removed should be the same as the subjectOfChange
+    </span>
+      </div>
+      <div class="comment">
+         <span class="markdown">a triple to be removed from the resource description</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="http://purl.org/vocab/changeset/schema">http://purl.org/vocab/changeset/schema</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>a pour super-propriétés</dt>
+            <dd>
+               <a href="http://purl.org/vocab/changeset/schema#statement"
+                  target="_blank"
+                  title="http://purl.org/vocab/changeset/schema#statement">statement</a>
+               <sup class="type-op" title="Propriété d'objet">op</sup>
+            </dd>
+            <dt>a pour domaine</dt>
+            <dd>
+               <a href="#http://purl.org/vocab/changeset/schema#ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">ChangeSet</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+            <dt>a pour cible</dt>
+            <dd>
+               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+                  target="_blank"
+                  title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">statement</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/changeset/schema#subjectOfChange">
+      <h3>subjectOfChange<sup class="type-op" title="Propriété d'objet">op</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#objectproperties">Retour vers les propriétés d'objet</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/changeset/schema#subjectOfChange</p>
+      <div class="comment">
+         <span class="markdown">the resource to which this set of changes applies</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="http://purl.org/vocab/changeset/schema">http://purl.org/vocab/changeset/schema</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>a pour domaine</dt>
+            <dd>
+               <a href="#http://purl.org/vocab/changeset/schema#ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">ChangeSet</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+            <dt>a pour cible</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Resource"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Resource">resource</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h2>Propriétés de donnée</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/vocab/changeset/schema#createdDate"
+            title="http://purl.org/vocab/changeset/schema#createdDate">createdDate</a>
+      </li>
+      <li>
+         <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">
+            <span>name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://xmlns.com/foaf/0.1/nick" title="http://xmlns.com/foaf/0.1/nick">nickname</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dsnotify/vocab/eventset/sourceResource"
+            title="http://purl.org/dsnotify/vocab/eventset/sourceResource">source resource</a>
+      </li>
+      <li>
+         <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dsnotify/vocab/eventset/targetResource"
+            title="http://purl.org/dsnotify/vocab/eventset/targetResource">target resource</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/vocab/changeset/schema#createdDate">
+      <h3>createdDate<sup class="type-dp" title="Propriété de donnée">dp</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#dataproperties">Retour vers les propriétés de données</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/changeset/schema#createdDate</p>
+      <div class="comment">
+         <span class="markdown">
+      The date should be in W3CDTF format
+    </span>
+      </div>
+      <div class="comment">
+         <span class="markdown">the date that the changeset was created</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="http://purl.org/vocab/changeset/schema">http://purl.org/vocab/changeset/schema</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>a pour super-propriétés</dt>
+            <dd>
+               <a href="http://purl.org/dc/elements/1.1/date"
+                  target="_blank"
+                  title="http://purl.org/dc/elements/1.1/date">date</a>
+               <sup class="type-dp" title="Propriété de donnée">dp</sup>
+            </dd>
+            <dt>a pour domaine</dt>
+            <dd>
+               <a href="#http://purl.org/vocab/changeset/schema#ChangeSet" title="http://purl.org/vocab/changeset/schema#ChangeSet">ChangeSet</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://xmlns.com/foaf/0.1/name">
+      <h3>name<sup class="type-dp" title="Propriété de donnée">dp</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#dataproperties">Retour vers les propriétés de données</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/name</p>
+      <div class="description">
+         <dl>
+            <dt>a pour domaine</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+            <dt>a pour cible</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+            </dd>
+            <dt>est aussi défini comme</dt>
+            <dd>
+               <a href="#http://xmlns.com/foaf/0.1/name">Annotation de propriété</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://xmlns.com/foaf/0.1/nick">
+      <h3>nickname<sup class="type-dp" title="Propriété de donnée">dp</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#dataproperties">Retour vers les propriétés de données</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/nick</p>
+      <div class="comment">
+         <span class="markdown">A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Statut</dt>
+         <dd>testing</dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/dsnotify/vocab/eventset/sourceResource">
+      <h3>source resource<sup class="type-dp" title="Propriété de donnée">dp</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#dataproperties">Retour vers les propriétés de données</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dsnotify/vocab/eventset/sourceResource</p>
+      <div class="comment">
+         <span class="markdown">The identifier (URI) of a resource that was published under a new URI (i.e., when a MoveEvent occurred).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>a pour domaine</dt>
+            <dd>
+               <a href="#http://purl.org/dsnotify/vocab/eventset/MoveEvent"
+                  title="http://purl.org/dsnotify/vocab/eventset/MoveEvent">Move event</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+            <dt>a pour cible</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.lingvoj.org/ontology#tag">
+      <h3>tag de langue<sup class="type-dp" title="Propriété de donnée">dp</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#dataproperties">Retour vers les propriétés de données</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.lingvoj.org/ontology#tag</p>
+      <div class="comment">
+         <span class="markdown">Le tag à utiliser pour la langue, par exemple comme valeur de xml:lang. Voir https://tools.ietf.org/html/bcp47</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>a pour super-propriétés</dt>
+            <dd>
+               <a href="http://purl.org/dc/terms/identifier"
+                  target="_blank"
+                  title="http://purl.org/dc/terms/identifier">identifier</a>
+               <sup class="type-dp" title="Propriété de donnée">dp</sup>
+            </dd>
+            <dt>a pour domaine</dt>
+            <dd>
+               <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/dsnotify/vocab/eventset/targetResource">
+      <h3>target resource<sup class="type-dp" title="Propriété de donnée">dp</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#dataproperties">Retour vers les propriétés de données</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dsnotify/vocab/eventset/targetResource</p>
+      <div class="comment">
+         <span class="markdown">The identifier (URI) of a resource that was affected by the corresponding event.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>a pour domaine</dt>
+            <dd>
+               <a href="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"
+                  target="_blank"
+                  title="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent">resource change event</a>
+               <sup class="type-c" title="classe">c</sup>
+            </dd>
+            <dt>a pour cible</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h2>Individus nommés</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#https://nomenclature.info/nom/agent/1" title="https://nomenclature.info/nom/agent/1">
+            <span>1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/agent/2" title="https://nomenclature.info/nom/agent/2">
+            <span>2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/agent/3" title="https://nomenclature.info/nom/agent/3">
+            <span>3</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/agent/4" title="https://nomenclature.info/nom/agent/4">
+            <span>4</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/source/AAT" title="https://nomenclature.info/nom/source/AAT">
+            <span>a a t</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/en" title="https://nomenclature.info/nom/lang/en">anglais</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/en-ca" title="https://nomenclature.info/nom/lang/en-ca">anglais canadien</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/level/1" title="https://nomenclature.info/nom/level/1">Catégorie</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/level/2" title="https://nomenclature.info/nom/level/2">Classe</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/cr" title="https://nomenclature.info/nom/lang/cr">cri</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/cr-latn" title="https://nomenclature.info/nom/lang/cr-latn">cri en écriture latine</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/source/CultureFr-architecturales"
+            title="https://nomenclature.info/nom/source/CultureFr-architecturales">
+            <span>culture fr architecturales</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/source/CultureFr-archives"
+            title="https://nomenclature.info/nom/source/CultureFr-archives">
+            <span>culture fr archives</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/source/CultureFr-Joconde"
+            title="https://nomenclature.info/nom/source/CultureFr-Joconde">
+            <span>culture fr joconde</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/source/CultureFr-mobiliers"
+            title="https://nomenclature.info/nom/source/CultureFr-mobiliers">
+            <span>culture fr mobiliers</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/source/DBpedia" title="https://nomenclature.info/nom/source/DBpedia">
+            <span>d bpedia</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/es" title="https://nomenclature.info/nom/lang/es">espagnol</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/fr" title="https://nomenclature.info/nom/lang/fr">français</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/fr-ca" title="https://nomenclature.info/nom/lang/fr-ca">français canadien</a>
+      </li>
+      <li>
+         <a href="#http://www.lexinfo.net/ontology/3.0/lexinfo#feminine"
+            title="http://www.lexinfo.net/ontology/3.0/lexinfo#feminine">féminin</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/source/GND" title="https://nomenclature.info/nom/source/GND">
+            <span>g n d</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/hai" title="https://nomenclature.info/nom/lang/hai">haïda</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/hai-latn" title="https://nomenclature.info/nom/lang/hai-latn">haïda en écriture latine</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/he" title="https://nomenclature.info/nom/lang/he">hébreu</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/he-latn" title="https://nomenclature.info/nom/lang/he-latn">hébreu en écriture latine</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/iu" title="https://nomenclature.info/nom/lang/iu">inuktitut</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/iu-latn" title="https://nomenclature.info/nom/lang/iu-latn">inuktitut en écriture latine</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/iro" title="https://nomenclature.info/nom/lang/iro">iroquoien</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/iro-latn" title="https://nomenclature.info/nom/lang/iro-latn">iroquoien en écriture latine</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/source/LCSH" title="https://nomenclature.info/nom/source/LCSH">
+            <span>l c s h</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/" title="https://nomenclature.info/nom/lang/">
+            <span>lang:</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.lexinfo.net/ontology/3.0/lexinfo#masculine"
+            title="http://www.lexinfo.net/ontology/3.0/lexinfo#masculine">masculin</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/moh" title="https://nomenclature.info/nom/lang/moh">mohawk</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/moh-latn" title="https://nomenclature.info/nom/lang/moh-latn">mohawk en écriture latine</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/oj" title="https://nomenclature.info/nom/lang/oj">ojibwé</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/lang/oj-latn" title="https://nomenclature.info/nom/lang/oj-latn">ojibwé en écriture latine</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/source/RAMEAU" title="https://nomenclature.info/nom/source/RAMEAU">
+            <span>r a m e a u</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/level/3" title="https://nomenclature.info/nom/level/3">Sous-classe</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/level/4" title="https://nomenclature.info/nom/level/4">Terme primaire</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/level/5" title="https://nomenclature.info/nom/level/5">Terme secondaire</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/level/6" title="https://nomenclature.info/nom/level/6">Terme tertiaire</a>
+      </li>
+      <li>
+         <a href="#http://vocab.getty.edu/aat/300404671" title="http://vocab.getty.edu/aat/300404671">Termes en ordre naturel</a>
+      </li>
+      <li>
+         <a href="#http://vocab.getty.edu/aat/300404672" title="http://vocab.getty.edu/aat/300404672">Termes inversés</a>
+      </li>
+      <li>
+         <a href="#https://nomenclature.info/nom/source/WD" title="https://nomenclature.info/nom/source/WD">
+            <span>w d</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="https://nomenclature.info/nom/agent/1">
+      <h3>1<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/agent/1</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">name</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"American Association for State and Local History (AASLH)"@en</span>
+         </dd>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">name</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"American Association for State and Local History (AASLH)"@fr</span>
+         </dd>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/nick" title="http://xmlns.com/foaf/0.1/nick">nickname</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"AASLH"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/agent/2">
+      <h3>2<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/agent/2</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">name</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"Canadian Heritage Information Network (CHIN)"@en</span>
+         </dd>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">name</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"Réseau canadien d’information sur le patrimoine (RCIP)"@fr</span>
+         </dd>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/nick" title="http://xmlns.com/foaf/0.1/nick">nickname</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"CHIN"</span>
+         </dd>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/nick" title="http://xmlns.com/foaf/0.1/nick">nickname</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"RCIP"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/agent/3">
+      <h3>3<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/agent/3</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">name</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"Gouvernement du Nunavut"@fr</span>
+         </dd>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">name</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"Government of Nunavut"@en</span>
+         </dd>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/nick" title="http://xmlns.com/foaf/0.1/nick">nickname</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"GN"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/agent/4">
+      <h3>4<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/agent/4</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">name</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"Getty Research Institute"@en</span>
+         </dd>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">name</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"Getty Research Institute"@fr</span>
+         </dd>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/nick" title="http://xmlns.com/foaf/0.1/nick">nickname</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"GRI"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/source/AAT">
+      <h3>a a t<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/source/AAT</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/en">
+      <h3>anglais<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/en</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"en"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/en-ca">
+      <h3>anglais canadien<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/en-ca</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"en-ca"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/level/1">
+      <h3>Catégorie<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/level/1</p>
+      <div class="comment">
+         <span class="markdown">Premier niveau de la hiérarchie, contenant le niveau le plus générique du regroupement d’objets par contexte fonctionnel.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="https://nomenclature.info/nom/ontology/">https://nomenclature.info/nom/ontology/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://schema.org/Collection" title="http://schema.org/Collection">Collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Collection"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Collection">collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/level/2">
+      <h3>Classe<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/level/2</p>
+      <div class="comment">
+         <span class="markdown">Deuxième niveau de la hiérarchie de Nomenclature.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="https://nomenclature.info/nom/ontology/">https://nomenclature.info/nom/ontology/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://schema.org/Collection" title="http://schema.org/Collection">Collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Collection"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Collection">collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/cr">
+      <h3>cri<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/cr</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"cr"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/cr-latn">
+      <h3>cri en écriture latine<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/cr-latn</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"cr-latn"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/source/CultureFr-architecturales">
+      <h3>culture fr architecturales<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/source/CultureFr-architecturales</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/source/CultureFr-archives">
+      <h3>culture fr archives<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/source/CultureFr-archives</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/source/CultureFr-Joconde">
+      <h3>culture fr joconde<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/source/CultureFr-Joconde</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/source/CultureFr-mobiliers">
+      <h3>culture fr mobiliers<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/source/CultureFr-mobiliers</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/source/DBpedia">
+      <h3>d bpedia<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/source/DBpedia</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/es">
+      <h3>espagnol<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/es</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"es"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/fr">
+      <h3>français<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/fr</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"fr"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/fr-ca">
+      <h3>français canadien<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/fr-ca</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"fr-ca"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.lexinfo.net/ontology/3.0/lexinfo#feminine">
+      <h3>féminin<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.lexinfo.net/ontology/3.0/lexinfo#feminine</p>
+      <div class="comment">
+         <span class="markdown">De, relatif à, ou constituant le genre qui inclut habituellement la plupart des mots ou formes grammaticales se référant aux femmes.</span>
+      </div>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lexinfo.net/ontology/3.0/lexinfo#Gender"
+               title="http://www.lexinfo.net/ontology/3.0/lexinfo#Gender">gender</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/source/GND">
+      <h3>g n d<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/source/GND</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/hai">
+      <h3>haïda<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/hai</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"hai"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/hai-latn">
+      <h3>haïda en écriture latine<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/hai-latn</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"hai-latn"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/he">
+      <h3>hébreu<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/he</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"he"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/he-latn">
+      <h3>hébreu en écriture latine<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/he-latn</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"he-latn"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/iu">
+      <h3>inuktitut<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/iu</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"iu"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/iu-latn">
+      <h3>inuktitut en écriture latine<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/iu-latn</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"iu-latn"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/iro">
+      <h3>iroquoien<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/iro</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"iro"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/iro-latn">
+      <h3>iroquoien en écriture latine<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/iro-latn</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"iro-latn"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/source/LCSH">
+      <h3>l c s h<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/source/LCSH</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/">
+      <h3>lang:<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.lexinfo.net/ontology/3.0/lexinfo#masculine">
+      <h3>masculin<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.lexinfo.net/ontology/3.0/lexinfo#masculine</p>
+      <div class="comment">
+         <span class="markdown">De, relatif à, ou constituant le genre qui inclut habituellement la plupart des mots ou formes grammaticales se référant aux hommes.</span>
+      </div>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lexinfo.net/ontology/3.0/lexinfo#Gender"
+               title="http://www.lexinfo.net/ontology/3.0/lexinfo#Gender">gender</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/moh">
+      <h3>mohawk<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/moh</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"moh"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/moh-latn">
+      <h3>mohawk en écriture latine<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/moh-latn</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"moh-latn"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/oj">
+      <h3>ojibwé<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/oj</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"oj"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/lang/oj-latn">
+      <h3>ojibwé en écriture latine<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/lang/oj-latn</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#Lingvo" title="http://www.lingvoj.org/ontology#Lingvo">Langue</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dt>a pour assertions</dt>
+         <dd>
+            <a href="#http://www.lingvoj.org/ontology#tag" title="http://www.lingvoj.org/ontology#tag">tag de langue</a>
+            <sup class="type-dp" title="Propriété de donnée">dp</sup> 
+            <span class="literal">"oj-latn"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/source/RAMEAU">
+      <h3>r a m e a u<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/source/RAMEAU</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/level/3">
+      <h3>Sous-classe<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/level/3</p>
+      <div class="comment">
+         <span class="markdown">Troisième niveau de la hiérarchie de Nomenclature.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="https://nomenclature.info/nom/ontology/">https://nomenclature.info/nom/ontology/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://schema.org/Collection" title="http://schema.org/Collection">Collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Collection"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Collection">collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/level/4">
+      <h3>Terme primaire<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/level/4</p>
+      <div class="comment">
+         <span class="markdown">Quatrième niveau de la hiérarchie de Nomenclature, contenant le nom d’objet le plus générique.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="https://nomenclature.info/nom/ontology/">https://nomenclature.info/nom/ontology/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://schema.org/Collection" title="http://schema.org/Collection">Collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Collection"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Collection">collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/level/5">
+      <h3>Terme secondaire<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/level/5</p>
+      <div class="comment">
+         <span class="markdown">Cinquième niveau de la hiérarchie de Nomenclature.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="https://nomenclature.info/nom/ontology/">https://nomenclature.info/nom/ontology/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://schema.org/Collection" title="http://schema.org/Collection">Collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Collection"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Collection">collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/level/6">
+      <h3>Terme tertiaire<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/level/6</p>
+      <div class="comment">
+         <span class="markdown">Sixième niveau de la hiérarchie de Nomenclature.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Est défini par</dt>
+         <dd>
+            <a href="https://nomenclature.info/nom/ontology/">https://nomenclature.info/nom/ontology/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://schema.org/Collection" title="http://schema.org/Collection">Collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Collection"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Collection">collection</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.getty.edu/aat/300404671">
+      <h3>Termes en ordre naturel<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.getty.edu/aat/300404671</p>
+      <div class="comment">
+         <span class="markdown">Termes à mots multiples qui sont organisés selon la forme utilisée à l'expression orale ou à l'écrit en anglais. Des exemples sont « Rocking Chair » et « Wedding Dress ». Se distingue des termes inversés.</span>
+      </div>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://vocab.getty.edu/aat/300404672">
+      <h3>Termes inversés<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.getty.edu/aat/300404672</p>
+      <div class="comment">
+         <span class="markdown">Termes à mots multiples qui sont organisés selon la forme utilisée lors de l'indexation à la fin des livres en anglais ou lors de situations similaires. Des exemples sont « Chair, Rocking » et « Dress, Wedding ». Se distingue des termes en ordre naturel.</span>
+      </div>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://nomenclature.info/nom/source/WD">
+      <h3>w d<sup class="type-ni" title="Individu nommé">ni</sup>
+         <span class="backlink"> Retour à <a href="#toc">Table des matières</a> ou <a href="#namedindividuals">Retour vers l'individu nommé</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://nomenclature.info/nom/source/WD</p>
+      <dl class="description">
+         <dt>appartient à</dt>
+         <dd>
+            <a href="#http://rdfs.org/ns/void#Dataset" title="http://rdfs.org/ns/void#Dataset">dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
+            <sup class="type-c" title="classe">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>L&eacute;gende <span class="backlink"> Retour  <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Individus nomm&eacute;s">ni</sup>: Individus nomm&eacute;s
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">R&eacute;f&eacute;rences <span class="backlink"> retour au <a href="#toc">sommaire</a></span></h2>
+<span class="markdown">
+Ajoutez vos r&eacute;f&eacute;rences ici. Il est recommand&eacute; de les avoir sous forme de liste.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Remerciements <span class="backlink"> retour au <a href="#toc">sommaire</a></span></h2>
+<p>
+Les auteurs voudraient remercier <a href="http://www.essepuntato.it/">Silvio Peroni</a> pour le d&eacute;veloppement de <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, qui est utilis&eacute; pour repr&eacute;senter les sections de R&eacute;f&eacute;rencement crois&eacute; dans ce document, et <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> pour le d&eacute;veloppement de <a href="https://github.com/dgarijo/Widoco">Widoco</a>, le programme utilis&eacute; pour cr&eacute;er le template de cette documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

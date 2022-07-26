@@ -1,0 +1,1399 @@
+@prefix : <https://nomenclature.info/nom/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://nomenclature.info/nom/ontology/> .
+
+<https://nomenclature.info/nom/ontology/> rdf:type owl:Ontology ;
+                                           <http://purl.org/dc/elements/1.1/description> "L'ontologie de NOM définit les valeurs utilisées dans Nomenclature pour le catalogage des objets de musée. Elle utilise les ontologies SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset."@fr ,
+                                                                                         "NOM Ontology defines the values used in Nomenclature for Museum Cataloging. It uses the SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset ontologies."@en ;
+                                           <http://purl.org/dc/elements/1.1/format> "meta/rdf-schema" ;
+                                           <http://purl.org/dc/elements/1.1/title> "Nomenclature for Museum Cataloging Ontology"@en ,
+                                                                                   "Ontologie de Nomenclature pour le catalogage des objets de musée"@fr ;
+                                           <http://purl.org/dc/terms/created> "2022-02-28"^^xsd:date ;
+                                           <http://purl.org/dc/terms/creator> <https://nomenclature.info/nom/agent/2> ;
+                                           <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
+                                           <http://purl.org/dc/terms/modified> "2022-04-22"^^xsd:date ;
+                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "nomo" ;
+                                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://nomenclature.info/nom/ontology/" ;
+                                           rdfs:comment "L'ontologie de NOM définit les valeurs utilisées dans Nomenclature pour le catalogage des objets de musée. Elle utilise les ontologies SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset."@fr ,
+                                                        "NOM Ontology defines the values used in Nomenclature for Museum Cataloging. It uses the SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset ontologies."@en ;
+                                           rdfs:label "Nomenclature for Museum Cataloging Ontology"@en ,
+                                                      "Ontologie de Nomenclature pour le catalogage des objets de musée"@fr ;
+                                           rdfs:seeAlso <http://www.wikidata.org/entity/P7749> ,
+                                                        <http://www.wikidata.org/entity/Q64351785> ,
+                                                        <https://nomenclature.info/> ,
+                                                        <https://nomenclature.info/.well-known/void> ;
+                                           owl:versionInfo "1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://lexvo.org/ontology#somewhatSameAs
+<http://lexvo.org/ontology#somewhatSameAs> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/format
+<http://purl.org/dc/elements/1.1/format> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/example
+<http://purl.org/vocab/vann/example> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://rdfs.org/ns/void#uriSpace
+<http://rdfs.org/ns/void#uriSpace> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/inverseOf
+<http://schema.org/inverseOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/isPartOf
+<http://schema.org/isPartOf> rdf:type owl:AnnotationProperty ;
+                             <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ;
+                             <http://schema.org/inverseOf> <http://schema.org/hasPart> ;
+                             <http://schema.org/rangeIncludes> <http://schema.org/CreativeWork> ,
+                                                               <http://schema.org/URL> ;
+                             rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of." ;
+                             rdfs:label "isPartOf" .
+
+
+###  http://schema.org/name
+<http://schema.org/name> <http://schema.org/domainIncludes> <http://schema.org/Thing> ;
+                         <http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+                         rdfs:comment "The name of the item." ;
+                         rdfs:label "name" ;
+                         rdf:type owl:AnnotationProperty ;
+                         rdfs:subPropertyOf rdfs:label .
+
+
+###  http://schema.org/position
+<http://schema.org/position> rdf:type owl:AnnotationProperty ;
+                             <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ,
+                                                                <http://schema.org/ListItem> ;
+                             <http://schema.org/rangeIncludes> <http://schema.org/Integer> ,
+                                                               <http://schema.org/Text> ;
+                             rdfs:comment "The position of an item in a series or sequence of items." ;
+                             rdfs:label "position" .
+
+
+###  http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/sameAs
+<http://schema.org/sameAs> rdf:type owl:AnnotationProperty ;
+                           <http://schema.org/domainIncludes> <http://schema.org/Thing> ;
+                           <http://schema.org/rangeIncludes> <http://schema.org/URL> ;
+                           rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." ;
+                           rdfs:label "sameAs" .
+
+
+###  http://schema.org/source
+<http://schema.org/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/url
+<http://schema.org/url> rdf:type owl:AnnotationProperty ;
+                        <http://schema.org/domainIncludes> <http://schema.org/Thing> ;
+                        <http://schema.org/rangeIncludes> <http://schema.org/URL> ;
+                        rdfs:comment "URL of the item." ;
+                        rdfs:label "url" .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
+rdf:value rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#maxCardinality
+owl:maxCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty ;
+                                 rdfs:subPropertyOf rdfs:label .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/vocab/changeset/schema#addition
+<http://purl.org/vocab/changeset/schema#addition> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <http://purl.org/vocab/changeset/schema#statement> ;
+                                                  rdfs:domain <http://purl.org/vocab/changeset/schema#ChangeSet> ;
+                                                  rdfs:range rdf:Statement ;
+                                                  <http://purl.org/dc/terms/issued> "2005-12-14" ;
+                                                  rdfs:comment """
+      By convention the subject of the triple being added should be the same as the subjectOfChange
+    """@en ;
+                                                  rdfs:isDefinedBy <http://purl.org/vocab/changeset/schema> ;
+                                                  rdfs:label "addition"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#changeNote> _:genid1 ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "a triple to be added to the resource description"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#historyNote> _:genid2 ,
+                                                                                                    _:genid3 .
+
+_:genid1 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+          <http://purl.org/dc/terms/date> "2006-03-21" ;
+          rdf:value "Added definitition and documentation" .
+
+_:genid2 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+          <http://purl.org/dc/terms/date> "2006-03-21" ;
+          rdf:value "Made a sub-property of statement" .
+
+_:genid3 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+          <http://purl.org/dc/terms/date> "2006-03-21" ;
+          rdf:value "Made owl:ObjectProperty" .
+
+
+###  http://purl.org/vocab/changeset/schema#removal
+<http://purl.org/vocab/changeset/schema#removal> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://purl.org/vocab/changeset/schema#statement> ;
+                                                 rdfs:domain <http://purl.org/vocab/changeset/schema#ChangeSet> ;
+                                                 rdfs:range rdf:Statement ;
+                                                 <http://purl.org/dc/terms/issued> "2005-12-14" ;
+                                                 rdfs:comment """
+      By convention the subject of the triple being removed should be the same as the subjectOfChange
+    """@en ;
+                                                 rdfs:isDefinedBy <http://purl.org/vocab/changeset/schema> ;
+                                                 rdfs:label "removal"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#changeNote> _:genid4 ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "a triple to be removed from the resource description"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#historyNote> _:genid5 ,
+                                                                                                   _:genid6 .
+
+_:genid4 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+          <http://purl.org/dc/terms/date> "2006-03-21" ;
+          rdf:value "Added definitition and documentation" .
+
+_:genid5 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+          <http://purl.org/dc/terms/date> "2006-03-21" ;
+          rdf:value "Made owl:ObjectProperty" .
+
+_:genid6 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+          <http://purl.org/dc/terms/date> "2006-03-21" ;
+          rdf:value "Made a sub-property of statement" .
+
+
+###  http://purl.org/vocab/changeset/schema#statement
+<http://purl.org/vocab/changeset/schema#statement> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/vocab/changeset/schema#subjectOfChange
+<http://purl.org/vocab/changeset/schema#subjectOfChange> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://purl.org/vocab/changeset/schema#ChangeSet> ;
+                                                         rdfs:range rdfs:Resource ;
+                                                         <http://purl.org/dc/terms/issued> "2005-12-14" ;
+                                                         rdfs:isDefinedBy <http://purl.org/vocab/changeset/schema> ;
+                                                         rdfs:label "subjectOfChange"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#changeNote> _:genid7 ;
+                                                         <http://www.w3.org/2004/02/skos/core#definition> "the resource to which this set of changes applies"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#historyNote> _:genid8 .
+
+_:genid7 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+          <http://purl.org/dc/terms/date> "2006-03-21" ;
+          rdf:value "Added definitition and documentation" .
+
+_:genid8 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+          <http://purl.org/dc/terms/date> "2006-03-21" ;
+          rdf:value "Made owl:ObjectProperty" .
+
+
+###  http://www.w3.org/2008/05/skos-xl#labelRelation
+<http://www.w3.org/2008/05/skos-xl#labelRelation> rdf:type owl:ObjectProperty .
+
+
+###  http://xmlns.com/foaf/0.1/isPrimaryTopicOf
+<http://xmlns.com/foaf/0.1/isPrimaryTopicOf> rdf:type owl:ObjectProperty .
+
+
+###  http://xmlns.com/foaf/0.1/primaryTopic
+<http://xmlns.com/foaf/0.1/primaryTopic> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> ;
+                                         rdf:type owl:FunctionalProperty ;
+                                         rdfs:domain <http://xmlns.com/foaf/0.1/Document> ;
+                                         rdfs:range owl:Thing ;
+                                         rdfs:comment "The primary topic of some page or document." ;
+                                         rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                         rdfs:label "primary topic" ;
+                                         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://nomenclature.info/nom/ontology/invertedFormOf
+:invertedFormOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://www.w3.org/2008/05/skos-xl#labelRelation> ;
+                rdfs:domain <http://www.w3.org/2008/05/skos-xl#Label> ;
+                rdfs:range <http://www.w3.org/2008/05/skos-xl#Label> ;
+                rdfs:comment "Used only for multi-word English labels"@en ,
+                             "Utilisée seulement pour les termes anglais à mots multiples"@fr ;
+                rdfs:isDefinedBy <https://nomenclature.info/nom/ontology/> ;
+                rdfs:label "forme inversée de"@fr ,
+                           "inverted form of"@en ;
+                rdfs:seeAlso <https://www.w3.org/TR/skos-reference/#xl-label-relations> ;
+                <http://www.w3.org/2004/02/skos/core#example> "\"Box, Drink\" est la forme inversée de \"Drink Box\""@fr ,
+                                                              "\"Box, Drink\" is the inverted form of \"Drink Box\""@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dsnotify/vocab/eventset/sourceResource
+<http://purl.org/dsnotify/vocab/eventset/sourceResource> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <http://purl.org/dsnotify/vocab/eventset/MoveEvent> ;
+                                                         rdfs:range xsd:anyURI ;
+                                                         rdfs:comment "The identifier (URI) of a resource that was published under a new URI (i.e., when a MoveEvent occurred)."@en-us ;
+                                                         rdfs:label "source resource"@en-us .
+
+
+###  http://purl.org/dsnotify/vocab/eventset/targetResource
+<http://purl.org/dsnotify/vocab/eventset/targetResource> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> ;
+                                                         rdfs:range xsd:anyURI ;
+                                                         rdfs:comment "The identifier (URI) of a resource that was affected by the corresponding event."@en-us ;
+                                                         rdfs:label "target resource"@en-us .
+
+
+###  http://purl.org/vocab/changeset/schema#createdDate
+<http://purl.org/vocab/changeset/schema#createdDate> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
+                                                     rdfs:domain <http://purl.org/vocab/changeset/schema#ChangeSet> ;
+                                                     <http://purl.org/dc/terms/issued> "2005-12-14" ;
+                                                     rdfs:comment """
+      The date should be in W3CDTF format
+    """@en ;
+                                                     rdfs:isDefinedBy <http://purl.org/vocab/changeset/schema> ;
+                                                     rdfs:label "createdDate"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "the date that the changeset was created"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#historyNote> _:genid9 .
+
+_:genid9 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+          <http://purl.org/dc/terms/date> "2006-03-21" ;
+          rdf:value "Made owl:DatatypeProperty" .
+
+
+###  http://www.lingvoj.org/ontology#tag
+<http://www.lingvoj.org/ontology#tag> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> ;
+                                      rdfs:domain <http://www.lingvoj.org/ontology#Lingvo> ;
+                                      rdfs:comment "A tag para ser usada, por exemplo como valor de xml:lang. Ver https://tools.ietf.org/html/bcp47"@pt ,
+                                                   "La etiqueta a utilizar para el lenguaje, por ejemplo como valor de xml:lang. Ver https://tools.ietf.org/html/bcp47"@es ,
+                                                   "Le tag à utiliser pour la langue, par exemple comme valeur de xml:lang. Voir https://tools.ietf.org/html/bcp47"@fr ,
+                                                   "The tag to use for the language, for example as value of xml:lang. See https://tools.ietf.org/html/bcp47"@en ,
+                                                   "例えばxml:langの値として、言語に用いるタグ。https://tools.ietf.org/html/bcp47を参照"@ja ;
+                                      rdfs:label "etiqueta"@es ,
+                                                 "language tag"@en ,
+                                                 "taal tag"@nl ,
+                                                 "tag de idioma"@pt ,
+                                                 "tag de langue"@fr ,
+                                                 "言語タグ"@ja .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain owl:Thing ;
+                                 rdfs:range rdfs:Literal .
+
+
+###  http://xmlns.com/foaf/0.1/nick
+<http://xmlns.com/foaf/0.1/nick> rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames)." ;
+                                 rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                 rdfs:label "nickname" ;
+                                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://d-nb.info/standards/elementset/gnd#Language
+<http://d-nb.info/standards/elementset/gnd#Language> rdf:type owl:Class ;
+                                                     owl:equivalentClass <http://www.lingvoj.org/ontology#Lingvo> .
+
+
+###  http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error2
+<http://org.semanticweb.owlapi/error#Error2> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error3
+<http://org.semanticweb.owlapi/error#Error3> rdf:type owl:Class .
+
+
+###  http://purl.org/dc/dcmitype/Dataset
+<http://purl.org/dc/dcmitype/Dataset> rdf:type owl:Class ;
+                                      owl:equivalentClass <http://schema.org/Dataset> .
+
+
+###  http://purl.org/dc/dcmitype/Image
+<http://purl.org/dc/dcmitype/Image> rdf:type owl:Class ;
+                                    owl:equivalentClass <http://schema.org/ImageObject> .
+
+
+###  http://purl.org/dc/terms/Agent
+<http://purl.org/dc/terms/Agent> rdf:type owl:Class ;
+                                 owl:equivalentClass <http://xmlns.com/foaf/0.1/Agent> .
+
+
+###  http://purl.org/dc/terms/LinguisticSystem
+<http://purl.org/dc/terms/LinguisticSystem> rdf:type owl:Class .
+
+
+###  http://purl.org/dsnotify/vocab/eventset/CreateEvent
+<http://purl.org/dsnotify/vocab/eventset/CreateEvent> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> ;
+                                                      rdfs:comment "An event class describing that a particular resource was 'created' in a dataset. This means that one or more triples having the associated resource as subject or object were created in the corresponding RDF model."@en-us ;
+                                                      rdfs:label "create event"@en-us .
+
+
+###  http://purl.org/dsnotify/vocab/eventset/MoveEvent
+<http://purl.org/dsnotify/vocab/eventset/MoveEvent> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> ;
+                                                    rdfs:comment "An event class describing that a particular resource was 'moved' in a dataset or between datasets. This means that all triples having the associated older resource as subject/object were replaced by triples having the target resource as subject/object in the corresponding RDF models. "@en-us ;
+                                                    rdfs:label "Move event"@en-us .
+
+
+###  http://purl.org/dsnotify/vocab/eventset/RemoveEvent
+<http://purl.org/dsnotify/vocab/eventset/RemoveEvent> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> ;
+                                                      rdfs:comment "An event class describing that a particular resource was 'removed' from a dataset. This means that all triples having the associated resource as subject or object were removed from the corresponding RDF model."@en-us ;
+                                                      rdfs:label "Remove event"@en-us .
+
+
+###  http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent
+<http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> rdf:type owl:Class .
+
+
+###  http://purl.org/dsnotify/vocab/eventset/UpdateEvent
+<http://purl.org/dsnotify/vocab/eventset/UpdateEvent> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> ;
+                                                      rdfs:comment "An event class describing that a particular resource was 'updated' in a dataset. This means that some triples having the associated resource as subject or object were modified/created/removed in the corresponding RDF model."@en-us ;
+                                                      rdfs:label "Update event"@en-us .
+
+
+###  http://purl.org/linguistics/gold/Language
+<http://purl.org/linguistics/gold/Language> rdf:type owl:Class ;
+                                            owl:equivalentClass <http://www.lingvoj.org/ontology#Lingvo> .
+
+
+###  http://purl.org/vocab/changeset/schema#ChangeSet
+<http://purl.org/vocab/changeset/schema#ChangeSet> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ owl:intersectionOf ( <http://org.semanticweb.owlapi/error#Error1>
+                                                                                          <http://org.semanticweb.owlapi/error#Error2>
+                                                                                          <http://org.semanticweb.owlapi/error#Error3>
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.org/vocab/changeset/schema#statement> ;
+                                                                                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                                          ]
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.org/vocab/changeset/schema#subjectOfChange> ;
+                                                                                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                                          ]
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.org/vocab/changeset/schema#createdDate> ;
+                                                                                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] ;
+                                                   <http://purl.org/dc/terms/issued> "2005-12-14" ;
+                                                   rdfs:isDefinedBy <http://purl.org/vocab/changeset/schema> ;
+                                                   rdfs:label "ChangeSet"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#changeNote> _:genid20 ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "The encapsulation of a delta between two versions of a resource description"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#historyNote> _:genid21 .
+
+_:genid20 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+           <http://purl.org/dc/terms/date> "2006-03-21" ;
+           rdf:value "Improved documentation" .
+
+_:genid21 <http://purl.org/dc/terms/creator> "Ian Davis" ;
+           <http://purl.org/dc/terms/date> "2006-03-21" ;
+           rdf:value "Added property cardinality restrictions" .
+
+
+###  http://rdfs.org/ns/void#Dataset
+<http://rdfs.org/ns/void#Dataset> rdf:type owl:Class ;
+                                  owl:equivalentClass <http://schema.org/Dataset> .
+
+
+###  http://schema.org/Collection
+<http://schema.org/Collection> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://schema.org/CreativeWork> ;
+                               <http://schema.org/isPartOf> <https://bib.schema.org> ;
+                               rdfs:comment "A collection of items e.g. creative works or products." ;
+                               rdfs:label "Collection" .
+
+
+###  http://schema.org/CreativeWork
+<http://schema.org/CreativeWork> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://schema.org/Thing> ;
+                                 <http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+                                 rdfs:comment "The most generic kind of creative work, including books, movies, photographs, software programs, etc." ;
+                                 rdfs:label "CreativeWork" .
+
+
+###  http://schema.org/DataDownload
+<http://schema.org/DataDownload> rdf:type owl:Class ;
+                                 owl:equivalentClass <http://www.w3.org/ns/dcat#Distribution> ;
+                                 rdfs:subClassOf <http://schema.org/MediaObject> ;
+                                 <http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass> ;
+                                 rdfs:comment "A dataset in downloadable form." ;
+                                 rdfs:label "DataDownload" .
+
+
+###  http://schema.org/Dataset
+<http://schema.org/Dataset> rdf:type owl:Class ;
+                            owl:equivalentClass <http://www.w3.org/ns/dcat#Dataset> ;
+                            rdfs:subClassOf <http://schema.org/CreativeWork> ;
+                            <http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass> ;
+                            rdfs:comment "A body of structured information describing some topic(s) of interest." ;
+                            rdfs:label "Dataset" .
+
+
+###  http://schema.org/DefinedTermSet
+<http://schema.org/DefinedTermSet> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://schema.org/CreativeWork> ;
+                                   <http://schema.org/isPartOf> <https://pending.schema.org> ;
+                                   <http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/894> ;
+                                   rdfs:comment "A set of defined terms for example a set of categories or a classification scheme, a glossary, dictionary or enumeration." ;
+                                   rdfs:label "DefinedTermSet" .
+
+
+###  http://schema.org/ImageObject
+<http://schema.org/ImageObject> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/MediaObject> ;
+                                rdfs:comment "An image file." ;
+                                rdfs:label "ImageObject" .
+
+
+###  http://schema.org/Intangible
+<http://schema.org/Intangible> rdf:type owl:Class .
+
+
+###  http://schema.org/Language
+<http://schema.org/Language> rdf:type owl:Class ;
+                             owl:equivalentClass <http://www.lingvoj.org/ontology#Lingvo> .
+
+
+###  http://schema.org/MediaObject
+<http://schema.org/MediaObject> rdf:type owl:Class .
+
+
+###  http://schema.org/Organization
+<http://schema.org/Organization> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://schema.org/Thing> ;
+                                 rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
+                                 rdfs:label "Organization" .
+
+
+###  http://schema.org/StructuredValue
+<http://schema.org/StructuredValue> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://schema.org/Intangible> ;
+                                    rdfs:comment "Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing." ;
+                                    rdfs:label "StructuredValue" .
+
+
+###  http://schema.org/Thing
+<http://schema.org/Thing> rdf:type owl:Class .
+
+
+###  http://www.lexinfo.net/ontology/3.0/lexinfo#Gender
+<http://www.lexinfo.net/ontology/3.0/lexinfo#Gender> rdf:type owl:Class ;
+                                                     rdfs:label "gender"@en ;
+                                                     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> .
+
+
+###  http://www.lingvoj.org/ontology#Lingvo
+<http://www.lingvoj.org/ontology#Lingvo> rdf:type owl:Class ;
+                                         owl:equivalentClass <http://www.ontotext.com/proton/protontop#Language> ;
+                                         rdfs:subClassOf <http://purl.org/dc/terms/LinguisticSystem> ,
+                                                         <http://www.loc.gov/mads/rdf/v1#Language> ;
+                                         <http://lexvo.org/ontology#somewhatSameAs> <http://lexvo.org/ontology#Language> ;
+                                         <http://purl.org/vocab/vann/example> <http://id.loc.gov/vocabulary/iso639-1/ja> ,
+                                                                              <http://lexvo.org/id/iso639-3/fra> ;
+                                         rdfs:comment "A language used in spoken or written human communication, or in which a resource is written or recorded. It is recommended to use instances defined on the basis of ISO 639 codes, such as those in examples"@en ,
+                                                      "Een taal gebruikt in geschreven of gesproken communicatie tussen mensen of in welke een bron is geschreven of opgenomen. Het is aan te raden instanties te gebruiken gedefinieerd op basis van de ISO 630 codes, zoals in deze voorbeelden"@nl ,
+                                                      "Um idioma utilizado na comunicação oral ou escrita entre pessoas, ou na que se escreve ou grava um recurso. Recomenda-se a utilização das instâncias definidas segundo os códigos ISO 639, como os que aparecem nos excemplos"@pt ,
+                                                      "Una lengua utilizada en la comunicación oral o escrita entre personas, o en la que se escribe o graba un recurso. Se recomienda el uso de las instancias definidas según los códigos ISO 639, como los que aparecen en los ejemplos"@es ,
+                                                      "Une langue utilisée dans la communication orale ou écrite entre humains, ou dans laquelle une ressource est écrite ou enregistrée. Il est recommandé d'utiliser des instances définies sur la base d'un code ISO 639, comme dans les exemples"@fr ,
+                                                      "会話または記述による人間のコミュニケーションで使用される言語、または資源が記述または記録される言語。例にあるような、ISO 639コードに基づいて定義されたインスタンスを使用することが推奨される"@ja ;
+                                         rdfs:label "Dil"@tr ,
+                                                    "Idioma"@pt ,
+                                                    "Jezyk"@pl ,
+                                                    "Kieli"@fi ,
+                                                    "Language"@en ,
+                                                    "Langue"@fr ,
+                                                    "Lenguaje"@es ,
+                                                    "Linguaggio"@it ,
+                                                    "Lingvo"@eo ,
+                                                    "Sprache"@de ,
+                                                    "Språk"@no ,
+                                                    "Språk"@sv ,
+                                                    "Taal"@nl ,
+                                                    "Язык"@ru ,
+                                                    "言語"@ja ,
+                                                    "语言"@zh .
+
+
+###  http://www.loc.gov/mads/rdf/v1#Language
+<http://www.loc.gov/mads/rdf/v1#Language> rdf:type owl:Class .
+
+
+###  http://www.ontotext.com/proton/protontop#Language
+<http://www.ontotext.com/proton/protontop#Language> rdf:type owl:Class .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
+rdf:Statement rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+<http://www.w3.org/2004/02/skos/core#Collection> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2008/05/skos-xl#Label
+<http://www.w3.org/2008/05/skos-xl#Label> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  rdfs:comment "An agent (eg. person, group, software or physical artifact)." ;
+                                  rdfs:label "Agent" ;
+                                  <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+<http://xmlns.com/foaf/0.1/Document> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://vocab.getty.edu/aat/300404671
+<http://vocab.getty.edu/aat/300404671> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Multiple-word terms or names that are arranged in the form used in speech or written text. Examples are \"Rocking Chair\" and \"Wedding Dress\". Distinguished from inverted terms."@en ,
+                                                                                        "Termes à mots multiples qui sont organisés selon la forme utilisée à l'expression orale ou à l'écrit en anglais. Des exemples sont « Rocking Chair » et « Wedding Dress ». Se distingue des termes inversés."@fr ;
+                                       <http://www.w3.org/2004/02/skos/core#example> "Barber's Chair"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Termes en ordre naturel"@fr ,
+                                                                                       "natural order terms"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#scopeNote> "Used only for English terms (both single-word and multi-word)"@en ,
+                                                                                       "Utilisé seulement pour les termes en anglais (pour les unitermes et ceux à mots multiples)."@fr .
+
+
+###  http://vocab.getty.edu/aat/300404672
+<http://vocab.getty.edu/aat/300404672> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Multiple-word terms that are arranged in the form used in back-of-book indexing or other similar situations. Examples are \"Chair, Rocking\" and \"Dress, Wedding\". Distinguished from natural order terms."@en ,
+                                                                                        "Termes à mots multiples qui sont organisés selon la forme utilisée lors de l'indexation à la fin des livres en anglais ou lors de situations similaires. Des exemples sont « Chair, Rocking » et « Dress, Wedding ». Se distingue des termes en ordre naturel."@fr ;
+                                       <http://www.w3.org/2004/02/skos/core#example> "Chair, Barber's"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Termes inversés"@fr ,
+                                                                                       "inverted terms"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#scopeNote> "Used only for English multi-word terms."@en ,
+                                                                                       "Utilisé seulement pour les termes à mots multiples en anglais."@fr .
+
+
+###  http://www.lexinfo.net/ontology/3.0/lexinfo#feminine
+<http://www.lexinfo.net/ontology/3.0/lexinfo#feminine> rdf:type owl:NamedIndividual ,
+                                                                <http://www.lexinfo.net/ontology/3.0/lexinfo#Gender> ;
+                                                       rdfs:comment "De, relatif à, ou constituant le genre qui inclut habituellement la plupart des mots ou formes grammaticales se référant aux femmes."@fr ,
+                                                                    "Of, relating to, or constituting the gender that ordinarily includes most words or grammatical forms referring to females."@en ;
+                                                       rdfs:label "feminine"@en ,
+                                                                  "féminin"@fr .
+
+
+###  http://www.lexinfo.net/ontology/3.0/lexinfo#masculine
+<http://www.lexinfo.net/ontology/3.0/lexinfo#masculine> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.lexinfo.net/ontology/3.0/lexinfo#Gender> ;
+                                                        rdfs:comment "De, relatif à, ou constituant le genre qui inclut habituellement la plupart des mots ou formes grammaticales se référant aux hommes."@fr ,
+                                                                     "Of, relating to, or constituting the gender that ordinarily includes most words or grammatical forms referring to males."@en ;
+                                                        rdfs:label "masculin"@fr ,
+                                                                   "masculine"@en .
+
+
+###  https://nomenclature.info/nom/agent/1
+<https://nomenclature.info/nom/agent/1> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Agent> ;
+                                        <http://xmlns.com/foaf/0.1/name> "American Association for State and Local History (AASLH)"@en ,
+                                                                         "American Association for State and Local History (AASLH)"@fr ;
+                                        <http://xmlns.com/foaf/0.1/nick> "AASLH" .
+
+
+###  https://nomenclature.info/nom/agent/2
+<https://nomenclature.info/nom/agent/2> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Agent> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Canadian Heritage Information Network (CHIN)"@en ,
+                                                                         "Réseau canadien d’information sur le patrimoine (RCIP)"@fr ;
+                                        <http://xmlns.com/foaf/0.1/nick> "CHIN" ,
+                                                                         "RCIP" ;
+                                        <http://schema.org/sameAs> <http://www.wikidata.org/entity/Q3456610> .
+
+
+###  https://nomenclature.info/nom/agent/3
+<https://nomenclature.info/nom/agent/3> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Agent> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Gouvernement du Nunavut"@fr ,
+                                                                         "Government of Nunavut"@en ;
+                                        <http://xmlns.com/foaf/0.1/nick> "GN" .
+
+
+###  https://nomenclature.info/nom/agent/4
+<https://nomenclature.info/nom/agent/4> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Agent> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Getty Research Institute"@en ,
+                                                                         "Getty Research Institute"@fr ;
+                                        <http://xmlns.com/foaf/0.1/nick> "GRI" .
+
+
+###  https://nomenclature.info/nom/lang/
+<https://nomenclature.info/nom/lang/> rdf:type owl:NamedIndividual ,
+                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                      <http://purl.org/dc/terms/title> "Nomenclature - Languages"@en ,
+                                                                       "Nomenclature - Langues"@fr .
+
+
+###  https://nomenclature.info/nom/lang/cr
+<https://nomenclature.info/nom/lang/cr> rdf:type owl:NamedIndividual ,
+                                                 <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <http://www.lingvoj.org/ontology#tag> "cr" ;
+                                        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://id.loc.gov/vocabulary/iso639-1/cr> ,
+                                                                                         <http://lexvo.org/id/iso639-3/cre> ,
+                                                                                         <http://www.wikidata.org/entity/Q33390> ;
+                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                        <http://www.w3.org/2004/02/skos/core#notation> "cr" ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Cree"@en ,
+                                                                                        "cri"@fr .
+
+
+###  https://nomenclature.info/nom/lang/cr-latn
+<https://nomenclature.info/nom/lang/cr-latn> rdf:type owl:NamedIndividual ,
+                                                      <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                             <http://www.lingvoj.org/ontology#tag> "cr-latn" ;
+                                             <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                             <http://www.w3.org/2004/02/skos/core#notation> "cr-latn" ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Cree in Latin script"@en ,
+                                                                                             "cri en écriture latine"@fr .
+
+
+###  https://nomenclature.info/nom/lang/en
+<https://nomenclature.info/nom/lang/en> rdf:type owl:NamedIndividual ,
+                                                 <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <http://www.lingvoj.org/ontology#tag> "en" ;
+                                        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://id.loc.gov/vocabulary/iso639-1/en> ,
+                                                                                         <http://lexvo.org/id/iso639-3/eng> ,
+                                                                                         <http://www.wikidata.org/entity/Q1860> ;
+                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                        <http://www.w3.org/2004/02/skos/core#notation> "en" ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "English"@en ,
+                                                                                        "anglais"@fr .
+
+
+###  https://nomenclature.info/nom/lang/en-ca
+<https://nomenclature.info/nom/lang/en-ca> rdf:type owl:NamedIndividual ,
+                                                    <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                    <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                           <http://www.lingvoj.org/ontology#tag> "en-ca" ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/entity/Q44676> ;
+                                           <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                           <http://www.w3.org/2004/02/skos/core#notation> "en-ca" ;
+                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Canadian English"@en ,
+                                                                                           "anglais canadien"@fr .
+
+
+###  https://nomenclature.info/nom/lang/es
+<https://nomenclature.info/nom/lang/es> rdf:type owl:NamedIndividual ,
+                                                 <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <http://www.lingvoj.org/ontology#tag> "es" ;
+                                        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://id.loc.gov/vocabulary/iso639-1/es> ,
+                                                                                         <http://lexvo.org/id/iso639-3/spa> ,
+                                                                                         <http://www.wikidata.org/entity/Q1321> ;
+                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                        <http://www.w3.org/2004/02/skos/core#notation> "es" ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Spanish"@en ,
+                                                                                        "espagnol"@fr .
+
+
+###  https://nomenclature.info/nom/lang/fr
+<https://nomenclature.info/nom/lang/fr> rdf:type owl:NamedIndividual ,
+                                                 <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <http://www.lingvoj.org/ontology#tag> "fr" ;
+                                        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://id.loc.gov/vocabulary/iso639-1/fr> ,
+                                                                                         <http://lexvo.org/id/iso639-3/fra> ,
+                                                                                         <http://www.wikidata.org/entity/Q150> ;
+                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                        <http://www.w3.org/2004/02/skos/core#notation> "fr" ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "French"@en ,
+                                                                                        "français"@fr .
+
+
+###  https://nomenclature.info/nom/lang/fr-ca
+<https://nomenclature.info/nom/lang/fr-ca> rdf:type owl:NamedIndividual ,
+                                                    <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                    <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                           <http://www.lingvoj.org/ontology#tag> "fr-ca" ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/entity/Q1450506> ;
+                                           <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                           <http://www.w3.org/2004/02/skos/core#notation> "fr-ca" ;
+                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Canadian French"@en ,
+                                                                                           "français canadien"@fr .
+
+
+###  https://nomenclature.info/nom/lang/hai
+<https://nomenclature.info/nom/lang/hai> rdf:type owl:NamedIndividual ,
+                                                  <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                         <http://www.lingvoj.org/ontology#tag> "hai" ;
+                                         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://id.loc.gov/vocabulary/iso639-2/hai> ,
+                                                                                          <http://lexvo.org/id/iso639-3/hai> ,
+                                                                                          <http://www.wikidata.org/entity/Q33303> ;
+                                         <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                         <http://www.w3.org/2004/02/skos/core#notation> "hai" ;
+                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Haida"@en ,
+                                                                                         "haïda"@fr .
+
+
+###  https://nomenclature.info/nom/lang/hai-latn
+<https://nomenclature.info/nom/lang/hai-latn> rdf:type owl:NamedIndividual ,
+                                                       <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                              <http://www.lingvoj.org/ontology#tag> "hai-latn" ;
+                                              <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                              <http://www.w3.org/2004/02/skos/core#notation> "hai-latn" ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Haida in Latin script"@en ,
+                                                                                              "haïda en écriture latine"@fr .
+
+
+###  https://nomenclature.info/nom/lang/he
+<https://nomenclature.info/nom/lang/he> rdf:type owl:NamedIndividual ,
+                                                 <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <http://www.lingvoj.org/ontology#tag> "he" ;
+                                        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://id.loc.gov/vocabulary/iso639-1/he> ,
+                                                                                         <http://lexvo.org/id/iso639-3/heb> ,
+                                                                                         <http://www.wikidata.org/entity/Q9288> ;
+                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                        <http://www.w3.org/2004/02/skos/core#notation> "he" ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Hebrew"@en ,
+                                                                                        "hébreu"@fr .
+
+
+###  https://nomenclature.info/nom/lang/he-latn
+<https://nomenclature.info/nom/lang/he-latn> rdf:type owl:NamedIndividual ,
+                                                      <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                             <http://www.lingvoj.org/ontology#tag> "he-latn" ;
+                                             <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                             <http://www.w3.org/2004/02/skos/core#notation> "he-latn" ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Hebrew in Latin script"@en ,
+                                                                                             "hébreu en écriture latine"@fr .
+
+
+###  https://nomenclature.info/nom/lang/iro
+<https://nomenclature.info/nom/lang/iro> rdf:type owl:NamedIndividual ,
+                                                  <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                         <http://www.lingvoj.org/ontology#tag> "iro" ;
+                                         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://id.loc.gov/vocabulary/iso639-2/iro> ,
+                                                                                          <http://lexvo.org/id/iso639-5/iro> ,
+                                                                                          <http://www.wikidata.org/entity/Q33623> ;
+                                         <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                         <http://www.w3.org/2004/02/skos/core#notation> "iro" ;
+                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Iroquoian"@en ,
+                                                                                         "iroquoien"@fr .
+
+
+###  https://nomenclature.info/nom/lang/iro-latn
+<https://nomenclature.info/nom/lang/iro-latn> rdf:type owl:NamedIndividual ,
+                                                       <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                              <http://www.lingvoj.org/ontology#tag> "iro-latn" ;
+                                              <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                              <http://www.w3.org/2004/02/skos/core#notation> "iro-latn" ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Iroquoian in Latin script"@en ,
+                                                                                              "iroquoien en écriture latine"@fr .
+
+
+###  https://nomenclature.info/nom/lang/iu
+<https://nomenclature.info/nom/lang/iu> rdf:type owl:NamedIndividual ,
+                                                 <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <http://www.lingvoj.org/ontology#tag> "iu" ;
+                                        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://id.loc.gov/vocabulary/iso639-1/iu> ,
+                                                                                         <http://lexvo.org/id/iso639-3/iku> ,
+                                                                                         <http://www.wikidata.org/entity/Q29921> ;
+                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                        <http://www.w3.org/2004/02/skos/core#notation> "iu" ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Inuktitut"@en ,
+                                                                                        "inuktitut"@fr .
+
+
+###  https://nomenclature.info/nom/lang/iu-latn
+<https://nomenclature.info/nom/lang/iu-latn> rdf:type owl:NamedIndividual ,
+                                                      <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                             <http://www.lingvoj.org/ontology#tag> "iu-latn" ;
+                                             <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                             <http://www.w3.org/2004/02/skos/core#notation> "iu-latn" ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Inuktitut in Latin script"@en ,
+                                                                                             "inuktitut en écriture latine"@fr .
+
+
+###  https://nomenclature.info/nom/lang/moh
+<https://nomenclature.info/nom/lang/moh> rdf:type owl:NamedIndividual ,
+                                                  <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                         <http://www.lingvoj.org/ontology#tag> "moh" ;
+                                         <http://www.w3.org/2004/02/skos/core#exactMatch> <http://id.loc.gov/vocabulary/iso639-2/moh> ,
+                                                                                          <http://lexvo.org/id/iso639-3/moh> ,
+                                                                                          <http://www.wikidata.org/entity/Q13339> ;
+                                         <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                         <http://www.w3.org/2004/02/skos/core#notation> "moh" ;
+                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Mohawk"@en ,
+                                                                                         "mohawk"@fr .
+
+
+###  https://nomenclature.info/nom/lang/moh-latn
+<https://nomenclature.info/nom/lang/moh-latn> rdf:type owl:NamedIndividual ,
+                                                       <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                              <http://www.lingvoj.org/ontology#tag> "moh-latn" ;
+                                              <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                              <http://www.w3.org/2004/02/skos/core#notation> "moh-latn" ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Mohawk in Latin script"@en ,
+                                                                                              "mohawk en écriture latine"@fr .
+
+
+###  https://nomenclature.info/nom/lang/oj
+<https://nomenclature.info/nom/lang/oj> rdf:type owl:NamedIndividual ,
+                                                 <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                        <http://www.lingvoj.org/ontology#tag> "oj" ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "Ojibway"@en ,
+                                                                                       "Ojibwe"@en ,
+                                                                                       "odjibwé"@fr ,
+                                                                                       "ojibwa"@fr ;
+                                        <http://www.w3.org/2004/02/skos/core#exactMatch> <http://id.loc.gov/vocabulary/iso639-1/oj> ,
+                                                                                         <http://lexvo.org/id/iso639-3/oji> ,
+                                                                                         <http://www.wikidata.org/entity/Q33875> ;
+                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                        <http://www.w3.org/2004/02/skos/core#notation> "oj" ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Ojibwa"@en ,
+                                                                                        "ojibwé"@fr .
+
+
+###  https://nomenclature.info/nom/lang/oj-latn
+<https://nomenclature.info/nom/lang/oj-latn> rdf:type owl:NamedIndividual ,
+                                                      <http://www.lingvoj.org/ontology#Lingvo> ,
+                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                             <http://www.lingvoj.org/ontology#tag> "oj-latn" ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "Ojibway in Latin script"@en ,
+                                                                                            "Ojibwe in Latin script"@en ,
+                                                                                            "odjibwé en écriture latine"@fr ,
+                                                                                            "ojibwa en écriture latine"@fr ;
+                                             <http://www.w3.org/2004/02/skos/core#inScheme> <https://nomenclature.info/nom/lang/> ;
+                                             <http://www.w3.org/2004/02/skos/core#notation> "oj-latn" ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Ojibwa in Latin script"@en ,
+                                                                                             "ojibwé en écriture latine"@fr .
+
+
+###  https://nomenclature.info/nom/level/1
+<https://nomenclature.info/nom/level/1> rdf:type owl:NamedIndividual ,
+                                                 <http://schema.org/Collection> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Collection> ;
+                                        <http://schema.org/position> 1 ;
+                                        rdfs:isDefinedBy <https://nomenclature.info/nom/ontology/> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Premier niveau de la hiérarchie, contenant le niveau le plus générique du regroupement d’objets par contexte fonctionnel."@fr ,
+                                                                                         "Top level of the Nomenclature hierarchy, containing the broadest level of object grouping by functional context."@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Category"@en ,
+                                                                                        "Catégorie"@fr .
+
+
+###  https://nomenclature.info/nom/level/2
+<https://nomenclature.info/nom/level/2> rdf:type owl:NamedIndividual ,
+                                                 <http://schema.org/Collection> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Collection> ;
+                                        <http://schema.org/position> 2 ;
+                                        rdfs:isDefinedBy <https://nomenclature.info/nom/ontology/> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Deuxième niveau de la hiérarchie de Nomenclature."@fr ,
+                                                                                         "Second level of the Nomenclature hierarchy."@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Class"@en ,
+                                                                                        "Classe"@fr .
+
+
+###  https://nomenclature.info/nom/level/3
+<https://nomenclature.info/nom/level/3> rdf:type owl:NamedIndividual ,
+                                                 <http://schema.org/Collection> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Collection> ;
+                                        <http://schema.org/position> 3 ;
+                                        rdfs:isDefinedBy <https://nomenclature.info/nom/ontology/> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Third level of the Nomenclature Hierarchy."@en ,
+                                                                                         "Troisième niveau de la hiérarchie de Nomenclature."@fr ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Sous-classe"@fr ,
+                                                                                        "Sub-Class"@en .
+
+
+###  https://nomenclature.info/nom/level/4
+<https://nomenclature.info/nom/level/4> rdf:type owl:NamedIndividual ,
+                                                 <http://schema.org/Collection> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Collection> ;
+                                        <http://schema.org/position> 4 ;
+                                        rdfs:isDefinedBy <https://nomenclature.info/nom/ontology/> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Fourth level of the Nomenclature Hierarchy, containing the most general object names."@en ,
+                                                                                         "Quatrième niveau de la hiérarchie de Nomenclature, contenant le nom d’objet le plus générique."@fr ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Primary Term"@en ,
+                                                                                        "Terme primaire"@fr .
+
+
+###  https://nomenclature.info/nom/level/5
+<https://nomenclature.info/nom/level/5> rdf:type owl:NamedIndividual ,
+                                                 <http://schema.org/Collection> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Collection> ;
+                                        <http://schema.org/position> 5 ;
+                                        rdfs:isDefinedBy <https://nomenclature.info/nom/ontology/> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Cinquième niveau de la hiérarchie de Nomenclature."@fr ,
+                                                                                         "Fifth level of the Nomenclature Hierarchy."@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Secondary Term"@en ,
+                                                                                        "Terme secondaire"@fr .
+
+
+###  https://nomenclature.info/nom/level/6
+<https://nomenclature.info/nom/level/6> rdf:type owl:NamedIndividual ,
+                                                 <http://schema.org/Collection> ,
+                                                 <http://www.w3.org/2004/02/skos/core#Collection> ;
+                                        <http://schema.org/position> 6 ;
+                                        rdfs:isDefinedBy <https://nomenclature.info/nom/ontology/> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Sixième niveau de la hiérarchie de Nomenclature."@fr ,
+                                                                                         "Sixth level of the Nomenclature Hierarchy."@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Terme tertiaire"@fr ,
+                                                                                        "Tertiary Term"@en .
+
+
+###  https://nomenclature.info/nom/source/AAT
+<https://nomenclature.info/nom/source/AAT> rdf:type owl:NamedIndividual ,
+                                                    <http://rdfs.org/ns/void#Dataset> ,
+                                                    <http://schema.org/Dataset> ;
+                                           <http://rdfs.org/ns/void#uriSpace> "http://vocab.getty.edu/aat" ;
+                                           <http://schema.org/name> "Art and Architecture Thesaurus"@en ,
+                                                                    "Art and Architecture Thesaurus"@fr ;
+                                           <http://schema.org/url> <http://www.getty.edu/research/tools/vocabularies/aat/> .
+
+
+###  https://nomenclature.info/nom/source/CultureFr-Joconde
+<https://nomenclature.info/nom/source/CultureFr-Joconde> rdf:type owl:NamedIndividual ,
+                                                                  <http://rdfs.org/ns/void#Dataset> ,
+                                                                  <http://schema.org/Dataset> ;
+                                                         <http://rdfs.org/ns/void#uriSpace> "http://data.culture.fr/thesaurus/resource/ark:/67717/T505" ;
+                                                         <http://schema.org/name> "Liste d’autorités Dénomination - Joconde"@en ,
+                                                                                  "Liste d’autorités Dénomination - Joconde"@fr ;
+                                                         <http://schema.org/url> <http://data.culture.fr/thesaurus/resource/ark:/67717/T505> .
+
+
+###  https://nomenclature.info/nom/source/CultureFr-architecturales
+<https://nomenclature.info/nom/source/CultureFr-architecturales> rdf:type owl:NamedIndividual ,
+                                                                          <http://rdfs.org/ns/void#Dataset> ,
+                                                                          <http://schema.org/Dataset> ;
+                                                                 <http://rdfs.org/ns/void#uriSpace> "http://data.culture.fr/thesaurus/resource/ark:/67717/T96" ;
+                                                                 <http://schema.org/name> "Thésaurus de la désignation des œuvres architecturales et des espaces aménagés"@en ,
+                                                                                          "Thésaurus de la désignation des œuvres architecturales et des espaces aménagés"@fr ;
+                                                                 <http://schema.org/url> <http://data.culture.fr/thesaurus/resource/ark:/67717/T96> .
+
+
+###  https://nomenclature.info/nom/source/CultureFr-archives
+<https://nomenclature.info/nom/source/CultureFr-archives> rdf:type owl:NamedIndividual ,
+                                                                   <http://rdfs.org/ns/void#Dataset> ,
+                                                                   <http://schema.org/Dataset> ;
+                                                          <http://rdfs.org/ns/void#uriSpace> "http://data.culture.fr/thesaurus/resource/ark:/67717/T3" ;
+                                                          <http://schema.org/name> "Liste d’autorité Typologie documentaire pour l'indexation des archives locales"@en ,
+                                                                                   "Liste d’autorité Typologie documentaire pour l'indexation des archives locales"@fr ;
+                                                          <http://schema.org/url> <http://data.culture.fr/thesaurus/resource/ark:/67717/T3> .
+
+
+###  https://nomenclature.info/nom/source/CultureFr-mobiliers
+<https://nomenclature.info/nom/source/CultureFr-mobiliers> rdf:type owl:NamedIndividual ,
+                                                                    <http://rdfs.org/ns/void#Dataset> ,
+                                                                    <http://schema.org/Dataset> ;
+                                                           <http://rdfs.org/ns/void#uriSpace> "http://data.culture.fr/thesaurus/resource/ark:/67717/T69" ;
+                                                           <http://schema.org/name> "Thésaurus de la désignation des objets mobiliers"@en ,
+                                                                                    "Thésaurus de la désignation des objets mobiliers"@fr ;
+                                                           <http://schema.org/url> <http://data.culture.fr/thesaurus/resource/ark:/67717/T69> .
+
+
+###  https://nomenclature.info/nom/source/DBpedia
+<https://nomenclature.info/nom/source/DBpedia> rdf:type owl:NamedIndividual ,
+                                                        <http://rdfs.org/ns/void#Dataset> ,
+                                                        <http://schema.org/Dataset> ;
+                                               <http://rdfs.org/ns/void#uriSpace> "http://dbpedia.org/resource" ,
+                                                                                  "http://fr.dbpedia.org/resource" ;
+                                               <http://schema.org/name> "DBpedia"@en ,
+                                                                        "DBpedia"@fr ;
+                                               <http://schema.org/url> <http://dbpedia.org> .
+
+
+###  https://nomenclature.info/nom/source/GND
+<https://nomenclature.info/nom/source/GND> rdf:type owl:NamedIndividual ,
+                                                    <http://rdfs.org/ns/void#Dataset> ,
+                                                    <http://schema.org/Dataset> ;
+                                           <http://rdfs.org/ns/void#uriSpace> "http://d-nb.info/gnd" ;
+                                           <http://schema.org/name> "Fichier d’autorité intégré de la Bibliothèque nationale allemande"@fr ,
+                                                                    "Gemeinsame Normdatei"@de ,
+                                                                    "German National Library Integrated Authority File"@en ;
+                                           <http://schema.org/url> <https://www.dnb.de/gnd> .
+
+
+###  https://nomenclature.info/nom/source/LCSH
+<https://nomenclature.info/nom/source/LCSH> rdf:type owl:NamedIndividual ,
+                                                     <http://rdfs.org/ns/void#Dataset> ,
+                                                     <http://schema.org/Dataset> ;
+                                            <http://rdfs.org/ns/void#uriSpace> "http://id.loc.gov/authorities/subjects" ;
+                                            <http://schema.org/name> "Library of Congress Subject Headings"@en ,
+                                                                     "Library of Congress Subject Headings"@fr ;
+                                            <http://schema.org/url> <http://id.loc.gov/authorities/subjects> .
+
+
+###  https://nomenclature.info/nom/source/RAMEAU
+<https://nomenclature.info/nom/source/RAMEAU> rdf:type owl:NamedIndividual ,
+                                                       <http://rdfs.org/ns/void#Dataset> ,
+                                                       <http://schema.org/Dataset> ;
+                                              <http://rdfs.org/ns/void#uriSpace> "http://data.bnf.fr/ark:/12148" ;
+                                              <http://schema.org/name> "Encyclopedic and Unified Alphabetical Directory of Authority-Matter (RAMEAU)"@en ,
+                                                                       "Répertoire d'autorité-matière encyclopédique et alphabétique unifié (RAMEAU)"@fr ;
+                                              <http://schema.org/url> <https://rameau.bnf.fr/> .
+
+
+###  https://nomenclature.info/nom/source/WD
+<https://nomenclature.info/nom/source/WD> rdf:type owl:NamedIndividual ,
+                                                   <http://rdfs.org/ns/void#Dataset> ,
+                                                   <http://schema.org/Dataset> ;
+                                          <http://rdfs.org/ns/void#uriSpace> "http://www.wikidata.org/entity" ;
+                                          <http://schema.org/name> "Wikidata"@en ,
+                                                                   "Wikidata"@fr ;
+                                          <http://schema.org/url> <https://www.wikidata.org> .
+
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://schema.org/about> <http://schema.org/domainIncludes> <http://schema.org/CommunicateAction> ,
+                                                              <http://schema.org/CreativeWork> ,
+                                                              <http://schema.org/Event> ;
+                           <http://schema.org/inverseOf> <http://schema.org/subjectOf> ;
+                           <http://schema.org/rangeIncludes> <http://schema.org/Thing> ;
+                           <http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/1670> ;
+                           rdfs:comment "The subject matter of the content." ;
+                           rdfs:label "about" .
+
+
+<http://schema.org/alternateName> <http://schema.org/domainIncludes> <http://schema.org/Thing> ;
+                                  <http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+                                  rdfs:comment "An alias for the item." ;
+                                  rdfs:label "alternateName" .
+
+
+<http://schema.org/citation> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ;
+                             <http://schema.org/rangeIncludes> <http://schema.org/CreativeWork> ,
+                                                               <http://schema.org/Text> ;
+                             rdfs:comment "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc." ;
+                             rdfs:label "citation" .
+
+
+<http://schema.org/contentSize> <http://schema.org/domainIncludes> <http://schema.org/MediaObject> ;
+                                <http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+                                rdfs:comment "File size in (mega/kilo) bytes." ;
+                                rdfs:label "contentSize" .
+
+
+<http://schema.org/contentUrl> <http://schema.org/domainIncludes> <http://schema.org/MediaObject> ;
+                               <http://schema.org/rangeIncludes> <http://schema.org/URL> ;
+                               rdfs:comment "Actual bytes of the media object, for example the image file or video file." ;
+                               rdfs:label "contentUrl" .
+
+
+<http://schema.org/contributor> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ,
+                                                                   <http://schema.org/Event> ;
+                                <http://schema.org/rangeIncludes> <http://schema.org/Organization> ,
+                                                                  <http://schema.org/Person> ;
+                                rdfs:comment "A secondary contributor to the CreativeWork or Event." ;
+                                rdfs:label "contributor" .
+
+
+<http://schema.org/creator> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ,
+                                                               <http://schema.org/UserComments> ;
+                            <http://schema.org/rangeIncludes> <http://schema.org/Organization> ,
+                                                              <http://schema.org/Person> ;
+                            rdfs:comment "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork." ;
+                            rdfs:label "creator" .
+
+
+<http://schema.org/creditText> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ;
+                               <http://schema.org/isPartOf> <https://pending.schema.org> ;
+                               <http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+                               <http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/2659> ;
+                               rdfs:comment "Text that can be used to credit person(s) and/or organization(s) associated with a published Creative Work." ;
+                               rdfs:label "creditText" .
+
+
+<http://schema.org/dateCreated> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ,
+                                                                   <http://schema.org/DataFeedItem> ;
+                                <http://schema.org/rangeIncludes> <http://schema.org/Date> ,
+                                                                  <http://schema.org/DateTime> ;
+                                rdfs:comment "The date on which the CreativeWork was created or the item was added to a DataFeed." ;
+                                rdfs:label "dateCreated" .
+
+
+<http://schema.org/description> <http://schema.org/domainIncludes> <http://schema.org/Thing> ;
+                                <http://schema.org/rangeIncludes> <http://schema.org/Text> ;
+                                rdfs:comment "A description of the item." ;
+                                rdfs:label "description" .
+
+
+<http://schema.org/distribution> <http://schema.org/domainIncludes> <http://schema.org/Dataset> ;
+                                 <http://schema.org/rangeIncludes> <http://schema.org/DataDownload> ;
+                                 rdfs:comment "A downloadable form of this dataset, at a specific location, in a specific format." ;
+                                 rdfs:label "distribution" .
+
+
+<http://schema.org/encodingFormat> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ,
+                                                                      <http://schema.org/MediaObject> ;
+                                   <http://schema.org/rangeIncludes> <http://schema.org/Text> ,
+                                                                     <http://schema.org/URL> ;
+                                   rdfs:comment """Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).
+
+In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.
+
+Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.""" ;
+                                   rdfs:label "encodingFormat" .
+
+
+<http://schema.org/image> <http://schema.org/domainIncludes> <http://schema.org/Thing> ;
+                          <http://schema.org/rangeIncludes> <http://schema.org/ImageObject> ,
+                                                            <http://schema.org/URL> ;
+                          rdfs:comment "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]." ;
+                          rdfs:label "image" .
+
+
+<http://schema.org/inLanguage> <http://schema.org/domainIncludes> <http://schema.org/BroadcastService> ,
+                                                                  <http://schema.org/CommunicateAction> ,
+                                                                  <http://schema.org/CreativeWork> ,
+                                                                  <http://schema.org/Event> ,
+                                                                  <http://schema.org/LinkRole> ,
+                                                                  <http://schema.org/PronounceableText> ,
+                                                                  <http://schema.org/WriteAction> ;
+                               <http://schema.org/rangeIncludes> <http://schema.org/Language> ,
+                                                                 <http://schema.org/Text> ;
+                               <http://schema.org/source> <https://github.com/schemaorg/schemaorg/issues/2382> ;
+                               rdfs:comment "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]]." ;
+                               rdfs:label "inLanguage" .
+
+
+<http://schema.org/keywords> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ,
+                                                                <http://schema.org/Event> ,
+                                                                <http://schema.org/Organization> ,
+                                                                <http://schema.org/Place> ,
+                                                                <http://schema.org/Product> ;
+                             <http://schema.org/rangeIncludes> <http://schema.org/DefinedTerm> ,
+                                                               <http://schema.org/Text> ,
+                                                               <http://schema.org/URL> ;
+                             rdfs:comment "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property." ;
+                             rdfs:label "keywords" .
+
+
+<http://schema.org/license> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ;
+                            <http://schema.org/rangeIncludes> <http://schema.org/CreativeWork> ,
+                                                              <http://schema.org/URL> ;
+                            rdfs:comment "A license document that applies to this content, typically indicated by URL." ;
+                            rdfs:label "license" .
+
+
+<http://schema.org/publisher> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ;
+                              <http://schema.org/rangeIncludes> <http://schema.org/Organization> ,
+                                                                <http://schema.org/Person> ;
+                              rdfs:comment "The publisher of the creative work." ;
+                              rdfs:label "publisher" .
+
+
+<http://schema.org/thumbnail> <http://schema.org/domainIncludes> <http://schema.org/ImageObject> ,
+                                                                 <http://schema.org/VideoObject> ;
+                              <http://schema.org/rangeIncludes> <http://schema.org/ImageObject> ;
+                              rdfs:comment "Thumbnail image for an image or video." ;
+                              rdfs:label "thumbnail" .
+
+
+<http://schema.org/thumbnailUrl> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> ;
+                                 <http://schema.org/rangeIncludes> <http://schema.org/URL> ;
+                                 rdfs:comment "A thumbnail image relevant to the Thing." ;
+                                 rdfs:label "thumbnailUrl" .
+
+
+<http://schema.org/value> <http://schema.org/domainIncludes> <http://schema.org/MonetaryAmount> ,
+                                                             <http://schema.org/PropertyValue> ,
+                                                             <http://schema.org/QuantitativeValue> ;
+                          <http://schema.org/rangeIncludes> <http://schema.org/Boolean> ,
+                                                            <http://schema.org/Number> ,
+                                                            <http://schema.org/StructuredValue> ,
+                                                            <http://schema.org/Text> ;
+                          <http://schema.org/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+                          rdfs:comment "The value of the quantitative value or property value node.\\n\\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\\n* For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator." ;
+                          rdfs:label "value" .
+
+
+<http://xmlns.com/foaf/0.1/name> rdfs:comment "A name for some thing." ;
+                                 rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                 rdfs:label "name" ;
+                                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

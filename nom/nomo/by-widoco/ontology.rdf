@@ -1,0 +1,1992 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://nomenclature.info/nom/ontology/"
+     xml:base="https://nomenclature.info/nom/ontology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:ontology="http://lexvo.org/ontology#"
+     xmlns:ontology1="http://www.lingvoj.org/ontology#">
+    <owl:Ontology rdf:about="https://nomenclature.info/nom/ontology/">
+        <dc:description xml:lang="fr">L&apos;ontologie de NOM définit les valeurs utilisées dans Nomenclature pour le catalogage des objets de musée. Elle utilise les ontologies SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset.</dc:description>
+        <dc:description xml:lang="en">NOM Ontology defines the values used in Nomenclature for Museum Cataloging. It uses the SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset ontologies.</dc:description>
+        <dc:format>meta/rdf-schema</dc:format>
+        <dc:title xml:lang="en">Nomenclature for Museum Cataloging Ontology</dc:title>
+        <dc:title xml:lang="fr">Ontologie de Nomenclature pour le catalogage des objets de musée</dc:title>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-02-28</terms:created>
+        <terms:creator rdf:resource="https://nomenclature.info/nom/agent/2"/>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-04-22</terms:modified>
+        <vann:preferredNamespacePrefix>nomo</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://nomenclature.info/nom/ontology/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="fr">L&apos;ontologie de NOM définit les valeurs utilisées dans Nomenclature pour le catalogage des objets de musée. Elle utilise les ontologies SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset.</rdfs:comment>
+        <rdfs:comment xml:lang="en">NOM Ontology defines the values used in Nomenclature for Museum Cataloging. It uses the SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset ontologies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Nomenclature for Museum Cataloging Ontology</rdfs:label>
+        <rdfs:label xml:lang="fr">Ontologie de Nomenclature pour le catalogage des objets de musée</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.wikidata.org/entity/P7749"/>
+        <rdfs:seeAlso rdf:resource="http://www.wikidata.org/entity/Q64351785"/>
+        <rdfs:seeAlso rdf:resource="https://nomenclature.info/"/>
+        <rdfs:seeAlso rdf:resource="https://nomenclature.info/.well-known/void"/>
+        <owl:versionInfo>1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lexvo.org/ontology#somewhatSameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://lexvo.org/ontology#somewhatSameAs"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/example"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://rdfs.org/ns/void#uriSpace -->
+
+
+    <owl:AnnotationProperty rdf:about="http://rdfs.org/ns/void#uriSpace"/>
+    
+
+
+    <!-- http://schema.org/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/domainIncludes"/>
+    
+
+
+    <!-- http://schema.org/inverseOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/inverseOf"/>
+    
+
+
+    <!-- http://schema.org/isPartOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/isPartOf">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:inverseOf rdf:resource="http://schema.org/hasPart"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.</rdfs:comment>
+        <rdfs:label>isPartOf</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/name">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>The name of the item.</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/position -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/position">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/ListItem"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Integer"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>The position of an item in a series or sequence of items.</rdfs:comment>
+        <rdfs:label>position</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
+    
+
+
+    <!-- http://schema.org/sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/sameAs">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>URL of a reference Web page that unambiguously indicates the item&apos;s identity. E.g. the URL of the item&apos;s Wikipedia page, Wikidata entry, or official website.</rdfs:comment>
+        <rdfs:label>sameAs</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://schema.org/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/source"/>
+    
+
+
+    <!-- http://schema.org/url -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/url">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>URL of the item.</rdfs:comment>
+        <rdfs:label>url</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#value -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/vocab/changeset/schema#addition -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/changeset/schema#addition">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/changeset/schema#statement"/>
+        <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+        <terms:issued>2005-12-14</terms:issued>
+        <rdfs:comment xml:lang="en">
+      By convention the subject of the triple being added should be the same as the subjectOfChange
+    </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+        <rdfs:label xml:lang="en">addition</rdfs:label>
+        <skos:changeNote rdf:nodeID="genid1"/>
+        <skos:definition xml:lang="en">a triple to be added to the resource description</skos:definition>
+        <skos:historyNote rdf:nodeID="genid2"/>
+        <skos:historyNote rdf:nodeID="genid3"/>
+    </owl:ObjectProperty>
+    <rdf:Description rdf:nodeID="genid1">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Added definitition and documentation</rdf:value>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Made a sub-property of statement</rdf:value>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Made owl:ObjectProperty</rdf:value>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/changeset/schema#removal -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/changeset/schema#removal">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/changeset/schema#statement"/>
+        <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+        <terms:issued>2005-12-14</terms:issued>
+        <rdfs:comment xml:lang="en">
+      By convention the subject of the triple being removed should be the same as the subjectOfChange
+    </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+        <rdfs:label xml:lang="en">removal</rdfs:label>
+        <skos:changeNote rdf:nodeID="genid4"/>
+        <skos:definition xml:lang="en">a triple to be removed from the resource description</skos:definition>
+        <skos:historyNote rdf:nodeID="genid5"/>
+        <skos:historyNote rdf:nodeID="genid6"/>
+    </owl:ObjectProperty>
+    <rdf:Description rdf:nodeID="genid4">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Added definitition and documentation</rdf:value>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid5">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Made owl:ObjectProperty</rdf:value>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Made a sub-property of statement</rdf:value>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/changeset/schema#statement -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/changeset/schema#statement"/>
+    
+
+
+    <!-- http://purl.org/vocab/changeset/schema#subjectOfChange -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/changeset/schema#subjectOfChange">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <terms:issued>2005-12-14</terms:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+        <rdfs:label xml:lang="en">subjectOfChange</rdfs:label>
+        <skos:changeNote rdf:nodeID="genid7"/>
+        <skos:definition xml:lang="en">the resource to which this set of changes applies</skos:definition>
+        <skos:historyNote rdf:nodeID="genid8"/>
+    </owl:ObjectProperty>
+    <rdf:Description rdf:nodeID="genid7">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Added definitition and documentation</rdf:value>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid8">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Made owl:ObjectProperty</rdf:value>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos-xl#labelRelation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2008/05/skos-xl#labelRelation"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/isPrimaryTopicOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/primaryTopic -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic">
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>The primary topic of some page or document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>primary topic</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nomenclature.info/nom/ontology/invertedFormOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://nomenclature.info/nom/ontology/invertedFormOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2008/05/skos-xl#labelRelation"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <rdfs:comment xml:lang="en">Used only for multi-word English labels</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Utilisée seulement pour les termes anglais à mots multiples</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://nomenclature.info/nom/ontology/"/>
+        <rdfs:label xml:lang="fr">forme inversée de</rdfs:label>
+        <rdfs:label xml:lang="en">inverted form of</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/skos-reference/#xl-label-relations"/>
+        <skos:example xml:lang="fr">&quot;Box, Drink&quot; est la forme inversée de &quot;Drink Box&quot;</skos:example>
+        <skos:example xml:lang="en">&quot;Box, Drink&quot; is the inverted form of &quot;Drink Box&quot;</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dsnotify/vocab/eventset/sourceResource -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dsnotify/vocab/eventset/sourceResource">
+        <rdfs:domain rdf:resource="http://purl.org/dsnotify/vocab/eventset/MoveEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en-us">The identifier (URI) of a resource that was published under a new URI (i.e., when a MoveEvent occurred).</rdfs:comment>
+        <rdfs:label xml:lang="en-us">source resource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dsnotify/vocab/eventset/targetResource -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dsnotify/vocab/eventset/targetResource">
+        <rdfs:domain rdf:resource="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en-us">The identifier (URI) of a resource that was affected by the corresponding event.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">target resource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/vocab/changeset/schema#createdDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/changeset/schema#createdDate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <rdfs:domain rdf:resource="http://purl.org/vocab/changeset/schema#ChangeSet"/>
+        <terms:issued>2005-12-14</terms:issued>
+        <rdfs:comment xml:lang="en">
+      The date should be in W3CDTF format
+    </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+        <rdfs:label xml:lang="en">createdDate</rdfs:label>
+        <skos:definition xml:lang="en">the date that the changeset was created</skos:definition>
+        <skos:historyNote rdf:nodeID="genid9"/>
+    </owl:DatatypeProperty>
+    <rdf:Description rdf:nodeID="genid9">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Made owl:DatatypeProperty</rdf:value>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.lingvoj.org/ontology#tag -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.lingvoj.org/ontology#tag">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:domain rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdfs:comment xml:lang="pt">A tag para ser usada, por exemplo como valor de xml:lang. Ver https://tools.ietf.org/html/bcp47</rdfs:comment>
+        <rdfs:comment xml:lang="es">La etiqueta a utilizar para el lenguaje, por ejemplo como valor de xml:lang. Ver https://tools.ietf.org/html/bcp47</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Le tag à utiliser pour la langue, par exemple comme valeur de xml:lang. Voir https://tools.ietf.org/html/bcp47</rdfs:comment>
+        <rdfs:comment xml:lang="en">The tag to use for the language, for example as value of xml:lang. See https://tools.ietf.org/html/bcp47</rdfs:comment>
+        <rdfs:comment xml:lang="ja">例えばxml:langの値として、言語に用いるタグ。https://tools.ietf.org/html/bcp47を参照</rdfs:comment>
+        <rdfs:label xml:lang="es">etiqueta</rdfs:label>
+        <rdfs:label xml:lang="en">language tag</rdfs:label>
+        <rdfs:label xml:lang="nl">taal tag</rdfs:label>
+        <rdfs:label xml:lang="pt">tag de idioma</rdfs:label>
+        <rdfs:label xml:lang="fr">tag de langue</rdfs:label>
+        <rdfs:label xml:lang="ja">言語タグ</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/nick -->
+
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/nick">
+        <rdfs:comment>A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>nickname</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://d-nb.info/standards/elementset/gnd#Language -->
+
+
+    <owl:Class rdf:about="http://d-nb.info/standards/elementset/gnd#Language">
+        <owl:equivalentClass rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error2 -->
+
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error2"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error3 -->
+
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error3"/>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Dataset -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/dcmitype/Dataset">
+        <owl:equivalentClass rdf:resource="http://schema.org/Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Image -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/dcmitype/Image">
+        <owl:equivalentClass rdf:resource="http://schema.org/ImageObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Agent -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Agent">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/LinguisticSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LinguisticSystem"/>
+    
+
+
+    <!-- http://purl.org/dsnotify/vocab/eventset/CreateEvent -->
+
+
+    <owl:Class rdf:about="http://purl.org/dsnotify/vocab/eventset/CreateEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"/>
+        <rdfs:comment xml:lang="en-us">An event class describing that a particular resource was &apos;created&apos; in a dataset. This means that one or more triples having the associated resource as subject or object were created in the corresponding RDF model.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">create event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dsnotify/vocab/eventset/MoveEvent -->
+
+
+    <owl:Class rdf:about="http://purl.org/dsnotify/vocab/eventset/MoveEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"/>
+        <rdfs:comment xml:lang="en-us">An event class describing that a particular resource was &apos;moved&apos; in a dataset or between datasets. This means that all triples having the associated older resource as subject/object were replaced by triples having the target resource as subject/object in the corresponding RDF models. </rdfs:comment>
+        <rdfs:label xml:lang="en-us">Move event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dsnotify/vocab/eventset/RemoveEvent -->
+
+
+    <owl:Class rdf:about="http://purl.org/dsnotify/vocab/eventset/RemoveEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"/>
+        <rdfs:comment xml:lang="en-us">An event class describing that a particular resource was &apos;removed&apos; from a dataset. This means that all triples having the associated resource as subject or object were removed from the corresponding RDF model.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Remove event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent -->
+
+
+    <owl:Class rdf:about="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"/>
+    
+
+
+    <!-- http://purl.org/dsnotify/vocab/eventset/UpdateEvent -->
+
+
+    <owl:Class rdf:about="http://purl.org/dsnotify/vocab/eventset/UpdateEvent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"/>
+        <rdfs:comment xml:lang="en-us">An event class describing that a particular resource was &apos;updated&apos; in a dataset. This means that some triples having the associated resource as subject or object were modified/created/removed in the corresponding RDF model.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Update event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/Language -->
+
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/Language">
+        <owl:equivalentClass rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/changeset/schema#ChangeSet -->
+
+
+    <owl:Class rdf:about="http://purl.org/vocab/changeset/schema#ChangeSet">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+                    <rdf:Description rdf:about="http://org.semanticweb.owlapi/error#Error2"/>
+                    <rdf:Description rdf:about="http://org.semanticweb.owlapi/error#Error3"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/vocab/changeset/schema#statement"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/vocab/changeset/schema#subjectOfChange"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/vocab/changeset/schema#createdDate"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <terms:issued>2005-12-14</terms:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/changeset/schema"/>
+        <rdfs:label xml:lang="en">ChangeSet</rdfs:label>
+        <skos:changeNote rdf:nodeID="genid20"/>
+        <skos:definition xml:lang="en">The encapsulation of a delta between two versions of a resource description</skos:definition>
+        <skos:historyNote rdf:nodeID="genid21"/>
+    </owl:Class>
+    <rdf:Description rdf:nodeID="genid20">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Improved documentation</rdf:value>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid21">
+        <terms:creator>Ian Davis</terms:creator>
+        <terms:date>2006-03-21</terms:date>
+        <rdf:value>Added property cardinality restrictions</rdf:value>
+    </rdf:Description>
+    
+
+
+    <!-- http://rdfs.org/ns/void#Dataset -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/ns/void#Dataset">
+        <owl:equivalentClass rdf:resource="http://schema.org/Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Collection -->
+
+
+    <owl:Class rdf:about="http://schema.org/Collection">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:isPartOf rdf:resource="https://bib.schema.org"/>
+        <rdfs:comment>A collection of items e.g. creative works or products.</rdfs:comment>
+        <rdfs:label>Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/CreativeWork -->
+
+
+    <owl:Class rdf:about="http://schema.org/CreativeWork">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+        <schema:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews"/>
+        <rdfs:comment>The most generic kind of creative work, including books, movies, photographs, software programs, etc.</rdfs:comment>
+        <rdfs:label>CreativeWork</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/DataDownload -->
+
+
+    <owl:Class rdf:about="http://schema.org/DataDownload">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
+        <schema:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass"/>
+        <rdfs:comment>A dataset in downloadable form.</rdfs:comment>
+        <rdfs:label>DataDownload</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Dataset -->
+
+
+    <owl:Class rdf:about="http://schema.org/Dataset">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass"/>
+        <rdfs:comment>A body of structured information describing some topic(s) of interest.</rdfs:comment>
+        <rdfs:label>Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/DefinedTermSet -->
+
+
+    <owl:Class rdf:about="http://schema.org/DefinedTermSet">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:isPartOf rdf:resource="https://pending.schema.org"/>
+        <schema:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/894"/>
+        <rdfs:comment>A set of defined terms for example a set of categories or a classification scheme, a glossary, dictionary or enumeration.</rdfs:comment>
+        <rdfs:label>DefinedTermSet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/ImageObject -->
+
+
+    <owl:Class rdf:about="http://schema.org/ImageObject">
+        <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
+        <rdfs:comment>An image file.</rdfs:comment>
+        <rdfs:label>ImageObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Intangible -->
+
+
+    <owl:Class rdf:about="http://schema.org/Intangible"/>
+    
+
+
+    <!-- http://schema.org/Language -->
+
+
+    <owl:Class rdf:about="http://schema.org/Language">
+        <owl:equivalentClass rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MediaObject -->
+
+
+    <owl:Class rdf:about="http://schema.org/MediaObject"/>
+    
+
+
+    <!-- http://schema.org/Organization -->
+
+
+    <owl:Class rdf:about="http://schema.org/Organization">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+        <rdfs:comment>An organization such as a school, NGO, corporation, club, etc.</rdfs:comment>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/StructuredValue -->
+
+
+    <owl:Class rdf:about="http://schema.org/StructuredValue">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
+        <rdfs:comment>Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.</rdfs:comment>
+        <rdfs:label>StructuredValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Thing -->
+
+
+    <owl:Class rdf:about="http://schema.org/Thing"/>
+    
+
+
+    <!-- http://www.lexinfo.net/ontology/3.0/lexinfo#Gender -->
+
+
+    <owl:Class rdf:about="http://www.lexinfo.net/ontology/3.0/lexinfo#Gender">
+        <rdfs:label xml:lang="en">gender</rdfs:label>
+        <owl:priorVersion rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#Gender"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lingvoj.org/ontology#Lingvo -->
+
+
+    <owl:Class rdf:about="http://www.lingvoj.org/ontology#Lingvo">
+        <owl:equivalentClass rdf:resource="http://www.ontotext.com/proton/protontop#Language"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+        <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Language"/>
+        <ontology:somewhatSameAs rdf:resource="http://lexvo.org/ontology#Language"/>
+        <vann:example rdf:resource="http://id.loc.gov/vocabulary/iso639-1/ja"/>
+        <vann:example rdf:resource="http://lexvo.org/id/iso639-3/fra"/>
+        <rdfs:comment xml:lang="en">A language used in spoken or written human communication, or in which a resource is written or recorded. It is recommended to use instances defined on the basis of ISO 639 codes, such as those in examples</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een taal gebruikt in geschreven of gesproken communicatie tussen mensen of in welke een bron is geschreven of opgenomen. Het is aan te raden instanties te gebruiken gedefinieerd op basis van de ISO 630 codes, zoals in deze voorbeelden</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um idioma utilizado na comunicação oral ou escrita entre pessoas, ou na que se escreve ou grava um recurso. Recomenda-se a utilização das instâncias definidas segundo os códigos ISO 639, como os que aparecem nos excemplos</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una lengua utilizada en la comunicación oral o escrita entre personas, o en la que se escribe o graba un recurso. Se recomienda el uso de las instancias definidas según los códigos ISO 639, como los que aparecen en los ejemplos</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une langue utilisée dans la communication orale ou écrite entre humains, ou dans laquelle une ressource est écrite ou enregistrée. Il est recommandé d&apos;utiliser des instances définies sur la base d&apos;un code ISO 639, comme dans les exemples</rdfs:comment>
+        <rdfs:comment xml:lang="ja">会話または記述による人間のコミュニケーションで使用される言語、または資源が記述または記録される言語。例にあるような、ISO 639コードに基づいて定義されたインスタンスを使用することが推奨される</rdfs:comment>
+        <rdfs:label xml:lang="tr">Dil</rdfs:label>
+        <rdfs:label xml:lang="pt">Idioma</rdfs:label>
+        <rdfs:label xml:lang="pl">Jezyk</rdfs:label>
+        <rdfs:label xml:lang="fi">Kieli</rdfs:label>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <rdfs:label xml:lang="fr">Langue</rdfs:label>
+        <rdfs:label xml:lang="es">Lenguaje</rdfs:label>
+        <rdfs:label xml:lang="it">Linguaggio</rdfs:label>
+        <rdfs:label xml:lang="eo">Lingvo</rdfs:label>
+        <rdfs:label xml:lang="de">Sprache</rdfs:label>
+        <rdfs:label xml:lang="no">Språk</rdfs:label>
+        <rdfs:label xml:lang="sv">Språk</rdfs:label>
+        <rdfs:label xml:lang="nl">Taal</rdfs:label>
+        <rdfs:label xml:lang="ru">Язык</rdfs:label>
+        <rdfs:label xml:lang="ja">言語</rdfs:label>
+        <rdfs:label xml:lang="zh">语言</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loc.gov/mads/rdf/v1#Language -->
+
+
+    <owl:Class rdf:about="http://www.loc.gov/mads/rdf/v1#Language"/>
+    
+
+
+    <!-- http://www.ontotext.com/proton/protontop#Language -->
+
+
+    <owl:Class rdf:about="http://www.ontotext.com/proton/protontop#Language"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Collection"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos-xl#Label -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2008/05/skos-xl#Label"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:comment>An agent (eg. person, group, software or physical artifact).</rdfs:comment>
+        <rdfs:label>Agent</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300404671 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404671">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Multiple-word terms or names that are arranged in the form used in speech or written text. Examples are &quot;Rocking Chair&quot; and &quot;Wedding Dress&quot;. Distinguished from inverted terms.</skos:definition>
+        <skos:definition xml:lang="fr">Termes à mots multiples qui sont organisés selon la forme utilisée à l&apos;expression orale ou à l&apos;écrit en anglais. Des exemples sont « Rocking Chair » et « Wedding Dress ». Se distingue des termes inversés.</skos:definition>
+        <skos:example xml:lang="en">Barber&apos;s Chair</skos:example>
+        <skos:prefLabel xml:lang="fr">Termes en ordre naturel</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">natural order terms</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Used only for English terms (both single-word and multi-word)</skos:scopeNote>
+        <skos:scopeNote xml:lang="fr">Utilisé seulement pour les termes en anglais (pour les unitermes et ceux à mots multiples).</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300404672 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404672">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Multiple-word terms that are arranged in the form used in back-of-book indexing or other similar situations. Examples are &quot;Chair, Rocking&quot; and &quot;Dress, Wedding&quot;. Distinguished from natural order terms.</skos:definition>
+        <skos:definition xml:lang="fr">Termes à mots multiples qui sont organisés selon la forme utilisée lors de l&apos;indexation à la fin des livres en anglais ou lors de situations similaires. Des exemples sont « Chair, Rocking » et « Dress, Wedding ». Se distingue des termes en ordre naturel.</skos:definition>
+        <skos:example xml:lang="en">Chair, Barber&apos;s</skos:example>
+        <skos:prefLabel xml:lang="fr">Termes inversés</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">inverted terms</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Used only for English multi-word terms.</skos:scopeNote>
+        <skos:scopeNote xml:lang="fr">Utilisé seulement pour les termes à mots multiples en anglais.</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lexinfo.net/ontology/3.0/lexinfo#feminine -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.lexinfo.net/ontology/3.0/lexinfo#feminine">
+        <rdf:type rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo#Gender"/>
+        <rdfs:comment xml:lang="fr">De, relatif à, ou constituant le genre qui inclut habituellement la plupart des mots ou formes grammaticales se référant aux femmes.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Of, relating to, or constituting the gender that ordinarily includes most words or grammatical forms referring to females.</rdfs:comment>
+        <rdfs:label xml:lang="en">feminine</rdfs:label>
+        <rdfs:label xml:lang="fr">féminin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lexinfo.net/ontology/3.0/lexinfo#masculine -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.lexinfo.net/ontology/3.0/lexinfo#masculine">
+        <rdf:type rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo#Gender"/>
+        <rdfs:comment xml:lang="fr">De, relatif à, ou constituant le genre qui inclut habituellement la plupart des mots ou formes grammaticales se référant aux hommes.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Of, relating to, or constituting the gender that ordinarily includes most words or grammatical forms referring to males.</rdfs:comment>
+        <rdfs:label xml:lang="fr">masculin</rdfs:label>
+        <rdfs:label xml:lang="en">masculine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/agent/1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/agent/1">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <foaf:name xml:lang="en">American Association for State and Local History (AASLH)</foaf:name>
+        <foaf:name xml:lang="fr">American Association for State and Local History (AASLH)</foaf:name>
+        <foaf:nick>AASLH</foaf:nick>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/agent/2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/agent/2">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <foaf:name xml:lang="en">Canadian Heritage Information Network (CHIN)</foaf:name>
+        <foaf:name xml:lang="fr">Réseau canadien d’information sur le patrimoine (RCIP)</foaf:name>
+        <foaf:nick>CHIN</foaf:nick>
+        <foaf:nick>RCIP</foaf:nick>
+        <schema:sameAs rdf:resource="http://www.wikidata.org/entity/Q3456610"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/agent/3 -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/agent/3">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <foaf:name xml:lang="fr">Gouvernement du Nunavut</foaf:name>
+        <foaf:name xml:lang="en">Government of Nunavut</foaf:name>
+        <foaf:nick>GN</foaf:nick>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/agent/4 -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/agent/4">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <foaf:name xml:lang="en">Getty Research Institute</foaf:name>
+        <foaf:name xml:lang="fr">Getty Research Institute</foaf:name>
+        <foaf:nick>GRI</foaf:nick>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:title xml:lang="en">Nomenclature - Languages</terms:title>
+        <terms:title xml:lang="fr">Nomenclature - Langues</terms:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/cr -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/cr">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>cr</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-1/cr"/>
+        <skos:exactMatch rdf:resource="http://lexvo.org/id/iso639-3/cre"/>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q33390"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>cr</skos:notation>
+        <skos:prefLabel xml:lang="en">Cree</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">cri</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/cr-latn -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/cr-latn">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>cr-latn</ontology1:tag>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>cr-latn</skos:notation>
+        <skos:prefLabel xml:lang="en">Cree in Latin script</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">cri en écriture latine</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/en -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/en">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>en</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+        <skos:exactMatch rdf:resource="http://lexvo.org/id/iso639-3/eng"/>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q1860"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>en</skos:notation>
+        <skos:prefLabel xml:lang="en">English</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">anglais</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/en-ca -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/en-ca">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>en-ca</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q44676"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>en-ca</skos:notation>
+        <skos:prefLabel xml:lang="en">Canadian English</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">anglais canadien</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/es -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/es">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>es</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-1/es"/>
+        <skos:exactMatch rdf:resource="http://lexvo.org/id/iso639-3/spa"/>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q1321"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>es</skos:notation>
+        <skos:prefLabel xml:lang="en">Spanish</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">espagnol</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/fr -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/fr">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>fr</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-1/fr"/>
+        <skos:exactMatch rdf:resource="http://lexvo.org/id/iso639-3/fra"/>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q150"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>fr</skos:notation>
+        <skos:prefLabel xml:lang="en">French</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">français</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/fr-ca -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/fr-ca">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>fr-ca</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q1450506"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>fr-ca</skos:notation>
+        <skos:prefLabel xml:lang="en">Canadian French</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">français canadien</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/hai -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/hai">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>hai</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-2/hai"/>
+        <skos:exactMatch rdf:resource="http://lexvo.org/id/iso639-3/hai"/>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q33303"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>hai</skos:notation>
+        <skos:prefLabel xml:lang="en">Haida</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">haïda</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/hai-latn -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/hai-latn">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>hai-latn</ontology1:tag>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>hai-latn</skos:notation>
+        <skos:prefLabel xml:lang="en">Haida in Latin script</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">haïda en écriture latine</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/he -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/he">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>he</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-1/he"/>
+        <skos:exactMatch rdf:resource="http://lexvo.org/id/iso639-3/heb"/>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q9288"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>he</skos:notation>
+        <skos:prefLabel xml:lang="en">Hebrew</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">hébreu</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/he-latn -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/he-latn">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>he-latn</ontology1:tag>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>he-latn</skos:notation>
+        <skos:prefLabel xml:lang="en">Hebrew in Latin script</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">hébreu en écriture latine</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/iro -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/iro">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>iro</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-2/iro"/>
+        <skos:exactMatch rdf:resource="http://lexvo.org/id/iso639-5/iro"/>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q33623"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>iro</skos:notation>
+        <skos:prefLabel xml:lang="en">Iroquoian</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">iroquoien</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/iro-latn -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/iro-latn">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>iro-latn</ontology1:tag>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>iro-latn</skos:notation>
+        <skos:prefLabel xml:lang="en">Iroquoian in Latin script</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">iroquoien en écriture latine</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/iu -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/iu">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>iu</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-1/iu"/>
+        <skos:exactMatch rdf:resource="http://lexvo.org/id/iso639-3/iku"/>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q29921"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>iu</skos:notation>
+        <skos:prefLabel xml:lang="en">Inuktitut</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">inuktitut</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/iu-latn -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/iu-latn">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>iu-latn</ontology1:tag>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>iu-latn</skos:notation>
+        <skos:prefLabel xml:lang="en">Inuktitut in Latin script</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">inuktitut en écriture latine</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/moh -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/moh">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>moh</ontology1:tag>
+        <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-2/moh"/>
+        <skos:exactMatch rdf:resource="http://lexvo.org/id/iso639-3/moh"/>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q13339"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>moh</skos:notation>
+        <skos:prefLabel xml:lang="en">Mohawk</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">mohawk</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/moh-latn -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/moh-latn">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>moh-latn</ontology1:tag>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>moh-latn</skos:notation>
+        <skos:prefLabel xml:lang="en">Mohawk in Latin script</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">mohawk en écriture latine</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/oj -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/oj">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>oj</ontology1:tag>
+        <skos:altLabel xml:lang="en">Ojibway</skos:altLabel>
+        <skos:altLabel xml:lang="en">Ojibwe</skos:altLabel>
+        <skos:altLabel xml:lang="fr">odjibwé</skos:altLabel>
+        <skos:altLabel xml:lang="fr">ojibwa</skos:altLabel>
+        <skos:exactMatch rdf:resource="http://id.loc.gov/vocabulary/iso639-1/oj"/>
+        <skos:exactMatch rdf:resource="http://lexvo.org/id/iso639-3/oji"/>
+        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q33875"/>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>oj</skos:notation>
+        <skos:prefLabel xml:lang="en">Ojibwa</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">ojibwé</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/lang/oj-latn -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/lang/oj-latn">
+        <rdf:type rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology1:tag>oj-latn</ontology1:tag>
+        <skos:altLabel xml:lang="en">Ojibway in Latin script</skos:altLabel>
+        <skos:altLabel xml:lang="en">Ojibwe in Latin script</skos:altLabel>
+        <skos:altLabel xml:lang="fr">odjibwé en écriture latine</skos:altLabel>
+        <skos:altLabel xml:lang="fr">ojibwa en écriture latine</skos:altLabel>
+        <skos:inScheme rdf:resource="https://nomenclature.info/nom/lang/"/>
+        <skos:notation>oj-latn</skos:notation>
+        <skos:prefLabel xml:lang="en">Ojibwa in Latin script</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">ojibwé en écriture latine</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/level/1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/level/1">
+        <rdf:type rdf:resource="http://schema.org/Collection"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <schema:position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</schema:position>
+        <rdfs:isDefinedBy rdf:resource="https://nomenclature.info/nom/ontology/"/>
+        <skos:definition xml:lang="fr">Premier niveau de la hiérarchie, contenant le niveau le plus générique du regroupement d’objets par contexte fonctionnel.</skos:definition>
+        <skos:definition xml:lang="en">Top level of the Nomenclature hierarchy, containing the broadest level of object grouping by functional context.</skos:definition>
+        <skos:prefLabel xml:lang="en">Category</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Catégorie</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/level/2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/level/2">
+        <rdf:type rdf:resource="http://schema.org/Collection"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <schema:position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</schema:position>
+        <rdfs:isDefinedBy rdf:resource="https://nomenclature.info/nom/ontology/"/>
+        <skos:definition xml:lang="fr">Deuxième niveau de la hiérarchie de Nomenclature.</skos:definition>
+        <skos:definition xml:lang="en">Second level of the Nomenclature hierarchy.</skos:definition>
+        <skos:prefLabel xml:lang="en">Class</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Classe</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/level/3 -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/level/3">
+        <rdf:type rdf:resource="http://schema.org/Collection"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <schema:position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</schema:position>
+        <rdfs:isDefinedBy rdf:resource="https://nomenclature.info/nom/ontology/"/>
+        <skos:definition xml:lang="en">Third level of the Nomenclature Hierarchy.</skos:definition>
+        <skos:definition xml:lang="fr">Troisième niveau de la hiérarchie de Nomenclature.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Sous-classe</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Sub-Class</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/level/4 -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/level/4">
+        <rdf:type rdf:resource="http://schema.org/Collection"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <schema:position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</schema:position>
+        <rdfs:isDefinedBy rdf:resource="https://nomenclature.info/nom/ontology/"/>
+        <skos:definition xml:lang="en">Fourth level of the Nomenclature Hierarchy, containing the most general object names.</skos:definition>
+        <skos:definition xml:lang="fr">Quatrième niveau de la hiérarchie de Nomenclature, contenant le nom d’objet le plus générique.</skos:definition>
+        <skos:prefLabel xml:lang="en">Primary Term</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Terme primaire</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/level/5 -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/level/5">
+        <rdf:type rdf:resource="http://schema.org/Collection"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <schema:position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</schema:position>
+        <rdfs:isDefinedBy rdf:resource="https://nomenclature.info/nom/ontology/"/>
+        <skos:definition xml:lang="fr">Cinquième niveau de la hiérarchie de Nomenclature.</skos:definition>
+        <skos:definition xml:lang="en">Fifth level of the Nomenclature Hierarchy.</skos:definition>
+        <skos:prefLabel xml:lang="en">Secondary Term</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Terme secondaire</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/level/6 -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/level/6">
+        <rdf:type rdf:resource="http://schema.org/Collection"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <schema:position rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</schema:position>
+        <rdfs:isDefinedBy rdf:resource="https://nomenclature.info/nom/ontology/"/>
+        <skos:definition xml:lang="fr">Sixième niveau de la hiérarchie de Nomenclature.</skos:definition>
+        <skos:definition xml:lang="en">Sixth level of the Nomenclature Hierarchy.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Terme tertiaire</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Tertiary Term</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/source/AAT -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/source/AAT">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdf:type rdf:resource="http://schema.org/Dataset"/>
+        <void:uriSpace>http://vocab.getty.edu/aat</void:uriSpace>
+        <schema:name xml:lang="en">Art and Architecture Thesaurus</schema:name>
+        <schema:name xml:lang="fr">Art and Architecture Thesaurus</schema:name>
+        <schema:url rdf:resource="http://www.getty.edu/research/tools/vocabularies/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/source/CultureFr-Joconde -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/source/CultureFr-Joconde">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdf:type rdf:resource="http://schema.org/Dataset"/>
+        <void:uriSpace>http://data.culture.fr/thesaurus/resource/ark:/67717/T505</void:uriSpace>
+        <schema:name xml:lang="en">Liste d’autorités Dénomination - Joconde</schema:name>
+        <schema:name xml:lang="fr">Liste d’autorités Dénomination - Joconde</schema:name>
+        <schema:url rdf:resource="http://data.culture.fr/thesaurus/resource/ark:/67717/T505"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/source/CultureFr-architecturales -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/source/CultureFr-architecturales">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdf:type rdf:resource="http://schema.org/Dataset"/>
+        <void:uriSpace>http://data.culture.fr/thesaurus/resource/ark:/67717/T96</void:uriSpace>
+        <schema:name xml:lang="en">Thésaurus de la désignation des œuvres architecturales et des espaces aménagés</schema:name>
+        <schema:name xml:lang="fr">Thésaurus de la désignation des œuvres architecturales et des espaces aménagés</schema:name>
+        <schema:url rdf:resource="http://data.culture.fr/thesaurus/resource/ark:/67717/T96"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/source/CultureFr-archives -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/source/CultureFr-archives">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdf:type rdf:resource="http://schema.org/Dataset"/>
+        <void:uriSpace>http://data.culture.fr/thesaurus/resource/ark:/67717/T3</void:uriSpace>
+        <schema:name xml:lang="en">Liste d’autorité Typologie documentaire pour l&apos;indexation des archives locales</schema:name>
+        <schema:name xml:lang="fr">Liste d’autorité Typologie documentaire pour l&apos;indexation des archives locales</schema:name>
+        <schema:url rdf:resource="http://data.culture.fr/thesaurus/resource/ark:/67717/T3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/source/CultureFr-mobiliers -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/source/CultureFr-mobiliers">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdf:type rdf:resource="http://schema.org/Dataset"/>
+        <void:uriSpace>http://data.culture.fr/thesaurus/resource/ark:/67717/T69</void:uriSpace>
+        <schema:name xml:lang="en">Thésaurus de la désignation des objets mobiliers</schema:name>
+        <schema:name xml:lang="fr">Thésaurus de la désignation des objets mobiliers</schema:name>
+        <schema:url rdf:resource="http://data.culture.fr/thesaurus/resource/ark:/67717/T69"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/source/DBpedia -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/source/DBpedia">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdf:type rdf:resource="http://schema.org/Dataset"/>
+        <void:uriSpace>http://dbpedia.org/resource</void:uriSpace>
+        <void:uriSpace>http://fr.dbpedia.org/resource</void:uriSpace>
+        <schema:name xml:lang="en">DBpedia</schema:name>
+        <schema:name xml:lang="fr">DBpedia</schema:name>
+        <schema:url rdf:resource="http://dbpedia.org"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/source/GND -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/source/GND">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdf:type rdf:resource="http://schema.org/Dataset"/>
+        <void:uriSpace>http://d-nb.info/gnd</void:uriSpace>
+        <schema:name xml:lang="fr">Fichier d’autorité intégré de la Bibliothèque nationale allemande</schema:name>
+        <schema:name xml:lang="de">Gemeinsame Normdatei</schema:name>
+        <schema:name xml:lang="en">German National Library Integrated Authority File</schema:name>
+        <schema:url rdf:resource="https://www.dnb.de/gnd"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/source/LCSH -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/source/LCSH">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdf:type rdf:resource="http://schema.org/Dataset"/>
+        <void:uriSpace>http://id.loc.gov/authorities/subjects</void:uriSpace>
+        <schema:name xml:lang="en">Library of Congress Subject Headings</schema:name>
+        <schema:name xml:lang="fr">Library of Congress Subject Headings</schema:name>
+        <schema:url rdf:resource="http://id.loc.gov/authorities/subjects"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/source/RAMEAU -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/source/RAMEAU">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdf:type rdf:resource="http://schema.org/Dataset"/>
+        <void:uriSpace>http://data.bnf.fr/ark:/12148</void:uriSpace>
+        <schema:name xml:lang="en">Encyclopedic and Unified Alphabetical Directory of Authority-Matter (RAMEAU)</schema:name>
+        <schema:name xml:lang="fr">Répertoire d&apos;autorité-matière encyclopédique et alphabétique unifié (RAMEAU)</schema:name>
+        <schema:url rdf:resource="https://rameau.bnf.fr/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://nomenclature.info/nom/source/WD -->
+
+
+    <owl:NamedIndividual rdf:about="https://nomenclature.info/nom/source/WD">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdf:type rdf:resource="http://schema.org/Dataset"/>
+        <void:uriSpace>http://www.wikidata.org/entity</void:uriSpace>
+        <schema:name xml:lang="en">Wikidata</schema:name>
+        <schema:name xml:lang="fr">Wikidata</schema:name>
+        <schema:url rdf:resource="https://www.wikidata.org"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://schema.org/about">
+        <schema:domainIncludes rdf:resource="http://schema.org/CommunicateAction"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:inverseOf rdf:resource="http://schema.org/subjectOf"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/1670"/>
+        <rdfs:comment>The subject matter of the content.</rdfs:comment>
+        <rdfs:label>about</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/alternateName">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>An alias for the item.</rdfs:comment>
+        <rdfs:label>alternateName</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/citation">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.</rdfs:comment>
+        <rdfs:label>citation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/contentSize">
+        <schema:domainIncludes rdf:resource="http://schema.org/MediaObject"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>File size in (mega/kilo) bytes.</rdfs:comment>
+        <rdfs:label>contentSize</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/contentUrl">
+        <schema:domainIncludes rdf:resource="http://schema.org/MediaObject"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>Actual bytes of the media object, for example the image file or video file.</rdfs:comment>
+        <rdfs:label>contentUrl</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/contributor">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>A secondary contributor to the CreativeWork or Event.</rdfs:comment>
+        <rdfs:label>contributor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/creator">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/UserComments"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</rdfs:comment>
+        <rdfs:label>creator</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/creditText">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:isPartOf rdf:resource="https://pending.schema.org"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/2659"/>
+        <rdfs:comment>Text that can be used to credit person(s) and/or organization(s) associated with a published Creative Work.</rdfs:comment>
+        <rdfs:label>creditText</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/dateCreated">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/DataFeedItem"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/DateTime"/>
+        <rdfs:comment>The date on which the CreativeWork was created or the item was added to a DataFeed.</rdfs:comment>
+        <rdfs:label>dateCreated</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/description">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment>A description of the item.</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/distribution">
+        <schema:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/DataDownload"/>
+        <rdfs:comment>A downloadable form of this dataset, at a specific location, in a specific format.</rdfs:comment>
+        <rdfs:label>distribution</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/encodingFormat">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/MediaObject"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).
+
+In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.
+
+Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.</rdfs:comment>
+        <rdfs:label>encodingFormat</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/image">
+        <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/ImageObject"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].</rdfs:comment>
+        <rdfs:label>image</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/inLanguage">
+        <schema:domainIncludes rdf:resource="http://schema.org/BroadcastService"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CommunicateAction"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/LinkRole"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/PronounceableText"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/WriteAction"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Language"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/2382"/>
+        <rdfs:comment>The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].</rdfs:comment>
+        <rdfs:label>inLanguage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/keywords">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Event"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Place"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/Product"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/DefinedTerm"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.</rdfs:comment>
+        <rdfs:label>keywords</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/license">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>A license document that applies to this content, typically indicated by URL.</rdfs:comment>
+        <rdfs:label>license</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/publisher">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>The publisher of the creative work.</rdfs:comment>
+        <rdfs:label>publisher</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/thumbnail">
+        <schema:domainIncludes rdf:resource="http://schema.org/ImageObject"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/VideoObject"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/ImageObject"/>
+        <rdfs:comment>Thumbnail image for an image or video.</rdfs:comment>
+        <rdfs:label>thumbnail</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/thumbnailUrl">
+        <schema:domainIncludes rdf:resource="http://schema.org/CreativeWork"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment>A thumbnail image relevant to the Thing.</rdfs:comment>
+        <rdfs:label>thumbnailUrl</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://schema.org/value">
+        <schema:domainIncludes rdf:resource="http://schema.org/MonetaryAmount"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/PropertyValue"/>
+        <schema:domainIncludes rdf:resource="http://schema.org/QuantitativeValue"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Boolean"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Number"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/StructuredValue"/>
+        <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+        <schema:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms"/>
+        <rdfs:comment>The value of the quantitative value or property value node.\n\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is &apos;Number&apos;.\n* For [[PropertyValue]], it can be &apos;Text;&apos;, &apos;Number&apos;, &apos;Boolean&apos;, or &apos;StructuredValue&apos;.\n* Use values from 0123456789 (Unicode &apos;DIGIT ZERO&apos; (U+0030) to &apos;DIGIT NINE&apos; (U+0039)) rather than superficially similiar Unicode symbols.\n* Use &apos;.&apos; (Unicode &apos;FULL STOP&apos; (U+002E)) rather than &apos;,&apos; to indicate a decimal point. Avoid using these symbols as a readability separator.</rdfs:comment>
+        <rdfs:label>value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:comment>A name for some thing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>name</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

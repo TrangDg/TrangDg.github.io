@@ -1,0 +1,2675 @@
+[ {
+  "@id" : "_:genid1",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Added definitition and documentation"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://org.semanticweb.owlapi/error#Error1"
+    }, {
+      "@id" : "http://org.semanticweb.owlapi/error#Error2"
+    }, {
+      "@id" : "http://org.semanticweb.owlapi/error#Error3"
+    }, {
+      "@id" : "_:genid16"
+    }, {
+      "@id" : "_:genid14"
+    }, {
+      "@id" : "_:genid12"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema#createdDate"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema#subjectOfChange"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema#statement"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Made a sub-property of statement"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Improved documentation"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Added property cardinality restrictions"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Made owl:ObjectProperty"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Added definitition and documentation"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Made owl:ObjectProperty"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Made a sub-property of statement"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Added definitition and documentation"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Made owl:ObjectProperty"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Ian Davis"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@value" : "2006-03-21"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value" : [ {
+    "@value" : "Made owl:DatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://d-nb.info/standards/elementset/gnd#Language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  } ]
+}, {
+  "@id" : "http://lexvo.org/ontology#somewhatSameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/dc/dcmitype/Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/dcmitype/Image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://schema.org/ImageObject"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/LinguisticSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dsnotify/vocab/eventset/CreateEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en-us",
+    "@value" : "An event class describing that a particular resource was 'created' in a dataset. This means that one or more triples having the associated resource as subject or object were created in the corresponding RDF model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en-us",
+    "@value" : "create event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"
+  } ]
+}, {
+  "@id" : "http://purl.org/dsnotify/vocab/eventset/MoveEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en-us",
+    "@value" : "An event class describing that a particular resource was 'moved' in a dataset or between datasets. This means that all triples having the associated older resource as subject/object were replaced by triples having the target resource as subject/object in the corresponding RDF models. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en-us",
+    "@value" : "Move event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"
+  } ]
+}, {
+  "@id" : "http://purl.org/dsnotify/vocab/eventset/RemoveEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en-us",
+    "@value" : "An event class describing that a particular resource was 'removed' from a dataset. This means that all triples having the associated resource as subject or object were removed from the corresponding RDF model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en-us",
+    "@value" : "Remove event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"
+  } ]
+}, {
+  "@id" : "http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/dsnotify/vocab/eventset/UpdateEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en-us",
+    "@value" : "An event class describing that a particular resource was 'updated' in a dataset. This means that some triples having the associated resource as subject or object were modified/created/removed in the corresponding RDF model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en-us",
+    "@value" : "Update event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"
+  } ]
+}, {
+  "@id" : "http://purl.org/dsnotify/vocab/eventset/sourceResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en-us",
+    "@value" : "The identifier (URI) of a resource that was published under a new URI (i.e., when a MoveEvent occurred)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/dsnotify/vocab/eventset/MoveEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en-us",
+    "@value" : "source resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "http://purl.org/dsnotify/vocab/eventset/targetResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en-us",
+    "@value" : "The identifier (URI) of a resource that was affected by the corresponding event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en-us",
+    "@value" : "target resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "http://purl.org/linguistics/gold/Language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  } ]
+}, {
+  "@id" : "http://purl.org/vocab/changeset/schema#ChangeSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2005-12-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ChangeSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
+    "@id" : "_:genid20"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The encapsulation of a delta between two versions of a resource description"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
+    "@id" : "_:genid21"
+  } ]
+}, {
+  "@id" : "http://purl.org/vocab/changeset/schema#addition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2005-12-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n      By convention the subject of the triple being added should be the same as the subjectOfChange\n    "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema#ChangeSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "addition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema#statement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "a triple to be added to the resource description"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://purl.org/vocab/changeset/schema#createdDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2005-12-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n      The date should be in W3CDTF format\n    "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema#ChangeSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "createdDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "the date that the changeset was created"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "http://purl.org/vocab/changeset/schema#removal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2005-12-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n      By convention the subject of the triple being removed should be the same as the subjectOfChange\n    "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema#ChangeSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "removal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema#statement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "a triple to be removed from the resource description"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  } ]
+}, {
+  "@id" : "http://purl.org/vocab/changeset/schema#statement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/changeset/schema#subjectOfChange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2005-12-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema#ChangeSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/vocab/changeset/schema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "subjectOfChange"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "the resource to which this set of changes applies"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://rdfs.org/ns/void#Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "http://rdfs.org/ns/void#uriSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/Collection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://schema.org/isPartOf" : [ {
+    "@id" : "https://bib.schema.org"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A collection of items e.g. creative works or products."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ]
+}, {
+  "@id" : "http://schema.org/CreativeWork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://schema.org/source" : [ {
+    "@id" : "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The most generic kind of creative work, including books, movies, photographs, software programs, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CreativeWork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Thing"
+  } ]
+}, {
+  "@id" : "http://schema.org/DataDownload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://schema.org/source" : [ {
+    "@id" : "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A dataset in downloadable form."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DataDownload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/MediaObject"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
+  } ]
+}, {
+  "@id" : "http://schema.org/Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://schema.org/source" : [ {
+    "@id" : "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A body of structured information describing some topic(s) of interest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
+  } ]
+}, {
+  "@id" : "http://schema.org/DefinedTermSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://schema.org/isPartOf" : [ {
+    "@id" : "https://pending.schema.org"
+  } ],
+  "http://schema.org/source" : [ {
+    "@id" : "https://github.com/schemaorg/schemaorg/issues/894"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A set of defined terms for example a set of categories or a classification scheme, a glossary, dictionary or enumeration."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DefinedTermSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ]
+}, {
+  "@id" : "http://schema.org/ImageObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An image file."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ImageObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/MediaObject"
+  } ]
+}, {
+  "@id" : "http://schema.org/Intangible",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://schema.org/Language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  } ]
+}, {
+  "@id" : "http://schema.org/MediaObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://schema.org/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An organization such as a school, NGO, corporation, club, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Thing"
+  } ]
+}, {
+  "@id" : "http://schema.org/StructuredValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "StructuredValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Intangible"
+  } ]
+}, {
+  "@id" : "http://schema.org/Thing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://schema.org/about",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CommunicateAction"
+  }, {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/Event"
+  } ],
+  "http://schema.org/inverseOf" : [ {
+    "@id" : "http://schema.org/subjectOf"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Thing"
+  } ],
+  "http://schema.org/source" : [ {
+    "@id" : "https://github.com/schemaorg/schemaorg/issues/1670"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The subject matter of the content."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "about"
+  } ]
+}, {
+  "@id" : "http://schema.org/alternateName",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/Thing"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An alias for the item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "alternateName"
+  } ]
+}, {
+  "@id" : "http://schema.org/citation",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/Text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "citation"
+  } ]
+}, {
+  "@id" : "http://schema.org/contentSize",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/MediaObject"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "File size in (mega/kilo) bytes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contentSize"
+  } ]
+}, {
+  "@id" : "http://schema.org/contentUrl",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/MediaObject"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Actual bytes of the media object, for example the image file or video file."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contentUrl"
+  } ]
+}, {
+  "@id" : "http://schema.org/contributor",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/Event"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Organization"
+  }, {
+    "@id" : "http://schema.org/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A secondary contributor to the CreativeWork or Event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contributor"
+  } ]
+}, {
+  "@id" : "http://schema.org/creator",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/UserComments"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Organization"
+  }, {
+    "@id" : "http://schema.org/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "creator"
+  } ]
+}, {
+  "@id" : "http://schema.org/creditText",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ],
+  "http://schema.org/isPartOf" : [ {
+    "@id" : "https://pending.schema.org"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Text"
+  } ],
+  "http://schema.org/source" : [ {
+    "@id" : "https://github.com/schemaorg/schemaorg/issues/2659"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Text that can be used to credit person(s) and/or organization(s) associated with a published Creative Work."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "creditText"
+  } ]
+}, {
+  "@id" : "http://schema.org/dateCreated",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/DataFeedItem"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Date"
+  }, {
+    "@id" : "http://schema.org/DateTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The date on which the CreativeWork was created or the item was added to a DataFeed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dateCreated"
+  } ]
+}, {
+  "@id" : "http://schema.org/description",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/Thing"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A description of the item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "description"
+  } ]
+}, {
+  "@id" : "http://schema.org/distribution",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/Dataset"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/DataDownload"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A downloadable form of this dataset, at a specific location, in a specific format."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "distribution"
+  } ]
+}, {
+  "@id" : "http://schema.org/domainIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/encodingFormat",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/MediaObject"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Text"
+  }, {
+    "@id" : "http://schema.org/URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).\n\nIn cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.\n\nUnregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "encodingFormat"
+  } ]
+}, {
+  "@id" : "http://schema.org/image",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/Thing"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/ImageObject"
+  }, {
+    "@id" : "http://schema.org/URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "image"
+  } ]
+}, {
+  "@id" : "http://schema.org/inLanguage",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/BroadcastService"
+  }, {
+    "@id" : "http://schema.org/CommunicateAction"
+  }, {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/Event"
+  }, {
+    "@id" : "http://schema.org/LinkRole"
+  }, {
+    "@id" : "http://schema.org/PronounceableText"
+  }, {
+    "@id" : "http://schema.org/WriteAction"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Language"
+  }, {
+    "@id" : "http://schema.org/Text"
+  } ],
+  "http://schema.org/source" : [ {
+    "@id" : "https://github.com/schemaorg/schemaorg/issues/2382"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "inLanguage"
+  } ]
+}, {
+  "@id" : "http://schema.org/inverseOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/isPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ],
+  "http://schema.org/inverseOf" : [ {
+    "@id" : "http://schema.org/hasPart"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isPartOf"
+  } ]
+}, {
+  "@id" : "http://schema.org/keywords",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/Event"
+  }, {
+    "@id" : "http://schema.org/Organization"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://schema.org/Product"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/DefinedTerm"
+  }, {
+    "@id" : "http://schema.org/Text"
+  }, {
+    "@id" : "http://schema.org/URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "keywords"
+  } ]
+}, {
+  "@id" : "http://schema.org/license",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A license document that applies to this content, typically indicated by URL."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "license"
+  } ]
+}, {
+  "@id" : "http://schema.org/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/Thing"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ]
+}, {
+  "@id" : "http://schema.org/position",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  }, {
+    "@id" : "http://schema.org/ListItem"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Integer"
+  }, {
+    "@id" : "http://schema.org/Text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The position of an item in a series or sequence of items."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "position"
+  } ]
+}, {
+  "@id" : "http://schema.org/publisher",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Organization"
+  }, {
+    "@id" : "http://schema.org/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The publisher of the creative work."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "publisher"
+  } ]
+}, {
+  "@id" : "http://schema.org/rangeIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/Thing"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sameAs"
+  } ]
+}, {
+  "@id" : "http://schema.org/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/thumbnail",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/ImageObject"
+  }, {
+    "@id" : "http://schema.org/VideoObject"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/ImageObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Thumbnail image for an image or video."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "thumbnail"
+  } ]
+}, {
+  "@id" : "http://schema.org/thumbnailUrl",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/CreativeWork"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A thumbnail image relevant to the Thing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "thumbnailUrl"
+  } ]
+}, {
+  "@id" : "http://schema.org/url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/Thing"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "URL of the item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "url"
+  } ]
+}, {
+  "@id" : "http://schema.org/value",
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "http://schema.org/MonetaryAmount"
+  }, {
+    "@id" : "http://schema.org/PropertyValue"
+  }, {
+    "@id" : "http://schema.org/QuantitativeValue"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://schema.org/Boolean"
+  }, {
+    "@id" : "http://schema.org/Number"
+  }, {
+    "@id" : "http://schema.org/StructuredValue"
+  }, {
+    "@id" : "http://schema.org/Text"
+  } ],
+  "http://schema.org/source" : [ {
+    "@id" : "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The value of the quantitative value or property value node.\\n\\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\\n* For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "value"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300404671",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Multiple-word terms or names that are arranged in the form used in speech or written text. Examples are \"Rocking Chair\" and \"Wedding Dress\". Distinguished from inverted terms."
+  }, {
+    "@language" : "fr",
+    "@value" : "Termes à mots multiples qui sont organisés selon la forme utilisée à l'expression orale ou à l'écrit en anglais. Des exemples sont « Rocking Chair » et « Wedding Dress ». Se distingue des termes inversés."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Barber's Chair"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Termes en ordre naturel"
+  }, {
+    "@language" : "en",
+    "@value" : "natural order terms"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Used only for English terms (both single-word and multi-word)"
+  }, {
+    "@language" : "fr",
+    "@value" : "Utilisé seulement pour les termes en anglais (pour les unitermes et ceux à mots multiples)."
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300404672",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Multiple-word terms that are arranged in the form used in back-of-book indexing or other similar situations. Examples are \"Chair, Rocking\" and \"Dress, Wedding\". Distinguished from natural order terms."
+  }, {
+    "@language" : "fr",
+    "@value" : "Termes à mots multiples qui sont organisés selon la forme utilisée lors de l'indexation à la fin des livres en anglais ou lors de situations similaires. Des exemples sont « Chair, Rocking » et « Dress, Wedding ». Se distingue des termes en ordre naturel."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Chair, Barber's"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Termes inversés"
+  }, {
+    "@language" : "en",
+    "@value" : "inverted terms"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Used only for English multi-word terms."
+  }, {
+    "@language" : "fr",
+    "@value" : "Utilisé seulement pour les termes à mots multiples en anglais."
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/3.0/lexinfo#Gender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gender"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Gender"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/3.0/lexinfo#feminine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/3.0/lexinfo#Gender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "De, relatif à, ou constituant le genre qui inclut habituellement la plupart des mots ou formes grammaticales se référant aux femmes."
+  }, {
+    "@language" : "en",
+    "@value" : "Of, relating to, or constituting the gender that ordinarily includes most words or grammatical forms referring to females."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "feminine"
+  }, {
+    "@language" : "fr",
+    "@value" : "féminin"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/3.0/lexinfo#masculine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/3.0/lexinfo#Gender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "De, relatif à, ou constituant le genre qui inclut habituellement la plupart des mots ou formes grammaticales se référant aux hommes."
+  }, {
+    "@language" : "en",
+    "@value" : "Of, relating to, or constituting the gender that ordinarily includes most words or grammatical forms referring to males."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "masculin"
+  }, {
+    "@language" : "en",
+    "@value" : "masculine"
+  } ]
+}, {
+  "@id" : "http://www.lingvoj.org/ontology#Lingvo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://lexvo.org/ontology#somewhatSameAs" : [ {
+    "@id" : "http://lexvo.org/ontology#Language"
+  } ],
+  "http://purl.org/vocab/vann/example" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-1/ja"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-3/fra"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A language used in spoken or written human communication, or in which a resource is written or recorded. It is recommended to use instances defined on the basis of ISO 639 codes, such as those in examples"
+  }, {
+    "@language" : "nl",
+    "@value" : "Een taal gebruikt in geschreven of gesproken communicatie tussen mensen of in welke een bron is geschreven of opgenomen. Het is aan te raden instanties te gebruiken gedefinieerd op basis van de ISO 630 codes, zoals in deze voorbeelden"
+  }, {
+    "@language" : "pt",
+    "@value" : "Um idioma utilizado na comunicação oral ou escrita entre pessoas, ou na que se escreve ou grava um recurso. Recomenda-se a utilização das instâncias definidas segundo os códigos ISO 639, como os que aparecem nos excemplos"
+  }, {
+    "@language" : "es",
+    "@value" : "Una lengua utilizada en la comunicación oral o escrita entre personas, o en la que se escribe o graba un recurso. Se recomienda el uso de las instancias definidas según los códigos ISO 639, como los que aparecen en los ejemplos"
+  }, {
+    "@language" : "fr",
+    "@value" : "Une langue utilisée dans la communication orale ou écrite entre humains, ou dans laquelle une ressource est écrite ou enregistrée. Il est recommandé d'utiliser des instances définies sur la base d'un code ISO 639, comme dans les exemples"
+  }, {
+    "@language" : "ja",
+    "@value" : "会話または記述による人間のコミュニケーションで使用される言語、または資源が記述または記録される言語。例にあるような、ISO 639コードに基づいて定義されたインスタンスを使用することが推奨される"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "tr",
+    "@value" : "Dil"
+  }, {
+    "@language" : "pt",
+    "@value" : "Idioma"
+  }, {
+    "@language" : "pl",
+    "@value" : "Jezyk"
+  }, {
+    "@language" : "fi",
+    "@value" : "Kieli"
+  }, {
+    "@language" : "en",
+    "@value" : "Language"
+  }, {
+    "@language" : "fr",
+    "@value" : "Langue"
+  }, {
+    "@language" : "es",
+    "@value" : "Lenguaje"
+  }, {
+    "@language" : "it",
+    "@value" : "Linguaggio"
+  }, {
+    "@language" : "eo",
+    "@value" : "Lingvo"
+  }, {
+    "@language" : "de",
+    "@value" : "Sprache"
+  }, {
+    "@language" : "no",
+    "@value" : "Språk"
+  }, {
+    "@language" : "sv",
+    "@value" : "Språk"
+  }, {
+    "@language" : "nl",
+    "@value" : "Taal"
+  }, {
+    "@language" : "ru",
+    "@value" : "Язык"
+  }, {
+    "@language" : "ja",
+    "@value" : "言語"
+  }, {
+    "@language" : "zh",
+    "@value" : "语言"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dc/terms/LinguisticSystem"
+  }, {
+    "@id" : "http://www.loc.gov/mads/rdf/v1#Language"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.ontotext.com/proton/protontop#Language"
+  } ]
+}, {
+  "@id" : "http://www.lingvoj.org/ontology#tag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "A tag para ser usada, por exemplo como valor de xml:lang. Ver https://tools.ietf.org/html/bcp47"
+  }, {
+    "@language" : "es",
+    "@value" : "La etiqueta a utilizar para el lenguaje, por ejemplo como valor de xml:lang. Ver https://tools.ietf.org/html/bcp47"
+  }, {
+    "@language" : "fr",
+    "@value" : "Le tag à utiliser pour la langue, par exemple comme valeur de xml:lang. Voir https://tools.ietf.org/html/bcp47"
+  }, {
+    "@language" : "en",
+    "@value" : "The tag to use for the language, for example as value of xml:lang. See https://tools.ietf.org/html/bcp47"
+  }, {
+    "@language" : "ja",
+    "@value" : "例えばxml:langの値として、言語に用いるタグ。https://tools.ietf.org/html/bcp47を参照"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "etiqueta"
+  }, {
+    "@language" : "en",
+    "@value" : "language tag"
+  }, {
+    "@language" : "nl",
+    "@value" : "taal tag"
+  }, {
+    "@language" : "pt",
+    "@value" : "tag de idioma"
+  }, {
+    "@language" : "fr",
+    "@value" : "tag de langue"
+  }, {
+    "@language" : "ja",
+    "@value" : "言語タグ"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/identifier"
+  } ]
+}, {
+  "@id" : "http://www.loc.gov/mads/rdf/v1#Language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.ontotext.com/proton/protontop#Language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#maxCardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Collection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#changeNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#historyNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#notation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#scopeNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2008/05/skos-xl#Label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2008/05/skos-xl#labelRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#Distribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An agent (eg. person, group, software or physical artifact)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Agent"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Document",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/isPrimaryTopicOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A name for some thing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/nick",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nickname"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/primaryTopic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The primary topic of some page or document."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "primary topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/isPrimaryTopicOf"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/agent/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "American Association for State and Local History (AASLH)"
+  }, {
+    "@language" : "fr",
+    "@value" : "American Association for State and Local History (AASLH)"
+  } ],
+  "http://xmlns.com/foaf/0.1/nick" : [ {
+    "@value" : "AASLH"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/agent/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://schema.org/sameAs" : [ {
+    "@id" : "http://www.wikidata.org/entity/Q3456610"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "Canadian Heritage Information Network (CHIN)"
+  }, {
+    "@language" : "fr",
+    "@value" : "Réseau canadien d’information sur le patrimoine (RCIP)"
+  } ],
+  "http://xmlns.com/foaf/0.1/nick" : [ {
+    "@value" : "CHIN"
+  }, {
+    "@value" : "RCIP"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/agent/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "fr",
+    "@value" : "Gouvernement du Nunavut"
+  }, {
+    "@language" : "en",
+    "@value" : "Government of Nunavut"
+  } ],
+  "http://xmlns.com/foaf/0.1/nick" : [ {
+    "@value" : "GN"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/agent/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "Getty Research Institute"
+  }, {
+    "@language" : "fr",
+    "@value" : "Getty Research Institute"
+  } ],
+  "http://xmlns.com/foaf/0.1/nick" : [ {
+    "@value" : "GRI"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Nomenclature - Languages"
+  }, {
+    "@language" : "fr",
+    "@value" : "Nomenclature - Langues"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/cr",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "cr"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-1/cr"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-3/cre"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q33390"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "cr"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Cree"
+  }, {
+    "@language" : "fr",
+    "@value" : "cri"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/cr-latn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "cr-latn"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "cr-latn"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Cree in Latin script"
+  }, {
+    "@language" : "fr",
+    "@value" : "cri en écriture latine"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/en",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "en"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-1/en"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-3/eng"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q1860"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "en"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "English"
+  }, {
+    "@language" : "fr",
+    "@value" : "anglais"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/en-ca",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "en-ca"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://www.wikidata.org/entity/Q44676"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "en-ca"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Canadian English"
+  }, {
+    "@language" : "fr",
+    "@value" : "anglais canadien"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/es",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "es"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-1/es"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-3/spa"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q1321"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "es"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Spanish"
+  }, {
+    "@language" : "fr",
+    "@value" : "espagnol"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/fr",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "fr"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-1/fr"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-3/fra"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q150"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "fr"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "French"
+  }, {
+    "@language" : "fr",
+    "@value" : "français"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/fr-ca",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "fr-ca"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://www.wikidata.org/entity/Q1450506"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "fr-ca"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Canadian French"
+  }, {
+    "@language" : "fr",
+    "@value" : "français canadien"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/hai",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "hai"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-2/hai"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-3/hai"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q33303"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "hai"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Haida"
+  }, {
+    "@language" : "fr",
+    "@value" : "haïda"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/hai-latn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "hai-latn"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "hai-latn"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Haida in Latin script"
+  }, {
+    "@language" : "fr",
+    "@value" : "haïda en écriture latine"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/he",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "he"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-1/he"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-3/heb"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q9288"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "he"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Hebrew"
+  }, {
+    "@language" : "fr",
+    "@value" : "hébreu"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/he-latn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "he-latn"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "he-latn"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Hebrew in Latin script"
+  }, {
+    "@language" : "fr",
+    "@value" : "hébreu en écriture latine"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/iro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "iro"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-2/iro"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-5/iro"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q33623"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "iro"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Iroquoian"
+  }, {
+    "@language" : "fr",
+    "@value" : "iroquoien"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/iro-latn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "iro-latn"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "iro-latn"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Iroquoian in Latin script"
+  }, {
+    "@language" : "fr",
+    "@value" : "iroquoien en écriture latine"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/iu",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "iu"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-1/iu"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-3/iku"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q29921"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "iu"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Inuktitut"
+  }, {
+    "@language" : "fr",
+    "@value" : "inuktitut"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/iu-latn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "iu-latn"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "iu-latn"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Inuktitut in Latin script"
+  }, {
+    "@language" : "fr",
+    "@value" : "inuktitut en écriture latine"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/moh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "moh"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-2/moh"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-3/moh"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q13339"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "moh"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Mohawk"
+  }, {
+    "@language" : "fr",
+    "@value" : "mohawk"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/moh-latn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "moh-latn"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "moh-latn"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Mohawk in Latin script"
+  }, {
+    "@language" : "fr",
+    "@value" : "mohawk en écriture latine"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/oj",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "oj"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ojibway"
+  }, {
+    "@language" : "en",
+    "@value" : "Ojibwe"
+  }, {
+    "@language" : "fr",
+    "@value" : "odjibwé"
+  }, {
+    "@language" : "fr",
+    "@value" : "ojibwa"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-1/oj"
+  }, {
+    "@id" : "http://lexvo.org/id/iso639-3/oji"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q33875"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "oj"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ojibwa"
+  }, {
+    "@language" : "fr",
+    "@value" : "ojibwé"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/lang/oj-latn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.lingvoj.org/ontology#tag" : [ {
+    "@value" : "oj-latn"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.lingvoj.org/ontology#Lingvo"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ojibway in Latin script"
+  }, {
+    "@language" : "en",
+    "@value" : "Ojibwe in Latin script"
+  }, {
+    "@language" : "fr",
+    "@value" : "odjibwé en écriture latine"
+  }, {
+    "@language" : "fr",
+    "@value" : "ojibwa en écriture latine"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://nomenclature.info/nom/lang/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "oj-latn"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ojibwa in Latin script"
+  }, {
+    "@language" : "fr",
+    "@value" : "ojibwé en écriture latine"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/level/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://schema.org/position" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://nomenclature.info/nom/ontology/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Premier niveau de la hiérarchie, contenant le niveau le plus générique du regroupement d’objets par contexte fonctionnel."
+  }, {
+    "@language" : "en",
+    "@value" : "Top level of the Nomenclature hierarchy, containing the broadest level of object grouping by functional context."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Category"
+  }, {
+    "@language" : "fr",
+    "@value" : "Catégorie"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/level/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://schema.org/position" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://nomenclature.info/nom/ontology/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Deuxième niveau de la hiérarchie de Nomenclature."
+  }, {
+    "@language" : "en",
+    "@value" : "Second level of the Nomenclature hierarchy."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Class"
+  }, {
+    "@language" : "fr",
+    "@value" : "Classe"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/level/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://schema.org/position" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://nomenclature.info/nom/ontology/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Third level of the Nomenclature Hierarchy."
+  }, {
+    "@language" : "fr",
+    "@value" : "Troisième niveau de la hiérarchie de Nomenclature."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Sous-classe"
+  }, {
+    "@language" : "en",
+    "@value" : "Sub-Class"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/level/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://schema.org/position" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://nomenclature.info/nom/ontology/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Fourth level of the Nomenclature Hierarchy, containing the most general object names."
+  }, {
+    "@language" : "fr",
+    "@value" : "Quatrième niveau de la hiérarchie de Nomenclature, contenant le nom d’objet le plus générique."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Primary Term"
+  }, {
+    "@language" : "fr",
+    "@value" : "Terme primaire"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/level/5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://schema.org/position" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "5"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://nomenclature.info/nom/ontology/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Cinquième niveau de la hiérarchie de Nomenclature."
+  }, {
+    "@language" : "en",
+    "@value" : "Fifth level of the Nomenclature Hierarchy."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Secondary Term"
+  }, {
+    "@language" : "fr",
+    "@value" : "Terme secondaire"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/level/6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://schema.org/position" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "6"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://nomenclature.info/nom/ontology/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "fr",
+    "@value" : "Sixième niveau de la hiérarchie de Nomenclature."
+  }, {
+    "@language" : "en",
+    "@value" : "Sixth level of the Nomenclature Hierarchy."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Terme tertiaire"
+  }, {
+    "@language" : "en",
+    "@value" : "Tertiary Term"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/ontology/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "fr",
+    "@value" : "L'ontologie de NOM définit les valeurs utilisées dans Nomenclature pour le catalogage des objets de musée. Elle utilise les ontologies SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset."
+  }, {
+    "@language" : "en",
+    "@value" : "NOM Ontology defines the values used in Nomenclature for Museum Cataloging. It uses the SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset ontologies."
+  } ],
+  "http://purl.org/dc/elements/1.1/format" : [ {
+    "@value" : "meta/rdf-schema"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "en",
+    "@value" : "Nomenclature for Museum Cataloging Ontology"
+  }, {
+    "@language" : "fr",
+    "@value" : "Ontologie de Nomenclature pour le catalogage des objets de musée"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-02-28"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://nomenclature.info/nom/agent/2"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-04-22"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "nomo"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://nomenclature.info/nom/ontology/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "L'ontologie de NOM définit les valeurs utilisées dans Nomenclature pour le catalogage des objets de musée. Elle utilise les ontologies SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset."
+  }, {
+    "@language" : "en",
+    "@value" : "NOM Ontology defines the values used in Nomenclature for Museum Cataloging. It uses the SKOS, SKOS-XL, DC, DCT, FOAF, Schema, Lexinfo, Changeset ontologies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Nomenclature for Museum Cataloging Ontology"
+  }, {
+    "@language" : "fr",
+    "@value" : "Ontologie de Nomenclature pour le catalogage des objets de musée"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.wikidata.org/entity/P7749"
+  }, {
+    "@id" : "http://www.wikidata.org/entity/Q64351785"
+  }, {
+    "@id" : "https://nomenclature.info/"
+  }, {
+    "@id" : "https://nomenclature.info/.well-known/void"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/ontology/invertedFormOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Used only for multi-word English labels"
+  }, {
+    "@language" : "fr",
+    "@value" : "Utilisée seulement pour les termes anglais à mots multiples"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2008/05/skos-xl#Label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://nomenclature.info/nom/ontology/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "forme inversée de"
+  }, {
+    "@language" : "en",
+    "@value" : "inverted form of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2008/05/skos-xl#Label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.w3.org/TR/skos-reference/#xl-label-relations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2008/05/skos-xl#labelRelation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "fr",
+    "@value" : "\"Box, Drink\" est la forme inversée de \"Drink Box\""
+  }, {
+    "@language" : "en",
+    "@value" : "\"Box, Drink\" is the inverted form of \"Drink Box\""
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/source/AAT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rdfs.org/ns/void#uriSpace" : [ {
+    "@value" : "http://vocab.getty.edu/aat"
+  } ],
+  "http://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "Art and Architecture Thesaurus"
+  }, {
+    "@language" : "fr",
+    "@value" : "Art and Architecture Thesaurus"
+  } ],
+  "http://schema.org/url" : [ {
+    "@id" : "http://www.getty.edu/research/tools/vocabularies/aat/"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://rdfs.org/ns/void#Dataset"
+  }, {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/source/CultureFr-Joconde",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rdfs.org/ns/void#uriSpace" : [ {
+    "@value" : "http://data.culture.fr/thesaurus/resource/ark:/67717/T505"
+  } ],
+  "http://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "Liste d’autorités Dénomination - Joconde"
+  }, {
+    "@language" : "fr",
+    "@value" : "Liste d’autorités Dénomination - Joconde"
+  } ],
+  "http://schema.org/url" : [ {
+    "@id" : "http://data.culture.fr/thesaurus/resource/ark:/67717/T505"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://rdfs.org/ns/void#Dataset"
+  }, {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/source/CultureFr-architecturales",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rdfs.org/ns/void#uriSpace" : [ {
+    "@value" : "http://data.culture.fr/thesaurus/resource/ark:/67717/T96"
+  } ],
+  "http://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "Thésaurus de la désignation des œuvres architecturales et des espaces aménagés"
+  }, {
+    "@language" : "fr",
+    "@value" : "Thésaurus de la désignation des œuvres architecturales et des espaces aménagés"
+  } ],
+  "http://schema.org/url" : [ {
+    "@id" : "http://data.culture.fr/thesaurus/resource/ark:/67717/T96"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://rdfs.org/ns/void#Dataset"
+  }, {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/source/CultureFr-archives",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rdfs.org/ns/void#uriSpace" : [ {
+    "@value" : "http://data.culture.fr/thesaurus/resource/ark:/67717/T3"
+  } ],
+  "http://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "Liste d’autorité Typologie documentaire pour l'indexation des archives locales"
+  }, {
+    "@language" : "fr",
+    "@value" : "Liste d’autorité Typologie documentaire pour l'indexation des archives locales"
+  } ],
+  "http://schema.org/url" : [ {
+    "@id" : "http://data.culture.fr/thesaurus/resource/ark:/67717/T3"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://rdfs.org/ns/void#Dataset"
+  }, {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/source/CultureFr-mobiliers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rdfs.org/ns/void#uriSpace" : [ {
+    "@value" : "http://data.culture.fr/thesaurus/resource/ark:/67717/T69"
+  } ],
+  "http://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "Thésaurus de la désignation des objets mobiliers"
+  }, {
+    "@language" : "fr",
+    "@value" : "Thésaurus de la désignation des objets mobiliers"
+  } ],
+  "http://schema.org/url" : [ {
+    "@id" : "http://data.culture.fr/thesaurus/resource/ark:/67717/T69"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://rdfs.org/ns/void#Dataset"
+  }, {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/source/DBpedia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rdfs.org/ns/void#uriSpace" : [ {
+    "@value" : "http://dbpedia.org/resource"
+  }, {
+    "@value" : "http://fr.dbpedia.org/resource"
+  } ],
+  "http://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "DBpedia"
+  }, {
+    "@language" : "fr",
+    "@value" : "DBpedia"
+  } ],
+  "http://schema.org/url" : [ {
+    "@id" : "http://dbpedia.org"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://rdfs.org/ns/void#Dataset"
+  }, {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/source/GND",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rdfs.org/ns/void#uriSpace" : [ {
+    "@value" : "http://d-nb.info/gnd"
+  } ],
+  "http://schema.org/name" : [ {
+    "@language" : "fr",
+    "@value" : "Fichier d’autorité intégré de la Bibliothèque nationale allemande"
+  }, {
+    "@language" : "de",
+    "@value" : "Gemeinsame Normdatei"
+  }, {
+    "@language" : "en",
+    "@value" : "German National Library Integrated Authority File"
+  } ],
+  "http://schema.org/url" : [ {
+    "@id" : "https://www.dnb.de/gnd"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://rdfs.org/ns/void#Dataset"
+  }, {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/source/LCSH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rdfs.org/ns/void#uriSpace" : [ {
+    "@value" : "http://id.loc.gov/authorities/subjects"
+  } ],
+  "http://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "Library of Congress Subject Headings"
+  }, {
+    "@language" : "fr",
+    "@value" : "Library of Congress Subject Headings"
+  } ],
+  "http://schema.org/url" : [ {
+    "@id" : "http://id.loc.gov/authorities/subjects"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://rdfs.org/ns/void#Dataset"
+  }, {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/source/RAMEAU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rdfs.org/ns/void#uriSpace" : [ {
+    "@value" : "http://data.bnf.fr/ark:/12148"
+  } ],
+  "http://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "Encyclopedic and Unified Alphabetical Directory of Authority-Matter (RAMEAU)"
+  }, {
+    "@language" : "fr",
+    "@value" : "Répertoire d'autorité-matière encyclopédique et alphabétique unifié (RAMEAU)"
+  } ],
+  "http://schema.org/url" : [ {
+    "@id" : "https://rameau.bnf.fr/"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://rdfs.org/ns/void#Dataset"
+  }, {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+}, {
+  "@id" : "https://nomenclature.info/nom/source/WD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rdfs.org/ns/void#uriSpace" : [ {
+    "@value" : "http://www.wikidata.org/entity"
+  } ],
+  "http://schema.org/name" : [ {
+    "@language" : "en",
+    "@value" : "Wikidata"
+  }, {
+    "@language" : "fr",
+    "@value" : "Wikidata"
+  } ],
+  "http://schema.org/url" : [ {
+    "@id" : "https://www.wikidata.org"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://rdfs.org/ns/void#Dataset"
+  }, {
+    "@id" : "http://schema.org/Dataset"
+  } ]
+} ]
