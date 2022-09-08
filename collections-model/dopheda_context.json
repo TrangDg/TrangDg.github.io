@@ -137,7 +137,8 @@
 			"@id": "crm:P1_is_identified_by"
 		},
 		"has_symbolic_content": {
-			"@id": "crm:P190_has_symbolic_content"
+			"@id": "crm:P190_has_symbolic_content",
+			"@container": "@language"
 		},
 		"in_the_role_of": {
 			"@id": "crm:P14.1_in_the_role_of"
@@ -255,6 +256,10 @@
 		},
 		"is_triggered_by": {
 			"@id": "crmsci:O13i_is_triggered_by"
+		},
+		"has_note": {
+			"id": "crm:P3_has_note",
+			"@container": "@language"
 		}
 	}
 }
