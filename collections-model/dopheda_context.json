@@ -258,7 +258,7 @@
 			"@id": "crmsci:O13i_is_triggered_by"
 		},
 		"has_note": {
-			"id": "crm:P3_has_note",
+			"@id": "crm:P3_has_note",
 			"@container": "@language"
 		}
 	}
