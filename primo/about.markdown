@@ -1,18 +1,12 @@
----
-layout: page
-title: About
-permalink: /about/
----
-
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <meta http-equiv="refresh" content="0; url=https://trangdg.github.io/rename-repo-testing/about">
+    <link rel="canonical" href="https://trangdg.github.io/rename-repo-testing/about">
+    <title>This page has moved</title>
+</head>
+<body>
+    <p>This page has moved. Redirecting you to <a href="https://trangdg.github.io/rename-repo-testing/about">https://trangdg.github.io/rename-repo-testing/about</a>&hellip;</p>
+</body>
+</html>
