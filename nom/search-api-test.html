@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">
+			input, select {height: 50px;}
+			#search-input {
+				width: 100%;
+				padding: 10px;
+				font-size: 1.2em;
+			}
+			#search {
+				position: relative;
+				display: inline-block;
+				width: 60%;
+				margin-top: 10px;
+			}
+			#search-list {
+				position: absolute;
+				max-height: 600px;
+				overflow: auto;
+				top: 100%;
+				left: 0;
+				right: 0;
+				border: 1px solid #d4d4d4;
+				border-top: none;
+				z-index: 99;
+			}
+			#search-list div {
+				padding: 10px;
+			}
+			#search-list div:hover {
+				background-color: lightgrey;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Nomenclature</h1>
+		<section>
+			<form action="" method="GET">
+				<select id="term-order">
+					<option value="natural" selected>Natural</option>
+					<option value="inverted">Inverted</option>
+				</select>
+				<select id="lang">
+					<option value="en" selected>English</option>
+					<option value="en-CA">Canadian English</option>
+					<option value="fr">French</option>
+					<option value="fr-CA">Canadian French</option>
+				</select>
+				<div id="search">
+					<input type="search" name="termSearch" id="search-input"/>
+					<div id="search-list"></div>
+				</div>
+		    	<!-- <input type="search" name="search_input" id="search-input" list="search-list"/> -->
+		    	<input type="submit" value="Search" disabled/>
+		    </form>
+		   <!--  <datalist id="search-list">
+		  	</datalist> -->
+  		</section>
+		
+
+		<script type="text/javascript">
+			const searchInput = document.querySelector("#search-input");
+			const searchList = document.querySelector("#search-list");
+
+			function removeAllChildNodes(parent) {
+			    while (parent.firstChild) {
+			        parent.removeChild(parent.firstChild);
+			    }
+			}
+			
+			function parse(data){
+				if (data.length > 0) {
+					for (const r of data) {
+						const display = {};
+						const pageUrl = r.mainEntityOfPage;
+
+						for (label of r.prefLabel) {
+							const val = label.literalForm.value;
+							const lang = label.literalForm.language;
+							display[lang] = val;
+						}
+
+						if (termOrder == 'inverted' && 'altLabel' in r) {
+							for (alt of r.altLabel) {
+								const altVal = alt.literalForm.value;
+								const altLang = alt.literalForm.language;
+								if (altVal.includes(', ')){
+									display[altLang] = altVal;
+								}
+							}
+						}
+						if (language in display) {
+							searchList.innerHTML += `<div><a href="${pageUrl}" target="_blank">${display[language]} (${language})</a></div>\n`;
+						} else {
+							const langRep = language.replace('-CA','');
+							searchList.innerHTML += `<div><a href="${pageUrl}" target="_blank">${display[langRep]} (${langRep})</a></div>\n`;
+						}
+					}
+				}	
+			}
+
+			searchInput.addEventListener("input", () => {
+				removeAllChildNodes(searchList);
+				const termOrder = document.querySelector("#term-order").value;
+				const language = document.querySelector("#lang").value;
+				const query = encodeURIComponent(searchInput.value);
+				
+				const rq = "https://nomenclature.info/api/v1/search?termSearch=" + query;
+				// console.log(rq)
+				// caches
+				// .match(rq)
+				// .then(cached => {
+				// 	if (cached !== undefined) {
+				// 		return cached;
+				// 	} else {
+				// 		fetch(rq, {mode: 'cors'})
+				// 		.then(response => {
+				// 			caches.open('myCaches')
+				// 			.then(cache => {
+				// 				cache.put(rq,response);
+				// 			});
+				// 			return response.clone()
+				// 		})
+				// 	}
+				// })
+				// .then(cachedResponse => console.log(cachedResponse))
+				// .then(cachedResponse => cachedResponse.json())
+				// .then(data => parse(data))
+
+				fetch(rq)
+				.then(response => response.json())
+				.then(data => parse(data))
+				
+			});
+			/*execute a function when someone clicks in the document:*/
+			document.addEventListener("click", () => {
+			    removeAllChildNodes(searchList);
+			});
+
+
+
+		</script>
+
+		
+	</body>
+</html>
