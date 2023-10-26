@@ -72,6 +72,8 @@
 			}
 			
 			function parse(data){
+				const termOrder = document.querySelector("#term-order").value;
+				const language = document.querySelector("#lang").value;
 				if (data.length > 0) {
 					for (const r of data) {
 						const display = {};
@@ -104,10 +106,7 @@
 
 			searchInput.addEventListener("input", () => {
 				removeAllChildNodes(searchList);
-				const termOrder = document.querySelector("#term-order").value;
-				const language = document.querySelector("#lang").value;
 				const query = encodeURIComponent(searchInput.value);
-				
 				const rq = "https://nomenclature.info/api/v1/search?termSearch=" + query;
 				// console.log(rq)
 				// caches
